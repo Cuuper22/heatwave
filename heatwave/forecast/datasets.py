@@ -21,6 +21,7 @@ Data kinds: ``measured`` (laptop), ``public``, ``simulated`` (gpu_stack heatwave
 from __future__ import annotations
 
 import json
+import os
 from dataclasses import dataclass, field, replace
 from pathlib import Path
 from typing import Callable, Optional, Sequence
@@ -49,7 +50,7 @@ BUCKETS = {
 }
 
 TEST_FROM_UTC = pd.Timestamp("2026-05-01", tz="UTC")
-SIM_SCENARIO = "/home/claude/gpu_stack-/experiments/e003-heatwave/sim-scenario-v2.json"
+SIM_SCENARIO = os.environ.get("HEATWAVE_SIM_SCENARIO", "/home/claude/gpu_stack-/experiments/e003-heatwave/sim-scenario-v2.json")
 SIM_TEST_SEEDS = tuple(range(100, 110))
 SIM_VAL_SEEDS = tuple(range(50, 54))     # subset of the validation seeds 50-59, used for MinT covariance only
 SIM_START_UTC = pd.Timestamp("2026-07-06", tz="UTC")  # scenario start_utc of sim-scenario-v2.json
