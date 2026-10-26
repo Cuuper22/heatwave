@@ -6,7 +6,7 @@ own 256-step context, horizon 300 s, 1 s data. The base forecasts are then adjus
   bottom_up         G = [0 | I]
   ols               G = (S'S)^-1 S'
   mint_shrink       MinT, W = Schaefer-Strimmer shrinkage covariance of the base MEDIAN errors at horizon steps 1-10
-                    on the TRAINING windows (public: training sessions; simulated: validation seeds 50-53), as the
+                    on TRAINING windows (public: training sessions; simulated: validation seeds 50-53 in four calibration windows at times disjoint from the test windows), as the
                     MinT paper uses one-step residuals for every horizon
   mint_shrink_allh  the same with errors pooled over all 300 steps (sensitivity)
 
@@ -203,7 +203,7 @@ def main() -> None:
             "context_steps": D.CONTEXT["seconds"], "horizon_steps": D.HORIZON["seconds"], "step_s": 1.0,
             "buckets": [list(b) for b in BUCKETS["seconds"]],
             "variants": ["base", "bottom_up", "ols", "mint_shrink", "mint_shrink_allh"],
-            "mint_covariance": "Schaefer-Strimmer shrinkage of base-median errors on training windows (steps 1-10, or all steps for mint_shrink_allh)",
+            "mint_covariance": "Schaefer-Strimmer shrinkage of base-median errors on training windows (steps 1-10, or all steps for mint_shrink_allh); simulated trees: validation seeds, calibration windows disjoint in time from the test windows",
             "quantile_adjustment": "each of the 21 quantile levels adjusted separately with the same G (approximation); median = level 0.5",
             "coherence_error": "sum |y_A - sum of bottom series below A| / sum |y_A| per aggregate level, pooled over windows, steps, nodes; quantile entries per level",
             "metrics": "as multiscale.json; level-wise WQL = 2*mean pinball/mean|y| over the nodes of the level; MASE with in-context naive (lag 1) scale",

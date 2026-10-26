@@ -54,8 +54,15 @@ SIM_SCENARIO = os.environ.get("HEATWAVE_SIM_SCENARIO", "/home/claude/gpu_stack-/
 SIM_TEST_SEEDS = tuple(range(100, 110))
 SIM_VAL_SEEDS = tuple(range(50, 54))     # subset of the validation seeds 50-59, used for MinT covariance only
 SIM_START_UTC = pd.Timestamp("2026-07-06", tz="UTC")  # scenario start_utc of sim-scenario-v2.json
-# Hierarchy windows of per-GPU power (start second, end second). Fixed a priori (30 h, 70 h, 110 h, 150 h into the week).
-SIM_GPU_WINDOWS_S = ((108000, 109800), (252000, 253800), (396000, 397800), (540000, 541800))
+# Windows of per-GPU power (start second, end second), fixed a priori. The first four (30, 70, 110, 150 h into the week) are the
+# evaluation windows of the TEST seeds; the last four (50, 90, 130, 160 h) are calibration windows: the MinT covariance is
+# estimated from the validation seeds in these windows only, so it never sees the times or the seeds of the test windows.
+# Note: the scenario's job schedule is generated with a fixed seed (jobs.generate.seed = 7), so every simulator seed has
+# the same schedule and differs in noise and event realisation only.
+SIM_GPU_WINDOWS_S = ((108000, 109800), (252000, 253800), (396000, 397800), (540000, 541800),
+                     (180000, 181800), (324000, 325800), (468000, 469800), (576000, 577800))
+SIM_EVAL_WINDOWS = (0, 1, 2, 3)
+SIM_CALIB_WINDOWS = (4, 5, 6, 7)
 
 
 # --------------------------------------------------------------------------- containers
@@ -506,7 +513,7 @@ def hier_public_node(split: str = "test", stride: int = 60, context: Optional[in
 
 def hier_sim(split: str = "test", seeds: Optional[Sequence[int]] = None, stride: int = 150, cache_dir: Path = CACHE_DIR,
              context: Optional[int] = None, horizon: Optional[int] = None) -> dict[str, HierWindows]:
-    """GPU -> rack -> site of the SIMULATED cluster, per-GPU power at 1 s in the fixed windows SIM_GPU_WINDOWS_S.
+    """GPU -> rack -> site of the SIMULATED cluster, per-GPU power at 1 s: split 'test' uses the evaluation windows (SIM_EVAL_WINDOWS), any other split the calibration windows.
     Returns one HierWindows per site (site-a: 4 racks, 104 GPUs; site-b: 4 racks, 80 GPUs). Rack = sum of its
     GPUs and site = sum of its racks (GPU power only; host and cooling power are not in this hierarchy)."""
     ctx = context or CONTEXT["seconds"]
@@ -526,7 +533,7 @@ def hier_sim(split: str = "test", seeds: Optional[Sequence[int]] = None, stride:
             if sid not in hiers:
                 mid = {rack_ids[r]: [f"{rack_ids[r]}.g{k}" for k in range(counts[r])] for r in racks}
                 hiers[sid] = build_tree(sid, mid, bottom_level="gpu", root_level="site", mid_level="rack")
-            for wi in range(len(SIM_GPU_WINDOWS_S)):
+            for wi in (SIM_EVAL_WINDOWS if split == "test" else SIM_CALIB_WINDOWS):
                 w = z[f"gpu_power_w_window_{wi}"].astype(np.float64)  # (184, 1800)
                 g = np.vstack([w[edges[r]:edges[r + 1]] for r in racks])
                 rack_rows = np.vstack([w[edges[r]:edges[r + 1]].sum(axis=0) for r in racks])
@@ -541,6 +548,7 @@ def hier_sim(split: str = "test", seeds: Optional[Sequence[int]] = None, stride:
             f"hier_sim_gpu_rack_{sid}", "simulated", hiers[sid], arrays, ids, grp, context=ctx, horizon=hor, stride=stride,
             step_s=1.0, split=split,
             meta={"description": "SIMULATED gpu_stack heatwave simulator v2, per-GPU power windows; rack and site rows are exact sums",
-                  "seeds": list(seeds), "gpu_windows_s": [list(w) for w in SIM_GPU_WINDOWS_S]},
+                  "seeds": list(seeds),
+                  "gpu_windows_s": [list(SIM_GPU_WINDOWS_S[i]) for i in (SIM_EVAL_WINDOWS if split == "test" else SIM_CALIB_WINDOWS)]},
         )
     return out
