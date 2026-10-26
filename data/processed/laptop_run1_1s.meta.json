@@ -1,0 +1,133 @@
+{
+ "name": "laptop_run1_1s",
+ "columns": {
+  "mono_s": {
+   "unit": "s",
+   "description": "host monotonic clock"
+  },
+  "power_w": {
+   "unit": "W",
+   "description": "GPU board power (NVML nvmlDeviceGetPowerUsage)"
+  },
+  "energy_mj": {
+   "unit": "mJ",
+   "description": "cumulative GPU energy counter (NVML)"
+  },
+  "power_energy_w": {
+   "unit": "W",
+   "description": "power from the NVML cumulative energy counter (differenced at counter updates)"
+  },
+  "temp_c": {
+   "unit": "degC",
+   "description": "GPU core temperature (NVML)"
+  },
+  "sm_clock_mhz": {
+   "unit": "MHz",
+   "description": "SM clock"
+  },
+  "util_gpu_pct": {
+   "unit": "%",
+   "description": "GPU utilization"
+  },
+  "util_mem_pct": {
+   "unit": "%",
+   "description": "memory controller utilization"
+  },
+  "enforced_limit_w": {
+   "unit": "W",
+   "description": "enforced power limit"
+  },
+  "clock_event_reasons": {
+   "unit": "bitmask",
+   "description": "NVML clock event reasons"
+  },
+  "segment": {
+   "unit": "code",
+   "description": "index into meta schedule"
+  },
+  "training_on": {
+   "unit": "0/1",
+   "description": "scripted load active (known future)"
+  },
+  "ckpt_scheduled": {
+   "unit": "0/1",
+   "description": "checkpoint write interval (from load log)"
+  }
+ },
+ "source": {
+  "title": "Laptop GPU collection run run1",
+  "url": "local: scripts/laptop_collect.py on the author's laptop",
+  "license": "same as this repo",
+  "retrieved_utc": "2026-10-26T20:16:17.338+00:00",
+  "raw_sha256": {
+   "telemetry.csv": "f4ca6ae95ba89d23582c77393ad20030b7d5c80c76cc86ed1d6ad6a3784f67a6",
+   "events.csv": "efff89053e6dc4b29b1f1da9e60444384d0e0041a9c106c0e5d49c6d188cbb8c",
+   "meta.json": "2ec7e516a9622793fc8b572cb2592975ec9473548707d2a7c98466b18ee86f91"
+  },
+  "device": {
+   "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU",
+   "driver": "596.36",
+   "limits_w": [
+    1.0,
+    105.0
+   ],
+   "default_limit_w": 80.0,
+   "torch": "2.6.0+cu124",
+   "params": 27442176
+  },
+  "schedule": [
+   [
+    "idle-0",
+    180,
+    "idle",
+    0,
+    0
+   ],
+   [
+    "steady-big-ckpt60",
+    600,
+    "train",
+    64,
+    60
+   ],
+   [
+    "idle-1",
+    180,
+    "idle",
+    0,
+    0
+   ],
+   [
+    "steady-mid-ckpt20",
+    480,
+    "train",
+    24,
+    20
+   ],
+   [
+    "idle-2",
+    240,
+    "idle",
+    0,
+    0
+   ],
+   [
+    "square-60on-60off",
+    480,
+    "square",
+    64,
+    0
+   ],
+   [
+    "idle-3",
+    300,
+    "idle",
+    0,
+    0
+   ]
+  ]
+ },
+ "data_kind": "measured",
+ "producer": "scripts/process_laptop_run.py",
+ "freq": "1s"
+}

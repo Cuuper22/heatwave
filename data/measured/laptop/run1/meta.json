@@ -1,0 +1,67 @@
+{
+ "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU",
+ "driver": "596.36",
+ "limits_w": [
+  1.0,
+  105.0
+ ],
+ "default_limit_w": 80.0,
+ "torch": "2.6.0+cu124",
+ "params": 27442176,
+ "schedule": [
+  [
+   "idle-0",
+   180,
+   "idle",
+   0,
+   0
+  ],
+  [
+   "steady-big-ckpt60",
+   600,
+   "train",
+   64,
+   60
+  ],
+  [
+   "idle-1",
+   180,
+   "idle",
+   0,
+   0
+  ],
+  [
+   "steady-mid-ckpt20",
+   480,
+   "train",
+   24,
+   20
+  ],
+  [
+   "idle-2",
+   240,
+   "idle",
+   0,
+   0
+  ],
+  [
+   "square-60on-60off",
+   480,
+   "square",
+   64,
+   0
+  ],
+  [
+   "idle-3",
+   300,
+   "idle",
+   0,
+   0
+  ]
+ ],
+ "scale": 1.0,
+ "started_utc": "2026-10-26T19:35:16.219+00:00",
+ "data_kind": "measured",
+ "ended_utc": "2026-10-26T20:16:17.338+00:00",
+ "steps": 2039
+}

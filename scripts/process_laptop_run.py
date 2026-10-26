@@ -63,14 +63,25 @@ def main(raw: Path, name: str, root: Path = PROCESSED) -> None:
             el = (tel.index[m] - a).total_seconds()
             tel.loc[m, "training_on"] = ((el // 60) % 2 == 0).astype(float)
     tel["ckpt_scheduled"] = 0.0
-    cs, ce = ev[ev.kind == "ckpt_start"].time.values, ev[ev.kind == "ckpt_end"].time.values
+    cs, ce = list(ev[ev.kind == "ckpt_start"].time), list(ev[ev.kind == "ckpt_end"].time)
     for a, b in zip(cs, ce):
         tel.loc[(tel.index >= a) & (tel.index <= b), "ckpt_scheduled"] = 1.0
+
+    # Power from the cumulative energy counter: it updates about every 94 ms,
+    # about 5x faster than the board power reading (~0.5 s), and resolves
+    # the checkpoint dips that the power reading smooths away.
+    e_j = tel["energy_mj"].to_numpy() / 1000.0
+    mono = tel["mono_s"].to_numpy()
+    ch = np.flatnonzero(np.diff(e_j) != 0) + 1
+    pe = np.full(len(tel), np.nan)
+    pe[ch[1:]] = np.diff(e_j[ch]) / np.diff(mono[ch])
+    tel["power_energy_w"] = pd.Series(pe, index=tel.index).bfill(limit=5)
 
     cols = {
         "mono_s": {"unit": "s", "description": "host monotonic clock"},
         "power_w": {"unit": "W", "description": "GPU board power (NVML nvmlDeviceGetPowerUsage)"},
         "energy_mj": {"unit": "mJ", "description": "cumulative GPU energy counter (NVML)"},
+        "power_energy_w": {"unit": "W", "description": "power from the NVML cumulative energy counter (differenced at counter updates)"},
         "temp_c": {"unit": "degC", "description": "GPU core temperature (NVML)"},
         "sm_clock_mhz": {"unit": "MHz", "description": "SM clock"},
         "util_gpu_pct": {"unit": "%", "description": "GPU utilization"},
@@ -94,6 +105,13 @@ def main(raw: Path, name: str, root: Path = PROCESSED) -> None:
             "producer": "scripts/process_laptop_run.py"}
     save_series(tel, f"laptop_{name}_10hz", {**base, "freq": "100ms (irregular, ~10 Hz)"})
     one = tel.resample("1s").mean()
+    # Exact 1 s average power from the energy counter, interpolated at second boundaries.
+    edges = one.index.union([one.index[-1] + pd.Timedelta("1s")])
+    t_ns = tel.index.asi8.astype(float)
+    e_at = np.interp(edges.asi8.astype(float), t_ns, e_j)
+    one["power_energy_w"] = np.diff(e_at)
+    inside = (edges[:-1] >= tel.index[0]) & (edges[1:] <= tel.index[-1])
+    one.loc[~inside, "power_energy_w"] = np.nan
     one["segment"] = tel["segment"].resample("1s").max()
     save_series(one, f"laptop_{name}_1s", {**base, "freq": "1s"})
     evc = {"segment": {"unit": "name", "description": "segment"},
