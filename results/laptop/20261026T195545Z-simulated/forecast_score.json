@@ -1,0 +1,77 @@
+{
+ "provenance": {
+  "script": "heatwave/laptop/score.py",
+  "script_sha256": "28dc8b6e725179130500d0376f4d1a447918241212bebd2241eae7173f8d18f0",
+  "git": {
+   "commit": "8e25968627a13878149e5d41dfefc28b5fc02910",
+   "dirty": "true"
+  },
+  "inputs": {
+   "/home/claude/wt/heatwave-laptop/laptop/logs/20261026T195545Z-simulated/telemetry.csv": "14a97a4455a0e1c7fe5f0a9a95b3cad968202169c8ec5a357dd635955311be32",
+   "/home/claude/wt/heatwave-laptop/laptop/logs/20261026T195545Z-simulated/forecasts.jsonl": "ca008f33fdf0233bac3efd870d3d5442c2de6e649b8786674d2eb582475e2110",
+   "/home/claude/wt/heatwave-laptop/laptop/logs/20261026T195545Z-simulated/meta.json": "3c7a1f6560eeb145d7b0b387fba38bad3c2e4150b4cb3de668f4423e1370fcc0"
+  },
+  "data_kind": "simulated",
+  "created_utc": "2026-10-26T19:56:46+00:00",
+  "notes": "SIMULATED: produced with the fake backend, not a GPU measurement."
+ },
+ "result": {
+  "run": "20261026T195545Z-simulated",
+  "data_kind": "simulated",
+  "n_forecasts_issued": 11,
+  "n_forecasts_scored": 8,
+  "complete_bins": 60,
+  "methods": {
+   "timestral-5M": {
+    "power_w": {
+     "n_forecasts": 8,
+     "pinball_mean": 1.417536490575397,
+     "wql": 0.039840011135253546,
+     "coverage_80": 0.8333333333333334,
+     "coverage_98": 1.0,
+     "mae_median": 3.670731770833333
+    },
+    "temp_c": {
+     "n_forecasts": 8,
+     "pinball_mean": 0.2764011979166666,
+     "wql": 0.007892634155932126,
+     "coverage_80": 1.0,
+     "coverage_98": 1.0,
+     "mae_median": 0.8010198958333327
+    }
+   },
+   "seasonal-naive": {
+    "power_w": {
+     "n_forecasts": 8,
+     "pinball_mean": 0.7399697098214287,
+     "wql": 0.0207969259874711,
+     "coverage_80": 0.875,
+     "coverage_98": 0.9791666666666666,
+     "mae_median": 1.4329032291666675
+    },
+    "temp_c": {
+     "n_forecasts": 8,
+     "pinball_mean": 1.478966470734127,
+     "wql": 0.042231876599586535,
+     "coverage_80": 0.0,
+     "coverage_98": 0.125,
+     "mae_median": 3.483833020833334
+    }
+   }
+  },
+  "notes": "Forecasts whose full horizon is inside the log are scored; actuals are 1 s bin means.",
+  "paired_lower_pinball": {
+   "power_w": {
+    "method": "timestral-5M",
+    "n_lower_pinball": 0,
+    "n_compared": 8
+   },
+   "temp_c": {
+    "method": "timestral-5M",
+    "n_lower_pinball": 8,
+    "n_compared": 8
+   }
+  },
+  "horizon_s": 12
+ }
+}

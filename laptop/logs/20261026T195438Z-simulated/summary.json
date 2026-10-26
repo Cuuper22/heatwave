@@ -1,0 +1,49 @@
+{
+ "provenance": {
+  "script": "heatwave/laptop/run.py",
+  "script_sha256": "5a73ed6f9a57ff5ed63183b473709ee24e74709cb86cc1b251b724076d8265fb",
+  "git": {
+   "commit": "8e25968627a13878149e5d41dfefc28b5fc02910",
+   "dirty": "true"
+  },
+  "inputs": {
+   "/home/claude/wt/heatwave-laptop/laptop/logs/20261026T195438Z-simulated/telemetry.csv": "2ff02aca1b98ad66aae7559f1df5f21ae607b7daddeb4d19f8935580bb44e0a9"
+  },
+  "data_kind": "simulated",
+  "created_utc": "2026-10-26T19:55:40+00:00",
+  "notes": "SIMULATED run (fake backend)"
+ },
+ "result": {
+  "run": "20261026T195438Z-simulated",
+  "data_kind": "simulated",
+  "interrupted": false,
+  "thread_errors": {},
+  "energy_source": "backend_energy_counter",
+  "controller": {
+   "mode": "clock",
+   "dry_run": false,
+   "mode_reason": "-pl unsupported; falling back to the SM clock limit (-lgc)",
+   "unit": "MHz",
+   "current": 1700.0,
+   "original": 1700.0,
+   "lo": 850.0,
+   "hi": 1700.0,
+   "last_command": "nvidia-smi -i 0 -lgc 210,1411",
+   "n_changes": 6,
+   "released": true,
+   "release_failed": false,
+   "quantile": 0.9,
+   "temp_limit_c": 75.0,
+   "power_budget_w": null
+  },
+  "samples": 596,
+  "duration_s": 60.31,
+  "power_w_mean": 71.3715600671141,
+  "power_w_max": 84.1337,
+  "temp_c_mean": 67.4855494966443,
+  "temp_c_max": 75.2109,
+  "sm_clock_mhz_mean": 1390.975336409396,
+  "energy_j": 4327.4853,
+  "forecasts_issued": 13
+ }
+}

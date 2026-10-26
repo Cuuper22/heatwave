@@ -1,0 +1,49 @@
+{
+ "provenance": {
+  "script": "heatwave/laptop/run.py",
+  "script_sha256": "5a73ed6f9a57ff5ed63183b473709ee24e74709cb86cc1b251b724076d8265fb",
+  "git": {
+   "commit": "8e25968627a13878149e5d41dfefc28b5fc02910",
+   "dirty": "true"
+  },
+  "inputs": {
+   "/home/claude/wt/heatwave-laptop/laptop/logs/20261026T195545Z-simulated/telemetry.csv": "14a97a4455a0e1c7fe5f0a9a95b3cad968202169c8ec5a357dd635955311be32"
+  },
+  "data_kind": "simulated",
+  "created_utc": "2026-10-26T19:56:46+00:00",
+  "notes": "SIMULATED run (fake backend)"
+ },
+ "result": {
+  "run": "20261026T195545Z-simulated",
+  "data_kind": "simulated",
+  "interrupted": false,
+  "thread_errors": {},
+  "energy_source": "backend_energy_counter",
+  "controller": {
+   "mode": "power",
+   "dry_run": true,
+   "mode_reason": "dry run requested (--dry-run); would use a power limit",
+   "unit": "W",
+   "current": 69.0,
+   "original": 80.0,
+   "lo": 40.0,
+   "hi": 105.0,
+   "last_command": "nvidia-smi -i 0 -pl 69",
+   "n_changes": 5,
+   "released": true,
+   "release_failed": false,
+   "quantile": 0.9,
+   "temp_limit_c": 75.0,
+   "power_budget_w": null
+  },
+  "samples": 589,
+  "duration_s": 60.1,
+  "power_w_mean": 72.40103480475383,
+  "power_w_max": 84.2742,
+  "temp_c_mean": 67.61732512733447,
+  "temp_c_max": 75.626,
+  "sm_clock_mhz_mean": 1408.4434570458402,
+  "energy_j": 4375.4247,
+  "forecasts_issued": 11
+ }
+}
