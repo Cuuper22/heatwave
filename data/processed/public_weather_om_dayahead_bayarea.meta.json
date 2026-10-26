@@ -1,0 +1,52 @@
+{
+ "name": "public_weather_om_dayahead_bayarea",
+ "freq": "1h",
+ "columns": {
+  "temperature_2m_c": {
+   "unit": "degC",
+   "description": "air temperature at 2 m"
+  },
+  "relative_humidity_2m_pct": {
+   "unit": "%",
+   "description": "relative humidity at 2 m"
+  },
+  "dew_point_2m_c": {
+   "unit": "degC",
+   "description": "dew point at 2 m"
+  },
+  "wind_speed_10m_mps": {
+   "unit": "m/s",
+   "description": "wind speed at 10 m (requested with wind_speed_unit=ms)"
+  },
+  "shortwave_radiation_w_m2": {
+   "unit": "W/m2",
+   "description": "shortwave solar radiation, mean of the preceding hour"
+  },
+  "wet_bulb_2m_c": {
+   "unit": "degC",
+   "description": "wet-bulb temperature computed here with Stull (2011, doi:10.1175/JAMC-D-11-0143.1) from temperature_2m_c and relative_humidity_2m_pct"
+  }
+ },
+ "source": {
+  "title": "Open-Meteo previous_day1",
+  "url": "https://previous-runs-api.open-meteo.com/v1/forecast",
+  "license": "CC BY 4.0, non-commercial free tier (https://open-meteo.com/en/license)",
+  "retrieved_utc": "2026-10-26T22:21:15+00:00",
+  "raw_sha256": {
+   "previous_day1_bayarea_20240101.json": "bdce934e1dfe3444b8ba5de9c658b6cafbdf4f006b8da882b2e728c90b29c527",
+   "previous_day1_bayarea_20240702.json": "1ff1c2fcb26ed34e7fb2e49ae38017f4302d6de881255be8ea033d3ea3c5b7ca",
+   "previous_day1_bayarea_20250101.json": "57aef88ef3f240ff9de4a969d89be1bb22bc852817284d949e42cfa189721a79",
+   "previous_day1_bayarea_20250703.json": "a02b34aab64aea1d9a36bb00c27df2970111c1b4290467f109139cc2e061594e",
+   "previous_day1_bayarea_20260102.json": "008334b39c9231151197865cde3137bfa65354542ce62f80d1f2e7593de9ace4",
+   "previous_day1_bayarea_20260704.json": "f73fd01e8fdd21ec8ed72e7922ac88e5e0d16852e84fa2d1abb3d36a8067a018"
+  }
+ },
+ "location": {
+  "name": "Santa Clara, California (CAISO NP15 region, Bay Area data-centre cluster)",
+  "latitude": 37.35,
+  "longitude": -121.96
+ },
+ "data_kind": "public",
+ "producer": "scripts/fetch_open_meteo.py",
+ "notes": "previous_day1 variables: the forecast issued one day before the valid time (day-ahead vintage) from the previous-runs API."
+}

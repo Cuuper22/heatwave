@@ -107,7 +107,7 @@ def load_nlr_run(run: str, freq: str | None = None) -> pd.DataFrame:
 
 
 def load_job_trace(name: str) -> pd.DataFrame:
-    """Alibaba job traces: ``alibaba2023_pods`` (with start/end), ``alibaba2023_nodes``, ``alibaba2026_gpu_pods_sample`` (sizes, durations)."""
+    """Job traces: ``alibaba2023_pods`` (with start/end), ``alibaba2023_nodes``, ``alibaba2026_gpu_pods_sample`` (sizes, durations), ``philly_jobs`` (2017), ``helios_venus_jobs`` (2020, GPU jobs)."""
     return pd.read_parquet(TRACE_DIR / f"{name}.parquet")
 
 

@@ -1,0 +1,38 @@
+{
+ "retrieved_utc": "2026-10-26T22:09:27+00:00",
+ "fetched_from": "author's laptop (these hosts were blocked from the project VM)",
+ "helios": {
+  "url": "https://raw.githubusercontent.com/S-Lab-System-Group/HeliosData/master/data.zip",
+  "sha256": "3d22a5f6c0ae669e2fcbfe4200fa9c48664507bc397c677bad8f085222c032ac",
+  "bytes": 36437672,
+  "clusters": {
+   "Saturn": {
+    "all_jobs": 1753078,
+    "gpu_jobs": 698896
+   },
+   "Uranus": {
+    "all_jobs": 490309,
+    "gpu_jobs": 329117
+   },
+   "Venus": {
+    "all_jobs": 246708,
+    "gpu_jobs": 125303
+   },
+   "Earth": {
+    "all_jobs": 872886,
+    "gpu_jobs": 427148
+   }
+  },
+  "licence_first_line": "\ufeffAttribution 4.0 International"
+ },
+ "philly": {
+  "url": "https://media.githubusercontent.com/media/msr-fiddle/philly-traces/master/trace-data.tar.gz",
+  "sha256": "2037ccf63a725a02be718b0e1aeee6142c90b7f62d0d849295120e9f6ba13d2c",
+  "bytes": 1055988361,
+  "licence_first_line": "\ufeffAttribution 4.0 International",
+  "rows": 117325,
+  "member": "trace-data/cluster_job_log",
+  "timezone_note": "timestamps kept naive as published (cluster local time)"
+ },
+ "compacted_on": "project VM (--compact-only)"
+}

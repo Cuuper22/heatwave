@@ -1,0 +1,326 @@
+{
+ "archive_bayarea_20240101.json": {
+  "bytes": 180567,
+  "retrieved_utc": "2026-10-26T22:08:16+00:00",
+  "sha256": "d9a0b7d1c9c5bd382c207fc3f8c9e2d1fd2e4e97a96b888e8c2710811e864c06",
+  "url": "https://archive-api.open-meteo.com/v1/archive?latitude=37.35&longitude=-121.96&start_date=2024-01-01&end_date=2024-07-01&hourly=temperature_2m%2Crelative_humidity_2m%2Cdew_point_2m%2Cwind_speed_10m%2Cshortwave_radiation&timezone=UTC&wind_speed_unit=ms"
+ },
+ "archive_bayarea_20240702.json": {
+  "bytes": 182315,
+  "retrieved_utc": "2026-10-26T22:08:32+00:00",
+  "sha256": "93648512e794d13ae205cc492db419e60e246430190067af5099e1620aa64b39",
+  "url": "https://archive-api.open-meteo.com/v1/archive?latitude=37.35&longitude=-121.96&start_date=2024-07-02&end_date=2024-12-31&hourly=temperature_2m%2Crelative_humidity_2m%2Cdew_point_2m%2Cwind_speed_10m%2Cshortwave_radiation&timezone=UTC&wind_speed_unit=ms"
+ },
+ "archive_bayarea_20250101.json": {
+  "bytes": 180440,
+  "retrieved_utc": "2026-10-26T22:08:48+00:00",
+  "sha256": "abcbed0c88a8019def250957b44265f864cccf7655a5c24ce4b926aad13ee5c9",
+  "url": "https://archive-api.open-meteo.com/v1/archive?latitude=37.35&longitude=-121.96&start_date=2025-01-01&end_date=2025-07-02&hourly=temperature_2m%2Crelative_humidity_2m%2Cdew_point_2m%2Cwind_speed_10m%2Cshortwave_radiation&timezone=UTC&wind_speed_unit=ms"
+ },
+ "archive_bayarea_20250703.json": {
+  "bytes": 182744,
+  "retrieved_utc": "2026-10-26T22:09:04+00:00",
+  "sha256": "1a3feb8525fb102532b8aa93c9b351f89d2701f88056077eec522ddc5bd26663",
+  "url": "https://archive-api.open-meteo.com/v1/archive?latitude=37.35&longitude=-121.96&start_date=2025-07-03&end_date=2026-01-01&hourly=temperature_2m%2Crelative_humidity_2m%2Cdew_point_2m%2Cwind_speed_10m%2Cshortwave_radiation&timezone=UTC&wind_speed_unit=ms"
+ },
+ "archive_bayarea_20260102.json": {
+  "bytes": 181390,
+  "retrieved_utc": "2026-10-26T22:09:20+00:00",
+  "sha256": "60d4ecf2fe98ff65ce98786b803b95bd2d5c39a5c825c978bfd213d1388720c6",
+  "url": "https://archive-api.open-meteo.com/v1/archive?latitude=37.35&longitude=-121.96&start_date=2026-01-02&end_date=2026-07-03&hourly=temperature_2m%2Crelative_humidity_2m%2Cdew_point_2m%2Cwind_speed_10m%2Cshortwave_radiation&timezone=UTC&wind_speed_unit=ms"
+ },
+ "archive_bayarea_20260704.json": {
+  "bytes": 114761,
+  "retrieved_utc": "2026-10-26T22:09:36+00:00",
+  "sha256": "46263f67df999d6fd4adb96c29820b10ad1c1c8ac62b0108af2bc32adf0073e4",
+  "url": "https://archive-api.open-meteo.com/v1/archive?latitude=37.35&longitude=-121.96&start_date=2026-07-04&end_date=2026-10-25&hourly=temperature_2m%2Crelative_humidity_2m%2Cdew_point_2m%2Cwind_speed_10m%2Cshortwave_radiation&timezone=UTC&wind_speed_unit=ms"
+ },
+ "archive_frankfurt_20240101.json": {
+  "bytes": 179933,
+  "retrieved_utc": "2026-10-26T22:11:46+00:00",
+  "sha256": "2525574131badcb2a11e1ba6b5011d7d4876e3acd9dfc5eb0d1baadcc70213ff",
+  "url": "https://archive-api.open-meteo.com/v1/archive?latitude=50.11&longitude=8.68&start_date=2024-01-01&end_date=2024-07-01&hourly=temperature_2m%2Crelative_humidity_2m%2Cdew_point_2m%2Cwind_speed_10m%2Cshortwave_radiation&timezone=UTC&wind_speed_unit=ms"
+ },
+ "archive_frankfurt_20240702.json": {
+  "bytes": 180797,
+  "retrieved_utc": "2026-10-26T22:12:05+00:00",
+  "sha256": "487418d318ea620fd3c786373a406511abb9d878ff154d064ddbdf049e914fb4",
+  "url": "https://archive-api.open-meteo.com/v1/archive?latitude=50.11&longitude=8.68&start_date=2024-07-02&end_date=2024-12-31&hourly=temperature_2m%2Crelative_humidity_2m%2Cdew_point_2m%2Cwind_speed_10m%2Cshortwave_radiation&timezone=UTC&wind_speed_unit=ms"
+ },
+ "archive_frankfurt_20250101.json": {
+  "bytes": 180304,
+  "retrieved_utc": "2026-10-26T22:12:23+00:00",
+  "sha256": "d43aafc2bdb4a93f63b1354781c6cbcf7c51d0fcb84757c87d2dd7ea8eb2680c",
+  "url": "https://archive-api.open-meteo.com/v1/archive?latitude=50.11&longitude=8.68&start_date=2025-01-01&end_date=2025-07-02&hourly=temperature_2m%2Crelative_humidity_2m%2Cdew_point_2m%2Cwind_speed_10m%2Cshortwave_radiation&timezone=UTC&wind_speed_unit=ms"
+ },
+ "archive_frankfurt_20250703.json": {
+  "bytes": 180424,
+  "retrieved_utc": "2026-10-26T22:12:41+00:00",
+  "sha256": "a40a147964a04fc989cb1c0820722c165dec1ff7e6eb08cc81f999771f4e1773",
+  "url": "https://archive-api.open-meteo.com/v1/archive?latitude=50.11&longitude=8.68&start_date=2025-07-03&end_date=2026-01-01&hourly=temperature_2m%2Crelative_humidity_2m%2Cdew_point_2m%2Cwind_speed_10m%2Cshortwave_radiation&timezone=UTC&wind_speed_unit=ms"
+ },
+ "archive_frankfurt_20260102.json": {
+  "bytes": 180093,
+  "retrieved_utc": "2026-10-26T22:13:02+00:00",
+  "sha256": "e54d37bb955871f509a9cf2c69da0464f02fbb57ba742439fdc07ac46c1bd3f7",
+  "url": "https://archive-api.open-meteo.com/v1/archive?latitude=50.11&longitude=8.68&start_date=2026-01-02&end_date=2026-07-03&hourly=temperature_2m%2Crelative_humidity_2m%2Cdew_point_2m%2Cwind_speed_10m%2Cshortwave_radiation&timezone=UTC&wind_speed_unit=ms"
+ },
+ "archive_frankfurt_20260704.json": {
+  "bytes": 113842,
+  "retrieved_utc": "2026-10-26T22:13:22+00:00",
+  "sha256": "5ddfbfb6bf5211824318d32b3cd1800aff668ccf5aeb3854972d5a4e83c4b97d",
+  "url": "https://archive-api.open-meteo.com/v1/archive?latitude=50.11&longitude=8.68&start_date=2026-07-04&end_date=2026-10-25&hourly=temperature_2m%2Crelative_humidity_2m%2Cdew_point_2m%2Cwind_speed_10m%2Cshortwave_radiation&timezone=UTC&wind_speed_unit=ms"
+ },
+ "archive_london_20240101.json": {
+  "bytes": 179349,
+  "retrieved_utc": "2026-10-26T22:09:52+00:00",
+  "sha256": "0dacb224b8f95d3f974aaf68123ffb3edfc0c4bfab9ebfdc59bfd3e94e3853d7",
+  "url": "https://archive-api.open-meteo.com/v1/archive?latitude=51.51&longitude=-0.13&start_date=2024-01-01&end_date=2024-07-01&hourly=temperature_2m%2Crelative_humidity_2m%2Cdew_point_2m%2Cwind_speed_10m%2Cshortwave_radiation&timezone=UTC&wind_speed_unit=ms"
+ },
+ "archive_london_20240702.json": {
+  "bytes": 180596,
+  "retrieved_utc": "2026-10-26T22:10:13+00:00",
+  "sha256": "faa2def940e9c2b0e5699a4209641a9494f810cd8ac13f475fbaec68d07dce35",
+  "url": "https://archive-api.open-meteo.com/v1/archive?latitude=51.51&longitude=-0.13&start_date=2024-07-02&end_date=2024-12-31&hourly=temperature_2m%2Crelative_humidity_2m%2Cdew_point_2m%2Cwind_speed_10m%2Cshortwave_radiation&timezone=UTC&wind_speed_unit=ms"
+ },
+ "archive_london_20250101.json": {
+  "bytes": 179404,
+  "retrieved_utc": "2026-10-26T22:10:34+00:00",
+  "sha256": "05b7d8872040fb63ab6b7added068fbee65ca55fc9002386000d554ac0d7e758",
+  "url": "https://archive-api.open-meteo.com/v1/archive?latitude=51.51&longitude=-0.13&start_date=2025-01-01&end_date=2025-07-02&hourly=temperature_2m%2Crelative_humidity_2m%2Cdew_point_2m%2Cwind_speed_10m%2Cshortwave_radiation&timezone=UTC&wind_speed_unit=ms"
+ },
+ "archive_london_20250703.json": {
+  "bytes": 180824,
+  "retrieved_utc": "2026-10-26T22:10:52+00:00",
+  "sha256": "8d36670a28530a4c709fae7de72e3378b5c3bdfe1e0013c28495393deb19c284",
+  "url": "https://archive-api.open-meteo.com/v1/archive?latitude=51.51&longitude=-0.13&start_date=2025-07-03&end_date=2026-01-01&hourly=temperature_2m%2Crelative_humidity_2m%2Cdew_point_2m%2Cwind_speed_10m%2Cshortwave_radiation&timezone=UTC&wind_speed_unit=ms"
+ },
+ "archive_london_20260102.json": {
+  "bytes": 179458,
+  "retrieved_utc": "2026-10-26T22:11:10+00:00",
+  "sha256": "c67ac1c79617ba24b63a1e43c908e2f57737944e9be58652bc372b800013e8bc",
+  "url": "https://archive-api.open-meteo.com/v1/archive?latitude=51.51&longitude=-0.13&start_date=2026-01-02&end_date=2026-07-03&hourly=temperature_2m%2Crelative_humidity_2m%2Cdew_point_2m%2Cwind_speed_10m%2Cshortwave_radiation&timezone=UTC&wind_speed_unit=ms"
+ },
+ "archive_london_20260704.json": {
+  "bytes": 114319,
+  "retrieved_utc": "2026-10-26T22:11:28+00:00",
+  "sha256": "d64fef9534f821c274d928389218dd47cca7764153769f8278577bfaf7833208",
+  "url": "https://archive-api.open-meteo.com/v1/archive?latitude=51.51&longitude=-0.13&start_date=2026-07-04&end_date=2026-10-25&hourly=temperature_2m%2Crelative_humidity_2m%2Cdew_point_2m%2Cwind_speed_10m%2Cshortwave_radiation&timezone=UTC&wind_speed_unit=ms"
+ },
+ "historical_forecast_bayarea_20240101.json": {
+  "bytes": 181012,
+  "retrieved_utc": "2026-10-26T22:13:42+00:00",
+  "sha256": "eb1c7b58cd8e42c30f49dd415441f792fef7b9f272fd4dd022fd2f4be137832d",
+  "url": "https://historical-forecast-api.open-meteo.com/v1/forecast?latitude=37.35&longitude=-121.96&start_date=2024-01-01&end_date=2024-07-01&hourly=temperature_2m%2Crelative_humidity_2m%2Cdew_point_2m%2Cwind_speed_10m%2Cshortwave_radiation&timezone=UTC&wind_speed_unit=ms"
+ },
+ "historical_forecast_bayarea_20240702.json": {
+  "bytes": 182421,
+  "retrieved_utc": "2026-10-26T22:14:01+00:00",
+  "sha256": "f91620b63230b801174ccdeb88ffcfe7b930743b33557842c3d686443ca05361",
+  "url": "https://historical-forecast-api.open-meteo.com/v1/forecast?latitude=37.35&longitude=-121.96&start_date=2024-07-02&end_date=2024-12-31&hourly=temperature_2m%2Crelative_humidity_2m%2Cdew_point_2m%2Cwind_speed_10m%2Cshortwave_radiation&timezone=UTC&wind_speed_unit=ms"
+ },
+ "historical_forecast_bayarea_20250101.json": {
+  "bytes": 180948,
+  "retrieved_utc": "2026-10-26T22:14:21+00:00",
+  "sha256": "b3b68b2fc25c1591cd7fc2b4a4dbd34a9a197ce28965f7986a46336891989ad1",
+  "url": "https://historical-forecast-api.open-meteo.com/v1/forecast?latitude=37.35&longitude=-121.96&start_date=2025-01-01&end_date=2025-07-02&hourly=temperature_2m%2Crelative_humidity_2m%2Cdew_point_2m%2Cwind_speed_10m%2Cshortwave_radiation&timezone=UTC&wind_speed_unit=ms"
+ },
+ "historical_forecast_bayarea_20250703.json": {
+  "bytes": 182684,
+  "retrieved_utc": "2026-10-26T22:14:39+00:00",
+  "sha256": "87f282c8f2a38fcb02cfdf5818e9ce62976834e797d4d5a644d988213ee3f603",
+  "url": "https://historical-forecast-api.open-meteo.com/v1/forecast?latitude=37.35&longitude=-121.96&start_date=2025-07-03&end_date=2026-01-01&hourly=temperature_2m%2Crelative_humidity_2m%2Cdew_point_2m%2Cwind_speed_10m%2Cshortwave_radiation&timezone=UTC&wind_speed_unit=ms"
+ },
+ "historical_forecast_bayarea_20260102.json": {
+  "bytes": 181736,
+  "retrieved_utc": "2026-10-26T22:14:56+00:00",
+  "sha256": "ae6b0ae73371f36a5a784fbbde50cd81ba28bd5650602b3c1da1d668cf2d2815",
+  "url": "https://historical-forecast-api.open-meteo.com/v1/forecast?latitude=37.35&longitude=-121.96&start_date=2026-01-02&end_date=2026-07-03&hourly=temperature_2m%2Crelative_humidity_2m%2Cdew_point_2m%2Cwind_speed_10m%2Cshortwave_radiation&timezone=UTC&wind_speed_unit=ms"
+ },
+ "historical_forecast_bayarea_20260704.json": {
+  "bytes": 114940,
+  "retrieved_utc": "2026-10-26T22:15:14+00:00",
+  "sha256": "8020f3ec433692aaee1ce74887cc824bea031127aa3e304d7da638307a230b6b",
+  "url": "https://historical-forecast-api.open-meteo.com/v1/forecast?latitude=37.35&longitude=-121.96&start_date=2026-07-04&end_date=2026-10-25&hourly=temperature_2m%2Crelative_humidity_2m%2Cdew_point_2m%2Cwind_speed_10m%2Cshortwave_radiation&timezone=UTC&wind_speed_unit=ms"
+ },
+ "historical_forecast_frankfurt_20240101.json": {
+  "bytes": 179979,
+  "retrieved_utc": "2026-10-26T22:17:31+00:00",
+  "sha256": "d7114b71bb060b9f3c4b6558a5b9e6cb02e02a93aff4e5daccbf064835e9432c",
+  "url": "https://historical-forecast-api.open-meteo.com/v1/forecast?latitude=50.11&longitude=8.68&start_date=2024-01-01&end_date=2024-07-01&hourly=temperature_2m%2Crelative_humidity_2m%2Cdew_point_2m%2Cwind_speed_10m%2Cshortwave_radiation&timezone=UTC&wind_speed_unit=ms"
+ },
+ "historical_forecast_frankfurt_20240702.json": {
+  "bytes": 180829,
+  "retrieved_utc": "2026-10-26T22:17:50+00:00",
+  "sha256": "1e25ed7aa2819ee3cad99fbe64c7c7be08f5dbdfa8c3bc031426e3dcd68ef054",
+  "url": "https://historical-forecast-api.open-meteo.com/v1/forecast?latitude=50.11&longitude=8.68&start_date=2024-07-02&end_date=2024-12-31&hourly=temperature_2m%2Crelative_humidity_2m%2Cdew_point_2m%2Cwind_speed_10m%2Cshortwave_radiation&timezone=UTC&wind_speed_unit=ms"
+ },
+ "historical_forecast_frankfurt_20250101.json": {
+  "bytes": 180270,
+  "retrieved_utc": "2026-10-26T22:18:08+00:00",
+  "sha256": "f3df770028b0688077a20e7796d0d99566eb35fef3554fffbd646a84ff7a5eee",
+  "url": "https://historical-forecast-api.open-meteo.com/v1/forecast?latitude=50.11&longitude=8.68&start_date=2025-01-01&end_date=2025-07-02&hourly=temperature_2m%2Crelative_humidity_2m%2Cdew_point_2m%2Cwind_speed_10m%2Cshortwave_radiation&timezone=UTC&wind_speed_unit=ms"
+ },
+ "historical_forecast_frankfurt_20250703.json": {
+  "bytes": 180470,
+  "retrieved_utc": "2026-10-26T22:18:28+00:00",
+  "sha256": "01e86357faca23f73da78f500c232cee90fec9b95a75e56eb36ed3cfbab9de34",
+  "url": "https://historical-forecast-api.open-meteo.com/v1/forecast?latitude=50.11&longitude=8.68&start_date=2025-07-03&end_date=2026-01-01&hourly=temperature_2m%2Crelative_humidity_2m%2Cdew_point_2m%2Cwind_speed_10m%2Cshortwave_radiation&timezone=UTC&wind_speed_unit=ms"
+ },
+ "historical_forecast_frankfurt_20260102.json": {
+  "bytes": 179944,
+  "retrieved_utc": "2026-10-26T22:18:51+00:00",
+  "sha256": "7f07fb9e65affdea3f7b432965ddbb18f4a9887453268540a0127f51675c8819",
+  "url": "https://historical-forecast-api.open-meteo.com/v1/forecast?latitude=50.11&longitude=8.68&start_date=2026-01-02&end_date=2026-07-03&hourly=temperature_2m%2Crelative_humidity_2m%2Cdew_point_2m%2Cwind_speed_10m%2Cshortwave_radiation&timezone=UTC&wind_speed_unit=ms"
+ },
+ "historical_forecast_frankfurt_20260704.json": {
+  "bytes": 113840,
+  "retrieved_utc": "2026-10-26T22:19:12+00:00",
+  "sha256": "62af553f4081b68b5343fc66c62e4f42dec79dcc520af0fa566f65c0f832e9ed",
+  "url": "https://historical-forecast-api.open-meteo.com/v1/forecast?latitude=50.11&longitude=8.68&start_date=2026-07-04&end_date=2026-10-25&hourly=temperature_2m%2Crelative_humidity_2m%2Cdew_point_2m%2Cwind_speed_10m%2Cshortwave_radiation&timezone=UTC&wind_speed_unit=ms"
+ },
+ "historical_forecast_london_20240101.json": {
+  "bytes": 179089,
+  "retrieved_utc": "2026-10-26T22:15:36+00:00",
+  "sha256": "67306310047d4055e9c25a162a174797d91e3471612132e7eba56241ab876452",
+  "url": "https://historical-forecast-api.open-meteo.com/v1/forecast?latitude=51.51&longitude=-0.13&start_date=2024-01-01&end_date=2024-07-01&hourly=temperature_2m%2Crelative_humidity_2m%2Cdew_point_2m%2Cwind_speed_10m%2Cshortwave_radiation&timezone=UTC&wind_speed_unit=ms"
+ },
+ "historical_forecast_london_20240702.json": {
+  "bytes": 180203,
+  "retrieved_utc": "2026-10-26T22:15:56+00:00",
+  "sha256": "22586bea02c5279d12563e3e8ad02eef261bc6da292bad1fa6080448f0d0fd5a",
+  "url": "https://historical-forecast-api.open-meteo.com/v1/forecast?latitude=51.51&longitude=-0.13&start_date=2024-07-02&end_date=2024-12-31&hourly=temperature_2m%2Crelative_humidity_2m%2Cdew_point_2m%2Cwind_speed_10m%2Cshortwave_radiation&timezone=UTC&wind_speed_unit=ms"
+ },
+ "historical_forecast_london_20250101.json": {
+  "bytes": 179260,
+  "retrieved_utc": "2026-10-26T22:16:15+00:00",
+  "sha256": "bb125a930b6bd9c9ca6253b02e2065eefc34ef19b0e9f15b5f3f105547952e2c",
+  "url": "https://historical-forecast-api.open-meteo.com/v1/forecast?latitude=51.51&longitude=-0.13&start_date=2025-01-01&end_date=2025-07-02&hourly=temperature_2m%2Crelative_humidity_2m%2Cdew_point_2m%2Cwind_speed_10m%2Cshortwave_radiation&timezone=UTC&wind_speed_unit=ms"
+ },
+ "historical_forecast_london_20250703.json": {
+  "bytes": 180419,
+  "retrieved_utc": "2026-10-26T22:16:33+00:00",
+  "sha256": "66b76354b99fbf5015c276071c975cea4a15fc07d999c6f428603d14cdd7d6ca",
+  "url": "https://historical-forecast-api.open-meteo.com/v1/forecast?latitude=51.51&longitude=-0.13&start_date=2025-07-03&end_date=2026-01-01&hourly=temperature_2m%2Crelative_humidity_2m%2Cdew_point_2m%2Cwind_speed_10m%2Cshortwave_radiation&timezone=UTC&wind_speed_unit=ms"
+ },
+ "historical_forecast_london_20260102.json": {
+  "bytes": 179380,
+  "retrieved_utc": "2026-10-26T22:16:54+00:00",
+  "sha256": "2ff0f5125c39a7299d75d9ef880d5069834dcf0ff7ad7f7d47faf7bb0a4fd0ae",
+  "url": "https://historical-forecast-api.open-meteo.com/v1/forecast?latitude=51.51&longitude=-0.13&start_date=2026-01-02&end_date=2026-07-03&hourly=temperature_2m%2Crelative_humidity_2m%2Cdew_point_2m%2Cwind_speed_10m%2Cshortwave_radiation&timezone=UTC&wind_speed_unit=ms"
+ },
+ "historical_forecast_london_20260704.json": {
+  "bytes": 114168,
+  "retrieved_utc": "2026-10-26T22:17:12+00:00",
+  "sha256": "bd518cac316ff0cdc22a5ca05ebb52451d74c89ac076c111904d76c3b2fafcd4",
+  "url": "https://historical-forecast-api.open-meteo.com/v1/forecast?latitude=51.51&longitude=-0.13&start_date=2026-07-04&end_date=2026-10-25&hourly=temperature_2m%2Crelative_humidity_2m%2Cdew_point_2m%2Cwind_speed_10m%2Cshortwave_radiation&timezone=UTC&wind_speed_unit=ms"
+ },
+ "previous_day1_bayarea_20240101.json": {
+  "bytes": 181963,
+  "retrieved_utc": "2026-10-26T22:19:29+00:00",
+  "sha256": "bdce934e1dfe3444b8ba5de9c658b6cafbdf4f006b8da882b2e728c90b29c527",
+  "url": "https://previous-runs-api.open-meteo.com/v1/forecast?latitude=37.35&longitude=-121.96&start_date=2024-01-01&end_date=2024-07-01&hourly=temperature_2m_previous_day1%2Crelative_humidity_2m_previous_day1%2Cdew_point_2m_previous_day1%2Cwind_speed_10m_previous_day1%2Cshortwave_radiation_previous_day1&timezone=UTC&wind_speed_unit=ms"
+ },
+ "previous_day1_bayarea_20240702.json": {
+  "bytes": 182269,
+  "retrieved_utc": "2026-10-26T22:19:46+00:00",
+  "sha256": "1ff1c2fcb26ed34e7fb2e49ae38017f4302d6de881255be8ea033d3ea3c5b7ca",
+  "url": "https://previous-runs-api.open-meteo.com/v1/forecast?latitude=37.35&longitude=-121.96&start_date=2024-07-02&end_date=2024-12-31&hourly=temperature_2m_previous_day1%2Crelative_humidity_2m_previous_day1%2Cdew_point_2m_previous_day1%2Cwind_speed_10m_previous_day1%2Cshortwave_radiation_previous_day1&timezone=UTC&wind_speed_unit=ms"
+ },
+ "previous_day1_bayarea_20250101.json": {
+  "bytes": 180194,
+  "retrieved_utc": "2026-10-26T22:20:02+00:00",
+  "sha256": "57aef88ef3f240ff9de4a969d89be1bb22bc852817284d949e42cfa189721a79",
+  "url": "https://previous-runs-api.open-meteo.com/v1/forecast?latitude=37.35&longitude=-121.96&start_date=2025-01-01&end_date=2025-07-02&hourly=temperature_2m_previous_day1%2Crelative_humidity_2m_previous_day1%2Cdew_point_2m_previous_day1%2Cwind_speed_10m_previous_day1%2Cshortwave_radiation_previous_day1&timezone=UTC&wind_speed_unit=ms"
+ },
+ "previous_day1_bayarea_20250703.json": {
+  "bytes": 182698,
+  "retrieved_utc": "2026-10-26T22:20:20+00:00",
+  "sha256": "a02b34aab64aea1d9a36bb00c27df2970111c1b4290467f109139cc2e061594e",
+  "url": "https://previous-runs-api.open-meteo.com/v1/forecast?latitude=37.35&longitude=-121.96&start_date=2025-07-03&end_date=2026-01-01&hourly=temperature_2m_previous_day1%2Crelative_humidity_2m_previous_day1%2Cdew_point_2m_previous_day1%2Cwind_speed_10m_previous_day1%2Cshortwave_radiation_previous_day1&timezone=UTC&wind_speed_unit=ms"
+ },
+ "previous_day1_bayarea_20260102.json": {
+  "bytes": 181302,
+  "retrieved_utc": "2026-10-26T22:20:39+00:00",
+  "sha256": "008334b39c9231151197865cde3137bfa65354542ce62f80d1f2e7593de9ace4",
+  "url": "https://previous-runs-api.open-meteo.com/v1/forecast?latitude=37.35&longitude=-121.96&start_date=2026-01-02&end_date=2026-07-03&hourly=temperature_2m_previous_day1%2Crelative_humidity_2m_previous_day1%2Cdew_point_2m_previous_day1%2Cwind_speed_10m_previous_day1%2Cshortwave_radiation_previous_day1&timezone=UTC&wind_speed_unit=ms"
+ },
+ "previous_day1_bayarea_20260704.json": {
+  "bytes": 114864,
+  "retrieved_utc": "2026-10-26T22:21:00+00:00",
+  "sha256": "f73fd01e8fdd21ec8ed72e7922ac88e5e0d16852e84fa2d1abb3d36a8067a018",
+  "url": "https://previous-runs-api.open-meteo.com/v1/forecast?latitude=37.35&longitude=-121.96&start_date=2026-07-04&end_date=2026-10-25&hourly=temperature_2m_previous_day1%2Crelative_humidity_2m_previous_day1%2Cdew_point_2m_previous_day1%2Cwind_speed_10m_previous_day1%2Cshortwave_radiation_previous_day1&timezone=UTC&wind_speed_unit=ms"
+ },
+ "previous_day1_frankfurt_20240101.json": {
+  "bytes": 181450,
+  "retrieved_utc": "2026-10-26T22:23:52+00:00",
+  "sha256": "c1020a3fc88d99d64a5f5f739bd6945fc11d96578b5b7f2e12d008b12c1acc18",
+  "url": "https://previous-runs-api.open-meteo.com/v1/forecast?latitude=50.11&longitude=8.68&start_date=2024-01-01&end_date=2024-07-01&hourly=temperature_2m_previous_day1%2Crelative_humidity_2m_previous_day1%2Cdew_point_2m_previous_day1%2Cwind_speed_10m_previous_day1%2Cshortwave_radiation_previous_day1&timezone=UTC&wind_speed_unit=ms"
+ },
+ "previous_day1_frankfurt_20240702.json": {
+  "bytes": 180873,
+  "retrieved_utc": "2026-10-26T22:24:16+00:00",
+  "sha256": "ddb85894c69b1e1714beda61f1a3d5ac370f7a86e8bdd82a6bcd542f1a5db9e7",
+  "url": "https://previous-runs-api.open-meteo.com/v1/forecast?latitude=50.11&longitude=8.68&start_date=2024-07-02&end_date=2024-12-31&hourly=temperature_2m_previous_day1%2Crelative_humidity_2m_previous_day1%2Cdew_point_2m_previous_day1%2Cwind_speed_10m_previous_day1%2Cshortwave_radiation_previous_day1&timezone=UTC&wind_speed_unit=ms"
+ },
+ "previous_day1_frankfurt_20250101.json": {
+  "bytes": 180484,
+  "retrieved_utc": "2026-10-26T22:24:38+00:00",
+  "sha256": "7022ed272ac343325f9667b4cc5bded55a165fcf9dd00c32a690423257d77530",
+  "url": "https://previous-runs-api.open-meteo.com/v1/forecast?latitude=50.11&longitude=8.68&start_date=2025-01-01&end_date=2025-07-02&hourly=temperature_2m_previous_day1%2Crelative_humidity_2m_previous_day1%2Cdew_point_2m_previous_day1%2Cwind_speed_10m_previous_day1%2Cshortwave_radiation_previous_day1&timezone=UTC&wind_speed_unit=ms"
+ },
+ "previous_day1_frankfurt_20250703.json": {
+  "bytes": 180565,
+  "retrieved_utc": "2026-10-26T22:25:05+00:00",
+  "sha256": "7ba10fc5f7eb0a771ef41e55a66718bcc0728056b988c55cf6dc24589136328b",
+  "url": "https://previous-runs-api.open-meteo.com/v1/forecast?latitude=50.11&longitude=8.68&start_date=2025-07-03&end_date=2026-01-01&hourly=temperature_2m_previous_day1%2Crelative_humidity_2m_previous_day1%2Cdew_point_2m_previous_day1%2Cwind_speed_10m_previous_day1%2Cshortwave_radiation_previous_day1&timezone=UTC&wind_speed_unit=ms"
+ },
+ "previous_day1_frankfurt_20260102.json": {
+  "bytes": 180098,
+  "retrieved_utc": "2026-10-26T22:25:39+00:00",
+  "sha256": "70870c90146e2b36bed41bfddb037e6683494840d2f2a576a5d72a0051000b56",
+  "url": "https://previous-runs-api.open-meteo.com/v1/forecast?latitude=50.11&longitude=8.68&start_date=2026-01-02&end_date=2026-07-03&hourly=temperature_2m_previous_day1%2Crelative_humidity_2m_previous_day1%2Cdew_point_2m_previous_day1%2Cwind_speed_10m_previous_day1%2Cshortwave_radiation_previous_day1&timezone=UTC&wind_speed_unit=ms"
+ },
+ "previous_day1_frankfurt_20260704.json": {
+  "bytes": 113964,
+  "retrieved_utc": "2026-10-26T22:25:58+00:00",
+  "sha256": "211ec29995323064e87e52c7039705efd7ae5687c26f1f6f5fe88f2810306f15",
+  "url": "https://previous-runs-api.open-meteo.com/v1/forecast?latitude=50.11&longitude=8.68&start_date=2026-07-04&end_date=2026-10-25&hourly=temperature_2m_previous_day1%2Crelative_humidity_2m_previous_day1%2Cdew_point_2m_previous_day1%2Cwind_speed_10m_previous_day1%2Cshortwave_radiation_previous_day1&timezone=UTC&wind_speed_unit=ms"
+ },
+ "previous_day1_london_20240101.json": {
+  "bytes": 184679,
+  "retrieved_utc": "2026-10-26T22:21:26+00:00",
+  "sha256": "a92306edf7bae8e00e75d5421ee402b3569baf8e46e84a69ddb109885637a54d",
+  "url": "https://previous-runs-api.open-meteo.com/v1/forecast?latitude=51.51&longitude=-0.13&start_date=2024-01-01&end_date=2024-07-01&hourly=temperature_2m_previous_day1%2Crelative_humidity_2m_previous_day1%2Cdew_point_2m_previous_day1%2Cwind_speed_10m_previous_day1%2Cshortwave_radiation_previous_day1&timezone=UTC&wind_speed_unit=ms"
+ },
+ "previous_day1_london_20240702.json": {
+  "bytes": 180652,
+  "retrieved_utc": "2026-10-26T22:21:44+00:00",
+  "sha256": "947da8c0788faf07667b162b8de516b7466789e20563b76458079041af09a7e0",
+  "url": "https://previous-runs-api.open-meteo.com/v1/forecast?latitude=51.51&longitude=-0.13&start_date=2024-07-02&end_date=2024-12-31&hourly=temperature_2m_previous_day1%2Crelative_humidity_2m_previous_day1%2Cdew_point_2m_previous_day1%2Cwind_speed_10m_previous_day1%2Cshortwave_radiation_previous_day1&timezone=UTC&wind_speed_unit=ms"
+ },
+ "previous_day1_london_20250101.json": {
+  "bytes": 179470,
+  "retrieved_utc": "2026-10-26T22:22:07+00:00",
+  "sha256": "a59663811f0b68fb9d83fdb17ed9c57c418c8daa801b472d27ec2f91d23f535d",
+  "url": "https://previous-runs-api.open-meteo.com/v1/forecast?latitude=51.51&longitude=-0.13&start_date=2025-01-01&end_date=2025-07-02&hourly=temperature_2m_previous_day1%2Crelative_humidity_2m_previous_day1%2Cdew_point_2m_previous_day1%2Cwind_speed_10m_previous_day1%2Cshortwave_radiation_previous_day1&timezone=UTC&wind_speed_unit=ms"
+ },
+ "previous_day1_london_20250703.json": {
+  "bytes": 180558,
+  "retrieved_utc": "2026-10-26T22:22:44+00:00",
+  "sha256": "f5df2ce5e69c406b0e8cef00e0af33e226e95f9105fbd1d43d72024ea274b134",
+  "url": "https://previous-runs-api.open-meteo.com/v1/forecast?latitude=51.51&longitude=-0.13&start_date=2025-07-03&end_date=2026-01-01&hourly=temperature_2m_previous_day1%2Crelative_humidity_2m_previous_day1%2Cdew_point_2m_previous_day1%2Cwind_speed_10m_previous_day1%2Cshortwave_radiation_previous_day1&timezone=UTC&wind_speed_unit=ms"
+ },
+ "previous_day1_london_20260102.json": {
+  "bytes": 179595,
+  "retrieved_utc": "2026-10-26T22:23:07+00:00",
+  "sha256": "150bda529eef4e86a1bb66f34bffd9c29b545ba07f5939993f03f19ad558d13e",
+  "url": "https://previous-runs-api.open-meteo.com/v1/forecast?latitude=51.51&longitude=-0.13&start_date=2026-01-02&end_date=2026-07-03&hourly=temperature_2m_previous_day1%2Crelative_humidity_2m_previous_day1%2Cdew_point_2m_previous_day1%2Cwind_speed_10m_previous_day1%2Cshortwave_radiation_previous_day1&timezone=UTC&wind_speed_unit=ms"
+ },
+ "previous_day1_london_20260704.json": {
+  "bytes": 114196,
+  "retrieved_utc": "2026-10-26T22:23:28+00:00",
+  "sha256": "8f9a5c34ef8453097436a4a2fb6402ef855c9891ee8a999aa030affb5054882c",
+  "url": "https://previous-runs-api.open-meteo.com/v1/forecast?latitude=51.51&longitude=-0.13&start_date=2026-07-04&end_date=2026-10-25&hourly=temperature_2m_previous_day1%2Crelative_humidity_2m_previous_day1%2Cdew_point_2m_previous_day1%2Cwind_speed_10m_previous_day1%2Cshortwave_radiation_previous_day1&timezone=UTC&wind_speed_unit=ms"
+ }
+}

@@ -1,0 +1,52 @@
+{
+ "name": "public_weather_om_forecast_frankfurt",
+ "freq": "1h",
+ "columns": {
+  "temperature_2m_c": {
+   "unit": "degC",
+   "description": "air temperature at 2 m"
+  },
+  "relative_humidity_2m_pct": {
+   "unit": "%",
+   "description": "relative humidity at 2 m"
+  },
+  "dew_point_2m_c": {
+   "unit": "degC",
+   "description": "dew point at 2 m"
+  },
+  "wind_speed_10m_mps": {
+   "unit": "m/s",
+   "description": "wind speed at 10 m (requested with wind_speed_unit=ms)"
+  },
+  "shortwave_radiation_w_m2": {
+   "unit": "W/m2",
+   "description": "shortwave solar radiation, mean of the preceding hour"
+  },
+  "wet_bulb_2m_c": {
+   "unit": "degC",
+   "description": "wet-bulb temperature computed here with Stull (2011, doi:10.1175/JAMC-D-11-0143.1) from temperature_2m_c and relative_humidity_2m_pct"
+  }
+ },
+ "source": {
+  "title": "Open-Meteo historical_forecast",
+  "url": "https://historical-forecast-api.open-meteo.com/v1/forecast",
+  "license": "CC BY 4.0, non-commercial free tier (https://open-meteo.com/en/license)",
+  "retrieved_utc": "2026-10-26T22:19:27+00:00",
+  "raw_sha256": {
+   "historical_forecast_frankfurt_20240101.json": "d7114b71bb060b9f3c4b6558a5b9e6cb02e02a93aff4e5daccbf064835e9432c",
+   "historical_forecast_frankfurt_20240702.json": "1e25ed7aa2819ee3cad99fbe64c7c7be08f5dbdfa8c3bc031426e3dcd68ef054",
+   "historical_forecast_frankfurt_20250101.json": "f3df770028b0688077a20e7796d0d99566eb35fef3554fffbd646a84ff7a5eee",
+   "historical_forecast_frankfurt_20250703.json": "01e86357faca23f73da78f500c232cee90fec9b95a75e56eb36ed3cfbab9de34",
+   "historical_forecast_frankfurt_20260102.json": "7f07fb9e65affdea3f7b432965ddbb18f4a9887453268540a0127f51675c8819",
+   "historical_forecast_frankfurt_20260704.json": "62af553f4081b68b5343fc66c62e4f42dec79dcc520af0fa566f65c0f832e9ed"
+  }
+ },
+ "location": {
+  "name": "Frankfurt am Main, Germany (DE-LU bidding zone, large data-centre cluster)",
+  "latitude": 50.11,
+  "longitude": 8.68
+ },
+ "data_kind": "public",
+ "producer": "scripts/fetch_open_meteo.py",
+ "notes": "Archived forecasts from the Open-Meteo historical-forecast API: best-match model runs, stitched from short lead times. Known only up to the issue time of each run, so usable as a short-lead covariate, not as a verified day-ahead vintage."
+}

@@ -1,0 +1,52 @@
+{
+ "name": "public_weather_om_forecast_bayarea",
+ "freq": "1h",
+ "columns": {
+  "temperature_2m_c": {
+   "unit": "degC",
+   "description": "air temperature at 2 m"
+  },
+  "relative_humidity_2m_pct": {
+   "unit": "%",
+   "description": "relative humidity at 2 m"
+  },
+  "dew_point_2m_c": {
+   "unit": "degC",
+   "description": "dew point at 2 m"
+  },
+  "wind_speed_10m_mps": {
+   "unit": "m/s",
+   "description": "wind speed at 10 m (requested with wind_speed_unit=ms)"
+  },
+  "shortwave_radiation_w_m2": {
+   "unit": "W/m2",
+   "description": "shortwave solar radiation, mean of the preceding hour"
+  },
+  "wet_bulb_2m_c": {
+   "unit": "degC",
+   "description": "wet-bulb temperature computed here with Stull (2011, doi:10.1175/JAMC-D-11-0143.1) from temperature_2m_c and relative_humidity_2m_pct"
+  }
+ },
+ "source": {
+  "title": "Open-Meteo historical_forecast",
+  "url": "https://historical-forecast-api.open-meteo.com/v1/forecast",
+  "license": "CC BY 4.0, non-commercial free tier (https://open-meteo.com/en/license)",
+  "retrieved_utc": "2026-10-26T22:15:29+00:00",
+  "raw_sha256": {
+   "historical_forecast_bayarea_20240101.json": "eb1c7b58cd8e42c30f49dd415441f792fef7b9f272fd4dd022fd2f4be137832d",
+   "historical_forecast_bayarea_20240702.json": "f91620b63230b801174ccdeb88ffcfe7b930743b33557842c3d686443ca05361",
+   "historical_forecast_bayarea_20250101.json": "b3b68b2fc25c1591cd7fc2b4a4dbd34a9a197ce28965f7986a46336891989ad1",
+   "historical_forecast_bayarea_20250703.json": "87f282c8f2a38fcb02cfdf5818e9ce62976834e797d4d5a644d988213ee3f603",
+   "historical_forecast_bayarea_20260102.json": "ae6b0ae73371f36a5a784fbbde50cd81ba28bd5650602b3c1da1d668cf2d2815",
+   "historical_forecast_bayarea_20260704.json": "8020f3ec433692aaee1ce74887cc824bea031127aa3e304d7da638307a230b6b"
+  }
+ },
+ "location": {
+  "name": "Santa Clara, California (CAISO NP15 region, Bay Area data-centre cluster)",
+  "latitude": 37.35,
+  "longitude": -121.96
+ },
+ "data_kind": "public",
+ "producer": "scripts/fetch_open_meteo.py",
+ "notes": "Archived forecasts from the Open-Meteo historical-forecast API: best-match model runs, stitched from short lead times. Known only up to the issue time of each run, so usable as a short-lead covariate, not as a verified day-ahead vintage."
+}

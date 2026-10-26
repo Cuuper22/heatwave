@@ -1,0 +1,52 @@
+{
+ "name": "public_weather_om_dayahead_london",
+ "freq": "1h",
+ "columns": {
+  "temperature_2m_c": {
+   "unit": "degC",
+   "description": "air temperature at 2 m"
+  },
+  "relative_humidity_2m_pct": {
+   "unit": "%",
+   "description": "relative humidity at 2 m"
+  },
+  "dew_point_2m_c": {
+   "unit": "degC",
+   "description": "dew point at 2 m"
+  },
+  "wind_speed_10m_mps": {
+   "unit": "m/s",
+   "description": "wind speed at 10 m (requested with wind_speed_unit=ms)"
+  },
+  "shortwave_radiation_w_m2": {
+   "unit": "W/m2",
+   "description": "shortwave solar radiation, mean of the preceding hour"
+  },
+  "wet_bulb_2m_c": {
+   "unit": "degC",
+   "description": "wet-bulb temperature computed here with Stull (2011, doi:10.1175/JAMC-D-11-0143.1) from temperature_2m_c and relative_humidity_2m_pct"
+  }
+ },
+ "source": {
+  "title": "Open-Meteo previous_day1",
+  "url": "https://previous-runs-api.open-meteo.com/v1/forecast",
+  "license": "CC BY 4.0, non-commercial free tier (https://open-meteo.com/en/license)",
+  "retrieved_utc": "2026-10-26T22:23:43+00:00",
+  "raw_sha256": {
+   "previous_day1_london_20240101.json": "a92306edf7bae8e00e75d5421ee402b3569baf8e46e84a69ddb109885637a54d",
+   "previous_day1_london_20240702.json": "947da8c0788faf07667b162b8de516b7466789e20563b76458079041af09a7e0",
+   "previous_day1_london_20250101.json": "a59663811f0b68fb9d83fdb17ed9c57c418c8daa801b472d27ec2f91d23f535d",
+   "previous_day1_london_20250703.json": "f5df2ce5e69c406b0e8cef00e0af33e226e95f9105fbd1d43d72024ea274b134",
+   "previous_day1_london_20260102.json": "150bda529eef4e86a1bb66f34bffd9c29b545ba07f5939993f03f19ad558d13e",
+   "previous_day1_london_20260704.json": "8f9a5c34ef8453097436a4a2fb6402ef855c9891ee8a999aa030affb5054882c"
+  }
+ },
+ "location": {
+  "name": "London, United Kingdom (GB grid)",
+  "latitude": 51.51,
+  "longitude": -0.13
+ },
+ "data_kind": "public",
+ "producer": "scripts/fetch_open_meteo.py",
+ "notes": "previous_day1 variables: the forecast issued one day before the valid time (day-ahead vintage) from the previous-runs API."
+}

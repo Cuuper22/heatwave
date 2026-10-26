@@ -81,7 +81,13 @@ manifests keep their sha256 and URL, and every fetch script downloads them again
   start times**; the hourly pod table that does (351 GB) was not fetched. A seeded 200,000-row sample and summary statistics are committed
   (`alibaba2026_gpu_pods_sample.parquet`, `results/data/public_job_trace_summary.json`).
 - Use for a job schedule: arrival times and sizes from the v2023 pods, size / duration distributions per job type from v2026.
-- Microsoft Philly traces: blocked (below). Other traces listed in the Alibaba README (v2020 PAI GPU trace, microservices) were not needed.
+- Microsoft Philly (2017) and SenseTime Helios (2020) job traces: blocked from the VM, collected from the author's laptop with
+  `scripts/fetch_job_traces_extra.py` (sha256 and licences in `data/processed/public_job_traces/extra_manifest.json`; both repositories
+  carry CC BY 4.0 licence files). Philly: Jeon et al., USENIX ATC 2019, arXiv:1901.05758, https://github.com/msr-fiddle/philly-traces;
+  `philly_jobs.parquet` keeps one row per job (117,325 jobs; per-minute GPU utilization not kept). Helios: Hu et al., SC 2021,
+  doi:10.1145/3458817.3476223, https://github.com/S-Lab-System-Group/HeliosData; only the Venus cluster's GPU jobs are committed
+  (`helios_venus_jobs.parquet`, 125,303 GPU jobs of 246,708) to stay inside the size budget; Earth, Saturn and Uranus are re-created by the
+  script. Other traces listed in the Alibaba README (v2020 PAI GPU trace, microservices) were not needed.
 
 ### 1.5 Other 2025-2026 sources found by web search
 - Used: 1.2 and 1.3 above.
@@ -143,9 +149,12 @@ Locations: Santa Clara CA (37.35, -121.96; CAISO NP15 / Bay Area), London (51.51
 - Free tier, CC BY 4.0, non-commercial (https://open-meteo.com/en/license). `scripts/fetch_open_meteo.py` requests `temperature_2m, relative_humidity_2m, dew_point_2m, wind_speed_10m,
   shortwave_radiation`, adds a computed wet-bulb (Stull 2011, doi:10.1175/JAMC-D-11-0143.1) and writes `public_weather_om_{actual,forecast,dayahead}_<region>`.
   `historical_forecast` is the stitched short-lead best-match forecast; `previous_day1` is the forecast issued one day earlier (true day-ahead vintage).
-- **Status on 2026-10-26:** the daily request limit of the shared egress address was already used up (HTTP 429, "Daily API request limit exceeded"); see the status line in the final
-  collection report and `results/data/public_reachability.json`. If `data/processed/public_weather_om_*` files are absent, only NASA POWER actuals exist and
-  `load_weather(kind="forecast")` raises `FileNotFoundError`. Re-run `python scripts/fetch_open_meteo.py` after the quota resets (00:00 UTC); finished chunks are kept.
+- **Status:** the VM's shared egress address had used up the daily request limit (HTTP 429), so on 2026-10-26 the same
+  script was run on the author's laptop (its own network and normal quota) and the processed outputs were copied back. Collected:
+  2024-01-01 to 2026-10-25, hourly, for bayarea, london and frankfurt: actuals (archive), archived short-lead forecasts
+  (historical-forecast, `kind="forecast"`) and day-ahead vintage forecasts (previous_day1, `vintage="dayahead"`); 24,696 rows each.
+  Missing share: 0 for actuals and short-lead forecasts; day-ahead 1.8% (bayarea, frankfurt) and 4.9% (london), as printed by the fetch run.
+  Raw sha256 in `data/processed/public_open_meteo/raw_manifest.json`.
 
 ## 4. Blocked / not reachable from this VM
 The status of each URL checked is in `results/data/public_reachability.json` (written by `scripts/fetch_reachability.py`, plain GET through the allowlist proxy, no workaround attempted).
@@ -154,13 +163,13 @@ Summary of what was refused or missing at that time:
 | URL | result |
 |---|---|
 | `github.com/...` HTML pages (alibaba/clusterdata, microsoft/philly-traces, S-Lab/HeliosData) | 403 (blocked); raw.githubusercontent.com works |
-| `raw.githubusercontent.com/microsoft/philly-traces/master/README.md` | 404 (the Philly traces are not reachable through this route; the repo page is 403) |
-| `raw.githubusercontent.com/S-Lab/Helios/main/README.md` | 404 |
+| `raw.githubusercontent.com/microsoft/philly-traces/master/README.md` | 404 (wrong owner; the traces live at msr-fiddle/philly-traces, collected from the laptop) |
+| `raw.githubusercontent.com/S-Lab/Helios/main/README.md` | 404 (the data lives at S-Lab-System-Group/HeliosData, collected from the laptop) |
 | `azurepublicdatasettraces.blob.core.windows.net/` | 400 (no listing; the Azure dataset README on raw.githubusercontent.com is reachable but its traces are VM/LLM-inference traces, not GPU power) |
 | `api.eia.gov` | 403 (blocked); the bulk file on www.eia.gov replaces it (www.eia.gov answered 503 on one early check, then 200/206) |
 | `unece.org/.../LCA-2.pdf` | 403 |
 | `pmc.ncbi.nlm.nih.gov`, `pubmed.ncbi.nlm.nih.gov` | bot check page instead of content (not worked around) |
-| `archive-api.open-meteo.com`, `previous-runs-api.open-meteo.com`, `historical-forecast-api.open-meteo.com` | 429 daily limit on the day of collection |
+| `archive-api.open-meteo.com`, `previous-runs-api.open-meteo.com`, `historical-forecast-api.open-meteo.com` | 429 daily limit on the VM's shared address; collected from the author's laptop instead |
 
 <!-- AUTO:BEGIN -->
 

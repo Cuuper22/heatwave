@@ -1,0 +1,52 @@
+{
+ "name": "public_weather_om_forecast_london",
+ "freq": "1h",
+ "columns": {
+  "temperature_2m_c": {
+   "unit": "degC",
+   "description": "air temperature at 2 m"
+  },
+  "relative_humidity_2m_pct": {
+   "unit": "%",
+   "description": "relative humidity at 2 m"
+  },
+  "dew_point_2m_c": {
+   "unit": "degC",
+   "description": "dew point at 2 m"
+  },
+  "wind_speed_10m_mps": {
+   "unit": "m/s",
+   "description": "wind speed at 10 m (requested with wind_speed_unit=ms)"
+  },
+  "shortwave_radiation_w_m2": {
+   "unit": "W/m2",
+   "description": "shortwave solar radiation, mean of the preceding hour"
+  },
+  "wet_bulb_2m_c": {
+   "unit": "degC",
+   "description": "wet-bulb temperature computed here with Stull (2011, doi:10.1175/JAMC-D-11-0143.1) from temperature_2m_c and relative_humidity_2m_pct"
+  }
+ },
+ "source": {
+  "title": "Open-Meteo historical_forecast",
+  "url": "https://historical-forecast-api.open-meteo.com/v1/forecast",
+  "license": "CC BY 4.0, non-commercial free tier (https://open-meteo.com/en/license)",
+  "retrieved_utc": "2026-10-26T22:17:27+00:00",
+  "raw_sha256": {
+   "historical_forecast_london_20240101.json": "67306310047d4055e9c25a162a174797d91e3471612132e7eba56241ab876452",
+   "historical_forecast_london_20240702.json": "22586bea02c5279d12563e3e8ad02eef261bc6da292bad1fa6080448f0d0fd5a",
+   "historical_forecast_london_20250101.json": "bb125a930b6bd9c9ca6253b02e2065eefc34ef19b0e9f15b5f3f105547952e2c",
+   "historical_forecast_london_20250703.json": "66b76354b99fbf5015c276071c975cea4a15fc07d999c6f428603d14cdd7d6ca",
+   "historical_forecast_london_20260102.json": "2ff0f5125c39a7299d75d9ef880d5069834dcf0ff7ad7f7d47faf7bb0a4fd0ae",
+   "historical_forecast_london_20260704.json": "bd518cac316ff0cdc22a5ca05ebb52451d74c89ac076c111904d76c3b2fafcd4"
+  }
+ },
+ "location": {
+  "name": "London, United Kingdom (GB grid)",
+  "latitude": 51.51,
+  "longitude": -0.13
+ },
+ "data_kind": "public",
+ "producer": "scripts/fetch_open_meteo.py",
+ "notes": "Archived forecasts from the Open-Meteo historical-forecast API: best-match model runs, stitched from short lead times. Known only up to the issue time of each run, so usable as a short-lead covariate, not as a verified day-ahead vintage."
+}

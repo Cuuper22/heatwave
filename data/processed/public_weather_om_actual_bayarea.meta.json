@@ -1,0 +1,52 @@
+{
+ "name": "public_weather_om_actual_bayarea",
+ "freq": "1h",
+ "columns": {
+  "temperature_2m_c": {
+   "unit": "degC",
+   "description": "air temperature at 2 m"
+  },
+  "relative_humidity_2m_pct": {
+   "unit": "%",
+   "description": "relative humidity at 2 m"
+  },
+  "dew_point_2m_c": {
+   "unit": "degC",
+   "description": "dew point at 2 m"
+  },
+  "wind_speed_10m_mps": {
+   "unit": "m/s",
+   "description": "wind speed at 10 m (requested with wind_speed_unit=ms)"
+  },
+  "shortwave_radiation_w_m2": {
+   "unit": "W/m2",
+   "description": "shortwave solar radiation, mean of the preceding hour"
+  },
+  "wet_bulb_2m_c": {
+   "unit": "degC",
+   "description": "wet-bulb temperature computed here with Stull (2011, doi:10.1175/JAMC-D-11-0143.1) from temperature_2m_c and relative_humidity_2m_pct"
+  }
+ },
+ "source": {
+  "title": "Open-Meteo archive",
+  "url": "https://archive-api.open-meteo.com/v1/archive",
+  "license": "CC BY 4.0, non-commercial free tier (https://open-meteo.com/en/license)",
+  "retrieved_utc": "2026-10-26T22:09:51+00:00",
+  "raw_sha256": {
+   "archive_bayarea_20240101.json": "d9a0b7d1c9c5bd382c207fc3f8c9e2d1fd2e4e97a96b888e8c2710811e864c06",
+   "archive_bayarea_20240702.json": "93648512e794d13ae205cc492db419e60e246430190067af5099e1620aa64b39",
+   "archive_bayarea_20250101.json": "abcbed0c88a8019def250957b44265f864cccf7655a5c24ce4b926aad13ee5c9",
+   "archive_bayarea_20250703.json": "1a3feb8525fb102532b8aa93c9b351f89d2701f88056077eec522ddc5bd26663",
+   "archive_bayarea_20260102.json": "60d4ecf2fe98ff65ce98786b803b95bd2d5c39a5c825c978bfd213d1388720c6",
+   "archive_bayarea_20260704.json": "46263f67df999d6fd4adb96c29820b10ad1c1c8ac62b0108af2bc32adf0073e4"
+  }
+ },
+ "location": {
+  "name": "Santa Clara, California (CAISO NP15 region, Bay Area data-centre cluster)",
+  "latitude": 37.35,
+  "longitude": -121.96
+ },
+ "data_kind": "public",
+ "producer": "scripts/fetch_open_meteo.py",
+ "notes": "ERA5-based reanalysis actuals served by the Open-Meteo archive API."
+}

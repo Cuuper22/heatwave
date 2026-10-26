@@ -1,0 +1,52 @@
+{
+ "name": "public_weather_om_actual_london",
+ "freq": "1h",
+ "columns": {
+  "temperature_2m_c": {
+   "unit": "degC",
+   "description": "air temperature at 2 m"
+  },
+  "relative_humidity_2m_pct": {
+   "unit": "%",
+   "description": "relative humidity at 2 m"
+  },
+  "dew_point_2m_c": {
+   "unit": "degC",
+   "description": "dew point at 2 m"
+  },
+  "wind_speed_10m_mps": {
+   "unit": "m/s",
+   "description": "wind speed at 10 m (requested with wind_speed_unit=ms)"
+  },
+  "shortwave_radiation_w_m2": {
+   "unit": "W/m2",
+   "description": "shortwave solar radiation, mean of the preceding hour"
+  },
+  "wet_bulb_2m_c": {
+   "unit": "degC",
+   "description": "wet-bulb temperature computed here with Stull (2011, doi:10.1175/JAMC-D-11-0143.1) from temperature_2m_c and relative_humidity_2m_pct"
+  }
+ },
+ "source": {
+  "title": "Open-Meteo archive",
+  "url": "https://archive-api.open-meteo.com/v1/archive",
+  "license": "CC BY 4.0, non-commercial free tier (https://open-meteo.com/en/license)",
+  "retrieved_utc": "2026-10-26T22:11:43+00:00",
+  "raw_sha256": {
+   "archive_london_20240101.json": "0dacb224b8f95d3f974aaf68123ffb3edfc0c4bfab9ebfdc59bfd3e94e3853d7",
+   "archive_london_20240702.json": "faa2def940e9c2b0e5699a4209641a9494f810cd8ac13f475fbaec68d07dce35",
+   "archive_london_20250101.json": "05b7d8872040fb63ab6b7added068fbee65ca55fc9002386000d554ac0d7e758",
+   "archive_london_20250703.json": "8d36670a28530a4c709fae7de72e3378b5c3bdfe1e0013c28495393deb19c284",
+   "archive_london_20260102.json": "c67ac1c79617ba24b63a1e43c908e2f57737944e9be58652bc372b800013e8bc",
+   "archive_london_20260704.json": "d64fef9534f821c274d928389218dd47cca7764153769f8278577bfaf7833208"
+  }
+ },
+ "location": {
+  "name": "London, United Kingdom (GB grid)",
+  "latitude": 51.51,
+  "longitude": -0.13
+ },
+ "data_kind": "public",
+ "producer": "scripts/fetch_open_meteo.py",
+ "notes": "ERA5-based reanalysis actuals served by the Open-Meteo archive API."
+}
