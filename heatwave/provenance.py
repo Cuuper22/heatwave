@@ -44,7 +44,13 @@ def _git(*args: str, cwd: Path = REPO_ROOT) -> str:
 
 
 def git_state(cwd: Path = REPO_ROOT) -> dict[str, str]:
+    """Commit of this repo. Runs from a `git archive` tarball (e.g. on Colab) have no .git;
+    they set HEATWAVE_GIT_COMMIT to the archived commit, recorded with source "archive"."""
+    import os
+
     commit = _git("rev-parse", "HEAD", cwd=cwd)
+    if commit == "unknown" and os.environ.get("HEATWAVE_GIT_COMMIT"):
+        return {"commit": os.environ["HEATWAVE_GIT_COMMIT"], "dirty": "false", "source": "archive"}
     dirty = bool(_git("status", "--porcelain", cwd=cwd))
     return {"commit": commit, "dirty": str(dirty).lower()}
 
