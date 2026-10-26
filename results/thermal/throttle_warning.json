@@ -1,0 +1,295 @@
+{
+ "provenance": {
+  "script": "experiments/thermal/throttle_warning_laptop.py",
+  "script_sha256": "c1d31cf35b25685af6c3226681a5cfadaa07120dc53365927dae70827d87bce2",
+  "git": {
+   "commit": "dcb294dad05015381b677742288527152e698094",
+   "dirty": "false",
+   "source": "archive",
+   "stamped_by": "scripts/stamp_archive_commit.py"
+  },
+  "inputs": {
+   "/content/heatwave/data/processed/laptop_run1_1s.parquet": "c8c74fef4a637da97afdd980736a9e2831b173539f1b09171f77ba598ebf4876",
+   "/content/heatwave/data/processed/laptop_run2_1s.parquet": "b93de209cdfd4c965a9bf493924da9a088385d35c03758590da05598db45d01b"
+  },
+  "data_kind": "measured",
+  "created_utc": "2026-10-26T23:03:21+00:00",
+  "notes": " Ran on a Google Colab CPU runtime (2 cores) from a git archive of the stamped commit."
+ },
+ "result": {
+  "settings": {
+   "fit_run": "run1",
+   "test_runs": [
+    "run2"
+   ],
+   "sizes": "5M,28M",
+   "context_s": 600,
+   "horizon_s": 30,
+   "stride_s": 2,
+   "gap_s": 30,
+   "min_lead_s": 3,
+   "classical": "ets,arima"
+  },
+  "event": "NVML software thermal slowdown (bit 0x20) onset",
+  "runs": {
+   "run1": {
+    "seconds": 2462,
+    "onsets": 6
+   },
+   "run2": {
+    "seconds": 4744,
+    "onsets": 7
+   }
+  },
+  "methods": {
+   "reactive": {
+    "tuned_on": "run1",
+    "threshold_c": 80.0,
+    "probability": 1.0,
+    "fit": {
+     "origins": 499,
+     "positive_origins": 75,
+     "precision": 1.0,
+     "recall": 0.41333333333333333,
+     "f1": 0.5849056603773585,
+     "false_alarm_rate": 0.0,
+     "onsets": 6,
+     "onsets_warned": 5,
+     "onset_recall": 0.8333333333333334,
+     "median_lead_s": 11.0
+    },
+    "test": {
+     "run2": {
+      "origins": 939,
+      "positive_origins": 90,
+      "precision": 1.0,
+      "recall": 0.37777777777777777,
+      "f1": 0.5483870967741935,
+      "false_alarm_rate": 0.0,
+      "onsets": 7,
+      "onsets_warned": 6,
+      "onset_recall": 0.8571428571428571,
+      "median_lead_s": 10.5
+     }
+    }
+   },
+   "naive-last": {
+    "tuned_on": "run1",
+    "threshold_c": 80.0,
+    "probability": 0.05,
+    "fit": {
+     "origins": 499,
+     "positive_origins": 75,
+     "precision": 1.0,
+     "recall": 0.41333333333333333,
+     "f1": 0.5849056603773585,
+     "false_alarm_rate": 0.0,
+     "onsets": 6,
+     "onsets_warned": 5,
+     "onset_recall": 0.8333333333333334,
+     "median_lead_s": 11.0
+    },
+    "test": {
+     "run2": {
+      "origins": 939,
+      "positive_origins": 90,
+      "precision": 1.0,
+      "recall": 0.36666666666666664,
+      "f1": 0.5365853658536585,
+      "false_alarm_rate": 0.0,
+      "onsets": 7,
+      "onsets_warned": 6,
+      "onset_recall": 0.8571428571428571,
+      "median_lead_s": 10.5
+     }
+    }
+   },
+   "ets": {
+    "tuned_on": "run1",
+    "threshold_c": 80.0,
+    "probability": 0.1,
+    "fit": {
+     "origins": 499,
+     "positive_origins": 75,
+     "precision": 1.0,
+     "recall": 0.6266666666666667,
+     "f1": 0.7704918032786886,
+     "false_alarm_rate": 0.0,
+     "onsets": 6,
+     "onsets_warned": 5,
+     "onset_recall": 0.8333333333333334,
+     "median_lead_s": 17.0
+    },
+    "test": {
+     "run2": {
+      "origins": 939,
+      "positive_origins": 90,
+      "precision": 1.0,
+      "recall": 0.5888888888888889,
+      "f1": 0.7412587412587412,
+      "false_alarm_rate": 0.0,
+      "onsets": 7,
+      "onsets_warned": 6,
+      "onset_recall": 0.8571428571428571,
+      "median_lead_s": 16.5
+     }
+    }
+   },
+   "arima": {
+    "tuned_on": "run1",
+    "threshold_c": 80.0,
+    "probability": 0.1,
+    "fit": {
+     "origins": 499,
+     "positive_origins": 75,
+     "precision": 1.0,
+     "recall": 0.6133333333333333,
+     "f1": 0.7603305785123966,
+     "false_alarm_rate": 0.0,
+     "onsets": 6,
+     "onsets_warned": 5,
+     "onset_recall": 0.8333333333333334,
+     "median_lead_s": 17.0
+    },
+    "test": {
+     "run2": {
+      "origins": 939,
+      "positive_origins": 90,
+      "precision": 1.0,
+      "recall": 0.5777777777777777,
+      "f1": 0.732394366197183,
+      "false_alarm_rate": 0.0,
+      "onsets": 7,
+      "onsets_warned": 6,
+      "onset_recall": 0.8571428571428571,
+      "median_lead_s": 16.5
+     }
+    }
+   },
+   "timestral-5M": {
+    "tuned_on": "run1",
+    "threshold_c": 86.0,
+    "probability": 0.1,
+    "fit": {
+     "origins": 499,
+     "positive_origins": 75,
+     "precision": 0.9622641509433962,
+     "recall": 0.68,
+     "f1": 0.796875,
+     "false_alarm_rate": 0.0047169811320754715,
+     "onsets": 6,
+     "onsets_warned": 5,
+     "onset_recall": 0.8333333333333334,
+     "median_lead_s": 19.0
+    },
+    "test": {
+     "run2": {
+      "origins": 939,
+      "positive_origins": 90,
+      "precision": 0.8928571428571429,
+      "recall": 0.5555555555555556,
+      "f1": 0.684931506849315,
+      "false_alarm_rate": 0.007067137809187279,
+      "onsets": 7,
+      "onsets_warned": 6,
+      "onset_recall": 0.8571428571428571,
+      "median_lead_s": 17.5
+     }
+    }
+   },
+   "timestral-5M+schedule": {
+    "tuned_on": "run1",
+    "threshold_c": 84.0,
+    "probability": 0.5,
+    "fit": {
+     "origins": 499,
+     "positive_origins": 75,
+     "precision": 0.8378378378378378,
+     "recall": 0.8266666666666667,
+     "f1": 0.8322147651006713,
+     "false_alarm_rate": 0.02830188679245283,
+     "onsets": 6,
+     "onsets_warned": 5,
+     "onset_recall": 0.8333333333333334,
+     "median_lead_s": 29.0
+    },
+    "test": {
+     "run2": {
+      "origins": 939,
+      "positive_origins": 90,
+      "precision": 0.8846153846153846,
+      "recall": 0.5111111111111111,
+      "f1": 0.6478873239436619,
+      "false_alarm_rate": 0.007067137809187279,
+      "onsets": 7,
+      "onsets_warned": 6,
+      "onset_recall": 0.8571428571428571,
+      "median_lead_s": 15.5
+     }
+    }
+   },
+   "timestral-28M": {
+    "tuned_on": "run1",
+    "threshold_c": 86.0,
+    "probability": 0.2,
+    "fit": {
+     "origins": 499,
+     "positive_origins": 75,
+     "precision": 0.9454545454545454,
+     "recall": 0.6933333333333334,
+     "f1": 0.8,
+     "false_alarm_rate": 0.007075471698113208,
+     "onsets": 6,
+     "onsets_warned": 5,
+     "onset_recall": 0.8333333333333334,
+     "median_lead_s": 19.0
+    },
+    "test": {
+     "run2": {
+      "origins": 939,
+      "positive_origins": 90,
+      "precision": 0.9310344827586207,
+      "recall": 0.6,
+      "f1": 0.7297297297297297,
+      "false_alarm_rate": 0.004711425206124852,
+      "onsets": 7,
+      "onsets_warned": 6,
+      "onset_recall": 0.8571428571428571,
+      "median_lead_s": 18.5
+     }
+    }
+   },
+   "timestral-28M+schedule": {
+    "tuned_on": "run1",
+    "threshold_c": 85.0,
+    "probability": 0.5,
+    "fit": {
+     "origins": 499,
+     "positive_origins": 75,
+     "precision": 0.9701492537313433,
+     "recall": 0.8666666666666667,
+     "f1": 0.915492957746479,
+     "false_alarm_rate": 0.0047169811320754715,
+     "onsets": 6,
+     "onsets_warned": 5,
+     "onset_recall": 0.8333333333333334,
+     "median_lead_s": 29.0
+    },
+    "test": {
+     "run2": {
+      "origins": 939,
+      "positive_origins": 90,
+      "precision": 1.0,
+      "recall": 0.5333333333333333,
+      "f1": 0.6956521739130436,
+      "false_alarm_rate": 0.0,
+      "onsets": 7,
+      "onsets_warned": 6,
+      "onset_recall": 0.8571428571428571,
+      "median_lead_s": 16.5
+     }
+    }
+   }
+  }
+ }
+}
