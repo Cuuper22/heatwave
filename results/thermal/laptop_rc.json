@@ -3,14 +3,15 @@
   "script": "experiments/thermal/calibrate_laptop.py",
   "script_sha256": "d9201216eb5cf4e2633e3bd2f5c28996e06971e79b2f291f01908901ff30b601",
   "git": {
-   "commit": "01fe2cb9f7ac69a8c64d2d0f8c62ee8988d5e8c3",
+   "commit": "5a3b2d6708cb6c35c4bb2e72e575fff1d322bb71",
    "dirty": "true"
   },
   "inputs": {
-   "/home/claude/wt/heatwave-main/data/processed/laptop_run1_1s.parquet": "c8c74fef4a637da97afdd980736a9e2831b173539f1b09171f77ba598ebf4876"
+   "/home/claude/wt/heatwave-main/data/processed/laptop_run1_1s.parquet": "c8c74fef4a637da97afdd980736a9e2831b173539f1b09171f77ba598ebf4876",
+   "/home/claude/wt/heatwave-main/data/processed/laptop_run2_1s.parquet": "b93de209cdfd4c965a9bf493924da9a088385d35c03758590da05598db45d01b"
   },
   "data_kind": "measured",
-  "created_utc": "2026-10-26T20:22:49+00:00",
+  "created_utc": "2026-10-26T21:41:03+00:00",
   "notes": ""
  },
  "result": {
@@ -91,9 +92,32 @@
     "temp_c_max": 91.0,
     "sm_clock_mhz_training_sw_thermal_median": 900.0,
     "sm_clock_mhz_training_no_thermal_median": 1642.0
+   },
+   "run2": {
+    "fraction_samples_sw_thermal": 0.5718201176445784,
+    "fraction_samples_hw_thermal": 0.00042166515569985876,
+    "temp_c_at_sw_thermal_p05": 86.0,
+    "temp_c_at_sw_thermal_median": 88.0,
+    "temp_c_max": 91.0,
+    "sm_clock_mhz_training_sw_thermal_median": 735.0,
+    "sm_clock_mhz_training_no_thermal_median": 1282.0
    }
   },
-  "validation": {},
+  "validation": {
+   "run2": {
+    "one_node": {
+     "rmse_c": 3.37531561124012,
+     "r2": 0.9568356163905534,
+     "max_abs_err_c": 15.004372431753083
+    },
+    "two_node": {
+     "rmse_c": 2.695823162442319,
+     "r2": 0.9724653495028405,
+     "max_abs_err_c": 25.09431125151262
+    },
+    "n_seconds": 4742
+   }
+  },
   "power_signal": "power_energy_w (1 s average from the NVML energy counter)"
  }
 }
