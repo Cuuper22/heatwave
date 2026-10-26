@@ -42,6 +42,27 @@ SCHEDULE = [
 ]
 
 
+def random_schedule(minutes: float, seed: int):
+    """A seeded random job sequence (written before the run, so it is a known-future schedule)."""
+    import random
+
+    rng = random.Random(seed)
+    out, total, i = [], 0.0, 0
+    while total < minutes * 60:
+        mode = rng.choices(["train", "idle", "square"], weights=[5, 2, 1])[0]
+        secs = rng.choice([60, 90, 120, 180, 240, 300, 360])
+        if mode == "idle":
+            out.append((f"r{i}-idle", secs, "idle", 0, 0))
+        elif mode == "square":
+            out.append((f"r{i}-square", secs, "square", rng.choice([32, 64]), 0))
+        else:
+            out.append((f"r{i}-train", secs, "train", rng.choice([16, 32, 48, 64]),
+                        rng.choice([0, 15, 30, 60])))
+        total += secs
+        i += 1
+    return out
+
+
 def utc() -> str:
     return datetime.now(timezone.utc).isoformat(timespec="milliseconds")
 
@@ -104,7 +125,13 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--out", required=True)
     ap.add_argument("--scale", type=float, default=1.0, help="multiply segment durations")
+    ap.add_argument("--random-minutes", type=float, default=0.0,
+                    help="use a seeded random schedule of about this many minutes")
+    ap.add_argument("--seed", type=int, default=0)
     args = ap.parse_args()
+    global SCHEDULE
+    if args.random_minutes > 0:
+        SCHEDULE = random_schedule(args.random_minutes, args.seed)
     os.makedirs(args.out, exist_ok=True)
     pynvml.nvmlInit()
     h = pynvml.nvmlDeviceGetHandleByIndex(0)
@@ -119,6 +146,7 @@ def main() -> None:
         "torch": torch.__version__,
         "params": sum(p.numel() for p in model.parameters()),
         "schedule": SCHEDULE,
+        "schedule_seed": args.seed if args.random_minutes > 0 else None,
         "scale": args.scale,
         "started_utc": utc(),
         "data_kind": "measured",
