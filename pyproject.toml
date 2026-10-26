@@ -22,6 +22,7 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = ["pytest>=7"]
+laptop = ["nvidia-ml-py"]
 
 [tool.setuptools.packages.find]
 include = ["heatwave*"]
