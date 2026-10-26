@@ -1,0 +1,62 @@
+{
+ "name": "public_uk_carbon_intensity",
+ "freq": "30min",
+ "columns": {
+  "intensity_actual_g_per_kwh": {
+   "unit": "gCO2/kWh",
+   "description": "GB national carbon intensity, actual (estimated from metered generation), period start in UTC"
+  },
+  "intensity_forecast_g_per_kwh": {
+   "unit": "gCO2/kWh",
+   "description": "forecast value served by the API for that period; the API does not document the forecast horizon/vintage of archived values"
+  }
+ },
+ "source": {
+  "title": "Carbon Intensity API (GB), /intensity",
+  "url": "https://api.carbonintensity.org.uk",
+  "license": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/), data from the National Energy System Operator carbon intensity API",
+  "retrieved_utc": "2026-10-26T19:56:05+00:00",
+  "raw_sha256": {
+   "intensity_20240101.json": "7d7d9b69668e7aad90dfd818fe98c93be4c714655513a833bf655a917004da5c",
+   "intensity_20240129.json": "a9bcf683047fb764bcb0983ca977790caea6a3ace9ce9c36a5e314067282f0aa",
+   "intensity_20240226.json": "d8ceb743985ae0f2858d3ec42d591d994ec9c9aa4fffc696bf25a396ac41d07a",
+   "intensity_20240325.json": "69e9e4e47cc433195742db1cae44368e066b5a2b3df6e7c15d2b68a85eba0bf6",
+   "intensity_20240422.json": "a92b2c9b9a8486d0f97862eac7aed9a93b4778d025318f40cfeeadbf8ffb09dd",
+   "intensity_20240520.json": "bc353c875ba8e20311397529aed8e970b3f00c630e075c1ddf29efad64077098",
+   "intensity_20240617.json": "0ca7fbc6e60e4fa0f3c4edf5190dce12632cb08b9cf056b6c506259f8bb51bc6",
+   "intensity_20240715.json": "005635659e756d112d8db37d9600fa5e46a07ba37994ac8c860d5afc1d9a74d9",
+   "intensity_20240812.json": "e0dbeccb5297ff8eccfc9c7f8ae471ca27ba87bf71dafa68c29ae28c1c69e0a9",
+   "intensity_20240909.json": "6e91f5f577a1257e0e625b1f1e4a50b98d7f60d1d47ef1512a197c6c82a7b744",
+   "intensity_20241007.json": "bcec4833c59c22835464a10fad1d9ddbbb086e5737c88ea22e9d999bb606ba8e",
+   "intensity_20241104.json": "8422319de527f7f78429349474e63de237d95eda74f48ae29190bcd04cf93627",
+   "intensity_20241202.json": "6c3f5ef8491d113f5f53e5a8eb17f188f20cc1f3bfc12f8bcf9a558d0bb1e1aa",
+   "intensity_20241230.json": "c52fb9ba5a217113abb4b4f4e89e15399b7003960ca95b623b712623489cc142",
+   "intensity_20250127.json": "e660ac875f9780c82b1df233f8e3a10fdedb8f751cc9a0ccb04dd837bdd8d189",
+   "intensity_20250224.json": "3a6bcd73c7c614386430205eebd53dbf0ae81b6bc6d3b12fa3dbeffd7b1373da",
+   "intensity_20250324.json": "3e9a2c23d793b6064205f931fd9f8d4a76b25c093c7b1caae786e18d695fe704",
+   "intensity_20250421.json": "2484d93b7477bf9243933e5448fc499b7059ac6217f508797cbf249b9706a454",
+   "intensity_20250519.json": "d94ca5821bffc7b1ef46c29005ece9b7f6ffd981c0a0f7fb21976dc32e416f4c",
+   "intensity_20250616.json": "a37e62e8d40301d6f7eedd1d81884e27f307ec170f3f725e78f834eaaba83e50",
+   "intensity_20250714.json": "6fba822108b3b2e9209d436b7910d36fff399b300386e3d4d65fb49c02db0423",
+   "intensity_20250811.json": "e80993244e06b9ea46c1e2a2635c8accc2416a491b342947282473401f650bcc",
+   "intensity_20250908.json": "3c168f5fd73b064a34129e0599b25eedbade0bd19d0d02b8e93c47fbec14ba7d",
+   "intensity_20251006.json": "ec700d9579edb43a63703f743e8e7f5bb3225399b99e1f57bf714d2a3971c7d7",
+   "intensity_20251103.json": "682f23b1b617f58a29b95067d5526343cf2ad1158b05667aaabcf73f3786cdca",
+   "intensity_20251201.json": "d8a1f887c90bec2eac1ef86c6230d4c2431e48f096771e5a597c207382425c79",
+   "intensity_20251229.json": "aa2f36619333f74258a063c0df23c5513e3b562f72315d253a9a9e957594b128",
+   "intensity_20260126.json": "bcb12ae08819798c76a9a4b31c2eb562c0e230f5d02442f57c7ab7e7489cdce6",
+   "intensity_20260223.json": "c09ed9bf3a4b424edb003c024087ec20d7c774897694e811283e88bcc673f2eb",
+   "intensity_20260323.json": "bb0f590536a923226e77c229037170c42d78e229d85827c8ca8e0b4afdc5cc6f",
+   "intensity_20260420.json": "77c8a3fcf44a3183e820348b763e8fb9d106bb2e80dfd1dd29394f0d28e05ac1",
+   "intensity_20260518.json": "a6a204e36b2515456938aaae49a7524dc027083a2a1c09888e3dae4ca8753824",
+   "intensity_20260615.json": "e22b5a818171eb90c842fa847b72c91ef3f5bb667a87c4cc8ce1379375134997",
+   "intensity_20260713.json": "468df8ed958624c532e7cd04e70e56c52d9585e92dfd185c5b93f90261495433",
+   "intensity_20260810.json": "c558daa09df560ef6fb0979e501e168636a2a8891bf6ef012fd02781ffbd5434",
+   "intensity_20260907.json": "036b3e75c50723c2ec2dfe93efa95ad77e8ed273425de1c4adabcca3efbdafe2",
+   "intensity_20261005.json": "8bfa3cc88d0ec13af0d2b95f196ab16165a6eb10d9af635c9e5cf3d751b6ce0e"
+  }
+ },
+ "data_kind": "public",
+ "producer": "scripts/fetch_uk_carbon.py",
+ "notes": "Forecast is the value the API returns for past periods; treat its vintage as unknown (not a verified day-ahead vintage)."
+}

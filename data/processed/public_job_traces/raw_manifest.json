@@ -1,0 +1,20 @@
+{
+ "asi_opensource_job_execution_summary.zip": {
+  "bytes": 1188295031,
+  "retrieved_utc": "2026-10-26T19:55:32+00:00",
+  "sha256": "2dd48db5c5a532d0b1504c67522ed7f6929df6efd5c22abc4a921349aa37ff4f",
+  "url": "https://tre-clusterdata.oss-cn-hangzhou.aliyuncs.com/cluster-trace-gpu-v2026/data/asi_opensource_job_execution_summary.zip"
+ },
+ "v2023/openb_node_list_gpu_node.csv": {
+  "bytes": 42353,
+  "retrieved_utc": "2026-10-26T19:55:25+00:00",
+  "sha256": "2beca64b4d3dfa342036a34b56a495c6cef9225db836c81f541282cb1df320b5",
+  "url": "https://raw.githubusercontent.com/alibaba/clusterdata/master/cluster-trace-gpu-v2023/csv/openb_node_list_gpu_node.csv"
+ },
+ "v2023/openb_pod_list_default.csv": {
+  "bytes": 575468,
+  "retrieved_utc": "2026-10-26T19:55:25+00:00",
+  "sha256": "1ee7ed79c27a3b0861cda8ddba86a004c6aba904caafa329a76ae93ca63834a8",
+  "url": "https://raw.githubusercontent.com/alibaba/clusterdata/master/cluster-trace-gpu-v2023/csv/openb_pod_list_default.csv"
+ }
+}

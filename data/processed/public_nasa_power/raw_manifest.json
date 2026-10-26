@@ -1,0 +1,56 @@
+{
+ "bayarea_2024.json": {
+  "bytes": 971967,
+  "retrieved_utc": "2026-10-26T19:52:18+00:00",
+  "sha256": "d59182b629d2065cb0b17b4a33ff995f5f7063ee73a1fd0d1e6bda7aa6434189",
+  "url": "https://power.larc.nasa.gov/api/temporal/hourly/point?parameters=T2M%2CRH2M%2CT2MDEW%2CT2MWET%2CWS10M%2CALLSKY_SFC_SW_DWN&community=RE&longitude=-121.96&latitude=37.35&start=20240101&end=20241231&format=JSON&time-standard=UTC"
+ },
+ "bayarea_2025.json": {
+  "bytes": 969477,
+  "retrieved_utc": "2026-10-26T19:52:24+00:00",
+  "sha256": "346ba365706b875536e4c31c14390d41eb6d86c400ab590cd1544681fcb97b73",
+  "url": "https://power.larc.nasa.gov/api/temporal/hourly/point?parameters=T2M%2CRH2M%2CT2MDEW%2CT2MWET%2CWS10M%2CALLSKY_SFC_SW_DWN&community=RE&longitude=-121.96&latitude=37.35&start=20250101&end=20251231&format=JSON&time-standard=UTC"
+ },
+ "bayarea_2026.json": {
+  "bytes": 798217,
+  "retrieved_utc": "2026-10-26T19:52:31+00:00",
+  "sha256": "d239e57788edb66fc104e6bf2b8e0208b462108222f513be8499314c1d3982c7",
+  "url": "https://power.larc.nasa.gov/api/temporal/hourly/point?parameters=T2M%2CRH2M%2CT2MDEW%2CT2MWET%2CWS10M%2CALLSKY_SFC_SW_DWN&community=RE&longitude=-121.96&latitude=37.35&start=20260101&end=20261025&format=JSON&time-standard=UTC"
+ },
+ "frankfurt_2024.json": {
+  "bytes": 970880,
+  "retrieved_utc": "2026-10-26T19:52:57+00:00",
+  "sha256": "50b737077c809cc771c895497b2c3667d43739afa19361b6e6f56c2fd921bb50",
+  "url": "https://power.larc.nasa.gov/api/temporal/hourly/point?parameters=T2M%2CRH2M%2CT2MDEW%2CT2MWET%2CWS10M%2CALLSKY_SFC_SW_DWN&community=RE&longitude=8.68&latitude=50.11&start=20240101&end=20241231&format=JSON&time-standard=UTC"
+ },
+ "frankfurt_2025.json": {
+  "bytes": 967741,
+  "retrieved_utc": "2026-10-26T19:53:04+00:00",
+  "sha256": "7c1577d13bab483439b003af3eac99679700e60c605c820b21778b2d2b9ed718",
+  "url": "https://power.larc.nasa.gov/api/temporal/hourly/point?parameters=T2M%2CRH2M%2CT2MDEW%2CT2MWET%2CWS10M%2CALLSKY_SFC_SW_DWN&community=RE&longitude=8.68&latitude=50.11&start=20250101&end=20251231&format=JSON&time-standard=UTC"
+ },
+ "frankfurt_2026.json": {
+  "bytes": 796211,
+  "retrieved_utc": "2026-10-26T19:53:10+00:00",
+  "sha256": "d5f7788bb2cb61dde514093232198afd2a580c3fddce17e93f0d047b6f5ab68d",
+  "url": "https://power.larc.nasa.gov/api/temporal/hourly/point?parameters=T2M%2CRH2M%2CT2MDEW%2CT2MWET%2CWS10M%2CALLSKY_SFC_SW_DWN&community=RE&longitude=8.68&latitude=50.11&start=20260101&end=20261025&format=JSON&time-standard=UTC"
+ },
+ "london_2024.json": {
+  "bytes": 970023,
+  "retrieved_utc": "2026-10-26T19:52:37+00:00",
+  "sha256": "b9cb441ac658afbc752af38a80610722b79ad8438e2a19bce2dcbf13003a43e1",
+  "url": "https://power.larc.nasa.gov/api/temporal/hourly/point?parameters=T2M%2CRH2M%2CT2MDEW%2CT2MWET%2CWS10M%2CALLSKY_SFC_SW_DWN&community=RE&longitude=-0.13&latitude=51.51&start=20240101&end=20241231&format=JSON&time-standard=UTC"
+ },
+ "london_2025.json": {
+  "bytes": 967501,
+  "retrieved_utc": "2026-10-26T19:52:44+00:00",
+  "sha256": "6c651c8b2295747e9be2676af36c56dcb6961cf41693d46c56cf1231d06cbbd0",
+  "url": "https://power.larc.nasa.gov/api/temporal/hourly/point?parameters=T2M%2CRH2M%2CT2MDEW%2CT2MWET%2CWS10M%2CALLSKY_SFC_SW_DWN&community=RE&longitude=-0.13&latitude=51.51&start=20250101&end=20251231&format=JSON&time-standard=UTC"
+ },
+ "london_2026.json": {
+  "bytes": 795599,
+  "retrieved_utc": "2026-10-26T19:52:50+00:00",
+  "sha256": "ea0b1fb36d89c3f816f40767d83a72916b0d5d0b928f8077f1ac062e356bb5c4",
+  "url": "https://power.larc.nasa.gov/api/temporal/hourly/point?parameters=T2M%2CRH2M%2CT2MDEW%2CT2MWET%2CWS10M%2CALLSKY_SFC_SW_DWN&community=RE&longitude=-0.13&latitude=51.51&start=20260101&end=20261025&format=JSON&time-standard=UTC"
+ }
+}

@@ -1,0 +1,156 @@
+{
+ "provenance": {
+  "script": "scripts/fetch_reachability.py",
+  "script_sha256": "891e1d2548a5e28f040d526cae8b22d1c6d2a95f6c2c77503c033a619a2ad5a5",
+  "git": {
+   "commit": "569a8dbc34f9f8c2ea858c91f90a446be4d49bbe",
+   "dirty": "true"
+  },
+  "inputs": {},
+  "data_kind": "public",
+  "created_utc": "2026-10-26T20:40:51+00:00",
+  "notes": "GET with Range bytes=0-0; 206/200 means reachable, 301/302 are redirects not followed, 403/407 are blocked by the proxy or site, 429 is a rate or quota limit."
+ },
+ "result": {
+  "mit_supercloud_bucket": {
+   "url": "https://mit-supercloud-dataset.s3.amazonaws.com/?list-type=2&delimiter=/",
+   "http_status": 200,
+   "note": ""
+  },
+  "alibaba_clusterdata_raw_readme": {
+   "url": "https://raw.githubusercontent.com/alibaba/clusterdata/master/README.md",
+   "http_status": 206,
+   "note": ""
+  },
+  "alibaba_clusterdata_github_page": {
+   "url": "https://github.com/alibaba/clusterdata",
+   "http_status": 403,
+   "note": "{\"message\":\"GitHub access to this repository is not enabled for this session. Use add_repo to request access. If add_repo answers that read access is already av"
+  },
+  "alibaba_v2026_oss_data": {
+   "url": "https://tre-clusterdata.oss-cn-hangzhou.aliyuncs.com/cluster-trace-gpu-v2026/data/asi_opensource_job_execution_summary.zip",
+   "http_status": 206,
+   "note": ""
+  },
+  "microsoft_philly_github_page": {
+   "url": "https://github.com/microsoft/philly-traces",
+   "http_status": 403,
+   "note": "{\"message\":\"GitHub access to this repository is not enabled for this session. Use add_repo to request access. If add_repo answers that read access is already av"
+  },
+  "microsoft_philly_raw_readme": {
+   "url": "https://raw.githubusercontent.com/microsoft/philly-traces/master/README.md",
+   "http_status": 404,
+   "note": ""
+  },
+  "azure_public_dataset_raw_readme": {
+   "url": "https://raw.githubusercontent.com/Azure/AzurePublicDataset/master/README.md",
+   "http_status": 206,
+   "note": ""
+  },
+  "azure_public_dataset_blob_root": {
+   "url": "https://azurepublicdatasettraces.blob.core.windows.net/",
+   "http_status": 400,
+   "note": "\ufeff<?xml version=\"1.0\" encoding=\"utf-8\"?><Error><Code>InvalidQueryParameterValue</Code><Message>Value for one of the query parameters specified in the request URI"
+  },
+  "helios_github_page": {
+   "url": "https://github.com/S-Lab/HeliosData",
+   "http_status": 403,
+   "note": "{\"message\":\"GitHub access to this repository is not enabled for this session. Use add_repo to request access. If add_repo answers that read access is already av"
+  },
+  "helios_raw_readme": {
+   "url": "https://raw.githubusercontent.com/S-Lab/Helios/main/README.md",
+   "http_status": 404,
+   "note": ""
+  },
+  "acmetrace_raw_readme": {
+   "url": "https://raw.githubusercontent.com/InternLM/AcmeTrace/main/README.md",
+   "http_status": 206,
+   "note": ""
+  },
+  "unece_lca_pdf": {
+   "url": "https://unece.org/sites/default/files/2021-10/LCA-2.pdf",
+   "http_status": 403,
+   "note": "<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><meta http-equiv=\"X-UA"
+  },
+  "caiso_oasis": {
+   "url": "https://oasis.caiso.com/oasisapi/SingleZip?queryname=PRC_LMP&startdatetime=20260101T08:00-0000&enddatetime=20260102T08:00-0000&version=12&market_run_id=DAM&node=TH_NP15_GEN-APND&resultformat=6",
+   "http_status": 200,
+   "note": ""
+  },
+  "caiso_outlook_fuelsource": {
+   "url": "https://www.caiso.com/outlook/history/20260101/fuelsource.csv",
+   "http_status": 200,
+   "note": ""
+  },
+  "uk_carbon_intensity_api": {
+   "url": "https://api.carbonintensity.org.uk/intensity/2026-01-01T00:00Z/2026-01-02T00:00Z",
+   "http_status": 200,
+   "note": ""
+  },
+  "energy_charts_price": {
+   "url": "https://api.energy-charts.info/price?bzn=DE-LU&start=2026-01-01&end=2026-01-02",
+   "http_status": 200,
+   "note": ""
+  },
+  "eia_api": {
+   "url": "https://api.eia.gov/v2/electricity/rto/region-data/data/?frequency=hourly",
+   "http_status": 403,
+   "note": "{   \"error\": {     \"code\": \"API_KEY_MISSING\",     \"message\": \"No api_key was supplied.  Please register for one at https://www.eia.gov/opendata/register.php\"   "
+  },
+  "eia_www_gridmonitor": {
+   "url": "https://www.eia.gov/electricity/gridmonitor/",
+   "http_status": 206,
+   "note": ""
+  },
+  "eia_www_opendata": {
+   "url": "https://www.eia.gov/opendata/",
+   "http_status": 206,
+   "note": ""
+  },
+  "eia_www_bulk_download": {
+   "url": "https://www.eia.gov/opendata/bulk/EBA.zip",
+   "http_status": 206,
+   "note": ""
+  },
+  "open_meteo_forecast": {
+   "url": "https://api.open-meteo.com/v1/forecast?latitude=37.35&longitude=-121.96&hourly=temperature_2m&forecast_days=1",
+   "http_status": 429,
+   "note": "{\"reason\":\"Daily API request limit exceeded. Please try again tomorrow.\",\"error\":true}"
+  },
+  "open_meteo_archive": {
+   "url": "https://archive-api.open-meteo.com/v1/archive?latitude=37.35&longitude=-121.96&start_date=2026-01-01&end_date=2026-01-02&hourly=temperature_2m",
+   "http_status": 429,
+   "note": "{\"error\":true,\"reason\":\"Daily API request limit exceeded. Please try again tomorrow.\"}"
+  },
+  "open_meteo_historical_forecast": {
+   "url": "https://historical-forecast-api.open-meteo.com/v1/forecast?latitude=37.35&longitude=-121.96&start_date=2026-01-01&end_date=2026-01-02&hourly=temperature_2m",
+   "http_status": 429,
+   "note": "{\"reason\":\"Daily API request limit exceeded. Please try again tomorrow.\",\"error\":true}"
+  },
+  "open_meteo_previous_runs": {
+   "url": "https://previous-runs-api.open-meteo.com/v1/forecast?latitude=37.35&longitude=-121.96&start_date=2026-01-01&end_date=2026-01-02&hourly=temperature_2m_previous_day1",
+   "http_status": 429,
+   "note": "{\"reason\":\"Daily API request limit exceeded. Please try again tomorrow.\",\"error\":true}"
+  },
+  "nasa_power_hourly": {
+   "url": "https://power.larc.nasa.gov/api/temporal/hourly/point?parameters=T2M&community=RE&longitude=-121.96&latitude=37.35&start=20260101&end=20260102&format=JSON&time-standard=UTC",
+   "http_status": 200,
+   "note": ""
+  },
+  "noaa_api_weather_gov": {
+   "url": "https://api.weather.gov/",
+   "http_status": 206,
+   "note": ""
+  },
+  "ncei_global_hourly_csv": {
+   "url": "https://www.ncei.noaa.gov/data/global-hourly/access/2026/72494023234.csv",
+   "http_status": 301,
+   "note": ""
+  },
+  "ipcc_ar5_annex_iii_pdf": {
+   "url": "https://www.ipcc.ch/site/assets/uploads/2018/02/ipcc_wg3_ar5_annex-iii.pdf",
+   "http_status": 206,
+   "note": ""
+  }
+ }
+}

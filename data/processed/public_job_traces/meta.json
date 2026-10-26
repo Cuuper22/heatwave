@@ -1,0 +1,21 @@
+{
+ "data_kind": "public",
+ "files": {
+  "alibaba2023_nodes.parquet": "Alibaba cluster-trace-gpu-v2023 openb_node_list_gpu_node.csv",
+  "alibaba2023_pods.parquet": "Alibaba cluster-trace-gpu-v2023 openb_pod_list_default.csv; times are seconds on a trace-relative clock (no calendar date given); run_duration_s = deletion_s - scheduled_s; NaN scheduled_s means never scheduled",
+  "alibaba2026_gpu_pods_sample.parquet": "seeded (seed=0) random sample of GPU-requesting pods from asi_opensource_job_execution_summary; no start times in this table"
+ },
+ "license_note": "no licence file in the repository; README: traces may be used 'for research or study purpose'",
+ "name": "public_job_traces",
+ "producer": "scripts/fetch_job_traces.py",
+ "raw_sha256": {
+  "asi_opensource_job_execution_summary.zip": "2dd48db5c5a532d0b1504c67522ed7f6929df6efd5c22abc4a921349aa37ff4f",
+  "v2023/openb_node_list_gpu_node.csv": "2beca64b4d3dfa342036a34b56a495c6cef9225db836c81f541282cb1df320b5",
+  "v2023/openb_pod_list_default.csv": "1ee7ed79c27a3b0861cda8ddba86a004c6aba904caafa329a76ae93ca63834a8"
+ },
+ "retrieved_utc": "2026-10-26T20:00:51+00:00",
+ "sources": {
+  "v2023": "https://raw.githubusercontent.com/alibaba/clusterdata/master/cluster-trace-gpu-v2023/",
+  "v2026": "https://tre-clusterdata.oss-cn-hangzhou.aliyuncs.com/cluster-trace-gpu-v2026/data/asi_opensource_job_execution_summary.zip"
+ }
+}

@@ -1,0 +1,33 @@
+{
+ "name": "public_de_price_dam_native",
+ "freq": "15min",
+ "columns": {
+  "price_eur_per_mwh": {
+   "unit": "EUR/MWh",
+   "description": "DE-LU day-ahead auction price at its native step"
+  }
+ },
+ "source": {
+  "title": "Energy-Charts /price?bzn=DE-LU (day-ahead)",
+  "url": "https://api.energy-charts.info",
+  "license": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/), from Bundesnetzagentur | SMARD.de (as stated in the API response)",
+  "retrieved_utc": "2026-10-26T19:54:01+00:00",
+  "raw_sha256": {
+   "price_20240101.json": "dc822fb8361927c04998ddb3043e560836e1b26dd8b3889972e20c0deb356a6d",
+   "price_20240331.json": "4998920dc487007559fa0f9b23f689f728254487262317b63d183c995c784653",
+   "price_20240629.json": "96107506d236f6f382dda0fc405e8f1ab75bdc0581b5b733f921a3a3cb05def6",
+   "price_20240927.json": "cf884e4aba4344f30231501986724edf61a258709ea74ca764a310faa6ad27bd",
+   "price_20241226.json": "8c8f31fcae9b723454a9ab85549319f6463c45ca0528143a67f73990c56cad06",
+   "price_20250326.json": "a0d3704fd7e8e1425ebdfc0afb6cd876bbdb36858968b5761dedbb42d1d6a544",
+   "price_20250624.json": "49e4b723cbf4980044e9fe008388561c68f6677d97dbd8d47c3b34d93e172de6",
+   "price_20250922.json": "fa6560c8a41f3b253b6a292c1cd0e6909cf039e0ae503a273ea8fef3f9fafee0",
+   "price_20251221.json": "d3f7049d3a50183734d6c580a86d9c80058bd8642761672fbcee75dce5ab35d2",
+   "price_20260321.json": "a9f67ec931a7758adf4f00e25abcd702690ce76d2cedda1cabc6f3fa80e15040",
+   "price_20260619.json": "d06ef4f339b1a740f82374b515409e543550cdc4c1dbf7f6997f7d5210c155c7",
+   "price_20260917.json": "ec3c9445b1d7bfcf151cc6d767848d8238dd4820b046227414d044ac5f1bb20e"
+  }
+ },
+ "data_kind": "public",
+ "producer": "scripts/fetch_energy_charts.py",
+ "notes": "Native step changes from 60 min to 15 min on 2025-09-30 22:00:00+00:00; this file covers only the 15-min period."
+}

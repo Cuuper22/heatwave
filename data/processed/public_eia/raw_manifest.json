@@ -1,0 +1,8 @@
+{
+ "EBA.zip": {
+  "bytes": 699317664,
+  "retrieved_utc": "2026-10-26T20:05:22+00:00",
+  "sha256": "454a7e70c080846c1d0aa9de6af99e16b90f25b5dec7440347d4332084cd1c58",
+  "url": "https://www.eia.gov/opendata/bulk/EBA.zip"
+ }
+}

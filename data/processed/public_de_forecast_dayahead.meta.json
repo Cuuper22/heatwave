@@ -1,0 +1,81 @@
+{
+ "name": "public_de_forecast_dayahead",
+ "freq": "15min",
+ "columns": {
+  "load_forecast_mw": {
+   "unit": "MW",
+   "description": "Energy-Charts day-ahead forecast: load"
+  },
+  "solar_forecast_mw": {
+   "unit": "MW",
+   "description": "Energy-Charts day-ahead forecast: solar"
+  },
+  "wind_onshore_forecast_mw": {
+   "unit": "MW",
+   "description": "Energy-Charts day-ahead forecast: wind onshore"
+  },
+  "wind_offshore_forecast_mw": {
+   "unit": "MW",
+   "description": "Energy-Charts day-ahead forecast: wind offshore"
+  }
+ },
+ "source": {
+  "title": "Energy-Charts /public_power_forecast (day-ahead)",
+  "url": "https://api.energy-charts.info",
+  "license": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/), from Bundesnetzagentur | SMARD.de (as stated in the API response)",
+  "retrieved_utc": "2026-10-26T19:54:01+00:00",
+  "raw_sha256": {
+   "fc_load_20240101.json": "b015e17cb8ba2f745ce330da2ad42db50f12c0d030eb17a31485e890ca331188",
+   "fc_load_20240331.json": "088688b7ce02c3c796104e8678ed565881e5b6bd504844ca15abab0036d7ec83",
+   "fc_load_20240629.json": "0837203c7697608f84a3f8488a4adbbca4acb0010b0e71fd9f8d79ac9a8c1684",
+   "fc_load_20240927.json": "2899d9b171be213e0cfcf95a4dc462ef57df899d71815c3cbfe03e98dd0a91b0",
+   "fc_load_20241226.json": "f507d6f7b13259762a6cc18816f709b5dc6d7cf2d0abd5d8c2b999cd4aa179c9",
+   "fc_load_20250326.json": "78185e5bb64be2fa79e9f4a4f36d586c1905e8e970bdff076b9cd497fdce6c8f",
+   "fc_load_20250624.json": "ad07d079c432690f55359f15c3300f1636b575ac71c0aef9dfa2c9a2145f1e0b",
+   "fc_load_20250922.json": "bf8531894017a96b659444995108b9666608b145964c41033b32b55ec78393ed",
+   "fc_load_20251221.json": "09c362ec5931663dbcad603f8ba8513c9aba98f4819f6da81947347730edfa83",
+   "fc_load_20260321.json": "d35b6005b31d7939336ed6bc8ce3ab7f635fe9ed3ab83001e4eadcf0c6515092",
+   "fc_load_20260619.json": "91d51fe25c607aea027afcaa1249bc5b6c81ff03310caba94f0314d65e27cfc4",
+   "fc_load_20260917.json": "11fe71dd95320548b126e808ae99b055f80aca4d21ae9d298a6ee38edf9ae0f2",
+   "fc_solar_20240101.json": "257217e1ac9b68452607e5c4ed8723c419b3ba5b5608cdcb53bd0e570b3c07cd",
+   "fc_solar_20240331.json": "a7b84f17e5ee648c372d82fdf2bdfc0111d416e2efa59b6f4dcc9df172e88d09",
+   "fc_solar_20240629.json": "7a0920a0c0834efe4dee837b640e32dd7a409fddf7f38ceeb0e6693a1365b884",
+   "fc_solar_20240927.json": "e66d234ee4e50c34f8c9c340393a369d2f5e4ade0a545253008f852377e4999a",
+   "fc_solar_20241226.json": "636b87e2a62ba3489aec3b71e3d21801356eec20b971a39b95a594395053d044",
+   "fc_solar_20250326.json": "6418360472d9e618eda98315034b5e41d33001cb423d3ca81846aa3e9c3208b3",
+   "fc_solar_20250624.json": "7a835709dbdd6110dbeff4ed47aef9b37582cc544b49bb2cfe53c83582edc6e0",
+   "fc_solar_20250922.json": "0777de67bf132c2bcd5179fb56f2ff79d88e90675cd52d261906e264cb67a30e",
+   "fc_solar_20251221.json": "4827373de2e2f18ece5a7dd7720f42d6c0579e601eb75349850313afa6548217",
+   "fc_solar_20260321.json": "58cd9bcd49a66d19d4ca6207860152c04bee11e0a3234345750ee938021b198d",
+   "fc_solar_20260619.json": "2a67dcc56ad17f470b9ea86069bdab6a5cd6cb1022ce0a39a76fadc87564339e",
+   "fc_solar_20260917.json": "3b919cb4e4e85682cdafbaa23b75ecdb12afc3cc33fbca4907fbbf7b63daf67f",
+   "fc_wind_onshore_20240101.json": "84a64c601153ef9946acefd8c804db9664ab9df2a9fda4e0e5d1a2e9119daf82",
+   "fc_wind_onshore_20240331.json": "f03f0fe067b099f0071882f5df533ac8629a18c67235d8d1ac6a5ee99de1a8ca",
+   "fc_wind_onshore_20240629.json": "d19d19556cadc43d4f287ae4075209980dcfcda470cdb9a09ccce97c0c6d5611",
+   "fc_wind_onshore_20240927.json": "422cc4a1558fd4d4620155f38fe0b97229f2ee76f046a2ee7b74d68df774206c",
+   "fc_wind_onshore_20241226.json": "affa3820843dd76795f2caf27595b4a1fa071116b4ed45ee553ba7c3ad180827",
+   "fc_wind_onshore_20250326.json": "a34d347df4bbb1f5408349b965e477e8e35f2598ad3c509308ed41b2e3a17756",
+   "fc_wind_onshore_20250624.json": "33a8f7b4217f09e2d17f5e5ce7a3ee35ab13171d19accab169181aaa6c3f1d21",
+   "fc_wind_onshore_20250922.json": "05a53bd34b8992a5cc7d4689004ecc9de67d88ae8503779fa308e60e11238ee5",
+   "fc_wind_onshore_20251221.json": "1a3071cd74177a45251e5e02321821e38a3fee436bed32dfc9f06f39b6edc459",
+   "fc_wind_onshore_20260321.json": "bcdcc4e53136e11bfc94294a31f0bf0ad8ab826002b57bd3cc675b0d28adfabf",
+   "fc_wind_onshore_20260619.json": "3fd484ae4965c178456ad77981d3806464fca91604513240b1519794c2e589b3",
+   "fc_wind_onshore_20260917.json": "9b7939f3f0b967f8f013962a33a6a5f5ce5880d74befb68ffd47654c10b9a900",
+   "fc_wind_offshore_20240101.json": "a898649259ca39e5b20df000f5f93574826fe3abc02024d34f0d917c1f44cf67",
+   "fc_wind_offshore_20240331.json": "b3d9a3cc4fa1f23f5099c49620c0c15bb065b5616608f16ac76846c5a0ebee23",
+   "fc_wind_offshore_20240629.json": "42eb297c53364918e9e53f831a2f7e65529c77358972ffadef5f5cea384fd894",
+   "fc_wind_offshore_20240927.json": "d16038a8f08d5fa754b611ea842e52191028d45ece67daeb38a6bf38d152f6cc",
+   "fc_wind_offshore_20241226.json": "cf7c3a9e2cfd9f2493e091dd352d90ab20a36a6a2b2016c66a1b0d03131c9cf6",
+   "fc_wind_offshore_20250326.json": "f3a4e9c22767e72f235b361b7078a22960f6fb2ff4600dd8a3c967bbbb88cdbf",
+   "fc_wind_offshore_20250624.json": "300a059d6796403b2f9ddb8d802f07b947663169709d5f584891b39334d27240",
+   "fc_wind_offshore_20250922.json": "a138bd81638d427c957dd9ac139db1be4ef868219791f768a6425f5e5c192b63",
+   "fc_wind_offshore_20251221.json": "5db1ba1dc1757368862a8c14fb99d15f1effc9b94503a8676f2dbf4fca8e2f0b",
+   "fc_wind_offshore_20260321.json": "153570b0fee5e0999ed08a1d5007e2db36e9fb58aa21f7de0c1a2ee7deb180c5",
+   "fc_wind_offshore_20260619.json": "7c505e68853cc83ffdd91fd7fa91ffd90637f3bd2cfb2afbb9c47b6b22907a29",
+   "fc_wind_offshore_20260917.json": "bc56d73a2d6f55608f45d7384ec1621122ceb517b3dabfa2ebe809d90a93b9e7"
+  }
+ },
+ "data_kind": "public",
+ "producer": "scripts/fetch_energy_charts.py",
+ "notes": "Archived day-ahead forecasts: known-future covariates for load and renewable output."
+}

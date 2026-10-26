@@ -1,0 +1,34 @@
+{
+ "name": "nlr_infer_online_000022",
+ "freq": "100ms",
+ "columns": {
+  "total_power_w": {
+   "unit": "W",
+   "description": "sum over all GPUs (NVML) and CPUs (RAPL) of all nodes of the job, as aggregated by the dataset authors"
+  }
+ },
+ "source": {
+  "title": "Dataset of Generative AI Workload Power Profiles (Vercellino et al., NLR 2026), aggregated datasets",
+  "url": "https://doi.org/10.7799/3025227",
+  "paper": "https://arxiv.org/abs/2604.07345",
+  "license": "NLR Data Catalog licence (https://data.nlr.gov/node/312/license): free use/copy with notice retained and credit to DOE/NLR/ALLIANCE",
+  "retrieved_utc": "2026-10-26T20:14:42+00:00",
+  "raw_sha256": {
+   "dataset.zip": "dcad6de800fb565d850b163902e2eddae48aabd1ed1c7336f9a1cdaf3012f137"
+  }
+ },
+ "data_kind": "public",
+ "producer": "scripts/fetch_nlr_genai_power.py",
+ "time_origin": "relative: index = 1970-01-01T00:00:00Z + seconds since job start; not a calendar time",
+ "run": {
+  "model": "llama3_70b_vllm_online",
+  "nodes": null,
+  "gpus": null,
+  "request_rate": 40.0,
+  "num_prompts": 1000,
+  "start_time_unspecified_tz": "2025-11-30 16:03:44.143130",
+  "mean_power_w_authors": 2581.032878396931,
+  "peak_power_w_authors": 2823.223090240353
+ },
+ "notes": "Hardware per node: 4x NVIDIA H100 SXM + 2x AMD EPYC 9554 (paper arXiv:2604.07345)."
+}
