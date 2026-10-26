@@ -1,0 +1,224 @@
+{
+ "name": "laptop_run2_10hz",
+ "columns": {
+  "mono_s": {
+   "unit": "s",
+   "description": "host monotonic clock"
+  },
+  "power_w": {
+   "unit": "W",
+   "description": "GPU board power (NVML nvmlDeviceGetPowerUsage)"
+  },
+  "energy_mj": {
+   "unit": "mJ",
+   "description": "cumulative GPU energy counter (NVML)"
+  },
+  "power_energy_w": {
+   "unit": "W",
+   "description": "power from the NVML cumulative energy counter (differenced at counter updates)"
+  },
+  "temp_c": {
+   "unit": "degC",
+   "description": "GPU core temperature (NVML)"
+  },
+  "sm_clock_mhz": {
+   "unit": "MHz",
+   "description": "SM clock"
+  },
+  "util_gpu_pct": {
+   "unit": "%",
+   "description": "GPU utilization"
+  },
+  "util_mem_pct": {
+   "unit": "%",
+   "description": "memory controller utilization"
+  },
+  "enforced_limit_w": {
+   "unit": "W",
+   "description": "enforced power limit"
+  },
+  "clock_event_reasons": {
+   "unit": "bitmask",
+   "description": "NVML clock event reasons"
+  },
+  "segment": {
+   "unit": "code",
+   "description": "index into meta schedule"
+  },
+  "training_on": {
+   "unit": "0/1",
+   "description": "scripted load active (known future)"
+  },
+  "ckpt_scheduled": {
+   "unit": "0/1",
+   "description": "checkpoint write interval (from load log)"
+  }
+ },
+ "source": {
+  "title": "Laptop GPU collection run run2",
+  "url": "local: scripts/laptop_collect.py on the author's laptop",
+  "license": "same as this repo",
+  "retrieved_utc": "2026-10-26T21:39:51.195+00:00",
+  "raw_sha256": {
+   "telemetry.csv": "ffecd2fd29e799f1ca14d4a0ca4a3a8c3231cd20b813135e7d9f3ee87c95fe94",
+   "events.csv": "6b4adeefb4dfdc91452e497a02b33692fcd19d26c33b1342b02585fc9bde09e2",
+   "meta.json": "57746b2ebbe653eca13e3d454da8fba408f498b2ae28fccc17ab98d9c6e85c7e"
+  },
+  "device": {
+   "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU",
+   "driver": "596.36",
+   "limits_w": [
+    1.0,
+    105.0
+   ],
+   "default_limit_w": 80.0,
+   "torch": "2.6.0+cu124",
+   "params": 27442176
+  },
+  "schedule": [
+   [
+    "r0-train",
+    360,
+    "train",
+    16,
+    30
+   ],
+   [
+    "r1-train",
+    360,
+    "train",
+    64,
+    60
+   ],
+   [
+    "r2-idle",
+    360,
+    "idle",
+    0,
+    0
+   ],
+   [
+    "r3-train",
+    180,
+    "train",
+    16,
+    60
+   ],
+   [
+    "r4-train",
+    360,
+    "train",
+    16,
+    60
+   ],
+   [
+    "r5-train",
+    360,
+    "train",
+    32,
+    0
+   ],
+   [
+    "r6-square",
+    60,
+    "square",
+    32,
+    0
+   ],
+   [
+    "r7-train",
+    240,
+    "train",
+    16,
+    60
+   ],
+   [
+    "r8-idle",
+    180,
+    "idle",
+    0,
+    0
+   ],
+   [
+    "r9-idle",
+    240,
+    "idle",
+    0,
+    0
+   ],
+   [
+    "r10-train",
+    180,
+    "train",
+    64,
+    15
+   ],
+   [
+    "r11-train",
+    300,
+    "train",
+    32,
+    60
+   ],
+   [
+    "r12-square",
+    60,
+    "square",
+    64,
+    0
+   ],
+   [
+    "r13-idle",
+    240,
+    "idle",
+    0,
+    0
+   ],
+   [
+    "r14-square",
+    60,
+    "square",
+    32,
+    0
+   ],
+   [
+    "r15-idle",
+    300,
+    "idle",
+    0,
+    0
+   ],
+   [
+    "r16-idle",
+    60,
+    "idle",
+    0,
+    0
+   ],
+   [
+    "r17-idle",
+    300,
+    "idle",
+    0,
+    0
+   ],
+   [
+    "r18-square",
+    240,
+    "square",
+    64,
+    0
+   ],
+   [
+    "r19-train",
+    300,
+    "train",
+    32,
+    30
+   ]
+  ]
+ },
+ "data_kind": "measured",
+ "producer": "scripts/process_laptop_run.py",
+ "freq": "100ms (irregular, ~10 Hz)"
+}
