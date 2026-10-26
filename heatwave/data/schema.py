@@ -54,6 +54,9 @@ def save_series(df: pd.DataFrame, name: str, meta: Mapping[str, Any], root: Path
 
 def load_series(name: str, root: Path = PROCESSED) -> tuple[pd.DataFrame, dict[str, Any]]:
     df = pd.read_parquet(root / f"{name}.parquet")
+    if isinstance(df.index, pd.DatetimeIndex):
+        # Files written by pandas 3 default to microsecond resolution; use ns everywhere.
+        df.index = df.index.as_unit("ns")
     meta = json.loads((root / f"{name}.meta.json").read_text())
     return df, meta
 
