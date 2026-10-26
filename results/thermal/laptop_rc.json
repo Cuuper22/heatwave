@@ -1,0 +1,99 @@
+{
+ "provenance": {
+  "script": "experiments/thermal/calibrate_laptop.py",
+  "script_sha256": "d9201216eb5cf4e2633e3bd2f5c28996e06971e79b2f291f01908901ff30b601",
+  "git": {
+   "commit": "01fe2cb9f7ac69a8c64d2d0f8c62ee8988d5e8c3",
+   "dirty": "true"
+  },
+  "inputs": {
+   "/home/claude/wt/heatwave-main/data/processed/laptop_run1_1s.parquet": "c8c74fef4a637da97afdd980736a9e2831b173539f1b09171f77ba598ebf4876"
+  },
+  "data_kind": "measured",
+  "created_utc": "2026-10-26T20:22:49+00:00",
+  "notes": ""
+ },
+ "result": {
+  "fit_run": "run1",
+  "device": {
+   "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU",
+   "driver": "596.36",
+   "limits_w": [
+    1.0,
+    105.0
+   ],
+   "default_limit_w": 80.0,
+   "torch": "2.6.0+cu124",
+   "params": 27442176
+  },
+  "one_node": {
+   "params": {
+    "heat_capacity_j_per_k": 12.685648923430715,
+    "resistance_k_per_w": 0.8012799996032113,
+    "cooling_lag_s": 0.0,
+    "cooling_capacity_w": null,
+    "supply_setpoint_c": 32.144823715443906,
+    "outdoor_coupling_k_per_k": 0.0,
+    "outdoor_reference_c": 0.0,
+    "time_constant_s": 10.164756764333042
+   },
+   "fit_report": {
+    "rmse_c": 3.1991873216428264,
+    "r2": 0.9603263131495527,
+    "time_constant_s": 10.164756764333042,
+    "n": 2460,
+    "success": true,
+    "free": [
+     "heat_capacity_j_per_k",
+     "resistance_k_per_w",
+     "supply_setpoint_c"
+    ],
+    "cost": 12588.803408321046,
+    "params": {
+     "heat_capacity_j_per_k": 12.685648923430715,
+     "resistance_k_per_w": 0.8012799996032113,
+     "cooling_lag_s": 0.0,
+     "cooling_capacity_w": null,
+     "supply_setpoint_c": 32.144823715443906,
+     "outdoor_coupling_k_per_k": 0.0,
+     "outdoor_reference_c": 0.0,
+     "time_constant_s": 10.164756764333042
+    }
+   },
+   "in_sample": {
+    "rmse_c": 3.1991873216428264,
+    "r2": 0.9603263131495527,
+    "max_abs_err_c": 13.651394257552113
+   }
+  },
+  "two_node": {
+   "params": {
+    "die_heat_capacity_j_per_k": 3.353147248151921,
+    "die_to_sink_k_per_w": 0.4619751247991157,
+    "sink_heat_capacity_j_per_k": 87.18998294572495,
+    "sink_to_ambient_k_per_w": 0.4316412486163322,
+    "ambient_c": 27.394620683593974
+   },
+   "die_tau_s": 1.549070618434795,
+   "sink_tau_s": 37.634793105529425,
+   "in_sample": {
+    "rmse_c": 2.0917911109411116,
+    "r2": 0.9830386722104384,
+    "max_abs_err_c": 10.721954844292725
+   }
+  },
+  "throttle": {
+   "run1": {
+    "fraction_samples_sw_thermal": 0.4298890739913047,
+    "fraction_samples_hw_thermal": 0.0006094835642598838,
+    "temp_c_at_sw_thermal_p05": 84.0,
+    "temp_c_at_sw_thermal_median": 88.0,
+    "temp_c_max": 91.0,
+    "sm_clock_mhz_training_sw_thermal_median": 900.0,
+    "sm_clock_mhz_training_no_thermal_median": 1642.0
+   }
+  },
+  "validation": {},
+  "power_signal": "power_energy_w (1 s average from the NVML energy counter)"
+ }
+}
