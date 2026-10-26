@@ -107,24 +107,53 @@ class SeasonalNaiveForecaster(_PerSeries):
         return q
 
 
+def _plausible(q: np.ndarray, y: np.ndarray, k: float) -> bool:
+    """Quantiles stay within k context ranges of the context (guards exploding ETS fits)."""
+    lo, hi = float(np.min(y)), float(np.max(y))
+    span = max(hi - lo, 1e-9 + 1e-6 * max(abs(lo), abs(hi)))
+    return bool(np.all(np.isfinite(q)) and q.min() >= lo - k * span and q.max() <= hi + k * span)
+
+
 class ETSForecaster(_PerSeries):
-    def __init__(self, season_length: int = 1, max_context: Optional[int] = 2048):
+    """statsforecast AutoETS with a guard.
+
+    Unrestricted AutoETS can pick multiplicative or trended models whose
+    intervals explode on short, noisy windows (seen on 1 s GPU power: quantiles
+    above 1e12). If the fitted quantiles leave ``guard_ranges`` context ranges
+    around the context, the forecaster refits simple exponential smoothing
+    (model "ANN", flat), and if that also fails, falls back to seasonal naive.
+    ``model`` is passed to AutoETS ("ZZZ" lets it choose).
+    """
+
+    def __init__(self, season_length: int = 1, max_context: Optional[int] = 2048,
+                 model: str = "ZZZ", guard_ranges: float = 5.0):
         self.season_length = season_length
         self.max_context = max_context
+        self.model = model
+        self.guard_ranges = guard_ranges
         self.name = f"ets-{season_length}"
+        self.n_guarded = 0
 
-    def _one(self, y: np.ndarray, horizon: int) -> np.ndarray:
+    def _fit(self, y: np.ndarray, horizon: int, model: str) -> Optional[np.ndarray]:
         from statsforecast.models import AutoETS
 
         try:
-            r = AutoETS(season_length=self.season_length).forecast(
+            r = AutoETS(season_length=self.season_length, model=model).forecast(
                 y=y, h=horizon, level=_interval_levels()
             )
             q = _from_intervals(r, horizon)
-            if np.all(np.isfinite(q)):
-                return q
+            return q if _plausible(q, y, self.guard_ranges) else None
         except Exception:
-            pass
+            return None
+
+    def _one(self, y: np.ndarray, horizon: int) -> np.ndarray:
+        q = self._fit(y, horizon, self.model)
+        if q is not None:
+            return q
+        self.n_guarded += 1
+        q = self._fit(y, horizon, "ANN")
+        if q is not None:
+            return q
         return SeasonalNaiveForecaster(max(1, self.season_length))._one(y, horizon)
 
 

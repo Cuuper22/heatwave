@@ -63,3 +63,12 @@ def test_timestral_wrapper_smoke():
     fc = f.forecast(y[:2000], 48, known_covariates=kc[..., :2048])
     assert fc.values.shape == (1, 1, 48, 21)
     assert wql(fc, y[None, None, 2000:2048]) < 0.2
+
+
+def test_ets_guard_keeps_quantiles_bounded():
+    rng = np.random.default_rng(1)
+    # short noisy window with a jump: the kind that made unrestricted AutoETS explode
+    y = np.concatenate([30 + rng.normal(0, 0.5, 200), 80 + rng.normal(0, 3, 56)])
+    fc = ETSForecaster(1, max_context=256).forecast(y, 300)
+    span = y.max() - y.min()
+    assert fc.values.max() <= y.max() + 5 * span and fc.values.min() >= y.min() - 5 * span
