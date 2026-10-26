@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+data/raw/
+*.egg-info/
+.ipynb_checkpoints/
+laptop/logs/*.tmp

@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "heatwave"
+version = "0.1.0"
+description = "Forecast-driven power and thermal management for GPU clusters, using Timestral quantile forecasts, built on gpu_stack."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = [
+    "numpy>=1.24",
+    "pandas>=2.0",
+    "pyarrow>=14",
+    "scipy>=1.10",
+    "statsforecast>=1.7",
+    "torch>=2.4",
+    "timestral @ git+https://github.com/mistralai/timestral.git",
+    "gpu_stack @ git+https://github.com/Cuuper22/gpu_stack-.git@heatwave",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[tool.setuptools.packages.find]
+include = ["heatwave*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
