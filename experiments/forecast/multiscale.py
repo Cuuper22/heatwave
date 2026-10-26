@@ -2,7 +2,7 @@
 
 Forecasters (all univariate, no covariates; covariate ablation is task T04b): Timestral 5M and 28M (zero-shot) on every
 window, Timestral 209M zero-shot on an equally spaced subsample of windows per dataset (``--n209``), SeasonalNaive, ETS
-(AutoETS) and ARIMA(2,1,1) (seasonal (1,0,0) at hourly scale) from the shared package. A fine-tuned checkpoint can be added
+(AutoETS, unrestricted and restricted to no trend: ets / ets-flat) and ARIMA(2,1,1) (seasonal (1,0,0) at hourly scale) from the shared package. A fine-tuned checkpoint can be added
 with ``--finetuned-dir DIR --finetuned-size 28M`` (scored as ``timestral-<size>-finetuned``).
 
 Protocol (fixed before running; nothing is tuned on test windows):
@@ -70,7 +70,8 @@ def main() -> None:
                        "MAE of median; coverage of the 10-90% (cov80) and 1-99% (cov98) quantile intervals",
             "bootstrap": {"n": N_BOOT, "ci_origin": "windows resampled with replacement", "ci_group": "groups (session/run/job/seed) resampled with replacement"},
             "classical": {"seasonal-naive": "season = SEASON[scale], quantiles from in-sample seasonal-naive errors",
-                          "ets": "statsforecast AutoETS, season = SEASON[scale]",
+                          "ets": "statsforecast AutoETS (shared ETSForecaster, unrestricted model choice), season = SEASON[scale]",
+                          "ets-flat": "statsforecast AutoETS restricted to additive error, no trend (ANN; ANA at hourly scale)",
                           "arima": "statsforecast ARIMA(2,1,1); hours: seasonal (1,0,0) with season 24"},
             "timestral": "zero-shot, no covariates, V=1 per series; 209M on an equally spaced subsample of windows",
             "n209_windows_per_dataset": a.n209,

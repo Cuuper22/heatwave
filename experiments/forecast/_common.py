@@ -34,11 +34,12 @@ if str(ROOT) not in sys.path:
 
 from heatwave.forecast import ARIMAForecaster, ETSForecaster, QUANTILE_LEVELS, QuantileForecast, SeasonalNaiveForecaster  # noqa: E402
 from heatwave.forecast import metrics as M  # noqa: E402
+from heatwave.forecast.classical import _PerSeries, _from_intervals, _interval_levels  # noqa: E402
 from heatwave.forecast.datasets import CACHE_DIR, SEASON  # noqa: E402
 
 N_BOOT = 1000
 BOOT_SEED = 20261026
-ALL_METHODS = ("timestral-5M", "timestral-28M", "timestral-209M", "seasonal-naive", "ets", "arima")
+ALL_METHODS = ("timestral-5M", "timestral-28M", "timestral-209M", "seasonal-naive", "ets", "ets-flat", "arima")
 FC_CACHE = CACHE_DIR / "fc"
 
 
@@ -51,6 +52,32 @@ def hardware_note() -> str:
 
 
 # --------------------------------------------------------------------------- forecasters
+class ETSFlatForecaster(_PerSeries):
+    """AutoETS restricted to additive errors and no trend (statsforecast model 'ANN', 'ANA' with a season).
+
+    Added because the shared ``ETSForecaster`` (unrestricted AutoETS) selected ETS(M,A,N) on many windows of the
+    seconds-scale power series, whose multiplicative-error trend intervals reach 1e12 and above. Both are reported.
+    """
+
+    def __init__(self, season_length: int = 1, max_context: int | None = 2048):
+        self.season_length = season_length
+        self.max_context = max_context
+        self.name = f"ets-flat-{season_length}"
+
+    def _one(self, y: np.ndarray, horizon: int) -> np.ndarray:
+        from statsforecast.models import AutoETS
+
+        try:
+            r = AutoETS(season_length=self.season_length, model="ANN" if self.season_length == 1 else "ANA").forecast(
+                y=y, h=horizon, level=_interval_levels())
+            q = _from_intervals(r, horizon)
+            if np.all(np.isfinite(q)):
+                return q
+        except Exception:
+            pass
+        return SeasonalNaiveForecaster(max(1, self.season_length))._one(y, horizon)
+
+
 def make_classical(kind: str, scale: str):
     """Classical baselines with orders fixed a priori per scale (no tuning)."""
     s = SEASON[scale]
@@ -58,6 +85,8 @@ def make_classical(kind: str, scale: str):
         return SeasonalNaiveForecaster(s)
     if kind == "ets":
         return ETSForecaster(season_length=s)
+    if kind == "ets-flat":
+        return ETSFlatForecaster(season_length=s)
     if kind == "arima":
         if s > 1:
             return ARIMAForecaster(order=(2, 1, 1), season_length=s, seasonal_order=(1, 0, 0))

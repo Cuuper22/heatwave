@@ -40,7 +40,7 @@ from heatwave.forecast.datasets import BUCKETS, HierWindows  # noqa: E402
 from heatwave.provenance import write_result  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[2]
-METHODS = ("timestral-5M", "timestral-28M", "seasonal-naive", "ets", "arima")
+METHODS = ("timestral-5M", "timestral-28M", "seasonal-naive", "ets", "ets-flat", "arima")
 W_STEPS = 10
 COMP = ("pin", "absy", "mae", "mase", "cov80", "cov98")
 
@@ -208,7 +208,7 @@ def main() -> None:
             "coherence_error": "sum |y_A - sum of bottom series below A| / sum |y_A| per aggregate level, pooled over windows, steps, nodes; quantile entries per level",
             "metrics": "as multiscale.json; level-wise WQL = 2*mean pinball/mean|y| over the nodes of the level; MASE with in-context naive (lag 1) scale",
             "bootstrap": {"n": N_BOOT, "unit": "windows (origins); group = session or sim seed"},
-            "covariates_used": False, "classical": "seasonal-naive (season 1 = last value), AutoETS, ARIMA(2,1,1)",
+            "covariates_used": False, "classical": "seasonal-naive (season 1 = last value), AutoETS (shared, unrestricted), AutoETS restricted to additive error and no trend (ets-flat), ARIMA(2,1,1)",
             "timestral": "zero-shot 5M and 28M; 209M not run in this study",
         },
         "trees": {}, "hardware": a.platform_label or hardware_note(), "threads": a.threads, "workers": a.workers,
