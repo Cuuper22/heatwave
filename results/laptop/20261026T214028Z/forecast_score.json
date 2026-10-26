@@ -1,0 +1,77 @@
+{
+ "provenance": {
+  "script": "heatwave/laptop/score.py",
+  "script_sha256": "28dc8b6e725179130500d0376f4d1a447918241212bebd2241eae7173f8d18f0",
+  "git": {
+   "commit": "137507dda683df6f239e38eba38e7011b3379904",
+   "dirty": "true"
+  },
+  "inputs": {
+   "laptop/logs/20261026T214028Z/telemetry.csv": "f1e5417bc6e86899edab57b9747245c6d1ef02515709d7c6e19c1811c97951db",
+   "laptop/logs/20261026T214028Z/forecasts.jsonl": "17a28febe183270439bc3861affdb3f04bb2277b2d05f39c94c6b9af82c25237",
+   "laptop/logs/20261026T214028Z/meta.json": "bcbc7c6292bb3945a581ef035935c4b4117f82123b34e630e750f960ebc9f59d"
+  },
+  "data_kind": "measured",
+  "created_utc": "2026-10-26T22:07:39+00:00",
+  "notes": "Measured on the laptop GPU."
+ },
+ "result": {
+  "run": "20261026T214028Z",
+  "data_kind": "measured",
+  "n_forecasts_issued": 293,
+  "n_forecasts_scored": 281,
+  "complete_bins": 1500,
+  "methods": {
+   "timestral-5M": {
+    "power_w": {
+     "n_forecasts": 281,
+     "pinball_mean": 0.6304662745297407,
+     "wql": 0.0180836457472614,
+     "coverage_80": 0.830367734282325,
+     "coverage_98": 0.9899762752075919,
+     "mae_median": 1.497067153024911
+    },
+    "temp_c": {
+     "n_forecasts": 281,
+     "pinball_mean": 0.18833882559453197,
+     "wql": 0.0043730386671687015,
+     "coverage_80": 0.8290035587188612,
+     "coverage_98": 0.9908066429418743,
+     "mae_median": 0.46329163701067594
+    }
+   },
+   "seasonal-naive": {
+    "power_w": {
+     "n_forecasts": 281,
+     "pinball_mean": 0.786933058747105,
+     "wql": 0.0225715779512647,
+     "coverage_80": 0.881791221826809,
+     "coverage_98": 0.9812574139976276,
+     "mae_median": 1.8317269276393833
+    },
+    "temp_c": {
+     "n_forecasts": 281,
+     "pinball_mean": 0.24630963427102745,
+     "wql": 0.005719062712445077,
+     "coverage_80": 0.8577698695136418,
+     "coverage_98": 0.9815539739027284,
+     "mae_median": 0.5379062870699879
+    }
+   }
+  },
+  "notes": "Forecasts whose full horizon is inside the log are scored; actuals are 1 s bin means.",
+  "paired_lower_pinball": {
+   "power_w": {
+    "method": "timestral-5M",
+    "n_lower_pinball": 231,
+    "n_compared": 281
+   },
+   "temp_c": {
+    "method": "timestral-5M",
+    "n_lower_pinball": 257,
+    "n_compared": 281
+   }
+  },
+  "horizon_s": 60
+ }
+}

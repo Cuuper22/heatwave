@@ -1,0 +1,26 @@
+{
+ "provenance": {
+  "script": "heatwave\\laptop\\load.py",
+  "script_sha256": "5a565861399653c9850b93268e0a97e9a0102dad071333356ca83e8a066e6326",
+  "git": {
+   "commit": "unknown",
+   "dirty": "true"
+  },
+  "inputs": {
+   "C:\\Users\\Acer\\heatwave-run\\hwsrc\\laptop\\logs\\20261026T214028Z\\events.csv": "7a5ccc60e6ae86ec06a930f65b56b386690843a6c1a2d5b0f5e6cc3888452959"
+  },
+  "data_kind": "measured",
+  "created_utc": "2026-10-26T22:05:28+00:00",
+  "notes": "synthetic-token training load; real compute on the device named"
+ },
+ "result": {
+  "size": "medium",
+  "device": "cuda",
+  "params": 91544064,
+  "steps": 9190,
+  "ckpt_every_steps": 273,
+  "checkpoints": 33,
+  "mean_ckpt_seconds": 1.6997878787881222,
+  "peak_cuda_mem_mib": 2474.46435546875
+ }
+}

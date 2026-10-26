@@ -1,0 +1,1 @@
+{'size': 'medium', 'device': 'cuda', 'params': 91544064, 'steps': 9190, 'ckpt_every_steps': 273, 'checkpoints': 33, 'mean_ckpt_seconds': 1.6997878787881222, 'peak_cuda_mem_mib': 2474.46435546875}

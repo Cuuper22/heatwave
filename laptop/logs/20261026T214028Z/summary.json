@@ -1,0 +1,49 @@
+{
+ "provenance": {
+  "script": "heatwave\\laptop\\run.py",
+  "script_sha256": "5a73ed6f9a57ff5ed63183b473709ee24e74709cb86cc1b251b724076d8265fb",
+  "git": {
+   "commit": "unknown",
+   "dirty": "true"
+  },
+  "inputs": {
+   "C:\\Users\\Acer\\heatwave-run\\hwsrc\\laptop\\logs\\20261026T214028Z\\telemetry.csv": "f1e5417bc6e86899edab57b9747245c6d1ef02515709d7c6e19c1811c97951db"
+  },
+  "data_kind": "measured",
+  "created_utc": "2026-10-26T22:05:30+00:00",
+  "notes": "measured on the local GPU"
+ },
+ "result": {
+  "run": "20261026T214028Z",
+  "data_kind": "measured",
+  "interrupted": false,
+  "thread_errors": {},
+  "energy_source": "backend_energy_counter",
+  "controller": {
+   "mode": "clock",
+   "dry_run": true,
+   "mode_reason": "no administrator rights; nvidia-smi -pl and -lgc need them (start an admin PowerShell, or run as root)",
+   "unit": "MHz",
+   "current": 1050.0,
+   "original": 2100.0,
+   "lo": 1050.0,
+   "hi": 2100.0,
+   "last_command": "nvidia-smi -i 0 -lgc 405,1050",
+   "n_changes": 11,
+   "released": true,
+   "release_failed": false,
+   "quantile": 0.9,
+   "temp_limit_c": 80.0,
+   "power_budget_w": null
+  },
+  "samples": 15001,
+  "duration_s": 1500.0,
+  "power_w_mean": 69.93711132591162,
+  "power_w_max": 96.959,
+  "temp_c_mean": 86.04706352909805,
+  "temp_c_max": 90.0,
+  "sm_clock_mhz_mean": 981.2356509566029,
+  "energy_j": 95695.723,
+  "forecasts_issued": 293
+ }
+}
