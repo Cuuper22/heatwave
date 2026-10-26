@@ -1,0 +1,72 @@
+{
+ "name": "public_caiso_np15_lmp_dam",
+ "freq": "1h",
+ "columns": {
+  "lmp_usd_per_mwh": {
+   "unit": "USD/MWh",
+   "description": "total locational marginal price at TH_NP15_GEN-APND"
+  },
+  "energy_usd_per_mwh": {
+   "unit": "USD/MWh",
+   "description": "marginal energy component at TH_NP15_GEN-APND"
+  },
+  "congestion_usd_per_mwh": {
+   "unit": "USD/MWh",
+   "description": "marginal congestion component at TH_NP15_GEN-APND"
+  },
+  "loss_usd_per_mwh": {
+   "unit": "USD/MWh",
+   "description": "marginal loss component at TH_NP15_GEN-APND"
+  },
+  "ghg_usd_per_mwh": {
+   "unit": "USD/MWh",
+   "description": "marginal greenhouse-gas component at TH_NP15_GEN-APND"
+  }
+ },
+ "source": {
+  "title": "CAISO OASIS PRC_LMP day-ahead market (DAM), node TH_NP15_GEN-APND",
+  "url": "https://oasis.caiso.com/oasisapi/SingleZip",
+  "license": "CAISO public market data; no explicit open license found. Cited with source; check CAISO terms before redistribution.",
+  "retrieved_utc": "2026-10-26T20:38:20+00:00",
+  "raw_sha256": {
+   "oasis/dam_20240101.zip": "9414e63b505d39e0c2d9eac2fafe89056fdcc43aa545750e917446041d59e4dc",
+   "oasis/dam_20240131.zip": "19983ad26ee47c902a281c2abdc32390e425d780bc3939486415b19057fd091d",
+   "oasis/dam_20240301.zip": "8427ff49d0a8aaa85198477904148d7acdaecd26775b9618b2455a91abe6d434",
+   "oasis/dam_20240331.zip": "2abc3162ebb2552dc1069c39d6ae2101f609e5995689fed976d139a5b8acbc7a",
+   "oasis/dam_20240430.zip": "61baad2a8f5efae610e9bcc3bb4246e131a21706695172110c83cb48cb025a5a",
+   "oasis/dam_20240530.zip": "e86166d0294845b8e46a68b10dbaa52332e5beda63a4987135b74503bd70c5f2",
+   "oasis/dam_20240629.zip": "f0c27c942eef68e3f00701ea6273c41fc577289c05b188490c439b569124ac01",
+   "oasis/dam_20240729.zip": "5cf6c37c5762a346c76ce7b21561c900dafa8d11854274fd0fb53237e8367fdf",
+   "oasis/dam_20240828.zip": "cadb4c66406512eeae807a7db5c1907e480659eef339456978e8a33836f8add9",
+   "oasis/dam_20240927.zip": "d60addbf8b3523b2e8e3da6b47ba1fdcf1b02706e42a5f60e122c6e498be15ed",
+   "oasis/dam_20241027.zip": "64d66a00fa557c3122487d04a16287ab97592c1b2dfcfe1e394eead16e4fda1b",
+   "oasis/dam_20241126.zip": "96f4f58555cbcefcc1653b7f04dc78c4c045f72da42481255791c8a65e4cac8f",
+   "oasis/dam_20241226.zip": "bb35918287a04f78d197b674eac73de61919ca0c1bafca91426c923882057ac4",
+   "oasis/dam_20250125.zip": "acae108f210543b00f93ed3b5dfc5c7724c2e7873e63d9f950c2501ed946904f",
+   "oasis/dam_20250224.zip": "d2a49f10d3391095b52a3ae7cec1ca7e348d034875753e99201e126f55436fc2",
+   "oasis/dam_20250326.zip": "bcdf035148b3b6de6c23733e373483319d75e90b81909e56aeac38a5276ef5d7",
+   "oasis/dam_20250425.zip": "ba678a8e73b4f9eb174ebc35ce6486dcd6c598001cc21acf7982a1b0788ec9fa",
+   "oasis/dam_20250525.zip": "af64abc49a856e8adc27cb1d430e275cd972b9b0c62d9b2ce5c58b37dc3676c0",
+   "oasis/dam_20250624.zip": "ebd1a5c9faf6445c10007bf4c3575303e183a352278e8989a9c8d26b7f0ca38a",
+   "oasis/dam_20250724.zip": "69d48c226a34e31c167aa7e0192419a609f3da432b64487c826cdfbe984ba1d9",
+   "oasis/dam_20250823.zip": "d049418bc129635c348bc9b02151512e1cd293bb1e231fae150bb09f6f5a2c6a",
+   "oasis/dam_20250922.zip": "a7e5e660000054877f7dc8a6bf2c2947fa78d4b65d4c68f4f1a3be82b653cb31",
+   "oasis/dam_20251022.zip": "55c2e8597c429d714811915d3364e1ba78e23237899cde73f62bc3a5dabdf1d6",
+   "oasis/dam_20251121.zip": "0e76f1d5520c4eb929e33371f4d4a4a5abd576c39efac7de4808c4cb213bd2f6",
+   "oasis/dam_20251221.zip": "06fb4b7823d386ee23182e27b87592c966133b394ee10a06907f3d3693c614cf",
+   "oasis/dam_20260120.zip": "212736c374603814c29267c225415c2698de65b2217dd62793a71beeae5f77fb",
+   "oasis/dam_20260219.zip": "260977a838781815c10587f24f6ac1a1ff9c2bea7e02085e7ddc598e6a79f21e",
+   "oasis/dam_20260321.zip": "3b65a2b250dd883ade612f7fd4c737e93bae4f0ffd65404726f98ddef753fd44",
+   "oasis/dam_20260420.zip": "4aecae7aef3bc2ae1bf0ce3866479ae56f0e0549e097b1541d3d2678cdf2e142",
+   "oasis/dam_20260520.zip": "09e3864e9e09d028dded227fc530753a83d325f0b4a5e0362d9d9c5e28df2aa3",
+   "oasis/dam_20260619.zip": "3f97419439f56d451205ebe8f20fc1925293c5cccec7b48693a6dbf52f6a5a6c",
+   "oasis/dam_20260719.zip": "0c3e283451c5619cfdc8f42c139c17f75d2a1cfeb9b8cd82a2748d86a8363475",
+   "oasis/dam_20260818.zip": "d38a688fdd73bd4c37d68eed9793ed2e51b5e3b6aee7b11f84f4821cbe67541e",
+   "oasis/dam_20260917.zip": "d404d8a42f0f458629bd76357648e18600d64a753a0b2e0339d62e27bc3133f3",
+   "oasis/dam_20261017.zip": "f87fe1270b04a7f8acd9b21e23146900aec22accb89a9f883dfe96838d25c71c"
+  }
+ },
+ "data_kind": "public",
+ "producer": "scripts/fetch_caiso.py",
+ "notes": "Day-ahead prices for operating day D are published about 1 pm Pacific on D-1, so they are known when D starts: usable as a known-future covariate for real-time price and load. Timestamps are interval START in UTC."
+}

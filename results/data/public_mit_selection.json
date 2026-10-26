@@ -1,0 +1,36 @@
+{
+ "provenance": {
+  "script": "scripts/fetch_mit_supercloud.py",
+  "script_sha256": "8a4d9ceeda3bf23dad96257764bbf02b818fa7ccc9acd64d05a7b3a834586ec8",
+  "git": {
+   "commit": "e4f5cec5a23547292b4af343f7794b7889d4ff38",
+   "dirty": "true"
+  },
+  "inputs": {
+   "/home/claude/heatwave/data/raw/mit_supercloud/slurm-log.csv": "27259e5b8e6daecd80b7853126af40ba759bc25edc9053fc174ef7a4f186aa01",
+   "/home/claude/heatwave/data/raw/mit_supercloud/labelled_jobids.csv": "bd00b9e572442ed9ad900c8919de789e0a4bf225df8a657be9c7b389d7ca6d82"
+  },
+  "data_kind": "public",
+  "created_utc": "2026-10-26T20:20:29+00:00",
+  "notes": ""
+ },
+ "result": {
+  "bucket_gpu_files": 109946,
+  "bucket_gpu_jobs": 98176,
+  "bucket_gpu_bytes": 2436905883610,
+  "slurm_log_rows": 395914,
+  "labelled_jobs_in_labels_file": 3430,
+  "selected_jobs": 263,
+  "selected_files": 300,
+  "selected_raw_bytes": 1999996043,
+  "selected_fraction_of_bucket_gpu_jobs": 0.002678862451108214,
+  "kept_jobs_after_min_30min_telemetry": 259,
+  "kept_series": 296,
+  "dropped_selected_jobs_shorter_than_30min_telemetry": 4,
+  "selection_parameters": {
+   "seed": 0,
+   "n_labelled": 200,
+   "n_other": 260
+  }
+ }
+}

@@ -1,0 +1,66 @@
+{
+ "name": "Image_generation_B200_8GPU_Node_ModelSize128_ImageSize32_BatchSize128",
+ "data_kind": "public",
+ "producer": "scripts/fetch_node_power_h100_b200.py",
+ "source": {
+  "title": "High-resolution AI Data Center Training Workloads Dataset (Elsayed et al., Sci Data 2026), Node_Dataset",
+  "url": "https://doi.org/10.6084/m9.figshare.31654879",
+  "license": "CC BY 4.0 (figshare record license field; https://creativecommons.org/licenses/by/4.0/)",
+  "retrieved_utc": "2026-10-26T20:09:08+00:00",
+  "raw_sha256": {
+   "ds.zip": "c0ccebea568612f5445b70c3baa7ce659935a949e5cc8f345a0af907739fa6f3"
+  }
+ },
+ "session": {
+  "file": "Image Generation Diffusion Models/B200/Batch_size_impact/Image_generation_B200_8GPU_Node_ModelSize128_ImageSize32_BatchSize128.csv",
+  "hardware": "B200",
+  "task": "image_generation",
+  "model_size": "128",
+  "image_size": "32",
+  "batch_size": "128",
+  "llama_params": null,
+  "seq_length": null,
+  "deepspeed_stage": null,
+  "n_gpus": 8
+ },
+ "notes": "Timestamps carry no time zone in the dataset; interpreted as UTC. Samples are about every 20 ms with jitter; each sample is assigned to its nearest 20 ms slot (slots without a sample are NaN, slots with two are averaged).",
+ "freq": "20ms",
+ "columns": {
+  "g0_power_w": {
+   "unit": "W",
+   "description": "GPU 0: board power draw (pynvml)"
+  },
+  "g1_power_w": {
+   "unit": "W",
+   "description": "GPU 1: board power draw (pynvml)"
+  },
+  "g2_power_w": {
+   "unit": "W",
+   "description": "GPU 2: board power draw (pynvml)"
+  },
+  "g3_power_w": {
+   "unit": "W",
+   "description": "GPU 3: board power draw (pynvml)"
+  },
+  "g4_power_w": {
+   "unit": "W",
+   "description": "GPU 4: board power draw (pynvml)"
+  },
+  "g5_power_w": {
+   "unit": "W",
+   "description": "GPU 5: board power draw (pynvml)"
+  },
+  "g6_power_w": {
+   "unit": "W",
+   "description": "GPU 6: board power draw (pynvml)"
+  },
+  "g7_power_w": {
+   "unit": "W",
+   "description": "GPU 7: board power draw (pynvml)"
+  },
+  "node_power_w": {
+   "unit": "W",
+   "description": "sum of the GPUs' power_w (NaN if any GPU is missing in that 20 ms slot)"
+  }
+ }
+}

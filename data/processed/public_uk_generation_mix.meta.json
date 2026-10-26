@@ -1,0 +1,89 @@
+{
+ "name": "public_uk_generation_mix",
+ "freq": "30min",
+ "columns": {
+  "share_biomass_pct": {
+   "unit": "%",
+   "description": "share of GB generation from this fuel (percent), as served by the API"
+  },
+  "share_coal_pct": {
+   "unit": "%",
+   "description": "share of GB generation from this fuel (percent), as served by the API"
+  },
+  "share_imports_pct": {
+   "unit": "%",
+   "description": "share of GB generation from this fuel (percent), as served by the API"
+  },
+  "share_gas_pct": {
+   "unit": "%",
+   "description": "share of GB generation from this fuel (percent), as served by the API"
+  },
+  "share_nuclear_pct": {
+   "unit": "%",
+   "description": "share of GB generation from this fuel (percent), as served by the API"
+  },
+  "share_other_pct": {
+   "unit": "%",
+   "description": "share of GB generation from this fuel (percent), as served by the API"
+  },
+  "share_hydro_pct": {
+   "unit": "%",
+   "description": "share of GB generation from this fuel (percent), as served by the API"
+  },
+  "share_solar_pct": {
+   "unit": "%",
+   "description": "share of GB generation from this fuel (percent), as served by the API"
+  },
+  "share_wind_pct": {
+   "unit": "%",
+   "description": "share of GB generation from this fuel (percent), as served by the API"
+  }
+ },
+ "source": {
+  "title": "Carbon Intensity API (GB), /generation",
+  "url": "https://api.carbonintensity.org.uk",
+  "license": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/), data from the National Energy System Operator carbon intensity API",
+  "retrieved_utc": "2026-10-26T19:56:05+00:00",
+  "raw_sha256": {
+   "generation_20240101.json": "25e803f999d3048d7f0d5975f22b76f05cb6bd73fad5bdea62ae4e4e9c21f396",
+   "generation_20240129.json": "9244e7b01764f8eb89b239cd74e73e88f44ea62ef304beb23aea39fa5869e2e1",
+   "generation_20240226.json": "034e3431037569bdd7ee15f831de5adbb402a23d11da19dd6073ec40fc12451e",
+   "generation_20240325.json": "eff6484a1e5f5147677aef87ceb6b3f1c591b836578b8863d554aeccc24bf0d5",
+   "generation_20240422.json": "4ba7491e75ad763dcf2dbbd83804ceb49db14b4d85228ac9ab409e8e42bb0063",
+   "generation_20240520.json": "e77b092ca2e2c7b1d2dcb3dbf46d43eaa7fd1f21d337078488f6db1927744ebe",
+   "generation_20240617.json": "837bfba5484380d9e827f57b521596ecf214c9a7e27090777a11813379b5f367",
+   "generation_20240715.json": "fd04ef4ded8db4fbecfa5ac7dab66f55e0a1500fe4119d16943aaef8881e15e9",
+   "generation_20240812.json": "12574ce97c52f1b0327e2457296c9628e83bd79b2b8fedc7faec4536afe80955",
+   "generation_20240909.json": "6fc9e08a4db1fbec63555c0d703b4e26222b8aa4753030c763e973d2e273a783",
+   "generation_20241007.json": "034af23c138627f2032a612d01f95bb5155278368379eb3a846bf540c26e0514",
+   "generation_20241104.json": "0120d75764d7bc14339960a63fdf2b3e6039de4ae4da0ea1ee9e583b32a305bc",
+   "generation_20241202.json": "c8905f4ece0411563e03cc0166bcc3da4b12ec80288c31ceea8977b8cc86fd5d",
+   "generation_20241230.json": "4a76f356f2543f6fbf9dca8c48316fbf836a3c3e3736889d4e1ff4fb8cc69961",
+   "generation_20250127.json": "ae012c36de21be86dce639306ccd8f0eae681b07488bf2233d2fb0d219dcb4ef",
+   "generation_20250224.json": "d4d2348e2dba9c731d0af1f7921449dec76408635a7d75d412bff9569b4b7dde",
+   "generation_20250324.json": "c93eed23f53308b2a0d6e56edcb90df00ed826150ff3dca05ed51318a4a5b835",
+   "generation_20250421.json": "8698b00986f313ad01dc385e1d2093983a4f0501b7dcc296594aaf71f8a8181f",
+   "generation_20250519.json": "3af630cc60e415e49025b7491511f9983067f5a0b8c1ee6ea41d5162bb00db7c",
+   "generation_20250616.json": "c49637ed1203079fb461d14407d4cc7cd500c9394d52ec3dff5e725844e8f86f",
+   "generation_20250714.json": "0c45564eb6d9717fd894dce66c3b1aba610ce127b5e5219c1ded93c095e7e493",
+   "generation_20250811.json": "e08958674e6226ffa8b7ed4490357103c2785e1952759ef164f52f7bb690a533",
+   "generation_20250908.json": "bdc1a78854cd641c44614895d47a9c4961c8204fb35fbd04c0db34842f796833",
+   "generation_20251006.json": "03204394531c29299dcdb2f507eecfaca998262de28a62c544bf6337a7ac5db5",
+   "generation_20251103.json": "908919d19c6e20801e39f15e35163d935284c09368e698f67126bda19cc21620",
+   "generation_20251201.json": "3b77d9f9ed6284a2e9fe0668d441d4fc70e660f2207606df707b63b132c6cdf9",
+   "generation_20251229.json": "6a4c5bb03eb341e5dfd4a665d898a0b097498d55b7a43e63a81f163e5b70804d",
+   "generation_20260126.json": "0c275dd3829362e10646cbbe4bcb4180771eb00a3bc550b846e831891a903a01",
+   "generation_20260223.json": "a17f6722ca8fa992ee8665bcdc8c1aca6096b25ba994b4e7e7920c3bdb41f580",
+   "generation_20260323.json": "4e0179377980e4bbcb6a01fbb1ad77117dcb6b2a176b3e22b30e48efde6c3433",
+   "generation_20260420.json": "be1b745cfd715c6b82595f008724bc1959af585beceefcef671bd54eceb28ab5",
+   "generation_20260518.json": "b28c197fe9d5f764c2b3890c2114d38794e3400f99e41dc86263fb53b0d86a7a",
+   "generation_20260615.json": "fe499342cb105ba5b7b847a6b832d4bce30a0a42f30a20f023e71ac2d210ed5f",
+   "generation_20260713.json": "534633ee9674a9be32bdb90e8ad78052c6c65a69482679bf83d7637ed7235feb",
+   "generation_20260810.json": "69ff2fefc07265ae0fdb8583d1a09096d344069b094ba47501093f7e46470f8e",
+   "generation_20260907.json": "06cf8a068f8c6a3dc34508403e497e43b3518c1c72b7ef5cdfa44d50ad1326fc",
+   "generation_20261005.json": "327d085e1d081a9fd4be51b7656ccab44b776f82998fe46633acb32d054024f8"
+  }
+ },
+ "data_kind": "public",
+ "producer": "scripts/fetch_uk_carbon.py"
+}

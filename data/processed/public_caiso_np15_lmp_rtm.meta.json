@@ -1,0 +1,72 @@
+{
+ "name": "public_caiso_np15_lmp_rtm",
+ "freq": "5min",
+ "columns": {
+  "lmp_usd_per_mwh": {
+   "unit": "USD/MWh",
+   "description": "total locational marginal price at TH_NP15_GEN-APND"
+  },
+  "energy_usd_per_mwh": {
+   "unit": "USD/MWh",
+   "description": "marginal energy component at TH_NP15_GEN-APND"
+  },
+  "congestion_usd_per_mwh": {
+   "unit": "USD/MWh",
+   "description": "marginal congestion component at TH_NP15_GEN-APND"
+  },
+  "loss_usd_per_mwh": {
+   "unit": "USD/MWh",
+   "description": "marginal loss component at TH_NP15_GEN-APND"
+  },
+  "ghg_usd_per_mwh": {
+   "unit": "USD/MWh",
+   "description": "marginal greenhouse-gas component at TH_NP15_GEN-APND"
+  }
+ },
+ "source": {
+  "title": "CAISO OASIS PRC_INTVL_LMP real-time market (RTM) 5-min LMP, node TH_NP15_GEN-APND",
+  "url": "https://oasis.caiso.com/oasisapi/SingleZip",
+  "license": "CAISO public market data; no explicit open license found. Cited with source; check CAISO terms before redistribution.",
+  "retrieved_utc": "2026-10-26T20:38:35+00:00",
+  "raw_sha256": {
+   "oasis/rtm_20240101.zip": "1858f520c1da2dbe83563a458c4a0ff371f7aaed01853a14ad3ba83badcb5310",
+   "oasis/rtm_20240131.zip": "f1e0152e3d760793bd39e3e7094ba4ad6839666500a0eaa5cb3f9341b2003888",
+   "oasis/rtm_20240301.zip": "ce4ff1445b8f52a509d65818a9f8058c2f2a9d28e4567754ad7e98d49c29acfc",
+   "oasis/rtm_20240331.zip": "0cda645f1cc0ff177675df767af569a537a426396e998e05c224c1a3312c6e7f",
+   "oasis/rtm_20240430.zip": "90e9246ad8fc5b35792fe47630cbf75ce69102e2bea0122e27bfdc53669b33e7",
+   "oasis/rtm_20240530.zip": "2819bc675072f39915204717190beaa415d1a9167b7a80f8a669c085efe14f30",
+   "oasis/rtm_20240629.zip": "d99776ac136c705e88b134d6b4f0bce31b0261d5cb3a1798f90f7971e113df9a",
+   "oasis/rtm_20240729.zip": "6dba77f4b2c165257483c63d5b16d66974b160a62f0b9f783bdeda185d403a97",
+   "oasis/rtm_20240828.zip": "0c108b6c0b4a8d03dfcca52219b598e66c6fe43dc45049b0c6392ced11698390",
+   "oasis/rtm_20240927.zip": "c900f9ccac364d3d8d8359c0b53e879a8cb4fc88b5d9a332b1df8d5b629c2a9c",
+   "oasis/rtm_20241027.zip": "ca838c926ca6cb4ff157b0fb22e4e74ba6afdca8e74d4390aa126710d5f1aa7f",
+   "oasis/rtm_20241126.zip": "3dd747a1fd126c62581dee9f7adaa15ab2ccf33fb829be9d280ca1021df46aa5",
+   "oasis/rtm_20241226.zip": "6bfb09b15c267be2e6a6c1d4e99a7b438970d9b9a918bd6938cdb9e1b319932a",
+   "oasis/rtm_20250125.zip": "781bd3fed3634237fbe99375b6eb58f3d25b91e8ece7aa22003e7e7e6cab878a",
+   "oasis/rtm_20250224.zip": "dfdcdcc79040a4115b3308aa3f96304a760f8df542218ab82241839eed546a00",
+   "oasis/rtm_20250326.zip": "566e232689641179df954def94f0b3408614ed1bb921ecf3868725854de638aa",
+   "oasis/rtm_20250425.zip": "cc610c9654a681c64e423f4eeeaedc607a3aa9759b2cdf84bf7628499f7d5a29",
+   "oasis/rtm_20250525.zip": "d45c9f9022f5cbc38795e1a066b12fcdc6f894e00bb8aa009bef638291ca6139",
+   "oasis/rtm_20250624.zip": "c2bea5949f07054bac52e27c70fe9f8dad7a09ef0e4ef20353024d9b88c5477a",
+   "oasis/rtm_20250724.zip": "1a56ff159e1c20442772d63eb199c204e74e54df2f64ad048811d2306fd78809",
+   "oasis/rtm_20250823.zip": "21b3ce63b70d2ae764c423308eaa985a53f994d5603b4b283802f9ebbf0c4886",
+   "oasis/rtm_20250922.zip": "7e9529dc4e77412d654f661468768b11f07459b2c2c1c6f71b004fbfa8374bfc",
+   "oasis/rtm_20251022.zip": "445709d4ff8ede88b17d71035d605e99c0582e60a7639e3b4ced24ab22415db1",
+   "oasis/rtm_20251121.zip": "0886090b11b285c6dc989e30095afd55f9c546f8bf65829c3385a95d64e0682c",
+   "oasis/rtm_20251221.zip": null,
+   "oasis/rtm_20260120.zip": null,
+   "oasis/rtm_20260219.zip": null,
+   "oasis/rtm_20260321.zip": null,
+   "oasis/rtm_20260420.zip": null,
+   "oasis/rtm_20260520.zip": null,
+   "oasis/rtm_20260619.zip": null,
+   "oasis/rtm_20260719.zip": null,
+   "oasis/rtm_20260818.zip": null,
+   "oasis/rtm_20260917.zip": null,
+   "oasis/rtm_20261017.zip": null
+  }
+ },
+ "data_kind": "public",
+ "producer": "scripts/fetch_caiso.py",
+ "notes": "Real-time 5-minute LMP; interval START in UTC. NaN where OASIS returned no row."
+}

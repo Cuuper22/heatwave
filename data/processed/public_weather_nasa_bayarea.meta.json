@@ -1,0 +1,49 @@
+{
+ "name": "public_weather_nasa_bayarea",
+ "freq": "1h",
+ "columns": {
+  "temperature_2m_c": {
+   "unit": "degC",
+   "description": "air temperature at 2 m"
+  },
+  "relative_humidity_2m_pct": {
+   "unit": "%",
+   "description": "relative humidity at 2 m"
+  },
+  "dew_point_2m_c": {
+   "unit": "degC",
+   "description": "dew/frost point at 2 m"
+  },
+  "wet_bulb_2m_c": {
+   "unit": "degC",
+   "description": "wet-bulb temperature at 2 m (computed by NASA POWER)"
+  },
+  "wind_speed_10m_mps": {
+   "unit": "m/s",
+   "description": "wind speed at 10 m"
+  },
+  "shortwave_radiation_wh_m2": {
+   "unit": "Wh/m2",
+   "description": "all-sky surface shortwave downward irradiance, hourly total"
+  }
+ },
+ "source": {
+  "title": "NASA POWER Hourly API v2 (SYN1DEG/GEOS/MERRA-2 based), point data",
+  "url": "https://power.larc.nasa.gov/api/temporal/hourly/point",
+  "license": "NASA POWER data: open; cite per https://power.larc.nasa.gov/docs/referencing/",
+  "retrieved_utc": "2026-10-26T19:52:36+00:00",
+  "raw_sha256": {
+   "bayarea_2024.json": "d59182b629d2065cb0b17b4a33ff995f5f7063ee73a1fd0d1e6bda7aa6434189",
+   "bayarea_2025.json": "346ba365706b875536e4c31c14390d41eb6d86c400ab590cd1544681fcb97b73",
+   "bayarea_2026.json": "d239e57788edb66fc104e6bf2b8e0208b462108222f513be8499314c1d3982c7"
+  }
+ },
+ "location": {
+  "name": "Santa Clara, California (CAISO NP15 region, Bay Area data-centre cluster)",
+  "latitude": 37.35,
+  "longitude": -121.96
+ },
+ "data_kind": "public",
+ "producer": "scripts/fetch_nasa_power.py",
+ "notes": "ACTUALS (reanalysis-assimilated), not archived forecasts. NASA fill value -999 mapped to NaN. Hour label = start of hour UTC."
+}

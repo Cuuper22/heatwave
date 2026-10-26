@@ -1,0 +1,147 @@
+{
+ "name": "public_de_generation",
+ "freq": "15min",
+ "columns": {
+  "hydro_pumped_storage_consumption_mw": {
+   "unit": "MW",
+   "description": "hydro_pumped_storage_consumption_mw"
+  },
+  "cross_border_electricity_trading_mw": {
+   "unit": "MW",
+   "description": "cross_border_electricity_trading_mw"
+  },
+  "hydro_run_of_river_mw": {
+   "unit": "MW",
+   "description": "hydro_run_of_river_mw"
+  },
+  "biomass_mw": {
+   "unit": "MW",
+   "description": "biomass_mw"
+  },
+  "fossil_brown_coal_lignite_mw": {
+   "unit": "MW",
+   "description": "fossil_brown_coal_lignite_mw"
+  },
+  "fossil_hard_coal_mw": {
+   "unit": "MW",
+   "description": "fossil_hard_coal_mw"
+  },
+  "fossil_oil_mw": {
+   "unit": "MW",
+   "description": "fossil_oil_mw"
+  },
+  "fossil_coal_derived_gas_mw": {
+   "unit": "MW",
+   "description": "fossil_coal_derived_gas_mw"
+  },
+  "fossil_gas_mw": {
+   "unit": "MW",
+   "description": "fossil_gas_mw"
+  },
+  "geothermal_mw": {
+   "unit": "MW",
+   "description": "geothermal_mw"
+  },
+  "hydro_water_reservoir_mw": {
+   "unit": "MW",
+   "description": "hydro_water_reservoir_mw"
+  },
+  "hydro_pumped_storage_mw": {
+   "unit": "MW",
+   "description": "hydro_pumped_storage_mw"
+  },
+  "others_mw": {
+   "unit": "MW",
+   "description": "others_mw"
+  },
+  "waste_mw": {
+   "unit": "MW",
+   "description": "waste_mw"
+  },
+  "wind_offshore_mw": {
+   "unit": "MW",
+   "description": "wind_offshore_mw"
+  },
+  "wind_onshore_mw": {
+   "unit": "MW",
+   "description": "wind_onshore_mw"
+  },
+  "solar_mw": {
+   "unit": "MW",
+   "description": "solar_mw"
+  },
+  "load_mw": {
+   "unit": "MW",
+   "description": "load_mw"
+  },
+  "residual_load_mw": {
+   "unit": "MW",
+   "description": "residual_load_mw"
+  },
+  "renewable_share_of_load_pct": {
+   "unit": "%",
+   "description": "renewable_share_of_load_pct"
+  },
+  "renewable_share_of_generation_pct": {
+   "unit": "%",
+   "description": "renewable_share_of_generation_pct"
+  },
+  "intensity_lifecycle_proxy_g_per_kwh": {
+   "unit": "gCO2eq/kWh",
+   "description": "production-weighted mean of IPCC AR5 lifecycle median factors over generation types that have a factor"
+  },
+  "intensity_factor_coverage_pct": {
+   "unit": "gCO2eq/kWh",
+   "description": "share of positive net generation (excluding storage and cross-border rows) covered by a factor"
+  }
+ },
+ "source": {
+  "title": "Energy-Charts /public_power?country=de (public net electricity generation)",
+  "url": "https://api.energy-charts.info",
+  "license": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/), from Bundesnetzagentur | SMARD.de (as stated in the API response)",
+  "retrieved_utc": "2026-10-26T19:54:01+00:00",
+  "raw_sha256": {
+   "power_20240101.json": "144052f7ac52fb0694e59c357163dca64f144d74ef4dc7026896b2e44299433d",
+   "power_20240331.json": "b37cdc1aebb370387445af8fa115ef62e72f556186a33b2875b0fdd49d0213e4",
+   "power_20240629.json": "4c3d777bf665b244ceffdce769d773779bcd5be78aad3d041b25f4258451c629",
+   "power_20240927.json": "e87ace921b3a07dedbcf813dbc58955af8a4ddeec06ffb2facaaf97076c3e813",
+   "power_20241226.json": "80284a24f3718d4385a16128383a65f6124e980ee50051d5365a622cf041ed0f",
+   "power_20250326.json": "56a464e1f3be5a6f76beb55c295512c072ccdfa1d5ff723853d7da1681b33243",
+   "power_20250624.json": "d2a237092698b56be9ca286398fa5a9e3050aa7b94e4b4fddb6c07f88d4d7f8c",
+   "power_20250922.json": "c80370bbe383345fbcef7673270bf611518e2ada90c659af094de18dc8c141c9",
+   "power_20251221.json": "2d91407d601921a69521edb7c85fe938931a1f51be417ed4ba6c3af6cf485e64",
+   "power_20260321.json": "a0c8c594a628c9f4da54390e3ebab25905d589ea632d8c556882de5df5f2537d",
+   "power_20260619.json": "643f7db5a4538c09dab50e9d1952b7e03e73ececc8f9f7ef402251e9361ed5e8",
+   "power_20260917.json": "bac6f0f56945b10f1dec6c287f933f5c9897de026ce512921ed2551a2812fbb1"
+  }
+ },
+ "data_kind": "public",
+ "producer": "scripts/fetch_energy_charts.py",
+ "emission_factors": {
+  "source": "https://www.ipcc.ch/site/assets/uploads/2018/02/ipcc_wg3_ar5_annex-iii.pdf (Table A.III.2, lifecycle median)",
+  "gco2eq_per_kwh": {
+   "coal": 820,
+   "gas_cc": 490,
+   "biomass_dedicated": 230,
+   "geothermal": 38,
+   "hydro": 24,
+   "solar_pv_utility": 48,
+   "wind_onshore": 11,
+   "wind_offshore": 12
+  },
+  "mapping": {
+   "Fossil brown coal / lignite": "coal",
+   "Fossil hard coal": "coal",
+   "Fossil coal-derived gas": "coal",
+   "Fossil gas": "gas_cc",
+   "Biomass": "biomass_dedicated",
+   "Geothermal": "geothermal",
+   "Hydro Run-of-River": "hydro",
+   "Hydro water reservoir": "hydro",
+   "Solar": "solar_pv_utility",
+   "Wind onshore": "wind_onshore",
+   "Wind offshore": "wind_offshore"
+  }
+ },
+ "notes": "intensity_lifecycle_proxy_g_per_kwh is production-based (no imports), computed here from IPCC AR5 lifecycle medians; generation types without a factor are excluded and reported as intensity_factor_coverage_pct."
+}

@@ -1,0 +1,87 @@
+{
+ "name": "public_eia_erco_hourly",
+ "freq": "1h",
+ "columns": {
+  "ng_natural_gas_mw": {
+   "unit": "MW",
+   "description": "EIA-930 hourly ng natural gas mw (megawatthours per hour = average MW)"
+  },
+  "ng_coal_mw": {
+   "unit": "MW",
+   "description": "EIA-930 hourly ng coal mw (megawatthours per hour = average MW)"
+  },
+  "ng_nuclear_mw": {
+   "unit": "MW",
+   "description": "EIA-930 hourly ng nuclear mw (megawatthours per hour = average MW)"
+  },
+  "ng_other_mw": {
+   "unit": "MW",
+   "description": "EIA-930 hourly ng other mw (megawatthours per hour = average MW)"
+  },
+  "ng_solar_mw": {
+   "unit": "MW",
+   "description": "EIA-930 hourly ng solar mw (megawatthours per hour = average MW)"
+  },
+  "ng_hydro_mw": {
+   "unit": "MW",
+   "description": "EIA-930 hourly ng hydro mw (megawatthours per hour = average MW)"
+  },
+  "ng_wind_mw": {
+   "unit": "MW",
+   "description": "EIA-930 hourly ng wind mw (megawatthours per hour = average MW)"
+  },
+  "net_generation_mw": {
+   "unit": "MW",
+   "description": "EIA-930 hourly net generation mw (megawatthours per hour = average MW)"
+  },
+  "interchange_mw": {
+   "unit": "MW",
+   "description": "EIA-930 hourly interchange mw (megawatthours per hour = average MW)"
+  },
+  "demand_mw": {
+   "unit": "MW",
+   "description": "EIA-930 hourly demand mw (megawatthours per hour = average MW)"
+  },
+  "demand_forecast_day_ahead_mw": {
+   "unit": "MW",
+   "description": "EIA-930 hourly demand forecast day ahead mw (megawatthours per hour = average MW)"
+  },
+  "intensity_lifecycle_proxy_g_per_kwh": {
+   "unit": "gCO2eq/kWh",
+   "description": "production-weighted IPCC AR5 lifecycle medians over coal, gas, nuclear, solar, hydro, wind; oil and other excluded"
+  },
+  "intensity_factor_coverage_pct": {
+   "unit": "%",
+   "description": "share of positive net generation covered by a factor"
+  }
+ },
+ "source": {
+  "title": "EIA Hourly Electric Grid Monitor (EIA-930), ERCOT (Texas) (ERCO), bulk file EBA.zip",
+  "url": "https://www.eia.gov/opendata/bulk/EBA.zip",
+  "license": "U.S. government work; cite EIA (https://www.eia.gov/about/copyright.php)",
+  "retrieved_utc": "2026-10-26T20:05:22+00:00",
+  "raw_sha256": {
+   "EBA.zip": "454a7e70c080846c1d0aa9de6af99e16b90f25b5dec7440347d4332084cd1c58"
+  },
+  "series_ids": [
+   "EBA.ERCO-ALL.D.H",
+   "EBA.ERCO-ALL.DF.H",
+   "EBA.ERCO-ALL.NG.COL.H",
+   "EBA.ERCO-ALL.NG.H",
+   "EBA.ERCO-ALL.NG.NG.H",
+   "EBA.ERCO-ALL.NG.NUC.H",
+   "EBA.ERCO-ALL.NG.OTH.H",
+   "EBA.ERCO-ALL.NG.SUN.H",
+   "EBA.ERCO-ALL.NG.WAT.H",
+   "EBA.ERCO-ALL.NG.WND.H",
+   "EBA.ERCO-ALL.TI.H"
+  ]
+ },
+ "data_kind": "public",
+ "producer": "scripts/fetch_eia_grid_monitor.py",
+ "emission_factors": {
+  "source": "https://www.ipcc.ch/site/assets/uploads/2018/02/ipcc_wg3_ar5_annex-iii.pdf (Table A.III.2, lifecycle median)",
+  "nuclear_gco2eq_per_kwh": 12
+ },
+ "notes": "demand_forecast_day_ahead_mw is the balancing authority's forecast submitted before the operating day: a known-future covariate. BA-reported values can contain outliers and gaps (EIA does not clean them in the bulk file)."
+}
