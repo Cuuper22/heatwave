@@ -5,3 +5,7 @@ data/raw/
 *.egg-info/
 .ipynb_checkpoints/
 laptop/logs/*.tmp
+
+# MIT Supercloud derived series: CC BY-NC-ND 4.0, re-create with scripts/fetch_mit_supercloud.py
+data/processed/public_gpu_mit/
+data/processed/public_gpu_mit_jobs.*
