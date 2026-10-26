@@ -281,3 +281,22 @@ def test_summarize_pairs_configs_and_gives_zero_delta_for_identical_stats():
     idx = block_indices(np.random.default_rng(0), 40, 3, 5)
     assert idx.shape == (5, 40) and idx.min() >= 0 and idx.max() < 40
     assert np.all(out["point"]["worse"][..., 1] > out["point"]["none"][..., 1])
+
+
+def test_guard_constant_rows():
+    from abl_engine import guard_constant_rows
+
+    cov = np.zeros((3, 4, 10))
+    cov[0, 0] = 350.0  # constant, non-binary -> zeroed
+    cov[0, 1] = 1.0  # constant indicator -> kept
+    cov[0, 2] = np.arange(10)  # varying -> kept
+    cov[0, 3, :5] = 0.08
+    cov[0, 3, 5:] = np.nan  # constant over its observed part -> zeroed, NaN kept
+    cov[1, 0] = [0.0, 1.0] * 5  # binary -> kept
+    out, n = guard_constant_rows(cov)
+    assert n == 2
+    assert np.all(out[0, 0] == 0.0) and np.all(out[0, 1] == 1.0)
+    np.testing.assert_array_equal(out[0, 2], np.arange(10))
+    assert np.all(out[0, 3, :5] == 0.0) and np.all(np.isnan(out[0, 3, 5:]))
+    np.testing.assert_array_equal(out[1, 0], cov[1, 0])
+    assert cov[0, 0, 0] == 350.0  # input untouched

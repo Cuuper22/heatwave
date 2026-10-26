@@ -4,6 +4,7 @@ STEP=setup     : unpack the code tarballs under /content and install the package
 STEP=simcache  : run sim_cache.py for the 20 (variant, seed) pairs in parallel worker processes
 STEP=smoke     : tiny GPU run of both ablation scripts (checks cuda and measures throughput)
 STEP=full      : start the full ablation_sim.py and ablation_real.py runs in the background (logs under /content/out)
+STEP=check     : print cores, memory, GPU and import check
 STEP=status    : print log tails
 """
 
@@ -20,7 +21,9 @@ ENV = {**os.environ, "PYTHONPATH": WT, "HEATWAVE_SIM_SCENARIO": f"{GS}/experimen
 
 def sh(cmd, **kw):
     print("+", cmd, flush=True)
-    return subprocess.run(cmd, shell=True, env=ENV, **kw)
+    r = subprocess.run(cmd, shell=True, env=ENV, capture_output=True, text=True, **kw)
+    print(r.stdout, r.stderr, flush=True)
+    return r
 
 
 os.makedirs(OUT, exist_ok=True)
@@ -46,13 +49,22 @@ elif STEP == "simcache":
         procs.append(subprocess.Popen(f"nohup sh -c '{cmd}' > {OUT}/simcache_{k}.log 2>&1", shell=True, env=ENV))
     print("started", len(procs), "workers")
 elif STEP == "smoke":
-    sh(f"cd {WT} && python experiments/ablation/ablation_sim.py --variants worlds --kinds rack_power_1s --seeds 100 --sizes 209M --device cuda "
-       f"--stride-mult 30 --reps 20 --out {OUT}/smoke_sim.json 2>&1 | tail -15")
+    which = os.environ.get("SMOKE", "sim")
+    if which == "sim":
+        cmd = (f"python experiments/ablation/ablation_sim.py --variants worlds --kinds {os.environ.get('KIND', 'rack_power_1s')} --seeds 100 --sizes 209M "
+               f"--device cuda --stride-mult 30 --reps 20 --out {OUT}/smoke_sim.json")
+    else:
+        cmd = (f"python experiments/ablation/ablation_real.py --sizes 209M --device cuda --stride-mult 40 --reps 20 --out {OUT}/smoke_real.json")
+    subprocess.Popen(f"cd {WT} && nohup {cmd} > {OUT}/smoke_{which}.log 2>&1", shell=True, env=ENV)
+    print("started", cmd)
 elif STEP == "full":
     extra = os.environ.get("EXTRA", "")
     sh(f"cd {WT} && nohup python experiments/ablation/ablation_sim.py --sizes 209M 28M --device cuda --batch-size {os.environ.get('BS', '64')} "
        f"--run-label colab-a100 --out {WT}/results/ablation/ablation_sim.json {extra} > {OUT}/full_sim.log 2>&1 &")
     sh(f"cd {WT} && nohup python experiments/ablation/ablation_real.py --sizes 209M 28M --device cuda --batch-size {os.environ.get('BS', '64')} "
        f"--run-label colab-a100 --out {WT}/results/ablation/ablation_real.json > {OUT}/full_real.log 2>&1 &")
+elif STEP == "check":
+    sh("nproc; free -g | head -2; nvidia-smi --query-gpu=name,memory.total --format=csv")
+    sh(f"cd {WT} && python -c 'import timestral, heatwave, gpu_stack; from heatwave.forecast import covariates; print(1)'")
 else:
     sh(f"tail -n 4 {OUT}/*.log; ls -la {WT}/results/ablation {WT}/results/ablation/cache | head -60; nvidia-smi --query-gpu=utilization.gpu,memory.used --format=csv")

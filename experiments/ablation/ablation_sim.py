@@ -49,6 +49,7 @@ def main() -> None:
     ap.add_argument("--cache-dir", default=str(ac.ROOT / "results" / "ablation" / "cache"))
     ap.add_argument("--out", default=str(ac.ROOT / "results" / "ablation" / "ablation_sim.json"))
     ap.add_argument("--run-label", default="")
+    ap.add_argument("--no-const-guard", action="store_true", help="feed constant non-binary covariate rows to the model unchanged")
     a = ap.parse_args()
 
     scenario = json.loads(Path(cv.SCENARIO_PATH).read_text())
@@ -76,6 +77,8 @@ def main() -> None:
         "bootstrap": "moving-block bootstrap over origins (block = ceil(horizon / origin stride)), same resampled origins for "
                      "every stream and config (paired); cluster bootstrap over seeds in delta_wql_cluster_ci95; "
                      f"{a.reps} replicates, 95% percentile intervals",
+        "const_guard": not a.no_const_guard,
+        "const_guard_rule": "covariate rows (window, channel) that are exactly constant and not 0/1 are replaced by zeros before the model; counts in constant_rows_zeroed",
         "sizes": a.sizes, "weights_dir": a.weights_dir, "seeds": a.seeds, "stride_mult": a.stride_mult,
         "split": "simulator test seeds 100-109 (fixed split; no fitting on any series)",
     }
@@ -88,7 +91,7 @@ def main() -> None:
                 MethodSpec(f.name, f, configs) for f in forecasters.values()
             ] + [MethodSpec(f"seasonal-naive-{ds.scale.season}", SeasonalNaiveForecaster(ds.scale.season), [("none", ())], False)]
             ac.log(f"{ds.name}: {ds.n_streams} streams x {ds.n_origins} origins, methods {[m.name for m in methods]}")
-            run = evaluate(ds, methods, batch_size=a.batch_size, log=ac.log)
+            run = evaluate(ds, methods, batch_size=a.batch_size, log=ac.log, const_guard=not a.no_const_guard)
             block = result_block(ds, run, methods, reps=a.reps, seed=0, cluster=ds.cluster)
             results[ds.name] = {
                 "data_kind": "simulated", "variant": variant, "quantity": kind, "what": ds.what,

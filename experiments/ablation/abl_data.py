@@ -323,17 +323,19 @@ def build_laptop(run: str, freq: str, quantity: str, d_nom: float, stride_mult: 
         df, grid = d, d.index
     col = {"power": "power_energy_w", "temp": "temp_c"}[quantity]
     y = df[col].interpolate(limit=20, limit_direction="both").to_numpy()
-    on = df["training_on"].interpolate(limit=20, limit_direction="both").to_numpy()
-    ck = df["ckpt_scheduled"].interpolate(limit=20, limit_direction="both").to_numpy()
+    # covariates are passed as 0/1 indicators (the model's indicator path): load active = at least half of the bin,
+    # checkpoint = any overlap with the bin
+    on = (df["training_on"].interpolate(limit=20, limit_direction="both").to_numpy() >= 0.5).astype(float)
+    ck = (df["ckpt_scheduled"].interpolate(limit=20, limit_direction="both").to_numpy() > 0.0).astype(float)
     # events are timestamped in UTC with sub-second precision; grid bins start on the grid timestamps
     gidx = pd.DatetimeIndex(grid)
 
     def fn_S(i, T, H):
-        fut = cv.laptop_training_on_future(sched, gidx, res_s, i, H)
+        fut = (cv.laptop_training_on_future(sched, gidx, res_s, i, H) >= 0.5).astype(float)
         return np.concatenate([on[i - T:i], fut])[None, :]
 
     def fn_K(i, T, H):
-        fut = cv.laptop_ckpt_future(sched, gidx, res_s, i, H)
+        fut = (cv.laptop_ckpt_future(sched, gidx, res_s, i, H) > 0.0).astype(float)
         return np.concatenate([ck[i - T:i], fut])[None, :]
 
     def fn_L(i, T, H):

@@ -88,6 +88,7 @@ def main() -> None:
     ap.add_argument("--cache-dir", default=str(ac.ROOT / "results" / "ablation" / "cache"))
     ap.add_argument("--out", default=str(ac.ROOT / "results" / "ablation" / "ablation_real.json"))
     ap.add_argument("--run-label", default="")
+    ap.add_argument("--no-const-guard", action="store_true", help="feed constant non-binary covariate rows to the model unchanged")
     a = ap.parse_args()
 
     forecasters = {s: ac.make_timestral(s, a.weights_dir, a.device, a.threads) for s in a.sizes}
@@ -115,6 +116,8 @@ def main() -> None:
             "L_realised": "logged checkpoint intervals of the whole run (realised; NOT known at the origin; comparison only)",
         },
         "bootstrap": f"moving-block bootstrap over origins (block = ceil(horizon / origin stride)), paired across configs, {a.reps} replicates, 95% percentile intervals",
+        "const_guard": not a.no_const_guard,
+        "const_guard_rule": "covariate rows (window, channel) that are exactly constant and not 0/1 are replaced by zeros before the model; counts in constant_rows_zeroed",
         "sizes": a.sizes, "weights_dir": a.weights_dir, "stride_mult": a.stride_mult,
         "laptop_ckpt_nominal_duration_s": d_nom,
     }
@@ -126,7 +129,7 @@ def main() -> None:
         methods = [MethodSpec(f.name, f, cfgs) for f in forecasters.values()] + [
             MethodSpec(f"seasonal-naive-{ds.scale.season}", SeasonalNaiveForecaster(ds.scale.season), [("none", ())], False)]
         ac.log(f"{ds.name}: {ds.n_origins} origins, configs {[c for c, _ in cfgs]}")
-        run = evaluate(ds, methods, batch_size=a.batch_size, log=ac.log)
+        run = evaluate(ds, methods, batch_size=a.batch_size, log=ac.log, const_guard=not a.no_const_guard)
         block = result_block(ds, run, methods, reps=a.reps, seed=0, cluster=None)
         np.savez_compressed(Path(a.cache_dir) / f"stats_{ds.name}.npz",
                             **{f"{m}|{c}": v for m, d in run["stats"].items() for c, v in d.items()})

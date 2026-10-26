@@ -180,6 +180,25 @@ class MethodSpec:
     uses_covariates: bool = True
 
 
+def guard_constant_rows(cov: np.ndarray) -> tuple[np.ndarray, int]:
+    """Zero every covariate row (window, channel) that is exactly constant and not a 0/1 indicator.
+
+    Timestral normalises known-future rows with the whole-row std clamped at 1e-6, so a constant non-binary row
+    turns float32 rounding noise into inputs of order 1e1-1e5. A constant row carries no information; a row of zeros
+    is the model's binary-indicator path (loc 0, scale 1). NaN entries stay NaN. Returns (array, rows zeroed).
+    """
+    out = cov.copy()
+    with np.errstate(all="ignore"):
+        mn, mx = np.nanmin(out, axis=-1), np.nanmax(out, axis=-1)
+    const = (mn == mx) & ~((mn == 0.0) | (mn == 1.0))
+    if const.any():
+        b, c = np.nonzero(const)
+        for i, j in zip(b, c):
+            r = out[i, j]
+            r[~np.isnan(r)] = 0.0
+    return out, int(const.sum())
+
+
 def _forecast_batch(forecaster, ctx3, horizon, kw, fail_count: dict, cfg: str) -> np.ndarray:
     """Quantiles (B, H, 21). If the model rejects a batch (degenerate input), retry window by window; a window that still
     fails becomes NaN (excluded from every average) and is counted in ``fail_count[cfg]``."""
@@ -202,6 +221,7 @@ def evaluate(
     *,
     batch_size: int = 64,
     log: Callable[[str], None] = print,
+    const_guard: bool = True,
 ) -> dict:
     """Run every method/config on every window. Returns {method: {cfg: stats (S, O, nb+1, 6)}}."""
     sc: Scale = dataset.scale
@@ -210,11 +230,18 @@ def evaluate(
     stats = {m.name: {c: np.full((S, O, nb, 6), np.nan) for c, _ in m.configs} for m in methods}
     timing = {m.name: 0.0 for m in methods}
     failures = {m.name: {} for m in methods}
+    zeroed = {g: 0 for g in dataset.groups}
+    n_rows = 0
     t_start = time.time()
     done = 0
     total = S * O
     for batch in dataset.iter_batches(batch_size):
         ctx3 = batch.ctx[:, None, :]
+        if const_guard:
+            for g in list(batch.cov):
+                batch.cov[g], nz = guard_constant_rows(batch.cov[g])
+                zeroed[g] += nz
+        n_rows += len(batch.stream)
         for m in methods:
             for cfg, groups in m.configs:
                 t0 = time.time()
@@ -229,7 +256,8 @@ def evaluate(
             log(f"  [{dataset.name}] {done}/{total} windows, {time.time() - t_start:.0f} s")
     log(f"  [{dataset.name}] finished {total} windows in {time.time() - t_start:.0f} s; forecast seconds: "
         + ", ".join(f"{k}={v:.0f}" for k, v in timing.items()))
-    return {"stats": stats, "forecast_seconds": timing, "wall_seconds": time.time() - t_start, "failed_windows": failures}
+    return {"stats": stats, "forecast_seconds": timing, "wall_seconds": time.time() - t_start, "failed_windows": failures,
+            "const_guard": const_guard, "constant_rows_zeroed": zeroed, "windows": n_rows}
 
 
 def result_block(
@@ -274,7 +302,15 @@ def result_block(
                         cl, ch = ci(dc)
                         e["delta_wql_cluster_ci95"] = [float(cl), float(ch)]
                 entry["buckets"][lab] = e
+            if "none" in sm["point"] and cfg != "none":
+                a = run["stats"][m.name][cfg][:, :, -1, 0]
+                z = run["stats"][m.name]["none"][:, :, -1, 0]
+                with np.errstate(all="ignore"):
+                    entry["blowup_rate_vs_none"] = float(np.nanmean(np.where(np.isnan(a) | np.isnan(z), np.nan, a > 10.0 * z)))
+                    entry["median_pinball_ratio_vs_none"] = float(np.nanmedian(a / z))
             cfgs[cfg] = entry
         out[m.name] = {"configs": cfgs, "forecast_seconds": run["forecast_seconds"][m.name],
-                       "failed_windows_by_config": run["failed_windows"][m.name]}
+                       "failed_windows_by_config": run["failed_windows"][m.name],
+                       "const_guard": run["const_guard"], "constant_rows_zeroed": run["constant_rows_zeroed"],
+                       "windows": run["windows"]}
     return out
