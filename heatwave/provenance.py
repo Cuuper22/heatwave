@@ -81,7 +81,7 @@ def write_result(
     if data_kind not in DATA_KINDS:
         raise ValueError(f"data_kind must be one of {DATA_KINDS}")
     script = Path(script).resolve()
-    payload = {
+    record = {
         "provenance": {
             "script": str(script.relative_to(REPO_ROOT)) if script.is_relative_to(REPO_ROOT) else str(script),
             "script_sha256": sha256_file(script),
@@ -97,5 +97,5 @@ def write_result(
     }
     out = Path(out_path)
     out.parent.mkdir(parents=True, exist_ok=True)
-    out.write_text(json.dumps(payload, indent=1, sort_keys=False, allow_nan=False) + "\n")
-    return payload
+    out.write_text(json.dumps(record, indent=1, sort_keys=False, allow_nan=False) + "\n")
+    return record
