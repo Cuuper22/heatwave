@@ -128,11 +128,12 @@ def load_price(region: str, market: str = "dam", native: bool = False) -> pd.Dat
 
 
 # ----------------------------------------------------------------------------- carbon
-def load_carbon(region: str, kind: str = "actual") -> pd.DataFrame:
+def load_carbon(region: str, kind: str = "actual", basis: str = "in_state") -> pd.DataFrame:
     """Grid carbon intensity as one column ``intensity_g_per_kwh`` (gCO2/kWh; kgCO2/MWh is numerically equal).
 
     gb    : 30 min; actual and forecast (the API's own forecast value; vintage undocumented).
-    caiso : 5 min; actual only, computed from CAISO's published CO2 and fuel mix (see meta).
+    caiso : 5 min; actual only, computed from CAISO's published CO2 and fuel mix (see meta). basis='in_state' (default, never negative,
+            imports excluded) or 'total' (CAISO imports CO2 included; negative while California is a net exporter).
     de    : 15 min; actual only, a production-based lifecycle proxy (IPCC AR5 medians; see meta).
     """
     r = _region(region)
@@ -143,7 +144,8 @@ def load_carbon(region: str, kind: str = "actual") -> pd.DataFrame:
     if kind != "actual":
         raise ValueError(f"{region!r} has no published intensity forecast; use load_forecast_covariates({region!r}) for day-ahead load/renewables")
     if r == "caiso":
-        return load_series("public_caiso_carbon")[0][["intensity_kg_per_mwh"]].rename(columns={"intensity_kg_per_mwh": "intensity_g_per_kwh"})
+        col = {"in_state": "intensity_in_state_kg_per_mwh", "total": "intensity_kg_per_mwh"}[basis]
+        return load_series("public_caiso_carbon")[0][[col]].rename(columns={col: "intensity_g_per_kwh"})
     return load_series("public_de_generation")[0][["intensity_lifecycle_proxy_g_per_kwh"]].rename(
         columns={"intensity_lifecycle_proxy_g_per_kwh": "intensity_g_per_kwh"})
 

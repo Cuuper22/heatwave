@@ -99,7 +99,8 @@ def carbon_from_outlook(fuel: pd.DataFrame, co2: pd.DataFrame) -> pd.DataFrame:
     """Total CO2 (mTCO2/h, summed over the CAISO CO2 resources) and a computed intensity.
 
     supply_mw = sum of all fuel-source columns (net: battery charging is negative).
-    intensity_kg_per_mwh = 1000 * co2_total_mt_per_h / supply_mw, computed here (not published by CAISO).
+    intensity_kg_per_mwh = 1000 * co2_total_mt_per_h / supply_mw, computed here (not published by CAISO); negative while the
+    published imports CO2 is negative (net export). intensity_in_state_kg_per_mwh excludes imports and is never negative.
     """
     out = pd.DataFrame(index=fuel.index.union(co2.index))
     co2c = [c for c in co2.columns]
@@ -108,4 +109,11 @@ def carbon_from_outlook(fuel: pd.DataFrame, co2: pd.DataFrame) -> pd.DataFrame:
     out["co2_total_mt_per_h"] = out[cols].sum(axis=1, min_count=len(cols))
     out["supply_mw"] = fuel.sum(axis=1, min_count=fuel.shape[1]).reindex(out.index)
     out["intensity_kg_per_mwh"] = np.where(out["supply_mw"] > 0, 1000.0 * out["co2_total_mt_per_h"] / out["supply_mw"], np.nan)
+    # in-state basis: CO2 of the in-state resources over in-state generation (imports excluded, battery discharge counted).
+    # The published imports CO2 is negative while California is a net exporter, which makes the total-basis value negative then.
+    in_state_co2 = out[[c for c in cols if "imports" not in c]].sum(axis=1, min_count=1)
+    gen_cols = [c for c in fuel.columns if "imports" not in c]
+    in_state_mw = fuel[gen_cols].clip(lower=0).sum(axis=1, min_count=len(gen_cols)).reindex(out.index)
+    out["in_state_generation_mw"] = in_state_mw
+    out["intensity_in_state_kg_per_mwh"] = np.where(in_state_mw > 0, 1000.0 * in_state_co2 / in_state_mw, np.nan)
     return out

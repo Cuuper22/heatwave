@@ -160,6 +160,9 @@ def process_outlook(manifest: Manifest) -> None:
     cmeta["co2_total_mt_per_h"] = {"unit": "mTCO2/h", "description": "sum of the CAISO CO2 resource columns"}
     cmeta["supply_mw"] = {"unit": "MW", "description": "sum of all fuelsource columns (net of battery charging)"}
     cmeta["intensity_kg_per_mwh"] = {"unit": "kgCO2/MWh", "description": "1000 * co2_total_mt_per_h / supply_mw; computed here, not published by CAISO"}
+    cmeta["in_state_generation_mw"] = {"unit": "MW", "description": "sum of the fuelsource columns except imports, batteries clipped at zero"}
+    cmeta["intensity_in_state_kg_per_mwh"] = {"unit": "kgCO2/MWh", "description": "1000 * (CO2 of non-import resources) / in_state_generation_mw; computed here, never negative"}
+    cmeta["intensity_kg_per_mwh"]["description"] += "; negative while CAISO's published imports CO2 is negative (net export)"
     save_series(carbon, "public_caiso_carbon", {
         "freq": "5min", "columns": cmeta,
         "source": {"title": "CAISO Today's Outlook history: co2.csv and fuelsource.csv", **src, "raw_sha256": {**shas["co2"], **shas["fuelsource"]}},
