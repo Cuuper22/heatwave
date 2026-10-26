@@ -1,6 +1,6 @@
 """Turn a raw laptop collection run (scripts/laptop_collect.py output) into processed series.
 
-Usage: python scripts/process_laptop_run.py <raw_run_dir> <name>
+Usage: python scripts/process_laptop_run.py <raw_run_dir> <name> [out_root]
 
 Writes data/processed/laptop_<name>_10hz.parquet (native ~10 Hz samples)
 and laptop_<name>_1s.parquet (1 s means), both MEASURED, with these
@@ -24,14 +24,17 @@ import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
-from heatwave.data.schema import save_series  # noqa: E402
+from heatwave.data.schema import PROCESSED, save_series as _save  # noqa: E402
 
 
 def sha(p: Path) -> str:
     return hashlib.sha256(p.read_bytes()).hexdigest()
 
 
-def main(raw: Path, name: str) -> None:
+def main(raw: Path, name: str, root: Path = PROCESSED) -> None:
+    def save_series(df, nm, meta):
+        return _save(df, nm, meta, root=root)
+
     tel = pd.read_csv(raw / "telemetry.csv")
     ev = pd.read_csv(raw / "events.csv")
     meta = json.loads((raw / "meta.json").read_text())
@@ -103,4 +106,4 @@ def main(raw: Path, name: str) -> None:
 
 
 if __name__ == "__main__":
-    main(Path(sys.argv[1]), sys.argv[2])
+    main(Path(sys.argv[1]), sys.argv[2], Path(sys.argv[3]) if len(sys.argv) > 3 else PROCESSED)
