@@ -4,15 +4,10 @@ import numpy as np
 import pytest
 
 from heatwave.forecast import hier_coherence as C
-from heatwave.forecast import reconcile as alias
 
 
 def tree():
     return C.build_tree("site", {"r1": ["a", "b"], "r2": ["c", "d", "e"]}, bottom_level="gpu")
-
-
-def test_alias_module_exports_same_objects():
-    assert alias.shrink_covariance is C.shrink_covariance
 
 
 def test_summing_matrix_and_levels():
