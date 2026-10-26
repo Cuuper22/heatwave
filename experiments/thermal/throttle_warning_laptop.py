@@ -131,11 +131,16 @@ def main() -> None:
     ap.add_argument("--stride-s", type=int, default=2)
     ap.add_argument("--gap-s", type=int, default=30)
     ap.add_argument("--min-lead-s", type=int, default=3)
+    ap.add_argument("--classical", default="ets,arima", help="comma list from ets,arima ('' for none)")
     a = ap.parse_args()
     from heatwave.forecast.timestral_fc import TimestralForecaster
 
-    methods = [("naive-last", None), ("ets", ETSForecaster(1, max_context=a.context_s)),
-               ("arima", ARIMAForecaster((2, 1, 1), max_context=a.context_s))]
+    methods = [("naive-last", None)]
+    cl = [c for c in a.classical.split(",") if c]
+    if "ets" in cl:
+        methods.append(("ets", ETSForecaster(1, max_context=a.context_s)))
+    if "arima" in cl:
+        methods.append(("arima", ARIMAForecaster((2, 1, 1), max_context=a.context_s)))
     for sz in a.sizes.split(","):
         tf = TimestralForecaster(sz, threads=2)
         methods += [(f"timestral-{sz}", tf), (f"timestral-{sz}+schedule", tf)]
