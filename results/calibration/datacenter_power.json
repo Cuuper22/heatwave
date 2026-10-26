@@ -1,0 +1,1552 @@
+{
+ "provenance": {
+  "script": "experiments/calibration/datacenter_power.py",
+  "script_sha256": "f6aa2a6ca6feab65fef67693086f1662e5c157b4e6237c99e090b41638dcf3e3",
+  "git": {
+   "commit": "494f1eb58930cd0405e3881d7e021fdabc28ec21",
+   "dirty": "true"
+  },
+  "inputs": {
+   "/home/claude/wt/heatwave-main/data/processed/public_gpu_node_20ms/LLM_H100_8GPU_Node_Lamma1B_SeqLength2048_Deepspeedds_z3_BatchSize16.parquet": "d3d0a16fdddc6cfb356947f7a9accbb067b16b4c1283bb20185cecc0b2d15006",
+   "/home/claude/wt/heatwave-main/data/processed/public_gpu_node_20ms/LLM_H100_8GPU_Node_Lamma3B_SeqLength2048_Deepspeedds_z3_BatchSize16.parquet": "f7ca42f28c2955183ac5216b17f446c840d4446c52ca1928cc1454abff9b08a0",
+   "/home/claude/wt/heatwave-main/data/processed/public_gpu_node_20ms/LLM_H100_8GPU_Node_Lamma8B_SeqLength1024_Deepspeedds_z3_BatchSize16.parquet": "84689878819a7c8ce1a97ea5c55a47b3e452a3934945cca64889ec0e0f3fcb28",
+   "/home/claude/wt/heatwave-main/data/processed/public_gpu_node_20ms/LLM_H100_8GPU_Node_Lamma8B_SeqLength2048_Deepspeedds_z1_BatchSize16.parquet": "dcc74bc7638919e96111c030b3b5073ccbb55f51de4e40e029eb1af01bf25cf4",
+   "/home/claude/wt/heatwave-main/data/processed/public_gpu_node_20ms/LLM_H100_8GPU_Node_Lamma8B_SeqLength2048_Deepspeedds_z2_BatchSize16.parquet": "61ea8c826a1f6607d4e18f2de8f40eb1bef9521c5b43eb350821b1cf3cc004a2",
+   "/home/claude/wt/heatwave-main/data/processed/public_gpu_node_20ms/LLM_H100_8GPU_Node_Lamma8B_SeqLength2048_Deepspeedds_z3_BatchSize16.parquet": "4b1eb7d8a331f497b42db3ad8a289e13a1331a2d0daabf35321af0fe8689059f",
+   "/home/claude/wt/heatwave-main/data/processed/public_gpu_node_20ms/LLM_H100_8GPU_Node_Lamma8B_SeqLength2048_Deepspeedds_z3_BatchSize2.parquet": "7571ec4bed69a2b364f5dbf7fa272d27fd1524984e5c991b06a92c2fbf94d99e",
+   "/home/claude/wt/heatwave-main/data/processed/public_gpu_node_20ms/LLM_H100_8GPU_Node_Lamma8B_SeqLength2048_Deepspeedds_z3_BatchSize32.parquet": "ebe707d174dffe79a894d51b736670c07c029e853653be9d9245255a2273cc4f",
+   "/home/claude/wt/heatwave-main/data/processed/public_gpu_node_20ms/LLM_H100_8GPU_Node_Lamma8B_SeqLength4096_Deepspeedds_z3_BatchSize16.parquet": "7e1b33d04f64cf51c083acd860d9a4593ae1ac43ada2e83419cdc6146dfb014a",
+   "/home/claude/wt/heatwave-main/data/processed/laptop_run1_10hz.parquet": "4845f6737003de2435e427d885cc2e7ef808d9f55d03351507a76e461100e36a"
+  },
+  "data_kind": "mixed",
+  "created_utc": "2026-10-26T20:57:54+00:00",
+  "notes": "public H100 data (CC BY 4.0) plus measured laptop checkpoint ratio"
+ },
+ "result": {
+  "source": "Elsayed et al. 2026 (doi:10.1038/s41597-026-07496-6), H100 SXM 8-GPU node, llm_training sessions",
+  "n_sessions": 9,
+  "n_gpu_sessions": 72,
+  "limit_w_median": 700.0,
+  "idle_w": {
+   "median": 126.44599914550781,
+   "p10": 120.4733985900879,
+   "p90": 130.46807098388672,
+   "n": 72
+  },
+  "compute_w": {
+   "median": 598.5419006347656,
+   "p10": 250.64739685058606,
+   "p90": 620.2267639160157,
+   "n": 72
+  },
+  "idle_ratio": {
+   "median": 0.21292761611145372,
+   "p10": 0.20561919308877497,
+   "p90": 0.5176742396083067,
+   "n": 72
+  },
+  "compute_fraction_of_limit": {
+   "median": 0.8550598580496651,
+   "p10": 0.3580677097865515,
+   "p90": 0.8860382341657366,
+   "n": 72
+  },
+  "low_phase_ratio": {
+   "median": 0.2492626550302487,
+   "p10": 0.22928046444112452,
+   "p90": 0.5320588747159619,
+   "n": 72
+  },
+  "low_phase_fraction_of_active_time": {
+   "median": 0.1434169547785198,
+   "p10": 0.09096703044529632,
+   "p90": 0.43584998760987786,
+   "n": 72
+  },
+  "temp_per_power_k_per_w": {
+   "median": 0.02558234685296796,
+   "p10": 0.023123633067633133,
+   "p90": 0.029757293669327414,
+   "n": 72
+  },
+  "gpu_rc_fit": {
+   "n_fits_r2_gt_0.5": 8,
+   "n_attempted": 72,
+   "time_constant_s": {
+    "median": 8.93304901995355,
+    "p10": 6.505709275092997,
+    "p90": 12.711169194472618,
+    "n": 8
+   },
+   "resistance_k_per_w": {
+    "median": 0.04838936600044555,
+    "p10": 0.04275283550502508,
+    "p90": 0.05334624246708355,
+    "n": 8
+   },
+   "heat_capacity_j_per_k": {
+    "median": 198.39640338529287,
+    "p10": 150.62783564987055,
+    "p90": 241.68516782062164,
+    "n": 8
+   },
+   "r2": {
+    "median": 0.6749385535621125,
+    "p10": 0.6478596968724923,
+    "p90": 0.6933243744407054,
+    "n": 8
+   }
+  },
+  "laptop_checkpoint": {
+   "run": "run1",
+   "checkpoint_power_w": 42.19354839129629,
+   "training_power_w": 68.90322580358463,
+   "ratio": 0.6123595506482253,
+   "n_checkpoint_samples": 95,
+   "signal": "power_energy_w (NVML energy counter, about 94 ms updates)",
+   "device": "RTX 3060 Laptop GPU (measured; a laptop checkpoint of a 27M-parameter model to local disk)"
+  },
+  "per_gpu": [
+   {
+    "idle_w": 129.3800048828125,
+    "compute_w": 619.6643676757812,
+    "low_w": 146.8380126953125,
+    "low_frac": 0.13921893915616734,
+    "limit_w": 700.0,
+    "temp_per_power_k_per_w": 0.02213234035129106,
+    "rc": {
+     "heat_capacity_j_per_k": 3.4453848376768117,
+     "resistance_k_per_w": 0.009423377648791,
+     "time_constant_s": 0.03246716247084708,
+     "rmse_c": 3.2592417735873425,
+     "r2": 0.15471791286656578
+    },
+    "session": "LLM_H100_8GPU_Node_Lamma8B_SeqLength2048_Deepspeedds_z3_BatchSize16",
+    "gpu": 0,
+    "idle_ratio": 0.2087904543682045,
+    "compute_fraction_of_limit": 0.8852348109654018,
+    "low_ratio": 0.23696378290407139
+   },
+   {
+    "idle_w": 123.9179458618164,
+    "compute_w": 598.29248046875,
+    "low_w": 141.64100646972656,
+    "low_frac": 0.14016051652244094,
+    "limit_w": 700.0,
+    "temp_per_power_k_per_w": 0.02313566249412488,
+    "rc": {
+     "heat_capacity_j_per_k": 2.640231507725092,
+     "resistance_k_per_w": 0.009276641080791273,
+     "time_constant_s": 0.02449248006736207,
+     "rmse_c": 3.462741766310975,
+     "r2": 0.1311406733958128
+    },
+    "session": "LLM_H100_8GPU_Node_Lamma8B_SeqLength2048_Deepspeedds_z3_BatchSize16",
+    "gpu": 1,
+    "idle_ratio": 0.2071193436439803,
+    "compute_fraction_of_limit": 0.8547035435267857,
+    "low_ratio": 0.236742080326254
+   },
+   {
+    "idle_w": 130.53713989257812,
+    "compute_w": 602.7357177734375,
+    "low_w": 148.9669952392578,
+    "low_frac": 0.14065372371429852,
+    "limit_w": 700.0,
+    "temp_per_power_k_per_w": 0.026885392262236622,
+    "rc": {
+     "heat_capacity_j_per_k": 0.37390375276298715,
+     "resistance_k_per_w": 0.01255232736429199,
+     "time_constant_s": 0.00469336230741831,
+     "rmse_c": 3.8213595466996013,
+     "r2": 0.1868487043280258
+    },
+    "session": "LLM_H100_8GPU_Node_Lamma8B_SeqLength2048_Deepspeedds_z3_BatchSize16",
+    "gpu": 2,
+    "idle_ratio": 0.21657442232691074,
+    "compute_fraction_of_limit": 0.861051025390625,
+    "low_ratio": 0.2471514311273205
+   },
+   {
+    "idle_w": 124.12799835205078,
+    "compute_w": 600.23876953125,
+    "low_w": 141.36300659179688,
+    "low_frac": 0.14036228310092813,
+    "limit_w": 700.0,
+    "temp_per_power_k_per_w": 0.024942609248434517,
+    "rc": {
+     "heat_capacity_j_per_k": 0.6632811137477892,
+     "resistance_k_per_w": 0.010908430448540741,
+     "time_constant_s": 0.007235355897148399,
+     "rmse_c": 3.5307731285155315,
+     "r2": 0.17087251369537948
+    },
+    "session": "LLM_H100_8GPU_Node_Lamma8B_SeqLength2048_Deepspeedds_z3_BatchSize16",
+    "gpu": 3,
+    "idle_ratio": 0.2067977022693606,
+    "compute_fraction_of_limit": 0.8574839564732143,
+    "low_ratio": 0.23551128945268363
+   },
+   {
+    "idle_w": 126.91200256347656,
+    "compute_w": 595.2401123046875,
+    "low_w": 144.61599731445312,
+    "low_frac": 0.13960005380442092,
+    "limit_w": 700.0,
+    "temp_per_power_k_per_w": 0.025900126713600695,
+    "rc": {
+     "heat_capacity_j_per_k": 0.09770412205238174,
+     "resistance_k_per_w": 0.010901411902381749,
+     "time_constant_s": 0.0010651128790535934,
+     "rmse_c": 3.658913454808273,
+     "r2": 0.15472744222049628
+    },
+    "session": "LLM_H100_8GPU_Node_Lamma8B_SeqLength2048_Deepspeedds_z3_BatchSize16",
+    "gpu": 4,
+    "idle_ratio": 0.21321144180302437,
+    "compute_fraction_of_limit": 0.850343017578125,
+    "low_ratio": 0.24295405219671765
+   },
+   {
+    "idle_w": 140.2959442138672,
+    "compute_w": 612.0548706054688,
+    "low_w": 161.97799682617188,
+    "low_frac": 0.1428059005514953,
+    "limit_w": 700.0,
+    "temp_per_power_k_per_w": 0.025462190074821568,
+    "rc": {
+     "heat_capacity_j_per_k": 0.15597217097084745,
+     "resistance_k_per_w": 0.012030863600722266,
+     "time_constant_s": 0.0018764799144587987,
+     "rmse_c": 3.5866463935015926,
+     "r2": 0.19107070734782328
+    },
+    "session": "LLM_H100_8GPU_Node_Lamma8B_SeqLength2048_Deepspeedds_z3_BatchSize16",
+    "gpu": 5,
+    "idle_ratio": 0.22922118743223288,
+    "compute_fraction_of_limit": 0.8743641008649553,
+    "low_ratio": 0.26464620184451254
+   },
+   {
+    "idle_w": 126.88700103759766,
+    "compute_w": 603.7837524414062,
+    "low_w": 147.98199462890625,
+    "low_frac": 0.1435008743218401,
+    "limit_w": 700.0,
+    "temp_per_power_k_per_w": 0.02654968619189318,
+    "rc": {
+     "heat_capacity_j_per_k": 3.078848984021704,
+     "resistance_k_per_w": 0.012246474918036607,
+     "time_constant_s": 0.037705046859244286,
+     "rmse_c": 3.7868716687924144,
+     "r2": 0.18407796973946877
+    },
+    "session": "LLM_H100_8GPU_Node_Lamma8B_SeqLength2048_Deepspeedds_z3_BatchSize16",
+    "gpu": 6,
+    "idle_ratio": 0.21015305649502602,
+    "compute_fraction_of_limit": 0.8625482177734375,
+    "low_ratio": 0.24509105127545985
+   },
+   {
+    "idle_w": 126.81700134277344,
+    "compute_w": 600.5447998046875,
+    "low_w": 145.67599487304688,
+    "low_frac": 0.14231269335963773,
+    "limit_w": 700.0,
+    "temp_per_power_k_per_w": 0.025877399833757805,
+    "rc": {
+     "heat_capacity_j_per_k": 0.20073988931795944,
+     "resistance_k_per_w": 0.011191584032457165,
+     "time_constant_s": 0.0022465973399680935,
+     "rmse_c": 3.6905868635097274,
+     "r2": 0.1631727407067134
+    },
+    "session": "LLM_H100_8GPU_Node_Lamma8B_SeqLength2048_Deepspeedds_z3_BatchSize16",
+    "gpu": 7,
+    "idle_ratio": 0.21116992667993723,
+    "compute_fraction_of_limit": 0.857921142578125,
+    "low_ratio": 0.24257306852115684
+   },
+   {
+    "idle_w": 124.60700225830078,
+    "compute_w": 228.483642578125,
+    "low_w": 127.2040023803711,
+    "low_frac": 0.08772711079444247,
+    "limit_w": 700.0,
+    "temp_per_power_k_per_w": 0.030051498152682213,
+    "rc": {
+     "heat_capacity_j_per_k": 207.08689475996874,
+     "resistance_k_per_w": 0.042021132608908975,
+     "time_constant_s": 8.702025866275823,
+     "rmse_c": 0.9735475931626888,
+     "r2": 0.6737959232827606
+    },
+    "session": "LLM_H100_8GPU_Node_Lamma8B_SeqLength2048_Deepspeedds_z3_BatchSize2",
+    "gpu": 0,
+    "idle_ratio": 0.5453650898256059,
+    "compute_fraction_of_limit": 0.3264052036830357,
+    "low_ratio": 0.556731330720432
+   },
+   {
+    "idle_w": 117.72799682617188,
+    "compute_w": 120.37637329101562,
+    "low_w": 118.15299987792969,
+    "low_frac": 0.033354114713216955,
+    "limit_w": 700.0,
+    "temp_per_power_k_per_w": 0.03272459491506065,
+    "rc": {
+     "heat_capacity_j_per_k": 244.58288508543922,
+     "resistance_k_per_w": 0.05027380099065203,
+     "time_constant_s": 12.296111290504886,
+     "rmse_c": 1.0432273362928075,
+     "r2": 0.6806144280560606
+    },
+    "session": "LLM_H100_8GPU_Node_Lamma8B_SeqLength2048_Deepspeedds_z3_BatchSize2",
+    "gpu": 1,
+    "idle_ratio": 0.9779992004042091,
+    "compute_fraction_of_limit": 0.17196624755859374,
+    "low_ratio": 0.9815298189146235
+   },
+   {
+    "idle_w": 121.76599884033203,
+    "compute_w": 125.98367309570312,
+    "low_w": 122.24400329589844,
+    "low_frac": 0.03411115069469184,
+    "limit_w": 700.0,
+    "temp_per_power_k_per_w": 0.03397573058920413,
+    "rc": {
+     "heat_capacity_j_per_k": 237.18028745196892,
+     "resistance_k_per_w": 0.05339265882730984,
+     "time_constant_s": 12.663686168486255,
+     "rmse_c": 1.0931931494024603,
+     "r2": 0.6834819105552701
+    },
+    "session": "LLM_H100_8GPU_Node_Lamma8B_SeqLength2048_Deepspeedds_z3_BatchSize2",
+    "gpu": 2,
+    "idle_ratio": 0.9665220567734428,
+    "compute_fraction_of_limit": 0.17997667585100446,
+    "low_ratio": 0.9703162345730001
+   },
+   {
+    "idle_w": 118.51799774169922,
+    "compute_w": 119.8072509765625,
+    "low_w": 118.58999633789062,
+    "low_frac": 0.023445849661560384,
+    "limit_w": 700.0,
+    "temp_per_power_k_per_w": 0.03297016056165657,
+    "rc": {
+     "heat_capacity_j_per_k": 153.60842190421323,
+     "resistance_k_per_w": 0.043066422460503406,
+     "time_constant_s": 6.615365191218092,
+     "rmse_c": 1.0301089710218059,
+     "r2": 0.6648737614648101
+    },
+    "session": "LLM_H100_8GPU_Node_Lamma8B_SeqLength2048_Deepspeedds_z3_BatchSize2",
+    "gpu": 3,
+    "idle_ratio": 0.989238938174823,
+    "compute_fraction_of_limit": 0.17115321568080358,
+    "low_ratio": 0.9898398917532129
+   },
+   {
+    "idle_w": 119.54499816894531,
+    "compute_w": 121.343017578125,
+    "low_w": 119.51599884033203,
+    "low_frac": 0.017049004730875658,
+    "limit_w": 700.0,
+    "temp_per_power_k_per_w": 0.03563515339590515,
+    "rc": {
+     "heat_capacity_j_per_k": 161.97854699099994,
+     "resistance_k_per_w": 0.048472002513628716,
+     "time_constant_s": 7.851424536901677,
+     "rmse_c": 1.0520078300890687,
+     "r2": 0.6760811838414644
+    },
+    "session": "LLM_H100_8GPU_Node_Lamma8B_SeqLength2048_Deepspeedds_z3_BatchSize2",
+    "gpu": 4,
+    "idle_ratio": 0.9851823413900016,
+    "compute_fraction_of_limit": 0.17334716796875,
+    "low_ratio": 0.9849433550091444
+   },
+   {
+    "idle_w": 129.26663208007812,
+    "compute_w": 130.29661560058594,
+    "low_w": 129.32998657226562,
+    "low_frac": 0.024714998218738866,
+    "limit_w": 700.0,
+    "temp_per_power_k_per_w": 0.03370705885015543,
+    "rc": {
+     "heat_capacity_j_per_k": 240.44328899284267,
+     "resistance_k_per_w": 0.05332634974127228,
+     "time_constant_s": 12.821962921774132,
+     "rmse_c": 1.0138231922252254,
+     "r2": 0.7162901235067212
+    },
+    "session": "LLM_H100_8GPU_Node_Lamma8B_SeqLength2048_Deepspeedds_z3_BatchSize2",
+    "gpu": 5,
+    "idle_ratio": 0.9920950861558435,
+    "compute_fraction_of_limit": 0.18613802228655135,
+    "low_ratio": 0.9925813189861858
+   },
+   {
+    "idle_w": 118.81700134277344,
+    "compute_w": 120.04800415039062,
+    "low_w": 118.86849975585938,
+    "low_frac": 0.0220876380477378,
+    "limit_w": 700.0,
+    "temp_per_power_k_per_w": 0.033975198131281484,
+    "rc": {
+     "heat_capacity_j_per_k": 189.705912010617,
+     "resistance_k_per_w": 0.04830672948726239,
+     "time_constant_s": 9.164072173631277,
+     "rmse_c": 1.077898282787534,
+     "r2": 0.6513749430327065
+    },
+    "session": "LLM_H100_8GPU_Node_Lamma8B_SeqLength2048_Deepspeedds_z3_BatchSize2",
+    "gpu": 6,
+    "idle_ratio": 0.9897457453263859,
+    "compute_fraction_of_limit": 0.1714971487862723,
+    "low_ratio": 0.9901747271611978
+   },
+   {
+    "idle_w": 121.5045166015625,
+    "compute_w": 122.86611938476562,
+    "low_w": 121.42500305175781,
+    "low_frac": 0.01634307089419309,
+    "limit_w": 700.0,
+    "temp_per_power_k_per_w": 0.03385900252664041,
+    "rc": {
+     "heat_capacity_j_per_k": 143.6731343897376,
+     "resistance_k_per_w": 0.04350044632455327,
+     "time_constant_s": 6.24984547080111,
+     "rmse_c": 1.084768939146639,
+     "r2": 0.6396574558319925
+    },
+    "session": "LLM_H100_8GPU_Node_Lamma8B_SeqLength2048_Deepspeedds_z3_BatchSize2",
+    "gpu": 7,
+    "idle_ratio": 0.9889179963522804,
+    "compute_fraction_of_limit": 0.17552302769252232,
+    "low_ratio": 0.9882708403242163
+   },
+   {
+    "idle_w": 129.74407958984375,
+    "compute_w": 644.3062744140625,
+    "low_w": 152.12100219726562,
+    "low_frac": 0.12408563183678947,
+    "limit_w": 700.0,
+    "temp_per_power_k_per_w": 0.022154945243057906,
+    "rc": {
+     "heat_capacity_j_per_k": 0.6917856254206993,
+     "resistance_k_per_w": 0.007656386497664484,
+     "time_constant_s": 0.005296578121749423,
+     "rmse_c": 3.255708008121584,
+     "r2": 0.11280728873936063
+    },
+    "session": "LLM_H100_8GPU_Node_Lamma8B_SeqLength2048_Deepspeedds_z3_BatchSize32",
+    "gpu": 0,
+    "idle_ratio": 0.20137019417952137,
+    "compute_fraction_of_limit": 0.9204375348772321,
+    "low_ratio": 0.23610045135072716
+   },
+   {
+    "idle_w": 124.30754852294922,
+    "compute_w": 631.4976806640625,
+    "low_w": 145.28799438476562,
+    "low_frac": 0.1230376458468636,
+    "limit_w": 700.0,
+    "temp_per_power_k_per_w": 0.023336873091455965,
+    "rc": {
+     "heat_capacity_j_per_k": 3.722827889997265,
+     "resistance_k_per_w": 0.008137292721210158,
+     "time_constant_s": 0.030293740291592916,
+     "rmse_c": 3.4262019082308948,
+     "r2": 0.11497894314878176
+    },
+    "session": "LLM_H100_8GPU_Node_Lamma8B_SeqLength2048_Deepspeedds_z3_BatchSize32",
+    "gpu": 1,
+    "idle_ratio": 0.19684561373563783,
+    "compute_fraction_of_limit": 0.9021395438058035,
+    "low_ratio": 0.2300689279364977
+   },
+   {
+    "idle_w": 131.2100067138672,
+    "compute_w": 622.810791015625,
+    "low_w": 149.4980010986328,
+    "low_frac": 0.1206861800998813,
+    "limit_w": 700.0,
+    "temp_per_power_k_per_w": 0.026733869844426356,
+    "rc": {
+     "heat_capacity_j_per_k": 0.001829318759438677,
+     "resistance_k_per_w": 0.009609865059264009,
+     "time_constant_s": 1.7579506428585925e-05,
+     "rmse_c": 3.7381567891000973,
+     "r2": 0.1268777975785007
+    },
+    "session": "LLM_H100_8GPU_Node_Lamma8B_SeqLength2048_Deepspeedds_z3_BatchSize32",
+    "gpu": 2,
+    "idle_ratio": 0.21067394561340444,
+    "compute_fraction_of_limit": 0.8897297014508928,
+    "low_ratio": 0.24003758967445737
+   },
+   {
+    "idle_w": 124.51499938964844,
+    "compute_w": 620.1807861328125,
+    "low_w": 142.14100646972656,
+    "low_frac": 0.12204997427465718,
+    "limit_w": 700.0,
+    "temp_per_power_k_per_w": 0.025086363849975802,
+    "rc": {
+     "heat_capacity_j_per_k": 1.0166104353280037,
+     "resistance_k_per_w": 0.009133767213245561,
+     "time_constant_s": 0.009285483062842216,
+     "rmse_c": 3.5570712302689107,
+     "r2": 0.12595483523244444
+    },
+    "session": "LLM_H100_8GPU_Node_Lamma8B_SeqLength2048_Deepspeedds_z3_BatchSize32",
+    "gpu": 3,
+    "idle_ratio": 0.20077210093216818,
+    "compute_fraction_of_limit": 0.8859725516183036,
+    "low_ratio": 0.22919285738608305
+   },
+   {
+    "idle_w": 127.3499984741211,
+    "compute_w": 617.4981079101562,
+    "low_w": 143.20199584960938,
+    "low_frac": 0.12012630730298077,
+    "limit_w": 700.0,
+    "temp_per_power_k_per_w": 0.025627856469640907,
+    "rc": {
+     "heat_capacity_j_per_k": 0.5832010532322638,
+     "resistance_k_per_w": 0.008300332865840154,
+     "time_constant_s": 0.004840762869536352,
+     "rmse_c": 3.6571798024051123,
+     "r2": 0.10321558936563524
+    },
+    "session": "LLM_H100_8GPU_Node_Lamma8B_SeqLength2048_Deepspeedds_z3_BatchSize32",
+    "gpu": 4,
+    "idle_ratio": 0.20623544727144338,
+    "compute_fraction_of_limit": 0.882140154157366,
+    "low_ratio": 0.23190677674180785
+   },
+   {
+    "idle_w": 140.91000366210938,
+    "compute_w": 633.7997436523438,
+    "low_w": 159.58599853515625,
+    "low_frac": 0.1218059256936824,
+    "limit_w": 700.0,
+    "temp_per_power_k_per_w": 0.025234507091242326,
+    "rc": {
+     "heat_capacity_j_per_k": 2.0283835980958447,
+     "resistance_k_per_w": 0.009893066062629564,
+     "time_constant_s": 0.020066932936316447,
+     "rmse_c": 3.497060585582767,
+     "r2": 0.14797244377397478
+    },
+    "session": "LLM_H100_8GPU_Node_Lamma8B_SeqLength2048_Deepspeedds_z3_BatchSize32",
+    "gpu": 5,
+    "idle_ratio": 0.22232575048090003,
+    "compute_fraction_of_limit": 0.9054282052176339,
+    "low_ratio": 0.2517924630507479
+   },
+   {
+    "idle_w": 127.52200317382812,
+    "compute_w": 620.2318725585938,
+    "low_w": 143.79901123046875,
+    "low_frac": 0.12093148110865043,
+    "limit_w": 700.0,
+    "temp_per_power_k_per_w": 0.026386166180488904,
+    "rc": {
+     "heat_capacity_j_per_k": 1.911001658727039,
+     "resistance_k_per_w": 0.008873711159099618,
+     "time_constant_s": 0.016957676744104005,
+     "rmse_c": 3.750104898207462,
+     "r2": 0.11094066023721683
+    },
+    "session": "LLM_H100_8GPU_Node_Lamma8B_SeqLength2048_Deepspeedds_z3_BatchSize32",
+    "gpu": 6,
+    "idle_ratio": 0.2056037569429827,
+    "compute_fraction_of_limit": 0.8860455322265625,
+    "low_ratio": 0.23184718101839236
+   },
+   {
+    "idle_w": 127.30999755859375,
+    "compute_w": 623.09033203125,
+    "low_w": 148.19000244140625,
+    "low_frac": 0.12182832060555841,
+    "limit_w": 700.0,
+    "temp_per_power_k_per_w": 0.026004251859009977,
+    "rc": {
+     "heat_capacity_j_per_k": 3.6278186905046206,
+     "resistance_k_per_w": 0.009799743619922183,
+     "time_constant_s": 0.0355516930665071,
+     "rmse_c": 3.642260668965451,
+     "r2": 0.1355755215173402
+    },
+    "session": "LLM_H100_8GPU_Node_Lamma8B_SeqLength2048_Deepspeedds_z3_BatchSize32",
+    "gpu": 7,
+    "idle_ratio": 0.20432029035592345,
+    "compute_fraction_of_limit": 0.8901290457589286,
+    "low_ratio": 0.23783068814165784
+   },
+   {
+    "idle_w": 122.48100280761719,
+    "compute_w": 611.9165649414062,
+    "low_w": 163.37100219726562,
+    "low_frac": 0.25590419482170335,
+    "limit_w": 700.0,
+    "temp_per_power_k_per_w": 0.025071790774255462,
+    "rc": {
+     "heat_capacity_j_per_k": 46.27759067523417,
+     "resistance_k_per_w": 0.01155724147241755,
+     "time_constant_s": 0.5348412901953801,
+     "rmse_c": 4.553806695443948,
+     "r2": 0.15100464066489028
+    },
+    "session": "LLM_H100_8GPU_Node_Lamma8B_SeqLength2048_Deepspeedds_z1_BatchSize16",
+    "gpu": 0,
+    "idle_ratio": 0.2001596456525822,
+    "compute_fraction_of_limit": 0.874166521344866,
+    "low_ratio": 0.26698248022246157
+   },
+   {
+    "idle_w": 130.2550048828125,
+    "compute_w": 616.48974609375,
+    "low_w": 173.6719970703125,
+    "low_frac": 0.25617180705158227,
+    "limit_w": 700.0,
+    "temp_per_power_k_per_w": 0.026707752244516464,
+    "rc": {
+     "heat_capacity_j_per_k": 40.329211423621906,
+     "resistance_k_per_w": 0.011955731100038511,
+     "time_constant_s": 0.48216520725742484,
+     "rmse_c": 4.804322022029641,
+     "r2": 0.14929914304199654
+    },
+    "session": "LLM_H100_8GPU_Node_Lamma8B_SeqLength2048_Deepspeedds_z1_BatchSize16",
+    "gpu": 1,
+    "idle_ratio": 0.21128494951967058,
+    "compute_fraction_of_limit": 0.8806996372767857,
+    "low_ratio": 0.28171108793089655
+   },
+   {
+    "idle_w": 127.57099914550781,
+    "compute_w": 612.9545288085938,
+    "low_w": 169.88699340820312,
+    "low_frac": 0.2543208224615865,
+    "limit_w": 700.0,
+    "temp_per_power_k_per_w": 0.02314944461831132,
+    "rc": {
+     "heat_capacity_j_per_k": 45.55123357320758,
+     "resistance_k_per_w": 0.011065606250009522,
+     "time_constant_s": 0.5040520149233294,
+     "rmse_c": 4.3376500295827976,
+     "r2": 0.15524743715497435
+    },
+    "session": "LLM_H100_8GPU_Node_Lamma8B_SeqLength2048_Deepspeedds_z1_BatchSize16",
+    "gpu": 2,
+    "idle_ratio": 0.20812473544076576,
+    "compute_fraction_of_limit": 0.8756493268694197,
+    "low_ratio": 0.27716084215645537
+   },
+   {
+    "idle_w": 121.97699737548828,
+    "compute_w": 611.4083251953125,
+    "low_w": 165.26300048828125,
+    "low_frac": 0.25706384781784525,
+    "limit_w": 700.0,
+    "temp_per_power_k_per_w": 0.024484436124157165,
+    "rc": {
+     "heat_capacity_j_per_k": 42.20122500321688,
+     "resistance_k_per_w": 0.010582194855987005,
+     "time_constant_s": 0.4465815861453918,
+     "rmse_c": 4.572701119380096,
+     "r2": 0.14099565217422771
+    },
+    "session": "LLM_H100_8GPU_Node_Lamma8B_SeqLength2048_Deepspeedds_z1_BatchSize16",
+    "gpu": 3,
+    "idle_ratio": 0.1995016952648185,
+    "compute_fraction_of_limit": 0.8734404645647321,
+    "low_ratio": 0.2702989044767889
+   },
+   {
+    "idle_w": 123.63400268554688,
+    "compute_w": 599.113037109375,
+    "low_w": 163.78900146484375,
+    "low_frac": 0.2535848888294195,
+    "limit_w": 700.0,
+    "temp_per_power_k_per_w": 0.02496829392766223,
+    "rc": {
+     "heat_capacity_j_per_k": 51.12809465588586,
+     "resistance_k_per_w": 0.009588107062474819,
+     "time_constant_s": 0.49022164546098024,
+     "rmse_c": 4.683664781803236,
+     "r2": 0.1070613757458646
+    },
+    "session": "LLM_H100_8GPU_Node_Lamma8B_SeqLength2048_Deepspeedds_z1_BatchSize16",
+    "gpu": 4,
+    "idle_ratio": 0.20636172980321252,
+    "compute_fraction_of_limit": 0.8558757672991072,
+    "low_ratio": 0.2733858075516093
+   },
+   {
+    "idle_w": 127.82599639892578,
+    "compute_w": 618.2572021484375,
+    "low_w": 166.2449951171875,
+    "low_frac": 0.2511540777413528,
+    "limit_w": 700.0,
+    "temp_per_power_k_per_w": 0.025826032760547332,
+    "rc": {
+     "heat_capacity_j_per_k": 36.37942726434216,
+     "resistance_k_per_w": 0.01245445921214466,
+     "time_constant_s": 0.45308609302493286,
+     "rmse_c": 4.702585610202295,
+     "r2": 0.1680058672423964
+    },
+    "session": "LLM_H100_8GPU_Node_Lamma8B_SeqLength2048_Deepspeedds_z1_BatchSize16",
+    "gpu": 5,
+    "idle_ratio": 0.206752134798805,
+    "compute_fraction_of_limit": 0.8832245744977678,
+    "low_ratio": 0.26889293733981234
+   },
+   {
+    "idle_w": 129.24400329589844,
+    "compute_w": 628.1356201171875,
+    "low_w": 177.49400329589844,
+    "low_frac": 0.26522602082915187,
+    "limit_w": 700.0,
+    "temp_per_power_k_per_w": 0.024265399190314424,
+    "rc": {
+     "heat_capacity_j_per_k": 45.69069989686298,
+     "resistance_k_per_w": 0.011199026324053047,
+     "time_constant_s": 0.5116913509093763,
+     "rmse_c": 4.528882851368434,
+     "r2": 0.14991407009255153
+    },
+    "session": "LLM_H100_8GPU_Node_Lamma8B_SeqLength2048_Deepspeedds_z1_BatchSize16",
+    "gpu": 6,
+    "idle_ratio": 0.20575811840090547,
+    "compute_fraction_of_limit": 0.8973366001674107,
+    "low_ratio": 0.2825727400442351
+   },
+   {
+    "idle_w": 123.46299743652344,
+    "compute_w": 614.0611572265625,
+    "low_w": 169.2010040283203,
+    "low_frac": 0.2584688120247095,
+    "limit_w": 700.0,
+    "temp_per_power_k_per_w": 0.0257151480438656,
+    "rc": {
+     "heat_capacity_j_per_k": 43.687103085464464,
+     "resistance_k_per_w": 0.011305915368131234,
+     "time_constant_s": 0.4939226901630861,
+     "rmse_c": 4.67566254525487,
+     "r2": 0.13969181864799518
+    },
+    "session": "LLM_H100_8GPU_Node_Lamma8B_SeqLength2048_Deepspeedds_z1_BatchSize16",
+    "gpu": 7,
+    "idle_ratio": 0.20105977390615318,
+    "compute_fraction_of_limit": 0.877230224609375,
+    "low_ratio": 0.27554422232554976
+   },
+   {
+    "idle_w": 129.09837341308594,
+    "compute_w": 608.96875,
+    "low_w": 147.52699279785156,
+    "low_frac": 0.1492274236007783,
+    "limit_w": 700.0,
+    "temp_per_power_k_per_w": 0.022086356403760287,
+    "rc": {
+     "heat_capacity_j_per_k": 3.5755686903897175,
+     "resistance_k_per_w": 0.009415738424351202,
+     "time_constant_s": 0.03366661950700957,
+     "rmse_c": 3.2919725287295387,
+     "r2": 0.15375179698644137
+    },
+    "session": "LLM_H100_8GPU_Node_Lamma8B_SeqLength2048_Deepspeedds_z2_BatchSize16",
+    "gpu": 0,
+    "idle_ratio": 0.21199507103293222,
+    "compute_fraction_of_limit": 0.8699553571428571,
+    "low_ratio": 0.24225708264644377
+   },
+   {
+    "idle_w": 123.46800231933594,
+    "compute_w": 584.7377319335938,
+    "low_w": 141.43800354003906,
+    "low_frac": 0.14931898821105644,
+    "limit_w": 700.0,
+    "temp_per_power_k_per_w": 0.023289892895673164,
+    "rc": {
+     "heat_capacity_j_per_k": 0.7862980765031727,
+     "resistance_k_per_w": 0.009723765125225776,
+     "time_constant_s": 0.007645777814333661,
+     "rmse_c": 3.485139989654056,
+     "r2": 0.1447413280353479
+    },
+    "session": "LLM_H100_8GPU_Node_Lamma8B_SeqLength2048_Deepspeedds_z2_BatchSize16",
+    "gpu": 1,
+    "idle_ratio": 0.21115107778500206,
+    "compute_fraction_of_limit": 0.8353396170479911,
+    "low_ratio": 0.2418828062836581
+   },
+   {
+    "idle_w": 129.88699340820312,
+    "compute_w": 590.9637451171875,
+    "low_w": 150.6479949951172,
+    "low_frac": 0.1500057227881424,
+    "limit_w": 700.0,
+    "temp_per_power_k_per_w": 0.02709093212053486,
+    "rc": {
+     "heat_capacity_j_per_k": 0.4044754000129738,
+     "resistance_k_per_w": 0.01258955293019691,
+     "time_constant_s": 0.005092164457425901,
+     "rmse_c": 3.8545298878312186,
+     "r2": 0.18500178555104063
+    },
+    "session": "LLM_H100_8GPU_Node_Lamma8B_SeqLength2048_Deepspeedds_z2_BatchSize16",
+    "gpu": 2,
+    "idle_ratio": 0.21978842946185584,
+    "compute_fraction_of_limit": 0.8442339215959821,
+    "low_ratio": 0.25491918284300813
+   },
+   {
+    "idle_w": 123.5479965209961,
+    "compute_w": 589.3356323242188,
+    "low_w": 139.46200561523438,
+    "low_frac": 0.14854068902369233,
+    "limit_w": 700.0,
+    "temp_per_power_k_per_w": 0.025045981121464517,
+    "rc": {
+     "heat_capacity_j_per_k": 0.021211133004565817,
+     "resistance_k_per_w": 0.011155764982086787,
+     "time_constant_s": 0.00023662641480272064,
+     "rmse_c": 3.5970208008320412,
+     "r2": 0.17232616107942555
+    },
+    "session": "LLM_H100_8GPU_Node_Lamma8B_SeqLength2048_Deepspeedds_z2_BatchSize16",
+    "gpu": 3,
+    "idle_ratio": 0.20963944778588758,
+    "compute_fraction_of_limit": 0.8419080461774554,
+    "low_ratio": 0.23664275154248668
+   },
+   {
+    "idle_w": 126.38700103759766,
+    "compute_w": 586.0247192382812,
+    "low_w": 147.8780059814453,
+    "low_frac": 0.15108160695891037,
+    "limit_w": 700.0,
+    "temp_per_power_k_per_w": 0.025942313869816064,
+    "rc": {
+     "heat_capacity_j_per_k": 0.16225697618383594,
+     "resistance_k_per_w": 0.011178881152516824,
+     "time_constant_s": 0.0018138514529258548,
+     "rmse_c": 3.701881059444244,
+     "r2": 0.16024101920978862
+    },
+    "session": "LLM_H100_8GPU_Node_Lamma8B_SeqLength2048_Deepspeedds_z2_BatchSize16",
+    "gpu": 4,
+    "idle_ratio": 0.2156683786340554,
+    "compute_fraction_of_limit": 0.8371781703404018,
+    "low_ratio": 0.25234090154705097
+   },
+   {
+    "idle_w": 139.66200256347656,
+    "compute_w": 598.6380004882812,
+    "low_w": 161.5449981689453,
+    "low_frac": 0.1504406546869635,
+    "limit_w": 700.0,
+    "temp_per_power_k_per_w": 0.025329683291368664,
+    "rc": {
+     "heat_capacity_j_per_k": 0.23536471900486727,
+     "resistance_k_per_w": 0.012261018702012787,
+     "time_constant_s": 0.002885811221512662,
+     "rmse_c": 3.5747500837480812,
+     "r2": 0.19775419034867814
+    },
+    "session": "LLM_H100_8GPU_Node_Lamma8B_SeqLength2048_Deepspeedds_z2_BatchSize16",
+    "gpu": 5,
+    "idle_ratio": 0.2332995941613475,
+    "compute_fraction_of_limit": 0.8551971435546875,
+    "low_ratio": 0.26985423250308294
+   },
+   {
+    "idle_w": 126.52799987792969,
+    "compute_w": 590.20751953125,
+    "low_w": 148.8300018310547,
+    "low_frac": 0.15298157262218154,
+    "limit_w": 700.0,
+    "temp_per_power_k_per_w": 0.026744313288435732,
+    "rc": {
+     "heat_capacity_j_per_k": 2.488685745561326,
+     "resistance_k_per_w": 0.012655584981603461,
+     "time_constant_s": 0.03149577394545653,
+     "rmse_c": 3.8108117225828804,
+     "r2": 0.1908350970840632
+    },
+    "session": "LLM_H100_8GPU_Node_Lamma8B_SeqLength2048_Deepspeedds_z2_BatchSize16",
+    "gpu": 6,
+    "idle_ratio": 0.2143788340386103,
+    "compute_fraction_of_limit": 0.8431535993303572,
+    "low_ratio": 0.25216554670339897
+   },
+   {
+    "idle_w": 126.68399810791016,
+    "compute_w": 592.2511596679688,
+    "low_w": 148.281005859375,
+    "low_frac": 0.1511044981114799,
+    "limit_w": 700.0,
+    "temp_per_power_k_per_w": 0.02577447043974463,
+    "rc": {
+     "heat_capacity_j_per_k": 0.36473992520556003,
+     "resistance_k_per_w": 0.011343007325745435,
+     "time_constant_s": 0.00413724764359851,
+     "rmse_c": 3.709474266184123,
+     "r2": 0.16676070656658692
+    },
+    "session": "LLM_H100_8GPU_Node_Lamma8B_SeqLength2048_Deepspeedds_z2_BatchSize16",
+    "gpu": 7,
+    "idle_ratio": 0.21390249059019567,
+    "compute_fraction_of_limit": 0.8460730852399554,
+    "low_ratio": 0.2503684516928682
+   },
+   {
+    "idle_w": 120.4469985961914,
+    "compute_w": 507.347412109375,
+    "low_w": 152.30599975585938,
+    "low_frac": 0.4887433850569558,
+    "limit_w": 700.0,
+    "temp_per_power_k_per_w": 0.02367547513340288,
+    "rc": {
+     "heat_capacity_j_per_k": 9475283179683120.0,
+     "resistance_k_per_w": 2.8088940779022017e-15,
+     "time_constant_s": 26.61506680985826,
+     "rmse_c": 3.659249890296501,
+     "r2": 0.01040008029532824
+    },
+    "session": "LLM_H100_8GPU_Node_Lamma1B_SeqLength2048_Deepspeedds_z3_BatchSize16",
+    "gpu": 0,
+    "idle_ratio": 0.2374053670549229,
+    "compute_fraction_of_limit": 0.7247820172991072,
+    "low_ratio": 0.3002006043997026
+   },
+   {
+    "idle_w": 126.0979995727539,
+    "compute_w": 480.5766906738281,
+    "low_w": 148.05599975585938,
+    "low_frac": 0.46526594313391334,
+    "limit_w": 700.0,
+    "temp_per_power_k_per_w": 0.024664689420304305,
+    "rc": {
+     "heat_capacity_j_per_k": 1746611594.7883935,
+     "resistance_k_per_w": 1.6042988467998574e-08,
+     "time_constant_s": 28.020869673262794,
+     "rmse_c": 3.8568208167421387,
+     "r2": 0.03747688766082291
+    },
+    "session": "LLM_H100_8GPU_Node_Lamma1B_SeqLength2048_Deepspeedds_z3_BatchSize16",
+    "gpu": 1,
+    "idle_ratio": 0.26238892151833015,
+    "compute_fraction_of_limit": 0.6865381295340401,
+    "low_ratio": 0.3080798603616553
+   },
+   {
+    "idle_w": 122.4810562133789,
+    "compute_w": 480.52008056640625,
+    "low_w": 145.6649932861328,
+    "low_frac": 0.4669028612431608,
+    "limit_w": 700.0,
+    "temp_per_power_k_per_w": 0.021934875227394807,
+    "rc": {
+     "heat_capacity_j_per_k": 1105133363.8087718,
+     "resistance_k_per_w": 3.5299916464161824e-08,
+     "time_constant_s": 39.0111154242078,
+     "rmse_c": 3.531910728425091,
+     "r2": 0.046926526201988894
+    },
+    "session": "LLM_H100_8GPU_Node_Lamma1B_SeqLength2048_Deepspeedds_z3_BatchSize16",
+    "gpu": 2,
+    "idle_ratio": 0.2548926905801857,
+    "compute_fraction_of_limit": 0.686457257952009,
+    "low_ratio": 0.30314028315826524
+   },
+   {
+    "idle_w": 119.18900299072266,
+    "compute_w": 480.743408203125,
+    "low_w": 141.40499877929688,
+    "low_frac": 0.4671495201363351,
+    "limit_w": 700.0,
+    "temp_per_power_k_per_w": 0.023975007330998842,
+    "rc": {
+     "heat_capacity_j_per_k": 9272051560134010.0,
+     "resistance_k_per_w": 5.2438118149247734e-15,
+     "time_constant_s": 48.6208935196224,
+     "rmse_c": 3.847711314797628,
+     "r2": 0.005963328141814883
+    },
+    "session": "LLM_H100_8GPU_Node_Lamma1B_SeqLength2048_Deepspeedds_z3_BatchSize16",
+    "gpu": 3,
+    "idle_ratio": 0.24792644258236526,
+    "compute_fraction_of_limit": 0.6867762974330357,
+    "low_ratio": 0.2941381958991938
+   },
+   {
+    "idle_w": 119.93599700927734,
+    "compute_w": 450.7230224609375,
+    "low_w": 139.33700561523438,
+    "low_frac": 0.4594134003049601,
+    "limit_w": 700.0,
+    "temp_per_power_k_per_w": 0.02556420016954722,
+    "rc": {
+     "heat_capacity_j_per_k": 642281383.0353093,
+     "resistance_k_per_w": 7.033633171184285e-08,
+     "time_constant_s": 45.17571640951271,
+     "rmse_c": 3.94745814025021,
+     "r2": 0.006799976599683677
+    },
+    "session": "LLM_H100_8GPU_Node_Lamma1B_SeqLength2048_Deepspeedds_z3_BatchSize16",
+    "gpu": 4,
+    "idle_ratio": 0.2660968955045374,
+    "compute_fraction_of_limit": 0.6438900320870535,
+    "low_ratio": 0.30914108814423874
+   },
+   {
+    "idle_w": 123.36979675292969,
+    "compute_w": 475.8328552246094,
+    "low_w": 145.32699584960938,
+    "low_frac": 0.46161090680778544,
+    "limit_w": 700.0,
+    "temp_per_power_k_per_w": 0.024390464629030256,
+    "rc": {
+     "heat_capacity_j_per_k": 8257621910.750393,
+     "resistance_k_per_w": 3.333271074473799e-09,
+     "time_constant_s": 27.524892259045348,
+     "rmse_c": 3.928239122431364,
+     "r2": 0.04220444549934266
+    },
+    "session": "LLM_H100_8GPU_Node_Lamma1B_SeqLength2048_Deepspeedds_z3_BatchSize16",
+    "gpu": 5,
+    "idle_ratio": 0.2592712869620887,
+    "compute_fraction_of_limit": 0.679761221749442,
+    "low_ratio": 0.30541605997553506
+   },
+   {
+    "idle_w": 125.0770034790039,
+    "compute_w": 478.8572998046875,
+    "low_w": 148.44900512695312,
+    "low_frac": 0.46748587317248186,
+    "limit_w": 700.0,
+    "temp_per_power_k_per_w": 0.022684364088883833,
+    "rc": {
+     "heat_capacity_j_per_k": 4579427385.854911,
+     "resistance_k_per_w": 5.3951937650457e-09,
+     "time_constant_s": 24.706898079643945,
+     "rmse_c": 3.5873278766115346,
+     "r2": 0.03681810077334213
+    },
+    "session": "LLM_H100_8GPU_Node_Lamma1B_SeqLength2048_Deepspeedds_z3_BatchSize16",
+    "gpu": 6,
+    "idle_ratio": 0.2611989073363178,
+    "compute_fraction_of_limit": 0.6840818568638393,
+    "low_ratio": 0.31000677067573434
+   },
+   {
+    "idle_w": 120.83799743652344,
+    "compute_w": 450.1211853027344,
+    "low_w": 137.843994140625,
+    "low_frac": 0.4533174503281489,
+    "limit_w": 700.0,
+    "temp_per_power_k_per_w": 0.023992988862844542,
+    "rc": {
+     "heat_capacity_j_per_k": 4718660361.23034,
+     "resistance_k_per_w": 6.683927764254708e-09,
+     "time_constant_s": 31.53918499851562,
+     "rmse_c": 3.7073736841601383,
+     "r2": 0.017670962400362478
+    },
+    "session": "LLM_H100_8GPU_Node_Lamma1B_SeqLength2048_Deepspeedds_z3_BatchSize16",
+    "gpu": 7,
+    "idle_ratio": 0.26845658765261715,
+    "compute_fraction_of_limit": 0.6430302647181919,
+    "low_ratio": 0.3062375170098168
+   },
+   {
+    "idle_w": 121.48200225830078,
+    "compute_w": 573.1246337890625,
+    "low_w": 125.66500091552734,
+    "low_frac": 0.2786428231454409,
+    "limit_w": 700.0,
+    "temp_per_power_k_per_w": 0.0256004935363887,
+    "rc": {
+     "heat_capacity_j_per_k": 814.1049318585423,
+     "resistance_k_per_w": 0.029306487700564956,
+     "time_constant_s": 23.85855617248164,
+     "rmse_c": 4.492447433890981,
+     "r2": 0.03039491970980135
+    },
+    "session": "LLM_H100_8GPU_Node_Lamma3B_SeqLength2048_Deepspeedds_z3_BatchSize16",
+    "gpu": 0,
+    "idle_ratio": 0.21196437056832565,
+    "compute_fraction_of_limit": 0.8187494768415179,
+    "low_ratio": 0.2192629552227171
+   },
+   {
+    "idle_w": 127.43000030517578,
+    "compute_w": 575.2236328125,
+    "low_w": 132.39100646972656,
+    "low_frac": 0.2744271435370912,
+    "limit_w": 700.0,
+    "temp_per_power_k_per_w": 0.026729990460904154,
+    "rc": {
+     "heat_capacity_j_per_k": 690.7150196561704,
+     "resistance_k_per_w": 0.035165608008908084,
+     "time_constant_s": 24.28941362709413,
+     "rmse_c": 4.717557678741291,
+     "r2": 0.056884905804770125
+    },
+    "session": "LLM_H100_8GPU_Node_Lamma3B_SeqLength2048_Deepspeedds_z3_BatchSize16",
+    "gpu": 1,
+    "idle_ratio": 0.22153123243931963,
+    "compute_fraction_of_limit": 0.821748046875,
+    "low_ratio": 0.23015571495630946
+   },
+   {
+    "idle_w": 124.77100372314453,
+    "compute_w": 570.4150390625,
+    "low_w": 129.4149932861328,
+    "low_frac": 0.2755603907436368,
+    "limit_w": 700.0,
+    "temp_per_power_k_per_w": 0.02374997771966239,
+    "rc": {
+     "heat_capacity_j_per_k": 805.15922890406,
+     "resistance_k_per_w": 0.042718053603349695,
+     "time_constant_s": 34.394835099555344,
+     "rmse_c": 4.259411952725618,
+     "r2": 0.0656567845436351
+    },
+    "session": "LLM_H100_8GPU_Node_Lamma3B_SeqLength2048_Deepspeedds_z3_BatchSize16",
+    "gpu": 2,
+    "idle_ratio": 0.21873722671865503,
+    "compute_fraction_of_limit": 0.8148786272321429,
+    "low_ratio": 0.22687864874466063
+   },
+   {
+    "idle_w": 120.06500244140625,
+    "compute_w": 567.56689453125,
+    "low_w": 123.91200256347656,
+    "low_frac": 0.2749711021962331,
+    "limit_w": 700.0,
+    "temp_per_power_k_per_w": 0.025054678800825285,
+    "rc": {
+     "heat_capacity_j_per_k": 1017.4150860583985,
+     "resistance_k_per_w": 0.0313222857938418,
+     "time_constant_s": 31.867766096487312,
+     "rmse_c": 4.5261811121411935,
+     "r2": 0.025208588056443437
+    },
+    "session": "LLM_H100_8GPU_Node_Lamma3B_SeqLength2048_Deepspeedds_z3_BatchSize16",
+    "gpu": 3,
+    "idle_ratio": 0.2115433503932029,
+    "compute_fraction_of_limit": 0.8108098493303572,
+    "low_ratio": 0.21832140626492094
+   },
+   {
+    "idle_w": 120.71099853515625,
+    "compute_w": 556.9573974609375,
+    "low_w": 125.02999877929688,
+    "low_frac": 0.2723193037329163,
+    "limit_w": 700.0,
+    "temp_per_power_k_per_w": 0.026426336438730776,
+    "rc": {
+     "heat_capacity_j_per_k": 838.6884472612419,
+     "resistance_k_per_w": 0.029640513219521172,
+     "time_constant_s": 24.859156008106527,
+     "rmse_c": 4.594262692258061,
+     "r2": 0.033348383280294436
+    },
+    "session": "LLM_H100_8GPU_Node_Lamma3B_SeqLength2048_Deepspeedds_z3_BatchSize16",
+    "gpu": 4,
+    "idle_ratio": 0.2167329118626571,
+    "compute_fraction_of_limit": 0.7956534249441964,
+    "low_ratio": 0.22448754491687298
+   },
+   {
+    "idle_w": 125.08699798583984,
+    "compute_w": 579.2308349609375,
+    "low_w": 129.76400756835938,
+    "low_frac": 0.27707894200040795,
+    "limit_w": 700.0,
+    "temp_per_power_k_per_w": 0.026010073003880425,
+    "rc": {
+     "heat_capacity_j_per_k": 726.9124632505824,
+     "resistance_k_per_w": 0.04451690398635352,
+     "time_constant_s": 32.35989233300991,
+     "rmse_c": 4.685018721436739,
+     "r2": 0.06878257485243588
+    },
+    "session": "LLM_H100_8GPU_Node_Lamma3B_SeqLength2048_Deepspeedds_z3_BatchSize16",
+    "gpu": 5,
+    "idle_ratio": 0.2159536240750642,
+    "compute_fraction_of_limit": 0.8274726213727679,
+    "low_ratio": 0.22402814169433932
+   },
+   {
+    "idle_w": 126.50900268554688,
+    "compute_w": 574.0792236328125,
+    "low_w": 131.0469970703125,
+    "low_frac": 0.2772602615534553,
+    "limit_w": 700.0,
+    "temp_per_power_k_per_w": 0.02458500415649173,
+    "rc": {
+     "heat_capacity_j_per_k": 894.168363327285,
+     "resistance_k_per_w": 0.0311694504009319,
+     "time_constant_s": 27.870736450812263,
+     "rmse_c": 4.409028848469337,
+     "r2": 0.04302980791786615
+    },
+    "session": "LLM_H100_8GPU_Node_Lamma3B_SeqLength2048_Deepspeedds_z3_BatchSize16",
+    "gpu": 6,
+    "idle_ratio": 0.2203685440573677,
+    "compute_fraction_of_limit": 0.8201131766183035,
+    "low_ratio": 0.2282733665939662
+   },
+   {
+    "idle_w": 121.69999694824219,
+    "compute_w": 561.5892333984375,
+    "low_w": 125.66100311279297,
+    "low_frac": 0.2744271435370912,
+    "limit_w": 700.0,
+    "temp_per_power_k_per_w": 0.026113605317139833,
+    "rc": {
+     "heat_capacity_j_per_k": 769.9651487989877,
+     "resistance_k_per_w": 0.024869855828947393,
+     "time_constant_s": 19.14892224394485,
+     "rmse_c": 4.550588098228311,
+     "r2": 0.03375689989303943
+    },
+    "session": "LLM_H100_8GPU_Node_Lamma3B_SeqLength2048_Deepspeedds_z3_BatchSize16",
+    "gpu": 7,
+    "idle_ratio": 0.21670642831198692,
+    "compute_fraction_of_limit": 0.8022703334263392,
+    "low_ratio": 0.2237596371859906
+   },
+   {
+    "idle_w": 129.4290008544922,
+    "compute_w": 621.349853515625,
+    "low_w": 151.60699462890625,
+    "low_frac": 0.1390180647469147,
+    "limit_w": 700.0,
+    "temp_per_power_k_per_w": 0.022089087671449698,
+    "rc": {
+     "heat_capacity_j_per_k": 3.607097105988519,
+     "resistance_k_per_w": 0.008971687747087604,
+     "time_constant_s": 0.032361748908352354,
+     "rmse_c": 3.2641431920047133,
+     "r2": 0.1409271158017481
+    },
+    "session": "LLM_H100_8GPU_Node_Lamma8B_SeqLength1024_Deepspeedds_z3_BatchSize16",
+    "gpu": 0,
+    "idle_ratio": 0.20830293935401636,
+    "compute_fraction_of_limit": 0.8876426478794642,
+    "low_ratio": 0.24399618632097064
+   },
+   {
+    "idle_w": 123.61161804199219,
+    "compute_w": 600.1639404296875,
+    "low_w": 147.29200744628906,
+    "low_frac": 0.1391298515471293,
+    "limit_w": 700.0,
+    "temp_per_power_k_per_w": 0.023122296464689607,
+    "rc": {
+     "heat_capacity_j_per_k": 0.30424306960773034,
+     "resistance_k_per_w": 0.0089345164317484,
+     "time_constant_s": 0.0027182647046558386,
+     "rmse_c": 3.5045831035890926,
+     "r2": 0.11897655934672702
+    },
+    "session": "LLM_H100_8GPU_Node_Lamma8B_SeqLength1024_Deepspeedds_z3_BatchSize16",
+    "gpu": 1,
+    "idle_ratio": 0.20596308727494095,
+    "compute_fraction_of_limit": 0.8573770577566965,
+    "low_ratio": 0.24541962207998588
+   },
+   {
+    "idle_w": 130.0919952392578,
+    "compute_w": 600.021484375,
+    "low_w": 152.94400024414062,
+    "low_frac": 0.1402253621892327,
+    "limit_w": 700.0,
+    "temp_per_power_k_per_w": 0.02710945331913426,
+    "rc": {
+     "heat_capacity_j_per_k": 0.1305828934698762,
+     "resistance_k_per_w": 0.012358407602236297,
+     "time_constant_s": 0.0016137966233801305,
+     "rmse_c": 3.899369972675421,
+     "r2": 0.17547464754756303
+    },
+    "session": "LLM_H100_8GPU_Node_Lamma8B_SeqLength1024_Deepspeedds_z3_BatchSize16",
+    "gpu": 2,
+    "idle_ratio": 0.21681222860672306,
+    "compute_fraction_of_limit": 0.8571735491071428,
+    "low_ratio": 0.254897539883012
+   },
+   {
+    "idle_w": 123.86399841308594,
+    "compute_w": 597.64111328125,
+    "low_w": 147.52000427246094,
+    "low_frac": 0.1396217134680737,
+    "limit_w": 700.0,
+    "temp_per_power_k_per_w": 0.025035999335656887,
+    "rc": {
+     "heat_capacity_j_per_k": 3.329425180468543,
+     "resistance_k_per_w": 0.010791589778459275,
+     "time_constant_s": 0.035929790745689257,
+     "rmse_c": 3.5665082260056526,
+     "r2": 0.16293791169741723
+    },
+    "session": "LLM_H100_8GPU_Node_Lamma8B_SeqLength1024_Deepspeedds_z3_BatchSize16",
+    "gpu": 3,
+    "idle_ratio": 0.20725481507293078,
+    "compute_fraction_of_limit": 0.8537730189732143,
+    "low_ratio": 0.24683710841532752
+   },
+   {
+    "idle_w": 126.70800018310547,
+    "compute_w": 593.9205932617188,
+    "low_w": 150.58700561523438,
+    "low_frac": 0.13888392058665713,
+    "limit_w": 700.0,
+    "temp_per_power_k_per_w": 0.02608319620563948,
+    "rc": {
+     "heat_capacity_j_per_k": 0.23432559393875446,
+     "resistance_k_per_w": 0.010769143982051196,
+     "time_constant_s": 0.00252348605980611,
+     "rmse_c": 3.681409170700607,
+     "r2": 0.14777712915633856
+    },
+    "session": "LLM_H100_8GPU_Node_Lamma8B_SeqLength1024_Deepspeedds_z3_BatchSize16",
+    "gpu": 4,
+    "idle_ratio": 0.2133416514272472,
+    "compute_fraction_of_limit": 0.8484579903738839,
+    "low_ratio": 0.2535473720286986
+   },
+   {
+    "idle_w": 139.9720001220703,
+    "compute_w": 612.6763305664062,
+    "low_w": 165.74400329589844,
+    "low_frac": 0.1410972992309068,
+    "limit_w": 700.0,
+    "temp_per_power_k_per_w": 0.025448674789613362,
+    "rc": {
+     "heat_capacity_j_per_k": 0.20897856488750918,
+     "resistance_k_per_w": 0.011918078669705016,
+     "time_constant_s": 0.0024906229766113886,
+     "rmse_c": 3.6431478014177885,
+     "r2": 0.1791005924487289
+    },
+    "session": "LLM_H100_8GPU_Node_Lamma8B_SeqLength1024_Deepspeedds_z3_BatchSize16",
+    "gpu": 5,
+    "idle_ratio": 0.2284599439196046,
+    "compute_fraction_of_limit": 0.8752519008091518,
+    "low_ratio": 0.2705245739502808
+   },
+   {
+    "idle_w": 126.73500061035156,
+    "compute_w": 602.3761596679688,
+    "low_w": 155.64300537109375,
+    "low_frac": 0.14333303523519944,
+    "limit_w": 700.0,
+    "temp_per_power_k_per_w": 0.026555541247776492,
+    "rc": {
+     "heat_capacity_j_per_k": 0.18521073239579774,
+     "resistance_k_per_w": 0.012063797201490955,
+     "time_constant_s": 0.0022343447151625152,
+     "rmse_c": 3.8454468139193403,
+     "r2": 0.17201260378169925
+    },
+    "session": "LLM_H100_8GPU_Node_Lamma8B_SeqLength1024_Deepspeedds_z3_BatchSize16",
+    "gpu": 6,
+    "idle_ratio": 0.21039179352683582,
+    "compute_fraction_of_limit": 0.8605373709542411,
+    "low_ratio": 0.25838174846907047
+   },
+   {
+    "idle_w": 126.68199920654297,
+    "compute_w": 600.3702392578125,
+    "low_w": 148.98599243164062,
+    "low_frac": 0.13982292970846003,
+    "limit_w": 700.0,
+    "temp_per_power_k_per_w": 0.025652798148219618,
+    "rc": {
+     "heat_capacity_j_per_k": 0.43939097741667266,
+     "resistance_k_per_w": 0.010572757260305583,
+     "time_constant_s": 0.004645574146594892,
+     "rmse_c": 3.6859077634329847,
+     "r2": 0.14570550842249397
+    },
+    "session": "LLM_H100_8GPU_Node_Lamma8B_SeqLength1024_Deepspeedds_z3_BatchSize16",
+    "gpu": 7,
+    "idle_ratio": 0.21100646055199093,
+    "compute_fraction_of_limit": 0.8576717703683036,
+    "low_ratio": 0.24815685836762919
+   },
+   {
+    "idle_w": 129.43499755859375,
+    "compute_w": 619.7152709960938,
+    "low_w": 146.8159942626953,
+    "low_frac": 0.14159331776540326,
+    "limit_w": 700.0,
+    "temp_per_power_k_per_w": 0.021993329217846424,
+    "rc": {
+     "heat_capacity_j_per_k": 2.372996346382704,
+     "resistance_k_per_w": 0.009334439753720834,
+     "time_constant_s": 0.022150591431109007,
+     "rmse_c": 3.2490826035958262,
+     "r2": 0.15376951363016322
+    },
+    "session": "LLM_H100_8GPU_Node_Lamma8B_SeqLength4096_Deepspeedds_z3_BatchSize16",
+    "gpu": 0,
+    "idle_ratio": 0.20886204296780936,
+    "compute_fraction_of_limit": 0.8853075299944196,
+    "low_ratio": 0.23690878881637362
+   },
+   {
+    "idle_w": 123.94200134277344,
+    "compute_w": 598.5394287109375,
+    "low_w": 138.99899291992188,
+    "low_frac": 0.14154841027483384,
+    "limit_w": 700.0,
+    "temp_per_power_k_per_w": 0.023180993811317135,
+    "rc": {
+     "heat_capacity_j_per_k": 0.5380501302668756,
+     "resistance_k_per_w": 0.009430376597978426,
+     "time_constant_s": 0.005074015357007988,
+     "rmse_c": 3.4937291805310626,
+     "r2": 0.13437933832543691
+    },
+    "session": "LLM_H100_8GPU_Node_Lamma8B_SeqLength4096_Deepspeedds_z3_BatchSize16",
+    "gpu": 1,
+    "idle_ratio": 0.2070740796637322,
+    "compute_fraction_of_limit": 0.8550563267299107,
+    "low_ratio": 0.23223030305502387
+   },
+   {
+    "idle_w": 130.4917449951172,
+    "compute_w": 602.20166015625,
+    "low_w": 147.95599365234375,
+    "low_frac": 0.14237919885036823,
+    "limit_w": 700.0,
+    "temp_per_power_k_per_w": 0.026895352810326102,
+    "rc": {
+     "heat_capacity_j_per_k": 0.39135965394877054,
+     "resistance_k_per_w": 0.012462117495571603,
+     "time_constant_s": 0.0048771699905358215,
+     "rmse_c": 3.8506534072309266,
+     "r2": 0.18377402386883168
+    },
+    "session": "LLM_H100_8GPU_Node_Lamma8B_SeqLength4096_Deepspeedds_z3_BatchSize16",
+    "gpu": 2,
+    "idle_ratio": 0.2166911080272665,
+    "compute_fraction_of_limit": 0.8602880859375,
+    "low_ratio": 0.24569177310795592
+   },
+   {
+    "idle_w": 124.09500122070312,
+    "compute_w": 598.7559814453125,
+    "low_w": 142.6750030517578,
+    "low_frac": 0.1416382252559727,
+    "limit_w": 700.0,
+    "temp_per_power_k_per_w": 0.024932750323256737,
+    "rc": {
+     "heat_capacity_j_per_k": 0.014366102611699775,
+     "resistance_k_per_w": 0.01086804437536261,
+     "time_constant_s": 0.00015613144068496584,
+     "rmse_c": 3.5508525799917505,
+     "r2": 0.16967136420438278
+    },
+    "session": "LLM_H100_8GPU_Node_Lamma8B_SeqLength4096_Deepspeedds_z3_BatchSize16",
+    "gpu": 3,
+    "idle_ratio": 0.20725471655607564,
+    "compute_fraction_of_limit": 0.8553656877790179,
+    "low_ratio": 0.2382857248579972
+   },
+   {
+    "idle_w": 126.91000366210938,
+    "compute_w": 596.8197021484375,
+    "low_w": 143.5399932861328,
+    "low_frac": 0.14168313274654212,
+    "limit_w": 700.0,
+    "temp_per_power_k_per_w": 0.02595903054795369,
+    "rc": {
+     "heat_capacity_j_per_k": 1.2469379855991756,
+     "resistance_k_per_w": 0.011164913713852118,
+     "time_constant_s": 0.013921955015739371,
+     "rmse_c": 3.6704718690382028,
+     "r2": 0.1609348158380305
+    },
+    "session": "LLM_H100_8GPU_Node_Lamma8B_SeqLength4096_Deepspeedds_z3_BatchSize16",
+    "gpu": 4,
+    "idle_ratio": 0.21264379041988307,
+    "compute_fraction_of_limit": 0.8525995744977679,
+    "low_ratio": 0.2405081346500729
+   },
+   {
+    "idle_w": 140.12318420410156,
+    "compute_w": 614.319580078125,
+    "low_w": 163.3719940185547,
+    "low_frac": 0.14487156457697145,
+    "limit_w": 700.0,
+    "temp_per_power_k_per_w": 0.025273934609345614,
+    "rc": {
+     "heat_capacity_j_per_k": 0.14633266981885998,
+     "resistance_k_per_w": 0.012269196624373119,
+     "time_constant_s": 0.001795384298577063,
+     "rmse_c": 3.552270432901644,
+     "r2": 0.20024136746902155
+    },
+    "session": "LLM_H100_8GPU_Node_Lamma8B_SeqLength4096_Deepspeedds_z3_BatchSize16",
+    "gpu": 5,
+    "idle_ratio": 0.22809493421368995,
+    "compute_fraction_of_limit": 0.8775994001116072,
+    "low_ratio": 0.26593974751346544
+   },
+   {
+    "idle_w": 126.66370391845703,
+    "compute_w": 603.7291259765625,
+    "low_w": 146.48300170898438,
+    "low_frac": 0.14588198311478354,
+    "limit_w": 700.0,
+    "temp_per_power_k_per_w": 0.02681841453024882,
+    "rc": {
+     "heat_capacity_j_per_k": 0.5244790619499554,
+     "resistance_k_per_w": 0.012509076642464615,
+     "time_constant_s": 0.00656074878329994,
+     "rmse_c": 3.821833157990632,
+     "r2": 0.18894837633849393
+    },
+    "session": "LLM_H100_8GPU_Node_Lamma8B_SeqLength4096_Deepspeedds_z3_BatchSize16",
+    "gpu": 6,
+    "idle_ratio": 0.2098022084218184,
+    "compute_fraction_of_limit": 0.8624701799665179,
+    "low_ratio": 0.24263033769000408
+   },
+   {
+    "idle_w": 126.50499725341797,
+    "compute_w": 598.5443725585938,
+    "low_w": 145.8820037841797,
+    "low_frac": 0.14460211963355488,
+    "limit_w": 700.0,
+    "temp_per_power_k_per_w": 0.025775474911954945,
+    "rc": {
+     "heat_capacity_j_per_k": 0.24659793023008686,
+     "resistance_k_per_w": 0.011244197369880206,
+     "time_constant_s": 0.0027727957985110453,
+     "rmse_c": 3.6830922713602448,
+     "r2": 0.16603442784824907
+    },
+    "session": "LLM_H100_8GPU_Node_Lamma8B_SeqLength4096_Deepspeedds_z3_BatchSize16",
+    "gpu": 7,
+    "idle_ratio": 0.21135441757249823,
+    "compute_fraction_of_limit": 0.8550633893694196,
+    "low_ratio": 0.24372796817148049
+   }
+  ]
+ }
+}
