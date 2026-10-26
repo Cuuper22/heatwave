@@ -57,6 +57,8 @@ def parse() -> argparse.Namespace:
     ap.add_argument("--max-train-windows", type=int, default=0)
     ap.add_argument("--threads", type=int, default=2)
     ap.add_argument("--workers", type=int, default=1)
+    ap.add_argument("--finetuned-dir", default="", help="fine-tuned Timestral checkpoint directory (weights_dir); adds timestral-<size>-finetuned")
+    ap.add_argument("--finetuned-size", default="28M")
     ap.add_argument("--platform-label", default="")
     ap.add_argument("--out", default=str(ROOT / "results" / "forecast" / "hierarchy.json"))
     return ap.parse_args()
@@ -75,8 +77,10 @@ def cap(hw: HierWindows, k: int) -> HierWindows:
 def base_forecasts(method: str, hw: HierWindows, key: str, a, ts) -> tuple[np.ndarray, float]:
     N, n, T = hw.context.shape
     H = hw.future.shape[2]
-    vals, sec, _ = forecast_series(method, "seconds", hw.context.reshape(N * n, T), H, threads=a.threads, workers=a.workers,
-                                   cache_key=f"hier__{key}__n{N}", timestral=ts)
+    ft = method.endswith("-finetuned")
+    vals, sec, _ = forecast_series(method.replace("-finetuned", ""), "seconds", hw.context.reshape(N * n, T), H, threads=a.threads,
+                                   workers=a.workers, cache_key=f"hier__{key}__n{N}" + ("__ft" if ft else ""),
+                                   timestral=None if ft else ts, weights_dir=a.finetuned_dir if ft else None)
     return vals.reshape(N, n, H, vals.shape[-1]), sec
 
 
@@ -147,7 +151,7 @@ def run_tree(name: str, test: HierWindows, train: HierWindows, methods, a, ts_ca
         t0 = time.time()
         try:
             ts = None
-            if m.startswith("timestral"):
+            if m.startswith("timestral") and not m.endswith("-finetuned"):
                 ts = ts_cache.get(m) or ts_cache.setdefault(m, make_timestral(m, a.threads))
             tr_vals, sec_tr = base_forecasts(m, train, f"{name}__train", a, ts)
             te_vals, sec_te = base_forecasts(m, test, f"{name}__test", a, ts)
@@ -188,6 +192,8 @@ def main() -> None:
     a = parse()
     t_start = time.time()
     methods = [m for m in a.methods.split(",") if m]
+    if a.finetuned_dir:
+        methods.append(f"timestral-{a.finetuned_size}-finetuned")
     studies = set(a.studies.split(","))
     seeds = tuple(int(s) for s in a.sim_seeds.split(",") if s)
     vseeds = tuple(int(s) for s in a.val_seeds.split(",") if s)
