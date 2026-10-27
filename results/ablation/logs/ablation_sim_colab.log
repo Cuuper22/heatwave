@@ -1,0 +1,80 @@
+Fetching 2 files:   0%|          | 0/2 [00:00<?, ?it/s]Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Fetching 2 files:  50%|█████     | 1/2 [00:00<00:00,  7.79it/s]Fetching 2 files: 100%|██████████| 2/2 [00:09<00:00,  5.72s/it]Fetching 2 files: 100%|██████████| 2/2 [00:09<00:00,  4.88s/it]
+Fetching 2 files:   0%|          | 0/2 [00:00<?, ?it/s]Fetching 2 files: 100%|██████████| 2/2 [00:01<00:00,  1.40it/s]Fetching 2 files: 100%|██████████| 2/2 [00:01<00:00,  1.40it/s]
+[00:35:55] sim_site_power_1h: 20 streams x 49 origins, methods ['timestral-209M', 'timestral-28M', 'seasonal-naive-24']
+[00:38:49]   [sim_site_power_1h] 640/980 windows, 173 s
+[00:40:21]   [sim_site_power_1h] finished 980 windows in 266 s; forecast seconds: timestral-209M=27, timestral-28M=8, seasonal-naive-24=0
+[00:40:22] sim_site_power_1min: 20 streams x 205 origins, methods ['timestral-209M', 'timestral-28M', 'seasonal-naive-1440']
+[00:46:45]   [sim_site_power_1min] 640/4100 windows, 383 s
+[00:53:11]   [sim_site_power_1min] 1280/4100 windows, 769 s
+[00:59:39]   [sim_site_power_1min] 1920/4100 windows, 1157 s
+[01:06:09]   [sim_site_power_1min] 2560/4100 windows, 1547 s
+[01:13:15]   [sim_site_power_1min] 3200/4100 windows, 1973 s
+[01:19:51]   [sim_site_power_1min] 3840/4100 windows, 2368 s
+[01:22:26]   [sim_site_power_1min] finished 4100 windows in 2524 s; forecast seconds: timestral-209M=2051, timestral-28M=370, seasonal-naive-1440=13
+[01:22:28] sim_rack_temp_1min: 80 streams x 205 origins, methods ['timestral-209M', 'timestral-28M', 'seasonal-naive-1440']
+[01:28:49]   [sim_rack_temp_1min] 640/16400 windows, 381 s
+[01:35:09]   [sim_rack_temp_1min] 1280/16400 windows, 761 s
+[01:41:30]   [sim_rack_temp_1min] 1920/16400 windows, 1142 s
+[01:47:50]   [sim_rack_temp_1min] 2560/16400 windows, 1522 s
+[01:54:11]   [sim_rack_temp_1min] 3200/16400 windows, 1903 s
+[02:00:32]   [sim_rack_temp_1min] 3840/16400 windows, 2284 s
+[02:06:52]   [sim_rack_temp_1min] 4480/16400 windows, 2664 s
+[02:13:13]   [sim_rack_temp_1min] 5120/16400 windows, 3045 s
+[02:19:33]   [sim_rack_temp_1min] 5760/16400 windows, 3425 s
+[02:25:54]   [sim_rack_temp_1min] 6400/16400 windows, 3806 s
+[02:32:15]   [sim_rack_temp_1min] 7040/16400 windows, 4187 s
+[02:38:35]   [sim_rack_temp_1min] 7680/16400 windows, 4567 s
+[02:44:56]   [sim_rack_temp_1min] 8320/16400 windows, 4948 s
+[02:51:16]   [sim_rack_temp_1min] 8960/16400 windows, 5328 s
+[02:57:37]   [sim_rack_temp_1min] 9600/16400 windows, 5709 s
+[03:03:57]   [sim_rack_temp_1min] 10240/16400 windows, 6089 s
+[03:10:18]   [sim_rack_temp_1min] 10880/16400 windows, 6470 s
+[03:16:38]   [sim_rack_temp_1min] 11520/16400 windows, 6850 s
+[03:22:59]   [sim_rack_temp_1min] 12160/16400 windows, 7231 s
+[03:29:19]   [sim_rack_temp_1min] 12800/16400 windows, 7611 s
+[03:35:40]   [sim_rack_temp_1min] 13440/16400 windows, 7992 s
+[03:42:00]   [sim_rack_temp_1min] 14080/16400 windows, 8372 s
+[03:48:21]   [sim_rack_temp_1min] 14720/16400 windows, 8753 s
+[03:54:41]   [sim_rack_temp_1min] 15360/16400 windows, 9133 s
+[04:01:02]   [sim_rack_temp_1min] 16000/16400 windows, 9514 s
+[04:05:00]   [sim_rack_temp_1min] finished 16400 windows in 9752 s; forecast seconds: timestral-209M=8203, timestral-28M=1478, seasonal-naive-1440=53
+[04:05:05] sim_rack_power_1s: 80 streams x 288 origins, methods ['timestral-209M', 'timestral-28M', 'seasonal-naive-1']
+[04:09:46]   [sim_rack_power_1s] 640/23040 windows, 280 s
+[04:14:27]   [sim_rack_power_1s] 1280/23040 windows, 562 s
+[04:19:07]   [sim_rack_power_1s] 1920/23040 windows, 842 s
+[04:23:47]   [sim_rack_power_1s] 2560/23040 windows, 1122 s
+[04:28:27]   [sim_rack_power_1s] 3200/23040 windows, 1402 s
+[04:33:08]   [sim_rack_power_1s] 3840/23040 windows, 1683 s
+[04:37:50]   [sim_rack_power_1s] 4480/23040 windows, 1964 s
+[04:42:30]   [sim_rack_power_1s] 5120/23040 windows, 2244 s
+[04:47:10]   [sim_rack_power_1s] 5760/23040 windows, 2525 s
+[04:51:50]   [sim_rack_power_1s] 6400/23040 windows, 2805 s
+[04:56:30]   [sim_rack_power_1s] 7040/23040 windows, 3085 s
+[05:01:11]   [sim_rack_power_1s] 7680/23040 windows, 3365 s
+[05:05:55]   [sim_rack_power_1s] 8320/23040 windows, 3649 s
+[05:10:35]   [sim_rack_power_1s] 8960/23040 windows, 3929 s
+[05:15:14]   [sim_rack_power_1s] 9600/23040 windows, 4209 s
+[05:19:55]   [sim_rack_power_1s] 10240/23040 windows, 4489 s
+[05:24:35]   [sim_rack_power_1s] 10880/23040 windows, 4769 s
+[05:29:15]   [sim_rack_power_1s] 11520/23040 windows, 5050 s
+[05:33:55]   [sim_rack_power_1s] 12160/23040 windows, 5330 s
+[05:38:35]   [sim_rack_power_1s] 12800/23040 windows, 5610 s
+[05:43:15]   [sim_rack_power_1s] 13440/23040 windows, 5890 s
+[05:47:55]   [sim_rack_power_1s] 14080/23040 windows, 6170 s
+[05:52:36]   [sim_rack_power_1s] 14720/23040 windows, 6450 s
+[05:57:16]   [sim_rack_power_1s] 15360/23040 windows, 6731 s
+[06:01:56]   [sim_rack_power_1s] 16000/23040 windows, 7011 s
+[06:06:36]   [sim_rack_power_1s] 16640/23040 windows, 7291 s
+[06:11:16]   [sim_rack_power_1s] 17280/23040 windows, 7571 s
+[06:15:56]   [sim_rack_power_1s] 17920/23040 windows, 7851 s
+[06:20:36]   [sim_rack_power_1s] 18560/23040 windows, 8131 s
+[06:25:16]   [sim_rack_power_1s] 19200/23040 windows, 8411 s
+[06:29:56]   [sim_rack_power_1s] 19840/23040 windows, 8691 s
+[06:34:36]   [sim_rack_power_1s] 20480/23040 windows, 8971 s
+[06:39:16]   [sim_rack_power_1s] 21120/23040 windows, 9251 s
+[06:43:56]   [sim_rack_power_1s] 21760/23040 windows, 9531 s
+[06:48:36]   [sim_rack_power_1s] 22400/23040 windows, 9810 s
+[06:53:16]   [sim_rack_power_1s] 23040/23040 windows, 10091 s
+[06:53:16]   [sim_rack_power_1s] finished 23040 windows in 10091 s; forecast seconds: timestral-209M=8470, timestral-28M=1541, seasonal-naive-1=57
+[06:53:24] wrote /content/heatwave-ablation/results/ablation/ablation_sim.json
