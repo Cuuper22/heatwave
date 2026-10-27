@@ -20,6 +20,7 @@ tests/test_covariates.py checks the per-window statistics against heatwave.forec
 from __future__ import annotations
 
 import math
+import os
 import time
 from dataclasses import dataclass, field
 from typing import Callable, Iterator, Optional, Sequence
@@ -222,8 +223,16 @@ def evaluate(
     batch_size: int = 64,
     log: Callable[[str], None] = print,
     const_guard: bool = True,
+    checkpoint: Optional[str] = None,
+    checkpoint_every: int = 25,
 ) -> dict:
-    """Run every method/config on every window. Returns {method: {cfg: stats (S, O, nb+1, 6)}}."""
+    """Run every method/config on every window. Returns {method: {cfg: stats (S, O, nb+1, 6)}}.
+
+    ``checkpoint`` (a file path) makes the run resumable: every ``checkpoint_every`` batches the per-window statistics and
+    counters are written there (atomic rename); if the file exists at start, the batches it already covers are skipped
+    (their windows are regenerated but not forecast again). The checkpoint only stores results already computed, so a
+    resumed run gives the same statistics as an uninterrupted one (same batch order and batch size are required).
+    """
     sc: Scale = dataset.scale
     S, O = dataset.n_streams, dataset.n_origins
     nb = len(sc.buckets) + 1
@@ -235,7 +244,16 @@ def evaluate(
     t_start = time.time()
     done = 0
     total = S * O
-    for batch in dataset.iter_batches(batch_size):
+    n_batches_done = 0
+    if checkpoint and os.path.exists(checkpoint):
+        ck = np.load(checkpoint, allow_pickle=True)[0]
+        assert ck["batch_size"] == batch_size and ck["shape"] == (S, O), "checkpoint belongs to another run geometry"
+        stats, timing, failures, zeroed = ck["stats"], ck["timing"], ck["failures"], ck["zeroed"]
+        n_rows, done, n_batches_done = ck["n_rows"], ck["done"], ck["batches"]
+        log(f"  [{dataset.name}] resuming from checkpoint: {n_batches_done} batches, {done}/{total} windows already done")
+    for bi, batch in enumerate(dataset.iter_batches(batch_size)):
+        if bi < n_batches_done:
+            continue
         ctx3 = batch.ctx[:, None, :]
         if const_guard:
             for g in list(batch.cov):
@@ -254,6 +272,12 @@ def evaluate(
         done += len(batch.stream)
         if (done // batch_size) % 10 == 0:
             log(f"  [{dataset.name}] {done}/{total} windows, {time.time() - t_start:.0f} s")
+        if checkpoint and (bi + 1) % checkpoint_every == 0:
+            tmp = checkpoint + ".tmp"
+            with open(tmp, "wb") as fh:
+                np.save(fh, np.array([{"batch_size": batch_size, "shape": (S, O), "stats": stats, "timing": timing, "failures": failures,
+                             "zeroed": zeroed, "n_rows": n_rows, "done": done, "batches": bi + 1}], dtype=object), allow_pickle=True)
+            os.replace(tmp, checkpoint)
     log(f"  [{dataset.name}] finished {total} windows in {time.time() - t_start:.0f} s; forecast seconds: "
         + ", ".join(f"{k}={v:.0f}" for k, v in timing.items()))
     return {"stats": stats, "forecast_seconds": timing, "wall_seconds": time.time() - t_start, "failed_windows": failures,

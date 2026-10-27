@@ -49,6 +49,10 @@ def main() -> None:
     ap.add_argument("--out", default=str(ac.ROOT / "results" / "ablation" / "ablation_sim.json"))
     ap.add_argument("--usd-per-eur", type=float, default=None, help="default: read from results/cost-v1.json")
     ap.add_argument("--run-label", default="")
+    ap.add_argument("--resume", action="store_true",
+                    help="skip datasets already present in --out (partial file) and resume the unfinished one from its checkpoint")
+    ap.add_argument("--checkpoint-dir", default=None, help="per-dataset checkpoints (default: <cache-dir>/ckpt)")
+    ap.add_argument("--checkpoint-every", type=int, default=25, help="batches between checkpoints")
     ap.add_argument("--no-const-guard", action="store_true", help="feed constant non-binary covariate rows to the model unchanged")
     a = ap.parse_args()
 
@@ -61,6 +65,13 @@ def main() -> None:
     forecasters = {s: ac.make_timestral(s, a.weights_dir, a.device, a.threads) for s in a.sizes}
     out_path = Path(a.out)
     results: dict = {}
+    if a.resume and out_path.exists():
+        prev = json.loads(out_path.read_text())["result"]
+        if not prev.get("complete"):
+            results = prev["datasets"]
+        ac.log(f"resume: datasets already complete in {out_path}: {list(results)}")
+    ckpt_dir = Path(a.checkpoint_dir or Path(a.cache_dir) / "ckpt")
+    ckpt_dir.mkdir(parents=True, exist_ok=True)
     t_all = time.time()
     design = {
         "forward_order": list(ac.FORWARD_ORDER),
@@ -92,13 +103,16 @@ def main() -> None:
     meta = {"hardware": ac.hardware_info(a.device), "run_label": a.run_label}
     for _ in [0]:
         for kind in a.kinds:
+            if SIM_KINDS[kind]["scale"].name in results:
+                continue
             t0 = time.time()
             ds = SimDataset(kind, a.seeds, Path(a.cache_dir), scenario, usd_per_eur, stride_mult=a.stride_mult)
             methods = [
                 MethodSpec(f.name, f, configs) for f in forecasters.values()
             ] + [MethodSpec(f"seasonal-naive-{ds.scale.season}", SeasonalNaiveForecaster(ds.scale.season), [("none", ())], False)]
             ac.log(f"{ds.name}: {ds.n_streams} streams x {ds.n_origins} origins, methods {[m.name for m in methods]}")
-            run = evaluate(ds, methods, batch_size=a.batch_size, log=ac.log, const_guard=not a.no_const_guard)
+            run = evaluate(ds, methods, batch_size=a.batch_size, log=ac.log, const_guard=not a.no_const_guard,
+                           checkpoint=str(ckpt_dir / f"{ds.name}.npy"), checkpoint_every=a.checkpoint_every)
             block = result_block(ds, run, methods, reps=a.reps, seed=0, cluster=ds.cluster)
             results[ds.name] = {
                 "data_kind": "mixed (simulated plant, public environment)", "quantity": kind, "what": ds.what,

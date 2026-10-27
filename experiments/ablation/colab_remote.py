@@ -57,7 +57,7 @@ elif STEP in ("full", "fullsim", "fullreal"):
     bs = os.environ.get("BS", "64")
     if STEP in ("full", "fullsim"):
         sh(f"cd {WT} && nohup python experiments/ablation/ablation_sim.py --sizes 209M 28M --device cuda --batch-size {bs} "
-           f"--run-label colab-a100 --out {WT}/results/ablation/ablation_sim.json {extra} > {OUT}/full_sim.log 2>&1 &")
+           f"--run-label colab-a100 --resume --out {WT}/results/ablation/ablation_sim.json {extra} >> {OUT}/full_sim.log 2>&1 &")
     if STEP in ("full", "fullreal"):
         sh(f"cd {WT} && nohup python experiments/ablation/ablation_real.py --sizes 209M 28M --device cuda --batch-size {bs} "
            f"--run-label colab-a100 --out {WT}/results/ablation/ablation_real.json > {OUT}/full_real.log 2>&1 &")
