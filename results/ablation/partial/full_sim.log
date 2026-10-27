@@ -1,0 +1,5 @@
+Fetching 2 files:   0%|          | 0/2 [00:00<?, ?it/s]Fetching 2 files: 100%|██████████| 2/2 [00:00<00:00, 1209.78it/s]
+Fetching 2 files:   0%|          | 0/2 [00:00<?, ?it/s]Fetching 2 files: 100%|██████████| 2/2 [00:00<00:00, 1223.19it/s]
+[00:12:11] sim_site_power_1h: 20 streams x 49 origins, methods ['timestral-209M', 'timestral-28M', 'seasonal-naive-24']
+[00:16:59]   [sim_site_power_1h] finished 980 windows in 288 s; forecast seconds: timestral-209M=25, timestral-28M=6, seasonal-naive-24=0
+[00:17:00] sim_site_power_1min: 20 streams x 205 origins, methods ['timestral-209M', 'timestral-28M', 'seasonal-naive-1440']
