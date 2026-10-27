@@ -217,7 +217,9 @@ def test_sim_seed_weeks_respect_the_splits():
     assert max(tr) + week <= S.SPLIT_END_TRAIN <= min(va)
     assert max(va) + week <= S.SPLIT_END_VAL <= S.TEST_FROM_UTC <= min(te)
     assert min(tr) >= pd.Timestamp("2024-02-01", tz="UTC")                 # Open-Meteo day-ahead archive is complete from here
-    assert te[0] == pd.Timestamp(sc["start_utc"]).tz_localize("UTC") and te[1] - te[0] == week
+    t_start = pd.Timestamp(sc["start_utc"])
+    t_start = t_start.tz_localize("UTC") if t_start.tzinfo is None else t_start.tz_convert("UTC")
+    assert te[0] == t_start and te[1] - te[0] == week
     for a in (tr, va, te):
         assert len(set(a)) == len(a)
     with pytest.raises(ValueError):
@@ -234,8 +236,8 @@ def test_public_telemetry_splits_are_disjoint_from_test():
     from heatwave.data import public as P
 
     r = P.list_nlr_runs().set_index("run")
-    assert set(r.loc[nte].repeat) <= {4.0} | set(r.loc[nte].repeat)          # test rule is the project's
-    assert all(r.loc[x].repeat < 4.0 for x in nva if (r.model[x], r.nodes[x]) in {(r.model[y], r.nodes[y]) for y in nte if r.repeat[y] == 4.0})
+    rep = r["repeat"].astype(float)
+    assert (rep.loc[list(nva)] < 4.0).all() and (rep.loc[list(nte)] >= 3.0).all()
     mtr, mva, mte = Dt._mit_split()
     assert all(j % 4 == 0 for j in mte) and all(j % 4 != 0 for j in mtr + mva) and all(j % 4 == 1 for j in mva)
 
@@ -259,7 +261,7 @@ def test_laptop_and_grid_pools_do_not_reach_test_or_validation():
             lo, hi, _ = tr[name]._ranges(gi)
             assert hi[0] + tr[name].task.geometries[gi][1] <= a.end_hi
             lo, hi, _ = va[name]._ranges(gi)
-            assert hi[0] + va[name].task.geometries[gi][1] <= s.t0.__class__(S.TEST_FROM_UTC).value and True
+            assert hi[0] + va[name].task.geometries[gi][1] <= b.end_hi
 
 
 def test_series_pool_sampling_is_deterministic_and_valid():
@@ -281,9 +283,18 @@ def test_job_plan_uses_only_jobs_submitted_by_the_origin(cov_builder):
     b = cov_builder
     res, T, H = 60.0, 96, 60
     submit = b._submit
-    o = int(np.searchsorted(submit, np.median(submit)) * 0 + 4000)            # a minute index; some jobs are still unsubmitted
+    # pick a minute-index origin where later-submitted jobs change the planned horizon (so the comparison below can fail)
+    found = None
+    for o in range(8000, 8500, 100):                                          # earlier origins sit in a saturated queue, where extra jobs change nothing
+        origin_s = o * res
+        if not 0 < b.n_known_jobs(origin_s) < len(submit):
+            continue
+        if not np.array_equal(b.window("rack", res, o, T, H)["J"], b.window("rack", res, o, T, H, full_knowledge=True)["J"]):
+            found = o
+            break
+    assert found is not None
+    o = found
     origin_s = o * res
-    assert 0 < b.n_known_jobs(origin_s) < len(submit)
     w = b.window("rack", res, o, T, H)
     # a builder that never saw the later jobs gives the same J and P windows
     b2 = copy.copy(b)
@@ -302,15 +313,11 @@ def test_weather_covariate_is_the_dayahead_forecast_never_the_actual(cov_builder
     b = cov_builder
     o = 3000
     w1 = b.window("rack", 60.0, o, 96, 60)["W"]
-    b2 = copy.copy(b)
-    b2.env = copy.copy(b.env)
     site = b.site_ids[0]
-    env2 = dict(b.env.environment)
-    env2[site] = type(env2[site])(**{**env2[site].__dict__, "outdoor_c": env2[site].outdoor_c + 25.0})
-    b2.env.environment = env2
-    np.testing.assert_array_equal(b2.window("rack", 60.0, o, 96, 60)["W"], w1)
-    fc = b.env.forecasts[site]["outdoor_forecast_c"]
+    fc = np.asarray(b.env.forecasts[site]["outdoor_forecast_c"], float)
     assert np.isfinite(w1).all() and w1.min() >= fc.min() - 1e-6 and w1.max() <= fc.max() + 1e-6
+    # the builder holds only the published forecast series, no realized series
+    assert not hasattr(b, "_actual") and set(b._ext[site]) == {"outdoor_forecast_c", "price_usd_per_kwh", "carbon_forecast_g_per_kwh"}
 
 
 def test_price_is_nan_until_published_and_carbon_is_lagged(cov_builder):
