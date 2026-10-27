@@ -90,6 +90,8 @@ Change in WQL against `none` (point estimate [95% CI], moving-block bootstrap ov
 | J+W+C | -0.0092 [-0.0103, -0.0083] | -0.0138 [-0.0155, -0.0101] | -0.0060 [-0.0055, +0.0013] | -0.0093 [-0.0091, -0.0042] | -9.26% [-9.04%, -4.19%] | -0.1051 [-0.1070, -0.0550] | 0 | 0.937 | [-0.0183, -0.0010] |
 | J+P+C | -0.0095 [-0.0109, -0.0083] | -0.0145 [-0.0170, -0.0103] | -0.0064 [-0.0080, +0.0039] | -0.0098 [-0.0112, -0.0030] | -9.78% [-11.20%, -3.03%] | -0.1107 [-0.1096, -0.0500] | 0 | 0.922 | [-0.0176, -0.0023] |
 
+Note: with 49 origins the moving-block interval can exclude its own point estimate; quote the seed-cluster interval for this dataset.
+
 ### sim_site_power_1h / timestral-28M
 
 Windows per configuration: 980. Constant non-binary covariate rows zeroed (rows per group): {'J': 0, 'P': 0, 'W': 0, 'C': 0} (guard on: True). Windows the model rejected, by configuration: none.
@@ -144,6 +146,8 @@ Change in WQL against `none` (point estimate [95% CI], moving-block bootstrap ov
 | P+W+C | +0.0001 [-0.0001, +0.0009] | -0.0025 [-0.0024, -0.0003] | -0.0004 [-0.0027, +0.0016] | -0.0011 [-0.0019, +0.0001] | -1.07% [-1.86%, +0.09%] | -0.0174 [-0.0246, +0.0029] | 0 | 0.979 | [-0.0081, +0.0062] |
 | J+W+C | -0.0073 [-0.0077, -0.0060] | -0.0118 [-0.0133, -0.0070] | -0.0090 [-0.0088, -0.0029] | -0.0098 [-0.0096, -0.0049] | -9.56% [-9.38%, -4.79%] | -0.1272 [-0.1296, -0.0733] | 0 | 0.959 | [-0.0190, -0.0011] |
 | J+P+C | -0.0069 [-0.0079, -0.0056] | -0.0113 [-0.0126, -0.0063] | -0.0063 [-0.0058, +0.0020] | -0.0082 [-0.0080, -0.0022] | -8.00% [-7.80%, -2.14%] | -0.1155 [-0.1131, -0.0441] | 0 | 0.948 | [-0.0160, -0.0006] |
+
+Note: with 49 origins the moving-block interval can exclude its own point estimate; quote the seed-cluster interval for this dataset.
 
 ### sim_site_power_1h / seasonal-naive-24
 
@@ -1065,5 +1069,65 @@ Windows per configuration: 1196. Constant non-binary covariate rows zeroed (rows
 | config | covariates | WQL 1-10 | WQL 11-40 | WQL 41-100 | MASE all | cov80 all | cov98 all |
 |---|---|---|---|---|---|---|---|
 | none | - | 0.2058 | 0.3233 | 0.5057 | 1.187 | 0.988 | 0.999 |
+
+
+# Diagnosis: where the extra loss of a covariate group comes from (sim_rack_power_1s, seed 100)
+
+Generated from horizon_steps_rack_power_1s_seed100.json (experiments/ablation/diagnose_horizon_steps.py). Each window is classed by the shape of each covariate row after the constant-row guard: constant over the context or varying in it, and changing inside the horizon or not. Loss ratio = summed per-window loss with the group / without it.
+
+## group C (price_usd_per_kwh, carbon_forecast_g_per_kwh)
+
+| model | row shape | windows | loss with / without | share of the extra loss |
+|---|---|---|---|---|
+| timestral-209M | context varies / context varies | 1120 | 1.03 | 0.000353 |
+| timestral-209M | context constant, changes in horizon / context constant, changes in horizon | 560 | 158 | 1 |
+| timestral-209M | context constant / context constant | 560 | 1.01 | 5.31e-05 |
+| timestral-28M | context varies / context varies | 1120 | 1.01 | 0.00122 |
+| timestral-28M | context constant, changes in horizon / context constant, changes in horizon | 560 | 13.7 | 1 |
+| timestral-28M | context constant / context constant | 560 | 0.983 | -0.00117 |
+
+## group J (planned_gpus_running, scheduled_checkpoint_gpus)
+
+| model | row shape | windows | loss with / without | share of the extra loss |
+|---|---|---|---|---|
+| timestral-209M | context constant / context varies | 936 | 0.988 | -0.00298 |
+| timestral-209M | context constant / context constant | 800 | 1.04 | 0.00126 |
+| timestral-209M | context constant / context varies, changes in horizon | 286 | 0.906 | -0.0111 |
+| timestral-209M | context varies / context varies | 77 | 0.826 | -0.00233 |
+| timestral-209M | context varies / context constant | 45 | 1 | 5.44e-05 |
+| timestral-209M | context varies / context varies, changes in horizon | 35 | 0.858 | -0.00204 |
+| timestral-209M | context constant / context constant, changes in horizon | 32 | 31.8 | 0.822 |
+| timestral-209M | context constant, changes in horizon / context varies | 13 | 10.1 | 0.118 |
+| timestral-209M | context constant, changes in horizon / context varies, changes in horizon | 7 | 6.34 | 0.0574 |
+| timestral-209M | context constant, changes in horizon / context constant | 3 | 4.14 | 0.0117 |
+| timestral-209M | context varies / context constant, changes in horizon | 3 | 1.84 | 0.00309 |
+| timestral-209M | context varies, changes in horizon / context varies | 2 | 0.531 | -0.00153 |
+| timestral-209M | context varies, changes in horizon / context constant | 1 | 47.6 | 0.00685 |
+| timestral-28M | context constant / context varies | 936 | 0.985 | -0.169 |
+| timestral-28M | context constant / context constant | 800 | 1.02 | 0.0297 |
+| timestral-28M | context constant / context varies, changes in horizon | 286 | 1.01 | 0.0313 |
+| timestral-28M | context varies / context varies | 77 | 0.9 | -0.0573 |
+| timestral-28M | context varies / context constant | 45 | 0.974 | -0.0151 |
+| timestral-28M | context varies / context varies, changes in horizon | 35 | 0.823 | -0.109 |
+| timestral-28M | context constant / context constant, changes in horizon | 32 | 2.03 | 1.11 |
+| timestral-28M | context constant, changes in horizon / context varies | 13 | 0.949 | -0.0252 |
+| timestral-28M | context constant, changes in horizon / context varies, changes in horizon | 7 | 0.82 | -0.0804 |
+| timestral-28M | context constant, changes in horizon / context constant | 3 | 2.95 | 0.296 |
+| timestral-28M | context varies / context constant, changes in horizon | 3 | 1.09 | 0.0132 |
+| timestral-28M | context varies, changes in horizon / context varies | 2 | 0.605 | -0.0488 |
+| timestral-28M | context varies, changes in horizon / context constant | 1 | 4.02 | 0.0211 |
+
+## group W (outdoor_forecast_c)
+
+| model | row shape | windows | loss with / without | share of the extra loss |
+|---|---|---|---|---|
+| timestral-209M | context varies, changes in horizon | 2224 | 1.05 | 0.564 |
+| timestral-209M | context varies | 8 | 1 | 4.81e-05 |
+| timestral-209M | context constant | 4 | 1.01 | 4.22e-05 |
+| timestral-209M | context constant, changes in horizon | 4 | 7.38 | 0.436 |
+| timestral-28M | context varies, changes in horizon | 2224 | 1.02 | 0.806 |
+| timestral-28M | context varies | 8 | 0.979 | -0.000873 |
+| timestral-28M | context constant | 4 | 0.97 | -0.000513 |
+| timestral-28M | context constant, changes in horizon | 4 | 2.15 | 0.195 |
 
 

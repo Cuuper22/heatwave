@@ -105,6 +105,9 @@ def sim_section(d: dict) -> list[str]:
                 if not names:
                     continue
                 out += [f"**{title}**", ""] + delta_table(block, labels, names, cluster=True) + [""]
+            if ds["subsampling"]["n_origins"] < 100:
+                out += [f"Note: with {ds['subsampling']['n_origins']} origins the moving-block interval can exclude its own point estimate; "
+                        "quote the seed-cluster interval for this dataset.", ""]
     return out
 
 
@@ -130,6 +133,28 @@ def real_section(d: dict) -> list[str]:
     return out
 
 
+def diagnosis_section(path: Path) -> list[str]:
+    d = json.loads(path.read_text())["result"]
+    out = [f"# Diagnosis: where the extra loss of a covariate group comes from ({d['dataset']}, seed {d['seed']})", "",
+           "Generated from " + path.name + " (experiments/ablation/diagnose_horizon_steps.py). Each window is classed by the shape of each "
+           "covariate row after the constant-row guard: constant over the context or varying in it, and changing inside the horizon or not. "
+           "Loss ratio = summed per-window loss with the group / without it.", ""]
+    for g, blk in d["groups"].items():
+        out += [f"## group {g} ({', '.join(blk['channels'])})", "", "| model | row shape | windows | loss with / without | share of the extra loss |", "|---|---|---|---|---|"]
+        for m, classes in blk["by_class"].items():
+            for k, v in classes.items():
+                if k.startswith("_"):
+                    continue
+                share = v["share_of_extra_loss"]
+                out.append(f"| {m} | {k} | {v['n_windows']} | {g_(v['loss_with_over_without'])} | {'' if share is None else g_(share)} |")
+        out.append("")
+    return out
+
+
+def g_(x):
+    return f"{x:.3g}"
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--sim", default=str(ROOT / "results/ablation/ablation_sim.json"))
@@ -142,6 +167,8 @@ def main() -> None:
     for path, fn in ((a.sim, sim_section), (a.real, real_section)):
         if Path(path).exists():
             lines += fn(json.loads(Path(path).read_text())["result"]) + [""]
+    for dp in sorted((ROOT / "results/ablation/diagnosis").glob("*.json")):
+        lines += diagnosis_section(dp) + [""]
     Path(a.out).write_text("\n".join(lines) + "\n")
     print("wrote", a.out)
 

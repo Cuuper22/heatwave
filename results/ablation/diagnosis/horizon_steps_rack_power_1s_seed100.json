@@ -1,0 +1,264 @@
+{
+ "provenance": {
+  "script": "experiments/ablation/diagnose_horizon_steps.py",
+  "script_sha256": "12ce5fca64a84d9090af0771e9da6095b46bf82d9134a32474ca6c927f1069d2",
+  "git": {
+   "commit": "b57ee81572f1b254343b7fe411a7951f76a01b44",
+   "dirty": "true"
+  },
+  "inputs": {
+   "/tmp/claude-0/abl_resume/sync/sim_rack_power_1s.npy": "bad4896ea08bcce4a079aec3b6e8fdf0abafd25c89f1976af31af3c1be0c37e4"
+  },
+  "data_kind": "mixed",
+  "created_utc": "2026-10-27T07:16:53+00:00",
+  "notes": "SIMULATED plant with PUBLIC environment (mixed); one seed; diagnosis only"
+ },
+ "result": {
+  "dataset": "sim_rack_power_1s",
+  "seed": 100,
+  "loss": "per-window pinball loss sum, all horizons",
+  "groups": {
+   "C": {
+    "channels": [
+     "price_usd_per_kwh",
+     "carbon_forecast_g_per_kwh"
+    ],
+    "by_class": {
+     "timestral-209M": {
+      "context varies / context varies": {
+       "n_windows": 1120,
+       "loss_with_over_without": 1.030922369506156,
+       "share_of_extra_loss": 0.00035325056186436113
+      },
+      "context constant, changes in horizon / context constant, changes in horizon": {
+       "n_windows": 560,
+       "loss_with_over_without": 157.58971659856545,
+       "share_of_extra_loss": 0.999593664812166
+      },
+      "context constant / context constant": {
+       "n_windows": 560,
+       "loss_with_over_without": 1.0099060052727646,
+       "share_of_extra_loss": 5.3084625969555035e-05
+      },
+      "_extra_loss_total": 11530675.98661331
+     },
+     "timestral-28M": {
+      "context varies / context varies": {
+       "n_windows": 1120,
+       "loss_with_over_without": 1.0086550955341707,
+       "share_of_extra_loss": 0.0012160466591836672
+      },
+      "context constant, changes in horizon / context constant, changes in horizon": {
+       "n_windows": 560,
+       "loss_with_over_without": 13.7041682249833,
+       "share_of_extra_loss": 0.9999515301195776
+      },
+      "context constant / context constant": {
+       "n_windows": 560,
+       "loss_with_over_without": 0.9826513822695256,
+       "share_of_extra_loss": -0.0011675767787612458
+      },
+      "_extra_loss_total": 1001801.3959402519
+     }
+    }
+   },
+   "J": {
+    "channels": [
+     "planned_gpus_running",
+     "scheduled_checkpoint_gpus"
+    ],
+    "by_class": {
+     "timestral-209M": {
+      "context constant / context varies": {
+       "n_windows": 936,
+       "loss_with_over_without": 0.9884248289593655,
+       "share_of_extra_loss": -0.0029792649821984043
+      },
+      "context constant / context constant": {
+       "n_windows": 800,
+       "loss_with_over_without": 1.0364217621580887,
+       "share_of_extra_loss": 0.0012633502377631895
+      },
+      "context constant / context varies, changes in horizon": {
+       "n_windows": 286,
+       "loss_with_over_without": 0.9056334910573945,
+       "share_of_extra_loss": -0.01111948896661484
+      },
+      "context varies / context varies": {
+       "n_windows": 77,
+       "loss_with_over_without": 0.8263340527642803,
+       "share_of_extra_loss": -0.0023319444644672466
+      },
+      "context varies / context constant": {
+       "n_windows": 45,
+       "loss_with_over_without": 1.0039399004867993,
+       "share_of_extra_loss": 5.4407411690141555e-05
+      },
+      "context varies / context varies, changes in horizon": {
+       "n_windows": 35,
+       "loss_with_over_without": 0.8580150800533467,
+       "share_of_extra_loss": -0.0020420951651775278
+      },
+      "context constant / context constant, changes in horizon": {
+       "n_windows": 32,
+       "loss_with_over_without": 31.75234212998567,
+       "share_of_extra_loss": 0.8217912016009677
+      },
+      "context constant, changes in horizon / context varies": {
+       "n_windows": 13,
+       "loss_with_over_without": 10.106735549345602,
+       "share_of_extra_loss": 0.11785522855281717
+      },
+      "context constant, changes in horizon / context varies, changes in horizon": {
+       "n_windows": 7,
+       "loss_with_over_without": 6.34450752655907,
+       "share_of_extra_loss": 0.05738746880975805
+      },
+      "context constant, changes in horizon / context constant": {
+       "n_windows": 3,
+       "loss_with_over_without": 4.144812042757716,
+       "share_of_extra_loss": 0.011700726962801392
+      },
+      "context varies / context constant, changes in horizon": {
+       "n_windows": 3,
+       "loss_with_over_without": 1.8415813970586214,
+       "share_of_extra_loss": 0.0030942096653859183
+      },
+      "context varies, changes in horizon / context varies": {
+       "n_windows": 2,
+       "loss_with_over_without": 0.53097953576565,
+       "share_of_extra_loss": -0.001525756027130716
+      },
+      "context varies, changes in horizon / context constant": {
+       "n_windows": 1,
+       "loss_with_over_without": 47.576914320605844,
+       "share_of_extra_loss": 0.006851956364405206
+      },
+      "_extra_loss_total": 520985.5905006611
+     },
+     "timestral-28M": {
+      "context constant / context varies": {
+       "n_windows": 936,
+       "loss_with_over_without": 0.9852157454981958,
+       "share_of_extra_loss": -0.1689349405048421
+      },
+      "context constant / context constant": {
+       "n_windows": 800,
+       "loss_with_over_without": 1.021273157858536,
+       "share_of_extra_loss": 0.029700326000276583
+      },
+      "context constant / context varies, changes in horizon": {
+       "n_windows": 286,
+       "loss_with_over_without": 1.0065409700289585,
+       "share_of_extra_loss": 0.03129962155091599
+      },
+      "context varies / context varies": {
+       "n_windows": 77,
+       "loss_with_over_without": 0.9000758999926737,
+       "share_of_extra_loss": -0.057270671418953104
+      },
+      "context varies / context constant": {
+       "n_windows": 45,
+       "loss_with_over_without": 0.9740162986806817,
+       "share_of_extra_loss": -0.01509842713738303
+      },
+      "context varies / context varies, changes in horizon": {
+       "n_windows": 35,
+       "loss_with_over_without": 0.8226761860022221,
+       "share_of_extra_loss": -0.108557748665969
+      },
+      "context constant / context constant, changes in horizon": {
+       "n_windows": 32,
+       "loss_with_over_without": 2.03491391809342,
+       "share_of_extra_loss": 1.11268411508177
+      },
+      "context constant, changes in horizon / context varies": {
+       "n_windows": 13,
+       "loss_with_over_without": 0.948692559425924,
+       "share_of_extra_loss": -0.025215938116238967
+      },
+      "context constant, changes in horizon / context varies, changes in horizon": {
+       "n_windows": 7,
+       "loss_with_over_without": 0.8202848546419765,
+       "share_of_extra_loss": -0.08041752403879052
+      },
+      "context constant, changes in horizon / context constant": {
+       "n_windows": 3,
+       "loss_with_over_without": 2.9536239601089695,
+       "share_of_extra_loss": 0.2962282121047401
+      },
+      "context varies / context constant, changes in horizon": {
+       "n_windows": 3,
+       "loss_with_over_without": 1.0914741478034857,
+       "share_of_extra_loss": 0.01324865708832822
+      },
+      "context varies, changes in horizon / context varies": {
+       "n_windows": 2,
+       "loss_with_over_without": 0.6046737472515785,
+       "share_of_extra_loss": -0.048780347699976925
+      },
+      "context varies, changes in horizon / context constant": {
+       "n_windows": 1,
+       "loss_with_over_without": 4.018951181887605,
+       "share_of_extra_loss": 0.021114665756122884
+      },
+      "_extra_loss_total": 13157.171003582527
+     }
+    }
+   },
+   "W": {
+    "channels": [
+     "outdoor_forecast_c"
+    ],
+    "by_class": {
+     "timestral-209M": {
+      "context varies, changes in horizon": {
+       "n_windows": 2224,
+       "loss_with_over_without": 1.0495390721462419,
+       "share_of_extra_loss": 0.5635802188782512
+      },
+      "context varies": {
+       "n_windows": 8,
+       "loss_with_over_without": 1.004048393794194,
+       "share_of_extra_loss": 4.8070908811759164e-05
+      },
+      "context constant": {
+       "n_windows": 4,
+       "loss_with_over_without": 1.0084802755968822,
+       "share_of_extra_loss": 4.219320275869462e-05
+      },
+      "context constant, changes in horizon": {
+       "n_windows": 4,
+       "loss_with_over_without": 7.380885356880226,
+       "share_of_extra_loss": 0.43632951701017847
+      },
+      "_extra_loss_total": 23305.534048694568
+     },
+     "timestral-28M": {
+      "context varies, changes in horizon": {
+       "n_windows": 2224,
+       "loss_with_over_without": 1.0224295620530006,
+       "share_of_extra_loss": 0.8059044823952629
+      },
+      "context varies": {
+       "n_windows": 8,
+       "loss_with_over_without": 0.9790085594472212,
+       "share_of_extra_loss": -0.0008732917423264823
+      },
+      "context constant": {
+       "n_windows": 4,
+       "loss_with_over_without": 0.9701291510730379,
+       "share_of_extra_loss": -0.0005134734821514901
+      },
+      "context constant, changes in horizon": {
+       "n_windows": 4,
+       "loss_with_over_without": 2.147647688122364,
+       "share_of_extra_loss": 0.1954822828292151
+      },
+      "_extra_loss_total": 7937.816343939599
+     }
+    }
+   }
+  }
+ }
+}
