@@ -1,0 +1,44 @@
+Fetching 2 files:   0%|          | 0/2 [00:00<?, ?it/s]Fetching 2 files: 100%|██████████| 2/2 [00:00<00:00, 1508.47it/s]
+Fetching 2 files:   0%|          | 0/2 [00:00<?, ?it/s]Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Fetching 2 files: 100%|██████████| 2/2 [00:01<00:00,  1.33it/s]Fetching 2 files: 100%|██████████| 2/2 [00:01<00:00,  1.33it/s]
+[23:44:11] caiso_rt_lmp_5min: 4249 origins, configs ['none', 'DA', 'WX', 'DEM', 'DA+WX+DEM']
+[23:47:05]   [caiso_rt_lmp_5min] 1280/4249 windows, 174 s
+[23:50:29]   [caiso_rt_lmp_5min] 2560/4249 windows, 378 s
+[23:53:53]   [caiso_rt_lmp_5min] 3840/4249 windows, 582 s
+[23:54:58]   [caiso_rt_lmp_5min] finished 4249 windows in 647 s; forecast seconds: timestral-209M=537, timestral-28M=106, seasonal-naive-288=4
+[23:55:06] caiso_carbon_5min: 4249 origins, configs ['none', 'WX', 'DEM', 'WX+DEM']
+[23:57:21]   [caiso_carbon_5min] 1280/4249 windows, 135 s
+[23:58:36]   [caiso_carbon_5min] 2560/4249 windows, 210 s
+/content/heatwave-ablation/experiments/ablation/abl_engine.py:81: RuntimeWarning: Mean of empty slice
+  denom = np.nanmean(np.abs(ctx[:, s:] - ctx[:, :-s]), axis=1)
+/content/heatwave-ablation/experiments/ablation/abl_engine.py:87: RuntimeWarning: Mean of empty slice
+  out[:, j, 0] = np.nanmean(loss[:, sl], axis=1)
+/content/heatwave-ablation/experiments/ablation/abl_engine.py:88: RuntimeWarning: Mean of empty slice
+  out[:, j, 1] = np.nanmean(np.abs(y[:, sl]), axis=1)
+/content/heatwave-ablation/experiments/ablation/abl_engine.py:89: RuntimeWarning: Mean of empty slice
+  out[:, j, 2] = np.nanmean(ae[:, sl], axis=1)
+/content/heatwave-ablation/experiments/ablation/abl_engine.py:91: RuntimeWarning: Mean of empty slice
+  out[:, j, 4] = np.nanmean(in80[:, sl], axis=1)
+/content/heatwave-ablation/experiments/ablation/abl_engine.py:92: RuntimeWarning: Mean of empty slice
+  out[:, j, 5] = np.nanmean(in98[:, sl], axis=1)
+[23:59:51]   [caiso_carbon_5min] 3840/4249 windows, 285 s
+[00:00:15]   [caiso_carbon_5min] finished 4249 windows in 309 s; forecast seconds: timestral-209M=255, timestral-28M=50, seasonal-naive-288=4
+[00:00:22] gb_carbon_30min: 4249 origins, configs ['none', 'F', 'WX', 'F+WX']
+[00:00:59]   [gb_carbon_30min] 1280/4249 windows, 37 s
+[00:01:36]   [gb_carbon_30min] 2560/4249 windows, 75 s
+[00:02:14]   [gb_carbon_30min] 3840/4249 windows, 112 s
+[00:02:26]   [gb_carbon_30min] finished 4249 windows in 124 s; forecast seconds: timestral-209M=101, timestral-28M=21, seasonal-naive-48=2
+[00:02:33] laptop_power_1s_run2: 817 origins, configs ['none', 'S', 'K', 'S+K', 'S+L_realised']
+[00:03:00]   [laptop_power_1s_run2] finished 817 windows in 27 s; forecast seconds: timestral-209M=22, timestral-28M=4, seasonal-naive-1=1
+[00:03:01] laptop_temp_1s_run2: 817 origins, configs ['none', 'S', 'K', 'S+K', 'S+L_realised']
+[00:03:27]   [laptop_temp_1s_run2] finished 817 windows in 27 s; forecast seconds: timestral-209M=22, timestral-28M=4, seasonal-naive-1=1
+[00:03:28] laptop_power_10hz_run2: 2337 origins, configs ['none', 'S', 'K', 'S+K', 'S+L_realised']
+[00:04:15]   [laptop_power_10hz_run2] 1280/2337 windows, 46 s
+[00:04:53]   [laptop_power_10hz_run2] finished 2337 windows in 84 s; forecast seconds: timestral-209M=68, timestral-28M=13, seasonal-naive-1=2
+[00:04:56] laptop_power_1s_run1: 361 origins, configs ['none', 'S', 'K', 'S+K', 'S+L_realised']
+[00:05:08]   [laptop_power_1s_run1] finished 361 windows in 12 s; forecast seconds: timestral-209M=10, timestral-28M=2, seasonal-naive-1=0
+[00:05:08] laptop_temp_1s_run1: 361 origins, configs ['none', 'S', 'K', 'S+K', 'S+L_realised']
+[00:05:20]   [laptop_temp_1s_run1] finished 361 windows in 12 s; forecast seconds: timestral-209M=10, timestral-28M=2, seasonal-naive-1=0
+[00:05:21] laptop_power_10hz_run1: 1196 origins, configs ['none', 'S', 'K', 'S+K', 'S+L_realised']
+[00:06:04]   [laptop_power_10hz_run1] finished 1196 windows in 43 s; forecast seconds: timestral-209M=35, timestral-28M=7, seasonal-naive-1=1
+[00:06:05] wrote /content/heatwave-ablation/results/ablation/ablation_real.json
