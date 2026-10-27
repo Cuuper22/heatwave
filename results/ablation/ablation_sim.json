@@ -3,8 +3,10 @@
   "script": "experiments/ablation/ablation_sim.py",
   "script_sha256": "17a1e26e4e208d6608ac64d654330001be0746b33700ce61cfda750e258ff33f",
   "git": {
-   "commit": "unknown",
-   "dirty": "true"
+   "commit": "ebb2c3086e43d1f1ae6c0d409d5787335d9e2293",
+   "dirty": "false",
+   "source": "archive",
+   "stamped_by": "scripts/stamp_archive_commit.py"
   },
   "inputs": {
    "/content/heatwave-ablation/results/ablation/cache/sim_v3_100.npz": "615b5b964b72ab8138a7febf244ca7dfa9b9a4d6a4ffb07e399e71cf03d62dc3",
