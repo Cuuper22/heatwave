@@ -42,7 +42,20 @@ Source: [results/forecast/multiscale.json](results/forecast/multiscale.json), ta
 
 **How big a slice electricity is was itself worth checking.** An audit of gpu_stack's cost inputs against 2026 sources (prices, operators' depreciation lives, measured server power, a separate facility term) moved the calculator's example from about 6 to about 7.4 percent electricity. At the industrial electricity prices of different places, with the calculator's other defaults (5.5-year server life, PUE 1.2), the same run ranges from about 5 percent (New Mexico average) to about 16 percent (California average). Source: gpu_stack `experiments/e003-heatwave/results/cost-audit-v1.json`, with the reasoning in `experiments/e003-heatwave/cost_audit/CORRECTION.md`.
 
-**Fine-tuning.** PENDING (T05).
+**Fine-tuning pays off most where the model has to learn to use a known-future input; elsewhere it trims a few percent.** I fine-tuned all weights of Timestral-28M, 123M and 209M on one Colab GPU (an RTX PRO 6000) on an equal mixture of ten tasks: simulated rack power, rack temperature and site power from 50 training seeds, the public GPU, job and node power series, MIT node temperature, my laptop's first run, CAISO prices and GB carbon. Validation loss chose the learning rate and stopped training (best step 200 to 700, under three minutes of training per model). Below, the test-window loss of the best fine-tuned configuration divided by that of the best zero-shot configuration, each picked from with and without known-future inputs (below 1 means fine-tuning lowered the loss). Test windows were never read in training: simulator seeds 100 to 109, the laptop's second run, grid data from May 2026.
+
+| series | data | 28M | 123M | 209M |
+|---|---|---|---|---|
+| laptop power, 1 s, with the scripted training schedule as input | measured | 0.524 | 0.498 | 0.448 |
+| simulated rack power, 1 s | simulated | 0.820 | 0.802 | 0.803 |
+| simulated site power, 1 h | simulated | 0.929 | 0.953 | 0.908 |
+| simulated rack temperature, 1 min | simulated | 1.047 | 0.913 | 0.987 |
+| laptop temperature, 1 s | measured | 0.991 | 1.011 | 1.022 |
+| six public series (range) | public | 0.942 to 0.984 | 0.664 to 0.996 | 0.931 to 1.052 |
+
+Three things qualify this. First, the large laptop and rack-power gains come with the known-future inputs. Without them, the paired difference between fine-tuned and zero-shot loss on laptop power has an interval that includes zero at every size, and zero-shot Timestral reads these inputs poorly here: on simulated rack power, adding them roughly doubles the zero-shot loss (28M: 0.054 against 0.026 without), and on laptop power they help the zero-shot 28M and 123M (0.146 and 0.144 against 0.191 and 0.193) but hurt the 209M (0.227 against 0.200). Part of what fine-tuning buys is a working path for these inputs, not a better model of the series itself. Second, without known-future inputs fine-tuning lowered loss on CAISO price and GB carbon at every size, with paired intervals that exclude zero, and raised it on the H100/B200 series at 209M (+0.0076, interval +0.0049 to +0.0106). Third, the laptop test is 70 windows from one 79-minute run, so its intervals leave out run-to-run variation. A CPU pilot tried smaller set-ups on laptop power with the schedule input: 28M with only its last blocks and head trained reached 0.095 (best zero-shot 0.146); 5M with all weights trained only brought that configuration back to the loss without the input (0.192 against 0.193); 5M with LoRA got worse (0.932, against 0.465 zero-shot with the input).¹ Source: [results/finetune/colab/finetune_colab.json](results/finetune/colab/finetune_colab.json), [results/finetune/cpu_pilot.json](results/finetune/cpu_pilot.json); every row with paired intervals is in the fine-tuning table of [results/HEADLINE.md](results/HEADLINE.md). The fine-tuned weights are not in this repository; [notebooks/finetune_timestral_colab.ipynb](notebooks/finetune_timestral_colab.ipynb) retrains them.
+
+¹ The pilot's weights were trained in an earlier working session on a Colab CPU runtime; the scores in its result file come from re-running the evaluation on those weights at the commit the file records.
 
 ## What is in here
 
@@ -53,12 +66,12 @@ heatwave/
   data/         one on-disk format for series, plus loaders for every public source
   laptop/       live logger, training load, forecast loop, dashboard and power/clock-limit controller
   sim_env.py    drives the gpu_stack simulator with public weather, price and carbon
-  finetune/     PENDING
+  finetune/     fine-tuning data recipe (fixed splits, leakage-safe inputs), training loop, evaluation
 data/           processed public and measured series (sources and licences in data/SOURCES.md)
 experiments/    the forecasting, ablation, thermal and calibration studies
 results/        every result file the text quotes, each with its provenance
 laptop/         Windows instructions and the one-command laptop run
-notebooks/      PENDING (Colab fine-tuning)
+notebooks/      Colab notebook that runs the fine-tune on a GPU runtime
 scripts/        data fetchers, laptop collection, headline-number collector
 ```
 
