@@ -2509,6 +2509,20 @@
    "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
    "key": "result/policies/perfect_foresight/overall/false_alarms_per_day/mean",
    "status": "missing file"
+  },
+  {
+   "section": "cost audit (published prices, calculator)",
+   "label": "electricity share, README example, defaults",
+   "value": 0.07422638015730647,
+   "unit": "",
+   "data_kind": "public",
+   "source": "gpu_stack:experiments/e003-heatwave/results/cost-audit-v1.json",
+   "key": "result/base_case/electricity_share",
+   "status": "ok"
   }
- ]
+ ],
+ "sentences": {
+  "readme_cost_range": "For a 7 billion parameter model trained on 2 trillion tokens on 1,024 H100s, power and cooling come to about 7.4 percent of the cost. At the industrial electricity prices of different places, with the calculator's other defaults (5.5-year server life, PUE 1.2), the same run ranges from about 5 percent (New Mexico average) to about 16 percent (California average).",
+  "readme_cost_range_source": "gpu_stack:experiments/e003-heatwave/results/cost-audit-v1.json result/base_case/electricity_share and result/one_at_a_time/H100 (electricity price NM, CA)"
+ }
 }
