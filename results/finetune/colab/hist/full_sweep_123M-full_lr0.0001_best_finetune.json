@@ -1,0 +1,31 @@
+{
+ "step": 75,
+ "val_macro": 0.04573447446039479,
+ "train_config": {
+  "base": "123M",
+  "mode": "full",
+  "last_blocks": 2,
+  "lora_r": 8,
+  "lora_alpha": 16.0,
+  "lr": 0.0001,
+  "head_lr_mult": 1.0,
+  "weight_decay": 0.01,
+  "warmup_steps": 100,
+  "max_steps": 150,
+  "min_lr_frac": 0.0,
+  "batch_size": 16,
+  "grad_clip": 1.0,
+  "eval_every": 75,
+  "patience": 100,
+  "min_delta": 0.0,
+  "symmetric": true,
+  "seed": 0,
+  "device": "cuda",
+  "max_seconds": 5400.0,
+  "micro_batch": null,
+  "halt_after": null,
+  "checkpoint_every": 0,
+  "log_every": 20,
+  "tf32": true
+ }
+}
