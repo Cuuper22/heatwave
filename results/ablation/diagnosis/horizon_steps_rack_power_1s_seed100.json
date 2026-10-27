@@ -3,14 +3,14 @@
   "script": "experiments/ablation/diagnose_horizon_steps.py",
   "script_sha256": "12ce5fca64a84d9090af0771e9da6095b46bf82d9134a32474ca6c927f1069d2",
   "git": {
-   "commit": "b57ee81572f1b254343b7fe411a7951f76a01b44",
-   "dirty": "true"
+   "commit": "dd7d24f8a3ac78da0cbc097299a7d74b8cd92490",
+   "dirty": "false"
   },
   "inputs": {
    "/tmp/claude-0/abl_resume/sync/sim_rack_power_1s.npy": "bad4896ea08bcce4a079aec3b6e8fdf0abafd25c89f1976af31af3c1be0c37e4"
   },
   "data_kind": "mixed",
-  "created_utc": "2026-10-27T07:16:53+00:00",
+  "created_utc": "2026-10-27T07:24:32+00:00",
   "notes": "SIMULATED plant with PUBLIC environment (mixed); one seed; diagnosis only"
  },
  "result": {
