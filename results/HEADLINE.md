@@ -313,8 +313,152 @@
 |---|---|---|---|---|---|
 | electricity share, README example, defaults | 0.07423 |  | public | gpu_stack:experiments/e003-heatwave/results/cost-audit-v1.json | result/base_case/electricity_share |
 
+## fine-tuning, Timestral-28M (test windows)
+
+| quantity | value | unit | data | source | key |
+|---|---|---|---|---|---|
+| laptop_power none zero-shot-28M WQL | 0.1914 |  | measured | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/28M/datasets/laptop_power/modes/none/models/zero-shot-28M/all/wql/est |
+| laptop_power none finetuned-28M-full WQL | 0.1986 |  | measured | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/28M/datasets/laptop_power/modes/none/models/finetuned-28M-full/all/wql/est |
+| laptop_power cov_all zero-shot-28M WQL | 0.1458 |  | measured | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/28M/datasets/laptop_power/modes/cov_all/models/zero-shot-28M/all/wql/est |
+| laptop_power cov_all finetuned-28M-full WQL | 0.07631 |  | measured | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/28M/datasets/laptop_power/modes/cov_all/models/finetuned-28M-full/all/wql/est |
+| elsayed_gpu_power none zero-shot-28M WQL | 0.158 |  | public | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/28M/datasets/elsayed_gpu_power/modes/none/models/zero-shot-28M/all/wql/est |
+| elsayed_gpu_power none finetuned-28M-full WQL | 0.1522 |  | public | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/28M/datasets/elsayed_gpu_power/modes/none/models/finetuned-28M-full/all/wql/est |
+| nlr_job_power none zero-shot-28M WQL | 0.07619 |  | public | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/28M/datasets/nlr_job_power/modes/none/models/zero-shot-28M/all/wql/est |
+| nlr_job_power none finetuned-28M-full WQL | 0.07179 |  | public | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/28M/datasets/nlr_job_power/modes/none/models/finetuned-28M-full/all/wql/est |
+| mit_node_power none zero-shot-28M WQL | 0.08603 |  | public | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/28M/datasets/mit_node_power/modes/none/models/zero-shot-28M/all/wql/est |
+| mit_node_power none finetuned-28M-full WQL | 0.08463 |  | public | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/28M/datasets/mit_node_power/modes/none/models/finetuned-28M-full/all/wql/est |
+| laptop_temp none zero-shot-28M WQL | 0.1638 |  | measured | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/28M/datasets/laptop_temp/modes/none/models/zero-shot-28M/all/wql/est |
+| laptop_temp none finetuned-28M-full WQL | 0.1624 |  | measured | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/28M/datasets/laptop_temp/modes/none/models/finetuned-28M-full/all/wql/est |
+| mit_node_temp none zero-shot-28M WQL | 0.01338 |  | public | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/28M/datasets/mit_node_temp/modes/none/models/zero-shot-28M/all/wql/est |
+| mit_node_temp none finetuned-28M-full WQL | 0.01294 |  | public | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/28M/datasets/mit_node_temp/modes/none/models/finetuned-28M-full/all/wql/est |
+| caiso_rt_price_1h none zero-shot-28M WQL | 0.2026 |  | public | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/28M/datasets/caiso_rt_price_1h/modes/none/models/zero-shot-28M/all/wql/est |
+| caiso_rt_price_1h none finetuned-28M-full WQL | 0.1941 |  | public | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/28M/datasets/caiso_rt_price_1h/modes/none/models/finetuned-28M-full/all/wql/est |
+| uk_carbon_actual_1h none zero-shot-28M WQL | 0.1854 |  | public | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/28M/datasets/uk_carbon_actual_1h/modes/none/models/zero-shot-28M/all/wql/est |
+| uk_carbon_actual_1h none finetuned-28M-full WQL | 0.1816 |  | public | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/28M/datasets/uk_carbon_actual_1h/modes/none/models/finetuned-28M-full/all/wql/est |
+| sim_rack_power_1s none zero-shot-28M WQL | 0.0256 |  | simulated | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/28M/datasets/sim_rack_power_1s/modes/none/models/zero-shot-28M/all/wql/est |
+| sim_rack_power_1s none finetuned-28M-full WQL | 0.02422 |  | simulated | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/28M/datasets/sim_rack_power_1s/modes/none/models/finetuned-28M-full/all/wql/est |
+| sim_rack_power_1s cov_all zero-shot-28M WQL | 0.0538 |  | simulated | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/28M/datasets/sim_rack_power_1s/modes/cov_all/models/zero-shot-28M/all/wql/est |
+| sim_rack_power_1s cov_all finetuned-28M-full WQL | 0.02099 |  | simulated | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/28M/datasets/sim_rack_power_1s/modes/cov_all/models/finetuned-28M-full/all/wql/est |
+| sim_rack_temp_1min none zero-shot-28M WQL | 0.005552 |  | simulated | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/28M/datasets/sim_rack_temp_1min/modes/none/models/zero-shot-28M/all/wql/est |
+| sim_rack_temp_1min none finetuned-28M-full WQL | 0.005815 |  | simulated | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/28M/datasets/sim_rack_temp_1min/modes/none/models/finetuned-28M-full/all/wql/est |
+| sim_rack_temp_1min cov_all zero-shot-28M WQL | 0.01092 |  | simulated | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/28M/datasets/sim_rack_temp_1min/modes/cov_all/models/zero-shot-28M/all/wql/est |
+| sim_rack_temp_1min cov_all finetuned-28M-full WQL | 0.006076 |  | simulated | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/28M/datasets/sim_rack_temp_1min/modes/cov_all/models/finetuned-28M-full/all/wql/est |
+| sim_site_power_1h none zero-shot-28M WQL | 0.1203 |  | simulated | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/28M/datasets/sim_site_power_1h/modes/none/models/zero-shot-28M/all/wql/est |
+| sim_site_power_1h none finetuned-28M-full WQL | 0.1204 |  | simulated | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/28M/datasets/sim_site_power_1h/modes/none/models/finetuned-28M-full/all/wql/est |
+| sim_site_power_1h cov_all zero-shot-28M WQL | 0.112 |  | simulated | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/28M/datasets/sim_site_power_1h/modes/cov_all/models/zero-shot-28M/all/wql/est |
+| sim_site_power_1h cov_all finetuned-28M-full WQL | 0.1041 |  | simulated | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/28M/datasets/sim_site_power_1h/modes/cov_all/models/finetuned-28M-full/all/wql/est |
+
+## fine-tuning, Timestral-123M (test windows)
+
+| quantity | value | unit | data | source | key |
+|---|---|---|---|---|---|
+| laptop_power none zero-shot-123M WQL | 0.1928 |  | measured | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/123M/datasets/laptop_power/modes/none/models/zero-shot-123M/all/wql/est |
+| laptop_power none finetuned-123M-full WQL | 0.1907 |  | measured | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/123M/datasets/laptop_power/modes/none/models/finetuned-123M-full/all/wql/est |
+| laptop_power cov_all zero-shot-123M WQL | 0.1436 |  | measured | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/123M/datasets/laptop_power/modes/cov_all/models/zero-shot-123M/all/wql/est |
+| laptop_power cov_all finetuned-123M-full WQL | 0.07151 |  | measured | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/123M/datasets/laptop_power/modes/cov_all/models/finetuned-123M-full/all/wql/est |
+| elsayed_gpu_power none zero-shot-123M WQL | 0.1541 |  | public | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/123M/datasets/elsayed_gpu_power/modes/none/models/zero-shot-123M/all/wql/est |
+| elsayed_gpu_power none finetuned-123M-full WQL | 0.1513 |  | public | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/123M/datasets/elsayed_gpu_power/modes/none/models/finetuned-123M-full/all/wql/est |
+| nlr_job_power none zero-shot-123M WQL | 0.07821 |  | public | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/123M/datasets/nlr_job_power/modes/none/models/zero-shot-123M/all/wql/est |
+| nlr_job_power none finetuned-123M-full WQL | 0.05196 |  | public | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/123M/datasets/nlr_job_power/modes/none/models/finetuned-123M-full/all/wql/est |
+| mit_node_power none zero-shot-123M WQL | 0.08299 |  | public | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/123M/datasets/mit_node_power/modes/none/models/zero-shot-123M/all/wql/est |
+| mit_node_power none finetuned-123M-full WQL | 0.07387 |  | public | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/123M/datasets/mit_node_power/modes/none/models/finetuned-123M-full/all/wql/est |
+| laptop_temp none zero-shot-123M WQL | 0.1601 |  | measured | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/123M/datasets/laptop_temp/modes/none/models/zero-shot-123M/all/wql/est |
+| laptop_temp none finetuned-123M-full WQL | 0.1618 |  | measured | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/123M/datasets/laptop_temp/modes/none/models/finetuned-123M-full/all/wql/est |
+| mit_node_temp none zero-shot-123M WQL | 0.01299 |  | public | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/123M/datasets/mit_node_temp/modes/none/models/zero-shot-123M/all/wql/est |
+| mit_node_temp none finetuned-123M-full WQL | 0.01294 |  | public | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/123M/datasets/mit_node_temp/modes/none/models/finetuned-123M-full/all/wql/est |
+| caiso_rt_price_1h none zero-shot-123M WQL | 0.2033 |  | public | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/123M/datasets/caiso_rt_price_1h/modes/none/models/zero-shot-123M/all/wql/est |
+| caiso_rt_price_1h none finetuned-123M-full WQL | 0.1938 |  | public | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/123M/datasets/caiso_rt_price_1h/modes/none/models/finetuned-123M-full/all/wql/est |
+| uk_carbon_actual_1h none zero-shot-123M WQL | 0.1898 |  | public | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/123M/datasets/uk_carbon_actual_1h/modes/none/models/zero-shot-123M/all/wql/est |
+| uk_carbon_actual_1h none finetuned-123M-full WQL | 0.1841 |  | public | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/123M/datasets/uk_carbon_actual_1h/modes/none/models/finetuned-123M-full/all/wql/est |
+| sim_rack_power_1s none zero-shot-123M WQL | 0.02148 |  | simulated | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/123M/datasets/sim_rack_power_1s/modes/none/models/zero-shot-123M/all/wql/est |
+| sim_rack_power_1s none finetuned-123M-full WQL | 0.02031 |  | simulated | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/123M/datasets/sim_rack_power_1s/modes/none/models/finetuned-123M-full/all/wql/est |
+| sim_rack_power_1s cov_all zero-shot-123M WQL | 0.04442 |  | simulated | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/123M/datasets/sim_rack_power_1s/modes/cov_all/models/zero-shot-123M/all/wql/est |
+| sim_rack_power_1s cov_all finetuned-123M-full WQL | 0.01723 |  | simulated | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/123M/datasets/sim_rack_power_1s/modes/cov_all/models/finetuned-123M-full/all/wql/est |
+| sim_rack_temp_1min none zero-shot-123M WQL | 0.005723 |  | simulated | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/123M/datasets/sim_rack_temp_1min/modes/none/models/zero-shot-123M/all/wql/est |
+| sim_rack_temp_1min none finetuned-123M-full WQL | 0.005615 |  | simulated | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/123M/datasets/sim_rack_temp_1min/modes/none/models/finetuned-123M-full/all/wql/est |
+| sim_rack_temp_1min cov_all zero-shot-123M WQL | 0.006115 |  | simulated | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/123M/datasets/sim_rack_temp_1min/modes/cov_all/models/zero-shot-123M/all/wql/est |
+| sim_rack_temp_1min cov_all finetuned-123M-full WQL | 0.005223 |  | simulated | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/123M/datasets/sim_rack_temp_1min/modes/cov_all/models/finetuned-123M-full/all/wql/est |
+| sim_site_power_1h none zero-shot-123M WQL | 0.1186 |  | simulated | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/123M/datasets/sim_site_power_1h/modes/none/models/zero-shot-123M/all/wql/est |
+| sim_site_power_1h none finetuned-123M-full WQL | 0.113 |  | simulated | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/123M/datasets/sim_site_power_1h/modes/none/models/finetuned-123M-full/all/wql/est |
+| sim_site_power_1h cov_all zero-shot-123M WQL | 0.1041 |  | simulated | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/123M/datasets/sim_site_power_1h/modes/cov_all/models/zero-shot-123M/all/wql/est |
+| sim_site_power_1h cov_all finetuned-123M-full WQL | 0.09927 |  | simulated | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/123M/datasets/sim_site_power_1h/modes/cov_all/models/finetuned-123M-full/all/wql/est |
+
+## fine-tuning, Timestral-209M (test windows)
+
+| quantity | value | unit | data | source | key |
+|---|---|---|---|---|---|
+| laptop_power none zero-shot-209M WQL | 0.1998 |  | measured | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/209M/datasets/laptop_power/modes/none/models/zero-shot-209M/all/wql/est |
+| laptop_power none finetuned-209M-full WQL | 0.1989 |  | measured | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/209M/datasets/laptop_power/modes/none/models/finetuned-209M-full/all/wql/est |
+| laptop_power cov_all zero-shot-209M WQL | 0.227 |  | measured | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/209M/datasets/laptop_power/modes/cov_all/models/zero-shot-209M/all/wql/est |
+| laptop_power cov_all finetuned-209M-full WQL | 0.08944 |  | measured | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/209M/datasets/laptop_power/modes/cov_all/models/finetuned-209M-full/all/wql/est |
+| elsayed_gpu_power none zero-shot-209M WQL | 0.1476 |  | public | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/209M/datasets/elsayed_gpu_power/modes/none/models/zero-shot-209M/all/wql/est |
+| elsayed_gpu_power none finetuned-209M-full WQL | 0.1552 |  | public | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/209M/datasets/elsayed_gpu_power/modes/none/models/finetuned-209M-full/all/wql/est |
+| nlr_job_power none zero-shot-209M WQL | 0.0732 |  | public | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/209M/datasets/nlr_job_power/modes/none/models/zero-shot-209M/all/wql/est |
+| nlr_job_power none finetuned-209M-full WQL | 0.06817 |  | public | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/209M/datasets/nlr_job_power/modes/none/models/finetuned-209M-full/all/wql/est |
+| mit_node_power none zero-shot-209M WQL | 0.08522 |  | public | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/209M/datasets/mit_node_power/modes/none/models/zero-shot-209M/all/wql/est |
+| mit_node_power none finetuned-209M-full WQL | 0.07996 |  | public | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/209M/datasets/mit_node_power/modes/none/models/finetuned-209M-full/all/wql/est |
+| laptop_temp none zero-shot-209M WQL | 0.1573 |  | measured | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/209M/datasets/laptop_temp/modes/none/models/zero-shot-209M/all/wql/est |
+| laptop_temp none finetuned-209M-full WQL | 0.1608 |  | measured | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/209M/datasets/laptop_temp/modes/none/models/finetuned-209M-full/all/wql/est |
+| mit_node_temp none zero-shot-209M WQL | 0.01289 |  | public | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/209M/datasets/mit_node_temp/modes/none/models/zero-shot-209M/all/wql/est |
+| mit_node_temp none finetuned-209M-full WQL | 0.0127 |  | public | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/209M/datasets/mit_node_temp/modes/none/models/finetuned-209M-full/all/wql/est |
+| caiso_rt_price_1h none zero-shot-209M WQL | 0.2019 |  | public | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/209M/datasets/caiso_rt_price_1h/modes/none/models/zero-shot-209M/all/wql/est |
+| caiso_rt_price_1h none finetuned-209M-full WQL | 0.1931 |  | public | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/209M/datasets/caiso_rt_price_1h/modes/none/models/finetuned-209M-full/all/wql/est |
+| uk_carbon_actual_1h none zero-shot-209M WQL | 0.1879 |  | public | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/209M/datasets/uk_carbon_actual_1h/modes/none/models/zero-shot-209M/all/wql/est |
+| uk_carbon_actual_1h none finetuned-209M-full WQL | 0.1824 |  | public | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/209M/datasets/uk_carbon_actual_1h/modes/none/models/finetuned-209M-full/all/wql/est |
+| sim_rack_power_1s none zero-shot-209M WQL | 0.02165 |  | simulated | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/209M/datasets/sim_rack_power_1s/modes/none/models/zero-shot-209M/all/wql/est |
+| sim_rack_power_1s none finetuned-209M-full WQL | 0.02058 |  | simulated | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/209M/datasets/sim_rack_power_1s/modes/none/models/finetuned-209M-full/all/wql/est |
+| sim_rack_power_1s cov_all zero-shot-209M WQL | 0.0453 |  | simulated | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/209M/datasets/sim_rack_power_1s/modes/cov_all/models/zero-shot-209M/all/wql/est |
+| sim_rack_power_1s cov_all finetuned-209M-full WQL | 0.01738 |  | simulated | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/209M/datasets/sim_rack_power_1s/modes/cov_all/models/finetuned-209M-full/all/wql/est |
+| sim_rack_temp_1min none zero-shot-209M WQL | 0.005581 |  | simulated | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/209M/datasets/sim_rack_temp_1min/modes/none/models/zero-shot-209M/all/wql/est |
+| sim_rack_temp_1min none finetuned-209M-full WQL | 0.005848 |  | simulated | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/209M/datasets/sim_rack_temp_1min/modes/none/models/finetuned-209M-full/all/wql/est |
+| sim_rack_temp_1min cov_all zero-shot-209M WQL | 0.008311 |  | simulated | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/209M/datasets/sim_rack_temp_1min/modes/cov_all/models/zero-shot-209M/all/wql/est |
+| sim_rack_temp_1min cov_all finetuned-209M-full WQL | 0.005506 |  | simulated | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/209M/datasets/sim_rack_temp_1min/modes/cov_all/models/finetuned-209M-full/all/wql/est |
+| sim_site_power_1h none zero-shot-209M WQL | 0.1179 |  | simulated | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/209M/datasets/sim_site_power_1h/modes/none/models/zero-shot-209M/all/wql/est |
+| sim_site_power_1h none finetuned-209M-full WQL | 0.1177 |  | simulated | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/209M/datasets/sim_site_power_1h/modes/none/models/finetuned-209M-full/all/wql/est |
+| sim_site_power_1h cov_all zero-shot-209M WQL | 0.1102 |  | simulated | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/209M/datasets/sim_site_power_1h/modes/cov_all/models/zero-shot-209M/all/wql/est |
+| sim_site_power_1h cov_all finetuned-209M-full WQL | 0.1 |  | simulated | heatwave:results/finetune/colab/finetune_colab.json | result/evaluation/209M/datasets/sim_site_power_1h/modes/cov_all/models/finetuned-209M-full/all/wql/est |
+
+## Fine-tuned vs zero-shot, best configuration of each (WQL on test windows)
+
+| size | dataset | data | zero-shot none | zero-shot cov | fine-tuned none | fine-tuned cov | best ft / best zs | ft-zs none [interval] | ft-zs cov [interval] |
+|---|---|---|---|---|---|---|---|---|---|
+| 28M | laptop_power | measured | 0.1914 | 0.1458 | 0.1986 | 0.0763 | 0.524 | +0.0072 [-0.0040, +0.0226] | -0.0695 [-0.1006, -0.0416] |
+| 28M | elsayed_gpu_power | public | 0.1580 |  | 0.1522 |  | 0.963 | -0.0059 [-0.0081, -0.0037] |  |
+| 28M | nlr_job_power | public | 0.0762 |  | 0.0718 |  | 0.942 | -0.0044 [-0.0084, -0.0007] |  |
+| 28M | mit_node_power | public | 0.0860 |  | 0.0846 |  | 0.984 | -0.0014 [-0.0029, +0.0002] |  |
+| 28M | laptop_temp | measured | 0.1638 |  | 0.1624 |  | 0.991 | -0.0015 [-0.0121, +0.0086] |  |
+| 28M | mit_node_temp | public | 0.0134 |  | 0.0129 |  | 0.967 | -0.0004 [-0.0013, +0.0001] |  |
+| 28M | caiso_rt_price_1h | public | 0.2026 |  | 0.1941 |  | 0.958 | -0.0085 [-0.0115, -0.0056] |  |
+| 28M | uk_carbon_actual_1h | public | 0.1854 |  | 0.1816 |  | 0.980 | -0.0038 [-0.0069, -0.0003] |  |
+| 28M | sim_rack_power_1s | simulated | 0.0256 | 0.0538 | 0.0242 | 0.0210 | 0.820 | -0.0014 [-0.0020, -0.0009] | -0.0328 [-0.0564, -0.0137] |
+| 28M | sim_rack_temp_1min | simulated | 0.0056 | 0.0109 | 0.0058 | 0.0061 | 1.047 | +0.0003 [+0.0000, +0.0005] | -0.0048 [-0.0092, -0.0017] |
+| 28M | sim_site_power_1h | simulated | 0.1203 | 0.1120 | 0.1204 | 0.1041 | 0.929 | +0.0001 [-0.0032, +0.0038] | -0.0079 [-0.0124, -0.0035] |
+| 123M | laptop_power | measured | 0.1928 | 0.1436 | 0.1907 | 0.0715 | 0.498 | -0.0021 [-0.0155, +0.0141] | -0.0721 [-0.1086, -0.0434] |
+| 123M | elsayed_gpu_power | public | 0.1541 |  | 0.1513 |  | 0.981 | -0.0029 [-0.0063, +0.0009] |  |
+| 123M | nlr_job_power | public | 0.0782 |  | 0.0520 |  | 0.664 | -0.0262 [-0.0413, -0.0141] |  |
+| 123M | mit_node_power | public | 0.0830 |  | 0.0739 |  | 0.890 | -0.0091 [-0.0170, -0.0012] |  |
+| 123M | laptop_temp | measured | 0.1601 |  | 0.1618 |  | 1.011 | +0.0017 [-0.0130, +0.0141] |  |
+| 123M | mit_node_temp | public | 0.0130 |  | 0.0129 |  | 0.996 | -0.0001 [-0.0003, +0.0001] |  |
+| 123M | caiso_rt_price_1h | public | 0.2033 |  | 0.1938 |  | 0.953 | -0.0095 [-0.0124, -0.0068] |  |
+| 123M | uk_carbon_actual_1h | public | 0.1898 |  | 0.1841 |  | 0.970 | -0.0058 [-0.0098, -0.0015] |  |
+| 123M | sim_rack_power_1s | simulated | 0.0215 | 0.0444 | 0.0203 | 0.0172 | 0.802 | -0.0012 [-0.0022, -0.0004] | -0.0272 [-0.0504, -0.0113] |
+| 123M | sim_rack_temp_1min | simulated | 0.0057 | 0.0061 | 0.0056 | 0.0052 | 0.913 | -0.0001 [-0.0006, +0.0002] | -0.0009 [-0.0016, -0.0003] |
+| 123M | sim_site_power_1h | simulated | 0.1186 | 0.1041 | 0.1130 | 0.0993 | 0.953 | -0.0055 [-0.0081, -0.0033] | -0.0048 [-0.0123, +0.0028] |
+| 209M | laptop_power | measured | 0.1998 | 0.2270 | 0.1989 | 0.0894 | 0.448 | -0.0009 [-0.0122, +0.0125] | -0.1375 [-0.2970, -0.0423] |
+| 209M | elsayed_gpu_power | public | 0.1476 |  | 0.1552 |  | 1.052 | +0.0076 [+0.0049, +0.0106] |  |
+| 209M | nlr_job_power | public | 0.0732 |  | 0.0682 |  | 0.931 | -0.0050 [-0.0109, +0.0003] |  |
+| 209M | mit_node_power | public | 0.0852 |  | 0.0800 |  | 0.938 | -0.0053 [-0.0082, -0.0026] |  |
+| 209M | laptop_temp | measured | 0.1573 |  | 0.1608 |  | 1.022 | +0.0035 [-0.0127, +0.0175] |  |
+| 209M | mit_node_temp | public | 0.0129 |  | 0.0127 |  | 0.986 | -0.0002 [-0.0004, +0.0001] |  |
+| 209M | caiso_rt_price_1h | public | 0.2019 |  | 0.1931 |  | 0.956 | -0.0088 [-0.0117, -0.0060] |  |
+| 209M | uk_carbon_actual_1h | public | 0.1879 |  | 0.1824 |  | 0.970 | -0.0056 [-0.0092, -0.0019] |  |
+| 209M | sim_rack_power_1s | simulated | 0.0216 | 0.0453 | 0.0206 | 0.0174 | 0.803 | -0.0011 [-0.0020, -0.0003] | -0.0279 [-0.0455, -0.0143] |
+| 209M | sim_rack_temp_1min | simulated | 0.0056 | 0.0083 | 0.0058 | 0.0055 | 0.987 | +0.0003 [-0.0000, +0.0005] | -0.0028 [-0.0045, -0.0014] |
+| 209M | sim_site_power_1h | simulated | 0.1179 | 0.1102 | 0.1177 | 0.1000 | 0.908 | -0.0002 [-0.0029, +0.0027] | -0.0102 [-0.0141, -0.0061] |
+
 ## Generated sentences (paste verbatim)
 
 - readme_cost_range: For a 7 billion parameter model trained on 2 trillion tokens on 1,024 H100s, power and cooling come to about 7.4 percent of the cost. At the industrial electricity prices of different places, with the calculator's other defaults (5.5-year server life, PUE 1.2), the same run ranges from about 5 percent (New Mexico average) to about 16 percent (California average).
 - readme_cost_range_source: gpu_stack:experiments/e003-heatwave/results/cost-audit-v1.json result/base_case/electricity_share and result/one_at_a_time/H100 (electricity price NM, CA)
 - packing_learned_vs_reactive: A small learned policy that picks the quantile per situation (from forecast spread, job value and the over-cap penalty) delivers $746 more net value per episode than reacting at a penalty of $40/kWh, and $5,575 more at $160/kWh; at $2.5/kWh reacting wins by $295.
+- finetune_rows_note: ratio_best_ft_over_best_zs compares the best fine-tuned configuration with the best zero-shot configuration (with or without covariates) on the same test windows

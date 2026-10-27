@@ -2519,11 +2519,1556 @@
    "source": "gpu_stack:experiments/e003-heatwave/results/cost-audit-v1.json",
    "key": "result/base_case/electricity_share",
    "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-28M (test windows)",
+   "label": "laptop_power none zero-shot-28M WQL",
+   "value": 0.19137627631366097,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/28M/datasets/laptop_power/modes/none/models/zero-shot-28M/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-28M (test windows)",
+   "label": "laptop_power none finetuned-28M-full WQL",
+   "value": 0.19861049907022335,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/28M/datasets/laptop_power/modes/none/models/finetuned-28M-full/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-28M (test windows)",
+   "label": "laptop_power cov_all zero-shot-28M WQL",
+   "value": 0.14576773350131286,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/28M/datasets/laptop_power/modes/cov_all/models/zero-shot-28M/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-28M (test windows)",
+   "label": "laptop_power cov_all finetuned-28M-full WQL",
+   "value": 0.07631342376453493,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/28M/datasets/laptop_power/modes/cov_all/models/finetuned-28M-full/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-28M (test windows)",
+   "label": "elsayed_gpu_power none zero-shot-28M WQL",
+   "value": 0.15804516851742562,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/28M/datasets/elsayed_gpu_power/modes/none/models/zero-shot-28M/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-28M (test windows)",
+   "label": "elsayed_gpu_power none finetuned-28M-full WQL",
+   "value": 0.15217663039019985,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/28M/datasets/elsayed_gpu_power/modes/none/models/finetuned-28M-full/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-28M (test windows)",
+   "label": "nlr_job_power none zero-shot-28M WQL",
+   "value": 0.07619369480318144,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/28M/datasets/nlr_job_power/modes/none/models/zero-shot-28M/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-28M (test windows)",
+   "label": "nlr_job_power none finetuned-28M-full WQL",
+   "value": 0.07179470149963729,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/28M/datasets/nlr_job_power/modes/none/models/finetuned-28M-full/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-28M (test windows)",
+   "label": "mit_node_power none zero-shot-28M WQL",
+   "value": 0.08602853740170095,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/28M/datasets/mit_node_power/modes/none/models/zero-shot-28M/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-28M (test windows)",
+   "label": "mit_node_power none finetuned-28M-full WQL",
+   "value": 0.08462913295390748,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/28M/datasets/mit_node_power/modes/none/models/finetuned-28M-full/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-28M (test windows)",
+   "label": "laptop_temp none zero-shot-28M WQL",
+   "value": 0.1638223209550868,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/28M/datasets/laptop_temp/modes/none/models/zero-shot-28M/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-28M (test windows)",
+   "label": "laptop_temp none finetuned-28M-full WQL",
+   "value": 0.1623546424821922,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/28M/datasets/laptop_temp/modes/none/models/finetuned-28M-full/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-28M (test windows)",
+   "label": "mit_node_temp none zero-shot-28M WQL",
+   "value": 0.01337935605961097,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/28M/datasets/mit_node_temp/modes/none/models/zero-shot-28M/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-28M (test windows)",
+   "label": "mit_node_temp none finetuned-28M-full WQL",
+   "value": 0.01293638465403872,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/28M/datasets/mit_node_temp/modes/none/models/finetuned-28M-full/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-28M (test windows)",
+   "label": "caiso_rt_price_1h none zero-shot-28M WQL",
+   "value": 0.2025821880850263,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/28M/datasets/caiso_rt_price_1h/modes/none/models/zero-shot-28M/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-28M (test windows)",
+   "label": "caiso_rt_price_1h none finetuned-28M-full WQL",
+   "value": 0.1940952555799026,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/28M/datasets/caiso_rt_price_1h/modes/none/models/finetuned-28M-full/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-28M (test windows)",
+   "label": "uk_carbon_actual_1h none zero-shot-28M WQL",
+   "value": 0.18535055374644735,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/28M/datasets/uk_carbon_actual_1h/modes/none/models/zero-shot-28M/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-28M (test windows)",
+   "label": "uk_carbon_actual_1h none finetuned-28M-full WQL",
+   "value": 0.18159247844616047,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/28M/datasets/uk_carbon_actual_1h/modes/none/models/finetuned-28M-full/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-28M (test windows)",
+   "label": "sim_rack_power_1s none zero-shot-28M WQL",
+   "value": 0.025598611872504444,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/28M/datasets/sim_rack_power_1s/modes/none/models/zero-shot-28M/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-28M (test windows)",
+   "label": "sim_rack_power_1s none finetuned-28M-full WQL",
+   "value": 0.024221842391804554,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/28M/datasets/sim_rack_power_1s/modes/none/models/finetuned-28M-full/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-28M (test windows)",
+   "label": "sim_rack_power_1s cov_all zero-shot-28M WQL",
+   "value": 0.05380243730961457,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/28M/datasets/sim_rack_power_1s/modes/cov_all/models/zero-shot-28M/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-28M (test windows)",
+   "label": "sim_rack_power_1s cov_all finetuned-28M-full WQL",
+   "value": 0.020985116076034965,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/28M/datasets/sim_rack_power_1s/modes/cov_all/models/finetuned-28M-full/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-28M (test windows)",
+   "label": "sim_rack_temp_1min none zero-shot-28M WQL",
+   "value": 0.005551938195649501,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/28M/datasets/sim_rack_temp_1min/modes/none/models/zero-shot-28M/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-28M (test windows)",
+   "label": "sim_rack_temp_1min none finetuned-28M-full WQL",
+   "value": 0.005814551838414056,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/28M/datasets/sim_rack_temp_1min/modes/none/models/finetuned-28M-full/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-28M (test windows)",
+   "label": "sim_rack_temp_1min cov_all zero-shot-28M WQL",
+   "value": 0.010921023557950374,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/28M/datasets/sim_rack_temp_1min/modes/cov_all/models/zero-shot-28M/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-28M (test windows)",
+   "label": "sim_rack_temp_1min cov_all finetuned-28M-full WQL",
+   "value": 0.006075929325720023,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/28M/datasets/sim_rack_temp_1min/modes/cov_all/models/finetuned-28M-full/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-28M (test windows)",
+   "label": "sim_site_power_1h none zero-shot-28M WQL",
+   "value": 0.12031313577537704,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/28M/datasets/sim_site_power_1h/modes/none/models/zero-shot-28M/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-28M (test windows)",
+   "label": "sim_site_power_1h none finetuned-28M-full WQL",
+   "value": 0.12038964995392108,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/28M/datasets/sim_site_power_1h/modes/none/models/finetuned-28M-full/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-28M (test windows)",
+   "label": "sim_site_power_1h cov_all zero-shot-28M WQL",
+   "value": 0.11201775897780436,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/28M/datasets/sim_site_power_1h/modes/cov_all/models/zero-shot-28M/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-28M (test windows)",
+   "label": "sim_site_power_1h cov_all finetuned-28M-full WQL",
+   "value": 0.10407971461074132,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/28M/datasets/sim_site_power_1h/modes/cov_all/models/finetuned-28M-full/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-123M (test windows)",
+   "label": "laptop_power none zero-shot-123M WQL",
+   "value": 0.19280279955672483,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/123M/datasets/laptop_power/modes/none/models/zero-shot-123M/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-123M (test windows)",
+   "label": "laptop_power none finetuned-123M-full WQL",
+   "value": 0.19066983795321604,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/123M/datasets/laptop_power/modes/none/models/finetuned-123M-full/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-123M (test windows)",
+   "label": "laptop_power cov_all zero-shot-123M WQL",
+   "value": 0.1436340348563169,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/123M/datasets/laptop_power/modes/cov_all/models/zero-shot-123M/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-123M (test windows)",
+   "label": "laptop_power cov_all finetuned-123M-full WQL",
+   "value": 0.07150963509356614,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/123M/datasets/laptop_power/modes/cov_all/models/finetuned-123M-full/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-123M (test windows)",
+   "label": "elsayed_gpu_power none zero-shot-123M WQL",
+   "value": 0.15410947229186042,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/123M/datasets/elsayed_gpu_power/modes/none/models/zero-shot-123M/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-123M (test windows)",
+   "label": "elsayed_gpu_power none finetuned-123M-full WQL",
+   "value": 0.15125303624334688,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/123M/datasets/elsayed_gpu_power/modes/none/models/finetuned-123M-full/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-123M (test windows)",
+   "label": "nlr_job_power none zero-shot-123M WQL",
+   "value": 0.07820583642273825,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/123M/datasets/nlr_job_power/modes/none/models/zero-shot-123M/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-123M (test windows)",
+   "label": "nlr_job_power none finetuned-123M-full WQL",
+   "value": 0.05195863243115994,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/123M/datasets/nlr_job_power/modes/none/models/finetuned-123M-full/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-123M (test windows)",
+   "label": "mit_node_power none zero-shot-123M WQL",
+   "value": 0.08298563045241306,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/123M/datasets/mit_node_power/modes/none/models/zero-shot-123M/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-123M (test windows)",
+   "label": "mit_node_power none finetuned-123M-full WQL",
+   "value": 0.07386696999396716,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/123M/datasets/mit_node_power/modes/none/models/finetuned-123M-full/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-123M (test windows)",
+   "label": "laptop_temp none zero-shot-123M WQL",
+   "value": 0.1600527280011738,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/123M/datasets/laptop_temp/modes/none/models/zero-shot-123M/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-123M (test windows)",
+   "label": "laptop_temp none finetuned-123M-full WQL",
+   "value": 0.1617614777776254,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/123M/datasets/laptop_temp/modes/none/models/finetuned-123M-full/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-123M (test windows)",
+   "label": "mit_node_temp none zero-shot-123M WQL",
+   "value": 0.012990547415429238,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/123M/datasets/mit_node_temp/modes/none/models/zero-shot-123M/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-123M (test windows)",
+   "label": "mit_node_temp none finetuned-123M-full WQL",
+   "value": 0.012938214346479635,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/123M/datasets/mit_node_temp/modes/none/models/finetuned-123M-full/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-123M (test windows)",
+   "label": "caiso_rt_price_1h none zero-shot-123M WQL",
+   "value": 0.20331962600674938,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/123M/datasets/caiso_rt_price_1h/modes/none/models/zero-shot-123M/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-123M (test windows)",
+   "label": "caiso_rt_price_1h none finetuned-123M-full WQL",
+   "value": 0.19380947707250026,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/123M/datasets/caiso_rt_price_1h/modes/none/models/finetuned-123M-full/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-123M (test windows)",
+   "label": "uk_carbon_actual_1h none zero-shot-123M WQL",
+   "value": 0.18982091445785734,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/123M/datasets/uk_carbon_actual_1h/modes/none/models/zero-shot-123M/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-123M (test windows)",
+   "label": "uk_carbon_actual_1h none finetuned-123M-full WQL",
+   "value": 0.1840500886262872,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/123M/datasets/uk_carbon_actual_1h/modes/none/models/finetuned-123M-full/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-123M (test windows)",
+   "label": "sim_rack_power_1s none zero-shot-123M WQL",
+   "value": 0.021483763995321436,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/123M/datasets/sim_rack_power_1s/modes/none/models/zero-shot-123M/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-123M (test windows)",
+   "label": "sim_rack_power_1s none finetuned-123M-full WQL",
+   "value": 0.020306977205692314,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/123M/datasets/sim_rack_power_1s/modes/none/models/finetuned-123M-full/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-123M (test windows)",
+   "label": "sim_rack_power_1s cov_all zero-shot-123M WQL",
+   "value": 0.044423728555766824,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/123M/datasets/sim_rack_power_1s/modes/cov_all/models/zero-shot-123M/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-123M (test windows)",
+   "label": "sim_rack_power_1s cov_all finetuned-123M-full WQL",
+   "value": 0.01723090080889237,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/123M/datasets/sim_rack_power_1s/modes/cov_all/models/finetuned-123M-full/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-123M (test windows)",
+   "label": "sim_rack_temp_1min none zero-shot-123M WQL",
+   "value": 0.00572304032681108,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/123M/datasets/sim_rack_temp_1min/modes/none/models/zero-shot-123M/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-123M (test windows)",
+   "label": "sim_rack_temp_1min none finetuned-123M-full WQL",
+   "value": 0.005614665844472571,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/123M/datasets/sim_rack_temp_1min/modes/none/models/finetuned-123M-full/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-123M (test windows)",
+   "label": "sim_rack_temp_1min cov_all zero-shot-123M WQL",
+   "value": 0.006115488436813943,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/123M/datasets/sim_rack_temp_1min/modes/cov_all/models/zero-shot-123M/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-123M (test windows)",
+   "label": "sim_rack_temp_1min cov_all finetuned-123M-full WQL",
+   "value": 0.005223452672516861,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/123M/datasets/sim_rack_temp_1min/modes/cov_all/models/finetuned-123M-full/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-123M (test windows)",
+   "label": "sim_site_power_1h none zero-shot-123M WQL",
+   "value": 0.11855623545938122,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/123M/datasets/sim_site_power_1h/modes/none/models/zero-shot-123M/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-123M (test windows)",
+   "label": "sim_site_power_1h none finetuned-123M-full WQL",
+   "value": 0.11300972309250899,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/123M/datasets/sim_site_power_1h/modes/none/models/finetuned-123M-full/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-123M (test windows)",
+   "label": "sim_site_power_1h cov_all zero-shot-123M WQL",
+   "value": 0.10411873921444789,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/123M/datasets/sim_site_power_1h/modes/cov_all/models/zero-shot-123M/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-123M (test windows)",
+   "label": "sim_site_power_1h cov_all finetuned-123M-full WQL",
+   "value": 0.09926986167867054,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/123M/datasets/sim_site_power_1h/modes/cov_all/models/finetuned-123M-full/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-209M (test windows)",
+   "label": "laptop_power none zero-shot-209M WQL",
+   "value": 0.19983675239351506,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/209M/datasets/laptop_power/modes/none/models/zero-shot-209M/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-209M (test windows)",
+   "label": "laptop_power none finetuned-209M-full WQL",
+   "value": 0.19892216844731309,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/209M/datasets/laptop_power/modes/none/models/finetuned-209M-full/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-209M (test windows)",
+   "label": "laptop_power cov_all zero-shot-209M WQL",
+   "value": 0.22698361840861284,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/209M/datasets/laptop_power/modes/cov_all/models/zero-shot-209M/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-209M (test windows)",
+   "label": "laptop_power cov_all finetuned-209M-full WQL",
+   "value": 0.08944053344775622,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/209M/datasets/laptop_power/modes/cov_all/models/finetuned-209M-full/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-209M (test windows)",
+   "label": "elsayed_gpu_power none zero-shot-209M WQL",
+   "value": 0.14760509450323334,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/209M/datasets/elsayed_gpu_power/modes/none/models/zero-shot-209M/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-209M (test windows)",
+   "label": "elsayed_gpu_power none finetuned-209M-full WQL",
+   "value": 0.15524040931812486,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/209M/datasets/elsayed_gpu_power/modes/none/models/finetuned-209M-full/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-209M (test windows)",
+   "label": "nlr_job_power none zero-shot-209M WQL",
+   "value": 0.07320088282535164,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/209M/datasets/nlr_job_power/modes/none/models/zero-shot-209M/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-209M (test windows)",
+   "label": "nlr_job_power none finetuned-209M-full WQL",
+   "value": 0.0681717528381792,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/209M/datasets/nlr_job_power/modes/none/models/finetuned-209M-full/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-209M (test windows)",
+   "label": "mit_node_power none zero-shot-209M WQL",
+   "value": 0.08522443527782908,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/209M/datasets/mit_node_power/modes/none/models/zero-shot-209M/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-209M (test windows)",
+   "label": "mit_node_power none finetuned-209M-full WQL",
+   "value": 0.07995918770863257,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/209M/datasets/mit_node_power/modes/none/models/finetuned-209M-full/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-209M (test windows)",
+   "label": "laptop_temp none zero-shot-209M WQL",
+   "value": 0.15731104617497468,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/209M/datasets/laptop_temp/modes/none/models/zero-shot-209M/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-209M (test windows)",
+   "label": "laptop_temp none finetuned-209M-full WQL",
+   "value": 0.16083970372901862,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/209M/datasets/laptop_temp/modes/none/models/finetuned-209M-full/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-209M (test windows)",
+   "label": "mit_node_temp none zero-shot-209M WQL",
+   "value": 0.01288719933844361,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/209M/datasets/mit_node_temp/modes/none/models/zero-shot-209M/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-209M (test windows)",
+   "label": "mit_node_temp none finetuned-209M-full WQL",
+   "value": 0.012701043312602646,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/209M/datasets/mit_node_temp/modes/none/models/finetuned-209M-full/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-209M (test windows)",
+   "label": "caiso_rt_price_1h none zero-shot-209M WQL",
+   "value": 0.20190024605484763,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/209M/datasets/caiso_rt_price_1h/modes/none/models/zero-shot-209M/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-209M (test windows)",
+   "label": "caiso_rt_price_1h none finetuned-209M-full WQL",
+   "value": 0.19309681534510606,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/209M/datasets/caiso_rt_price_1h/modes/none/models/finetuned-209M-full/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-209M (test windows)",
+   "label": "uk_carbon_actual_1h none zero-shot-209M WQL",
+   "value": 0.18791988774282847,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/209M/datasets/uk_carbon_actual_1h/modes/none/models/zero-shot-209M/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-209M (test windows)",
+   "label": "uk_carbon_actual_1h none finetuned-209M-full WQL",
+   "value": 0.18236773942935378,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/209M/datasets/uk_carbon_actual_1h/modes/none/models/finetuned-209M-full/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-209M (test windows)",
+   "label": "sim_rack_power_1s none zero-shot-209M WQL",
+   "value": 0.021646291542620436,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/209M/datasets/sim_rack_power_1s/modes/none/models/zero-shot-209M/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-209M (test windows)",
+   "label": "sim_rack_power_1s none finetuned-209M-full WQL",
+   "value": 0.020582698494208705,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/209M/datasets/sim_rack_power_1s/modes/none/models/finetuned-209M-full/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-209M (test windows)",
+   "label": "sim_rack_power_1s cov_all zero-shot-209M WQL",
+   "value": 0.04530332596947653,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/209M/datasets/sim_rack_power_1s/modes/cov_all/models/zero-shot-209M/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-209M (test windows)",
+   "label": "sim_rack_power_1s cov_all finetuned-209M-full WQL",
+   "value": 0.01738044774353265,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/209M/datasets/sim_rack_power_1s/modes/cov_all/models/finetuned-209M-full/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-209M (test windows)",
+   "label": "sim_rack_temp_1min none zero-shot-209M WQL",
+   "value": 0.0055812107908825214,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/209M/datasets/sim_rack_temp_1min/modes/none/models/zero-shot-209M/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-209M (test windows)",
+   "label": "sim_rack_temp_1min none finetuned-209M-full WQL",
+   "value": 0.005847884274667241,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/209M/datasets/sim_rack_temp_1min/modes/none/models/finetuned-209M-full/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-209M (test windows)",
+   "label": "sim_rack_temp_1min cov_all zero-shot-209M WQL",
+   "value": 0.008310923943015252,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/209M/datasets/sim_rack_temp_1min/modes/cov_all/models/zero-shot-209M/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-209M (test windows)",
+   "label": "sim_rack_temp_1min cov_all finetuned-209M-full WQL",
+   "value": 0.005506370558384452,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/209M/datasets/sim_rack_temp_1min/modes/cov_all/models/finetuned-209M-full/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-209M (test windows)",
+   "label": "sim_site_power_1h none zero-shot-209M WQL",
+   "value": 0.11793968603278115,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/209M/datasets/sim_site_power_1h/modes/none/models/zero-shot-209M/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-209M (test windows)",
+   "label": "sim_site_power_1h none finetuned-209M-full WQL",
+   "value": 0.11773297284463995,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/209M/datasets/sim_site_power_1h/modes/none/models/finetuned-209M-full/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-209M (test windows)",
+   "label": "sim_site_power_1h cov_all zero-shot-209M WQL",
+   "value": 0.11023389771500465,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/209M/datasets/sim_site_power_1h/modes/cov_all/models/zero-shot-209M/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "fine-tuning, Timestral-209M (test windows)",
+   "label": "sim_site_power_1h cov_all finetuned-209M-full WQL",
+   "value": 0.10003942426439652,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "heatwave:results/finetune/colab/finetune_colab.json",
+   "key": "result/evaluation/209M/datasets/sim_site_power_1h/modes/cov_all/models/finetuned-209M-full/all/wql/est",
+   "status": "ok"
   }
  ],
  "sentences": {
   "readme_cost_range": "For a 7 billion parameter model trained on 2 trillion tokens on 1,024 H100s, power and cooling come to about 7.4 percent of the cost. At the industrial electricity prices of different places, with the calculator's other defaults (5.5-year server life, PUE 1.2), the same run ranges from about 5 percent (New Mexico average) to about 16 percent (California average).",
   "readme_cost_range_source": "gpu_stack:experiments/e003-heatwave/results/cost-audit-v1.json result/base_case/electricity_share and result/one_at_a_time/H100 (electricity price NM, CA)",
-  "packing_learned_vs_reactive": "A small learned policy that picks the quantile per situation (from forecast spread, job value and the over-cap penalty) delivers $746 more net value per episode than reacting at a penalty of $40/kWh, and $5,575 more at $160/kWh; at $2.5/kWh reacting wins by $295."
- }
+  "packing_learned_vs_reactive": "A small learned policy that picks the quantile per situation (from forecast spread, job value and the over-cap penalty) delivers $746 more net value per episode than reacting at a penalty of $40/kWh, and $5,575 more at $160/kWh; at $2.5/kWh reacting wins by $295.",
+  "finetune_rows_note": "ratio_best_ft_over_best_zs compares the best fine-tuned configuration with the best zero-shot configuration (with or without covariates) on the same test windows"
+ },
+ "finetune_table": [
+  {
+   "size": "28M",
+   "dataset": "laptop_power",
+   "data_kind": "measured",
+   "zero_shot_best": 0.14576773350131286,
+   "finetuned_best": 0.07631342376453493,
+   "ratio_best_ft_over_best_zs": 0.5235275457160593,
+   "zero_shot_none": 0.19137627631366097,
+   "zero_shot_cov": 0.14576773350131286,
+   "finetuned_none": 0.19861049907022335,
+   "finetuned_cov": 0.07631342376453493,
+   "paired_delta_none": {
+    "est": 0.007234222756562381,
+    "lo": -0.003992510970484002,
+    "hi": 0.02263493692112338
+   },
+   "paired_delta_cov": {
+    "est": -0.06945430973677794,
+    "lo": -0.10057732364672299,
+    "hi": -0.041585136151973824
+   }
+  },
+  {
+   "size": "28M",
+   "dataset": "elsayed_gpu_power",
+   "data_kind": "public",
+   "zero_shot_best": 0.15804516851742562,
+   "finetuned_best": 0.15217663039019985,
+   "ratio_best_ft_over_best_zs": 0.962867968807419,
+   "zero_shot_none": 0.15804516851742562,
+   "zero_shot_cov": null,
+   "finetuned_none": 0.15217663039019985,
+   "finetuned_cov": null,
+   "paired_delta_none": {
+    "est": -0.005868538127225764,
+    "lo": -0.008065332503101546,
+    "hi": -0.003724186021877606
+   },
+   "paired_delta_cov": null
+  },
+  {
+   "size": "28M",
+   "dataset": "nlr_job_power",
+   "data_kind": "public",
+   "zero_shot_best": 0.07619369480318144,
+   "finetuned_best": 0.07179470149963729,
+   "ratio_best_ft_over_best_zs": 0.9422656518376311,
+   "zero_shot_none": 0.07619369480318144,
+   "zero_shot_cov": null,
+   "finetuned_none": 0.07179470149963729,
+   "finetuned_cov": null,
+   "paired_delta_none": {
+    "est": -0.004398993303544152,
+    "lo": -0.008390184964978899,
+    "hi": -0.000708931938010169
+   },
+   "paired_delta_cov": null
+  },
+  {
+   "size": "28M",
+   "dataset": "mit_node_power",
+   "data_kind": "public",
+   "zero_shot_best": 0.08602853740170095,
+   "finetuned_best": 0.08462913295390748,
+   "ratio_best_ft_over_best_zs": 0.9837332530569582,
+   "zero_shot_none": 0.08602853740170095,
+   "zero_shot_cov": null,
+   "finetuned_none": 0.08462913295390748,
+   "finetuned_cov": null,
+   "paired_delta_none": {
+    "est": -0.0013994044477934758,
+    "lo": -0.002856610533991572,
+    "hi": 0.00016780222412366122
+   },
+   "paired_delta_cov": null
+  },
+  {
+   "size": "28M",
+   "dataset": "laptop_temp",
+   "data_kind": "measured",
+   "zero_shot_best": 0.1638223209550868,
+   "finetuned_best": 0.1623546424821922,
+   "ratio_best_ft_over_best_zs": 0.991041034797102,
+   "zero_shot_none": 0.1638223209550868,
+   "zero_shot_cov": null,
+   "finetuned_none": 0.1623546424821922,
+   "finetuned_cov": null,
+   "paired_delta_none": {
+    "est": -0.0014676784728946124,
+    "lo": -0.012088664404859676,
+    "hi": 0.008551797291018582
+   },
+   "paired_delta_cov": null
+  },
+  {
+   "size": "28M",
+   "dataset": "mit_node_temp",
+   "data_kind": "public",
+   "zero_shot_best": 0.01337935605961097,
+   "finetuned_best": 0.01293638465403872,
+   "ratio_best_ft_over_best_zs": 0.9668914255963729,
+   "zero_shot_none": 0.01337935605961097,
+   "zero_shot_cov": null,
+   "finetuned_none": 0.01293638465403872,
+   "finetuned_cov": null,
+   "paired_delta_none": {
+    "est": -0.00044297140557224973,
+    "lo": -0.0012972515726627344,
+    "hi": 0.00011652426826800502
+   },
+   "paired_delta_cov": null
+  },
+  {
+   "size": "28M",
+   "dataset": "caiso_rt_price_1h",
+   "data_kind": "public",
+   "zero_shot_best": 0.2025821880850263,
+   "finetuned_best": 0.1940952555799026,
+   "ratio_best_ft_over_best_zs": 0.9581062255011205,
+   "zero_shot_none": 0.2025821880850263,
+   "zero_shot_cov": null,
+   "finetuned_none": 0.1940952555799026,
+   "finetuned_cov": null,
+   "paired_delta_none": {
+    "est": -0.008486932505123695,
+    "lo": -0.011526547066152616,
+    "hi": -0.005649269285786326
+   },
+   "paired_delta_cov": null
+  },
+  {
+   "size": "28M",
+   "dataset": "uk_carbon_actual_1h",
+   "data_kind": "public",
+   "zero_shot_best": 0.18535055374644735,
+   "finetuned_best": 0.18159247844616047,
+   "ratio_best_ft_over_best_zs": 0.9797244992025879,
+   "zero_shot_none": 0.18535055374644735,
+   "zero_shot_cov": null,
+   "finetuned_none": 0.18159247844616047,
+   "finetuned_cov": null,
+   "paired_delta_none": {
+    "est": -0.0037580753002868783,
+    "lo": -0.006936211659697028,
+    "hi": -0.0003143847208129397
+   },
+   "paired_delta_cov": null
+  },
+  {
+   "size": "28M",
+   "dataset": "sim_rack_power_1s",
+   "data_kind": "simulated",
+   "zero_shot_best": 0.025598611872504444,
+   "finetuned_best": 0.020985116076034965,
+   "ratio_best_ft_over_best_zs": 0.8197755480083335,
+   "zero_shot_none": 0.025598611872504444,
+   "zero_shot_cov": 0.05380243730961457,
+   "finetuned_none": 0.024221842391804554,
+   "finetuned_cov": 0.020985116076034965,
+   "paired_delta_none": {
+    "est": -0.0013767694806998895,
+    "lo": -0.0019888986586915867,
+    "hi": -0.000883128765313977
+   },
+   "paired_delta_cov": {
+    "est": -0.03281732123357961,
+    "lo": -0.056412506509219563,
+    "hi": -0.013735837097985074
+   }
+  },
+  {
+   "size": "28M",
+   "dataset": "sim_rack_temp_1min",
+   "data_kind": "simulated",
+   "zero_shot_best": 0.005551938195649501,
+   "finetuned_best": 0.005814551838414056,
+   "ratio_best_ft_over_best_zs": 1.0473012547168372,
+   "zero_shot_none": 0.005551938195649501,
+   "zero_shot_cov": 0.010921023557950374,
+   "finetuned_none": 0.005814551838414056,
+   "finetuned_cov": 0.006075929325720023,
+   "paired_delta_none": {
+    "est": 0.0002626136427645552,
+    "lo": 4.666926578206058e-05,
+    "hi": 0.00047742804143984435
+   },
+   "paired_delta_cov": {
+    "est": -0.004845094232230351,
+    "lo": -0.009180311083879816,
+    "hi": -0.0016776620461025015
+   }
+  },
+  {
+   "size": "28M",
+   "dataset": "sim_site_power_1h",
+   "data_kind": "simulated",
+   "zero_shot_best": 0.11201775897780436,
+   "finetuned_best": 0.10407971461074132,
+   "ratio_best_ft_over_best_zs": 0.9291358402497955,
+   "zero_shot_none": 0.12031313577537704,
+   "zero_shot_cov": 0.11201775897780436,
+   "finetuned_none": 0.12038964995392108,
+   "finetuned_cov": 0.10407971461074132,
+   "paired_delta_none": {
+    "est": 7.651417854404041e-05,
+    "lo": -0.0031587003662172613,
+    "hi": 0.00383736908085039
+   },
+   "paired_delta_cov": {
+    "est": -0.007938044367063038,
+    "lo": -0.0123729051857191,
+    "hi": -0.0035246011081996667
+   }
+  },
+  {
+   "size": "123M",
+   "dataset": "laptop_power",
+   "data_kind": "measured",
+   "zero_shot_best": 0.1436340348563169,
+   "finetuned_best": 0.07150963509356614,
+   "ratio_best_ft_over_best_zs": 0.4978599617082414,
+   "zero_shot_none": 0.19280279955672483,
+   "zero_shot_cov": 0.1436340348563169,
+   "finetuned_none": 0.19066983795321604,
+   "finetuned_cov": 0.07150963509356614,
+   "paired_delta_none": {
+    "est": -0.0021329616035087873,
+    "lo": -0.015505151941671664,
+    "hi": 0.014072643945846406
+   },
+   "paired_delta_cov": {
+    "est": -0.07212439976275076,
+    "lo": -0.10857990206995709,
+    "hi": -0.0434335243352754
+   }
+  },
+  {
+   "size": "123M",
+   "dataset": "elsayed_gpu_power",
+   "data_kind": "public",
+   "zero_shot_best": 0.15410947229186042,
+   "finetuned_best": 0.15125303624334688,
+   "ratio_best_ft_over_best_zs": 0.9814648898212831,
+   "zero_shot_none": 0.15410947229186042,
+   "zero_shot_cov": null,
+   "finetuned_none": 0.15125303624334688,
+   "finetuned_cov": null,
+   "paired_delta_none": {
+    "est": -0.0028564360485135443,
+    "lo": -0.006319464475247338,
+    "hi": 0.0009028071591078288
+   },
+   "paired_delta_cov": null
+  },
+  {
+   "size": "123M",
+   "dataset": "nlr_job_power",
+   "data_kind": "public",
+   "zero_shot_best": 0.07820583642273825,
+   "finetuned_best": 0.05195863243115994,
+   "ratio_best_ft_over_best_zs": 0.6643830538465162,
+   "zero_shot_none": 0.07820583642273825,
+   "zero_shot_cov": null,
+   "finetuned_none": 0.05195863243115994,
+   "finetuned_cov": null,
+   "paired_delta_none": {
+    "est": -0.02624720399157831,
+    "lo": -0.041298666897466835,
+    "hi": -0.01413213153100688
+   },
+   "paired_delta_cov": null
+  },
+  {
+   "size": "123M",
+   "dataset": "mit_node_power",
+   "data_kind": "public",
+   "zero_shot_best": 0.08298563045241306,
+   "finetuned_best": 0.07386696999396716,
+   "ratio_best_ft_over_best_zs": 0.8901175973631379,
+   "zero_shot_none": 0.08298563045241306,
+   "zero_shot_cov": null,
+   "finetuned_none": 0.07386696999396716,
+   "finetuned_cov": null,
+   "paired_delta_none": {
+    "est": -0.009118660458445893,
+    "lo": -0.017010115337824174,
+    "hi": -0.0012405348823438882
+   },
+   "paired_delta_cov": null
+  },
+  {
+   "size": "123M",
+   "dataset": "laptop_temp",
+   "data_kind": "measured",
+   "zero_shot_best": 0.1600527280011738,
+   "finetuned_best": 0.1617614777776254,
+   "ratio_best_ft_over_best_zs": 1.0106761677716551,
+   "zero_shot_none": 0.1600527280011738,
+   "zero_shot_cov": null,
+   "finetuned_none": 0.1617614777776254,
+   "finetuned_cov": null,
+   "paired_delta_none": {
+    "est": 0.0017087497764516069,
+    "lo": -0.013033014477568479,
+    "hi": 0.01414248406310058
+   },
+   "paired_delta_cov": null
+  },
+  {
+   "size": "123M",
+   "dataset": "mit_node_temp",
+   "data_kind": "public",
+   "zero_shot_best": 0.012990547415429238,
+   "finetuned_best": 0.012938214346479635,
+   "ratio_best_ft_over_best_zs": 0.9959714500647259,
+   "zero_shot_none": 0.012990547415429238,
+   "zero_shot_cov": null,
+   "finetuned_none": 0.012938214346479635,
+   "finetuned_cov": null,
+   "paired_delta_none": {
+    "est": -5.2333068949602865e-05,
+    "lo": -0.00025994995159682146,
+    "hi": 0.00013220893931807713
+   },
+   "paired_delta_cov": null
+  },
+  {
+   "size": "123M",
+   "dataset": "caiso_rt_price_1h",
+   "data_kind": "public",
+   "zero_shot_best": 0.20331962600674938,
+   "finetuned_best": 0.19380947707250026,
+   "ratio_best_ft_over_best_zs": 0.9532256225282776,
+   "zero_shot_none": 0.20331962600674938,
+   "zero_shot_cov": null,
+   "finetuned_none": 0.19380947707250026,
+   "finetuned_cov": null,
+   "paired_delta_none": {
+    "est": -0.009510148934249119,
+    "lo": -0.012443813749856411,
+    "hi": -0.0067765934187199095
+   },
+   "paired_delta_cov": null
+  },
+  {
+   "size": "123M",
+   "dataset": "uk_carbon_actual_1h",
+   "data_kind": "public",
+   "zero_shot_best": 0.18982091445785734,
+   "finetuned_best": 0.1840500886262872,
+   "ratio_best_ft_over_best_zs": 0.9695985774378336,
+   "zero_shot_none": 0.18982091445785734,
+   "zero_shot_cov": null,
+   "finetuned_none": 0.1840500886262872,
+   "finetuned_cov": null,
+   "paired_delta_none": {
+    "est": -0.005770825831570153,
+    "lo": -0.009758746307661076,
+    "hi": -0.0015032348053284305
+   },
+   "paired_delta_cov": null
+  },
+  {
+   "size": "123M",
+   "dataset": "sim_rack_power_1s",
+   "data_kind": "simulated",
+   "zero_shot_best": 0.021483763995321436,
+   "finetuned_best": 0.01723090080889237,
+   "ratio_best_ft_over_best_zs": 0.8020429200695363,
+   "zero_shot_none": 0.021483763995321436,
+   "zero_shot_cov": 0.044423728555766824,
+   "finetuned_none": 0.020306977205692314,
+   "finetuned_cov": 0.01723090080889237,
+   "paired_delta_none": {
+    "est": -0.0011767867896291216,
+    "lo": -0.002153079516618067,
+    "hi": -0.00036537287517374753
+   },
+   "paired_delta_cov": {
+    "est": -0.027192827746874454,
+    "lo": -0.05042355648639658,
+    "hi": -0.011309405303822084
+   }
+  },
+  {
+   "size": "123M",
+   "dataset": "sim_rack_temp_1min",
+   "data_kind": "simulated",
+   "zero_shot_best": 0.00572304032681108,
+   "finetuned_best": 0.005223452672516861,
+   "ratio_best_ft_over_best_zs": 0.9127059000521505,
+   "zero_shot_none": 0.00572304032681108,
+   "zero_shot_cov": 0.006115488436813943,
+   "finetuned_none": 0.005614665844472571,
+   "finetuned_cov": 0.005223452672516861,
+   "paired_delta_none": {
+    "est": -0.00010837448233850903,
+    "lo": -0.0005744606937493322,
+    "hi": 0.00021117967450586436
+   },
+   "paired_delta_cov": {
+    "est": -0.0008920357642970824,
+    "lo": -0.001642108242232998,
+    "hi": -0.00034551206136583914
+   }
+  },
+  {
+   "size": "123M",
+   "dataset": "sim_site_power_1h",
+   "data_kind": "simulated",
+   "zero_shot_best": 0.10411873921444789,
+   "finetuned_best": 0.09926986167867054,
+   "ratio_best_ft_over_best_zs": 0.9534293483347855,
+   "zero_shot_none": 0.11855623545938122,
+   "zero_shot_cov": 0.10411873921444789,
+   "finetuned_none": 0.11300972309250899,
+   "finetuned_cov": 0.09926986167867054,
+   "paired_delta_none": {
+    "est": -0.0055465123668722305,
+    "lo": -0.008095775039718513,
+    "hi": -0.00334050565944172
+   },
+   "paired_delta_cov": {
+    "est": -0.0048488775357773545,
+    "lo": -0.012322466033978904,
+    "hi": 0.0027930864675910464
+   }
+  },
+  {
+   "size": "209M",
+   "dataset": "laptop_power",
+   "data_kind": "measured",
+   "zero_shot_best": 0.19983675239351506,
+   "finetuned_best": 0.08944053344775622,
+   "ratio_best_ft_over_best_zs": 0.44756798925370583,
+   "zero_shot_none": 0.19983675239351506,
+   "zero_shot_cov": 0.22698361840861284,
+   "finetuned_none": 0.19892216844731309,
+   "finetuned_cov": 0.08944053344775622,
+   "paired_delta_none": {
+    "est": -0.0009145839462019745,
+    "lo": -0.01217755153448525,
+    "hi": 0.012451850341419641
+   },
+   "paired_delta_cov": {
+    "est": -0.1375430849608566,
+    "lo": -0.29704155762780043,
+    "hi": -0.04226728455313275
+   }
+  },
+  {
+   "size": "209M",
+   "dataset": "elsayed_gpu_power",
+   "data_kind": "public",
+   "zero_shot_best": 0.14760509450323334,
+   "finetuned_best": 0.15524040931812486,
+   "ratio_best_ft_over_best_zs": 1.051727989745803,
+   "zero_shot_none": 0.14760509450323334,
+   "zero_shot_cov": null,
+   "finetuned_none": 0.15524040931812486,
+   "finetuned_cov": null,
+   "paired_delta_none": {
+    "est": 0.0076353148148915195,
+    "lo": 0.004872480022196422,
+    "hi": 0.010613930726994222
+   },
+   "paired_delta_cov": null
+  },
+  {
+   "size": "209M",
+   "dataset": "nlr_job_power",
+   "data_kind": "public",
+   "zero_shot_best": 0.07320088282535164,
+   "finetuned_best": 0.0681717528381792,
+   "ratio_best_ft_over_best_zs": 0.9312968670176924,
+   "zero_shot_none": 0.07320088282535164,
+   "zero_shot_cov": null,
+   "finetuned_none": 0.0681717528381792,
+   "finetuned_cov": null,
+   "paired_delta_none": {
+    "est": -0.005029129987172448,
+    "lo": -0.010870732083837651,
+    "hi": 0.0003157917728032664
+   },
+   "paired_delta_cov": null
+  },
+  {
+   "size": "209M",
+   "dataset": "mit_node_power",
+   "data_kind": "public",
+   "zero_shot_best": 0.08522443527782908,
+   "finetuned_best": 0.07995918770863257,
+   "ratio_best_ft_over_best_zs": 0.938219038330592,
+   "zero_shot_none": 0.08522443527782908,
+   "zero_shot_cov": null,
+   "finetuned_none": 0.07995918770863257,
+   "finetuned_cov": null,
+   "paired_delta_none": {
+    "est": -0.00526524756919651,
+    "lo": -0.008234513003286169,
+    "hi": -0.0025778602159557224
+   },
+   "paired_delta_cov": null
+  },
+  {
+   "size": "209M",
+   "dataset": "laptop_temp",
+   "data_kind": "measured",
+   "zero_shot_best": 0.15731104617497468,
+   "finetuned_best": 0.16083970372901862,
+   "ratio_best_ft_over_best_zs": 1.022431085672897,
+   "zero_shot_none": 0.15731104617497468,
+   "zero_shot_cov": null,
+   "finetuned_none": 0.16083970372901862,
+   "finetuned_cov": null,
+   "paired_delta_none": {
+    "est": 0.00352865755404394,
+    "lo": -0.01273809559728726,
+    "hi": 0.017525299060700734
+   },
+   "paired_delta_cov": null
+  },
+  {
+   "size": "209M",
+   "dataset": "mit_node_temp",
+   "data_kind": "public",
+   "zero_shot_best": 0.01288719933844361,
+   "finetuned_best": 0.012701043312602646,
+   "ratio_best_ft_over_best_zs": 0.9855549665251436,
+   "zero_shot_none": 0.01288719933844361,
+   "zero_shot_cov": null,
+   "finetuned_none": 0.012701043312602646,
+   "finetuned_cov": null,
+   "paired_delta_none": {
+    "est": -0.0001861560258409646,
+    "lo": -0.00041957938473430025,
+    "hi": 5.272660998461593e-05
+   },
+   "paired_delta_cov": null
+  },
+  {
+   "size": "209M",
+   "dataset": "caiso_rt_price_1h",
+   "data_kind": "public",
+   "zero_shot_best": 0.20190024605484763,
+   "finetuned_best": 0.19309681534510606,
+   "ratio_best_ft_over_best_zs": 0.956397127384629,
+   "zero_shot_none": 0.20190024605484763,
+   "zero_shot_cov": null,
+   "finetuned_none": 0.19309681534510606,
+   "finetuned_cov": null,
+   "paired_delta_none": {
+    "est": -0.008803430709741572,
+    "lo": -0.011729484430374953,
+    "hi": -0.006047075509010375
+   },
+   "paired_delta_cov": null
+  },
+  {
+   "size": "209M",
+   "dataset": "uk_carbon_actual_1h",
+   "data_kind": "public",
+   "zero_shot_best": 0.18791988774282847,
+   "finetuned_best": 0.18236773942935378,
+   "ratio_best_ft_over_best_zs": 0.9704547060975638,
+   "zero_shot_none": 0.18791988774282847,
+   "zero_shot_cov": null,
+   "finetuned_none": 0.18236773942935378,
+   "finetuned_cov": null,
+   "paired_delta_none": {
+    "est": -0.005552148313474697,
+    "lo": -0.009162155565826667,
+    "hi": -0.001910169640580034
+   },
+   "paired_delta_cov": null
+  },
+  {
+   "size": "209M",
+   "dataset": "sim_rack_power_1s",
+   "data_kind": "simulated",
+   "zero_shot_best": 0.021646291542620436,
+   "finetuned_best": 0.01738044774353265,
+   "ratio_best_ft_over_best_zs": 0.8029295784597301,
+   "zero_shot_none": 0.021646291542620436,
+   "zero_shot_cov": 0.04530332596947653,
+   "finetuned_none": 0.020582698494208705,
+   "finetuned_cov": 0.01738044774353265,
+   "paired_delta_none": {
+    "est": -0.001063593048411731,
+    "lo": -0.002005384552297887,
+    "hi": -0.00028466236757205556
+   },
+   "paired_delta_cov": {
+    "est": -0.027922878225943883,
+    "lo": -0.04547006297999345,
+    "hi": -0.014316085915512707
+   }
+  },
+  {
+   "size": "209M",
+   "dataset": "sim_rack_temp_1min",
+   "data_kind": "simulated",
+   "zero_shot_best": 0.0055812107908825214,
+   "finetuned_best": 0.005506370558384452,
+   "ratio_best_ft_over_best_zs": 0.9865906816097453,
+   "zero_shot_none": 0.0055812107908825214,
+   "zero_shot_cov": 0.008310923943015252,
+   "finetuned_none": 0.005847884274667241,
+   "finetuned_cov": 0.005506370558384452,
+   "paired_delta_none": {
+    "est": 0.00026667348378471914,
+    "lo": -4.9177085655075066e-06,
+    "hi": 0.00046972016193909844
+   },
+   "paired_delta_cov": {
+    "est": -0.0028045533846308,
+    "lo": -0.004495207333270835,
+    "hi": -0.0013959360745258048
+   }
+  },
+  {
+   "size": "209M",
+   "dataset": "sim_site_power_1h",
+   "data_kind": "simulated",
+   "zero_shot_best": 0.11023389771500465,
+   "finetuned_best": 0.10003942426439652,
+   "ratio_best_ft_over_best_zs": 0.9075196136404011,
+   "zero_shot_none": 0.11793968603278115,
+   "zero_shot_cov": 0.11023389771500465,
+   "finetuned_none": 0.11773297284463995,
+   "finetuned_cov": 0.10003942426439652,
+   "paired_delta_none": {
+    "est": -0.0002067131881412082,
+    "lo": -0.002930422023089797,
+    "hi": 0.002724561653008713
+   },
+   "paired_delta_cov": {
+    "est": -0.01019447345060813,
+    "lo": -0.014079252421562514,
+    "hi": -0.006091033693460562
+   }
+  }
+ ]
 }
