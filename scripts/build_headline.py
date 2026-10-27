@@ -109,16 +109,23 @@ def main() -> None:
         b.get("power-cap packing (simulated, 6 test seeds)", f"best fixed policy at penalty {pen}", "gpu_stack", pk,
               ["result", "best_fixed_by_penalty", pen, "best_fixed_policy_by_mean_net_value_on_test_seeds"])
     # outage (simulated)
-    for ver in ("v1", "v2"):
+    for ver in ("v1", "v2", "v3"):
         oc = f"experiments/e003-heatwave/results/outage-{ver}.json"
         for pol in ("reactive", "e001", "naive", "ets", "arima", "ts5m", "ts28m", "perfect_foresight"):
             for metric, unit in (("useful_gpu_h", "GPU-h"), ("lost_gpu_h", "GPU-h"), ("deficit_gpu_h", "GPU-h")):
                 b.get(f"outage response {ver} (simulated, 10 test seeds)", f"{pol} {metric}", "gpu_stack", oc,
                       ["result", "policies", pol, "overall", metric, "mean"], unit)
+            if pol in ("reactive", "e001"):  # no warnings, so no recall or false alarms
+                continue
             b.get(f"outage response {ver} (simulated, 10 test seeds)", f"{pol} recall", "gpu_stack", oc,
                   ["result", "policies", pol, "overall", "recall", "value"])
             b.get(f"outage response {ver} (simulated, 10 test seeds)", f"{pol} false alarms per day", "gpu_stack", oc,
                   ["result", "policies", pol, "overall", "false_alarms_per_day", "mean"])
+            if ver == "v3" and pol != "reactive":
+                for metric in ("useful_gpu_h_minus_reactive", "lost_gpu_h_minus_reactive"):
+                    for stat in ("mean", "lo", "hi"):
+                        b.get(f"outage response {ver} (simulated, 10 test seeds)", f"{pol} {metric} ({stat})", "gpu_stack", oc,
+                              ["result", "paired_vs_reactive", pol, metric, stat], "GPU-h")
     # cost audit: README sentence generated from the result so it cannot drift
     ca = b.load("gpu_stack", "experiments/e003-heatwave/results/cost-audit-v1.json")
     sentences = {}

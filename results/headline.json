@@ -1742,26 +1742,6 @@
   },
   {
    "section": "outage response v1 (simulated, 10 test seeds)",
-   "label": "reactive recall",
-   "value": null,
-   "unit": "",
-   "data_kind": "simulated",
-   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v1.json",
-   "key": "result/policies/reactive/overall/recall/value",
-   "status": "missing key"
-  },
-  {
-   "section": "outage response v1 (simulated, 10 test seeds)",
-   "label": "reactive false alarms per day",
-   "value": null,
-   "unit": "",
-   "data_kind": "simulated",
-   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v1.json",
-   "key": "result/policies/reactive/overall/false_alarms_per_day/mean",
-   "status": "missing key"
-  },
-  {
-   "section": "outage response v1 (simulated, 10 test seeds)",
    "label": "e001 useful_gpu_h",
    "value": 1267.4949166514696,
    "unit": "GPU-h",
@@ -1789,26 +1769,6 @@
    "source": "gpu_stack:experiments/e003-heatwave/results/outage-v1.json",
    "key": "result/policies/e001/overall/deficit_gpu_h/mean",
    "status": "ok"
-  },
-  {
-   "section": "outage response v1 (simulated, 10 test seeds)",
-   "label": "e001 recall",
-   "value": null,
-   "unit": "",
-   "data_kind": "simulated",
-   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v1.json",
-   "key": "result/policies/e001/overall/recall/value",
-   "status": "missing key"
-  },
-  {
-   "section": "outage response v1 (simulated, 10 test seeds)",
-   "label": "e001 false alarms per day",
-   "value": null,
-   "unit": "",
-   "data_kind": "simulated",
-   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v1.json",
-   "key": "result/policies/e001/overall/false_alarms_per_day/mean",
-   "status": "missing key"
   },
   {
    "section": "outage response v1 (simulated, 10 test seeds)",
@@ -2142,26 +2102,6 @@
   },
   {
    "section": "outage response v2 (simulated, 10 test seeds)",
-   "label": "reactive recall",
-   "value": null,
-   "unit": "",
-   "data_kind": "simulated",
-   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
-   "key": "result/policies/reactive/overall/recall/value",
-   "status": "missing key"
-  },
-  {
-   "section": "outage response v2 (simulated, 10 test seeds)",
-   "label": "reactive false alarms per day",
-   "value": null,
-   "unit": "",
-   "data_kind": "simulated",
-   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
-   "key": "result/policies/reactive/overall/false_alarms_per_day/mean",
-   "status": "missing key"
-  },
-  {
-   "section": "outage response v2 (simulated, 10 test seeds)",
    "label": "e001 useful_gpu_h",
    "value": 1267.4949166514696,
    "unit": "GPU-h",
@@ -2189,26 +2129,6 @@
    "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
    "key": "result/policies/e001/overall/deficit_gpu_h/mean",
    "status": "ok"
-  },
-  {
-   "section": "outage response v2 (simulated, 10 test seeds)",
-   "label": "e001 recall",
-   "value": null,
-   "unit": "",
-   "data_kind": "simulated",
-   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
-   "key": "result/policies/e001/overall/recall/value",
-   "status": "missing key"
-  },
-  {
-   "section": "outage response v2 (simulated, 10 test seeds)",
-   "label": "e001 false alarms per day",
-   "value": null,
-   "unit": "",
-   "data_kind": "simulated",
-   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
-   "key": "result/policies/e001/overall/false_alarms_per_day/mean",
-   "status": "missing key"
   },
   {
    "section": "outage response v2 (simulated, 10 test seeds)",
@@ -2508,6 +2428,726 @@
    "data_kind": "simulated",
    "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
    "key": "result/policies/perfect_foresight/overall/false_alarms_per_day/mean",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v3 (simulated, 10 test seeds)",
+   "label": "reactive useful_gpu_h",
+   "value": 1722.1336059637688,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v3.json",
+   "key": "result/policies/reactive/overall/useful_gpu_h/mean",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v3 (simulated, 10 test seeds)",
+   "label": "reactive lost_gpu_h",
+   "value": 35.056193378909306,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v3.json",
+   "key": "result/policies/reactive/overall/lost_gpu_h/mean",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v3 (simulated, 10 test seeds)",
+   "label": "reactive deficit_gpu_h",
+   "value": 10.665678145327002,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v3.json",
+   "key": "result/policies/reactive/overall/deficit_gpu_h/mean",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v3 (simulated, 10 test seeds)",
+   "label": "e001 useful_gpu_h",
+   "value": 1267.4949166514696,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v3.json",
+   "key": "result/policies/e001/overall/useful_gpu_h/mean",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v3 (simulated, 10 test seeds)",
+   "label": "e001 lost_gpu_h",
+   "value": 0.7429954685335168,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v3.json",
+   "key": "result/policies/e001/overall/lost_gpu_h/mean",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v3 (simulated, 10 test seeds)",
+   "label": "e001 deficit_gpu_h",
+   "value": 465.3043674576261,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v3.json",
+   "key": "result/policies/e001/overall/deficit_gpu_h/mean",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v3 (simulated, 10 test seeds)",
+   "label": "naive useful_gpu_h",
+   "value": 1729.1087591392038,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v3.json",
+   "key": "result/policies/naive/overall/useful_gpu_h/mean",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v3 (simulated, 10 test seeds)",
+   "label": "naive lost_gpu_h",
+   "value": 19.709169707184945,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v3.json",
+   "key": "result/policies/naive/overall/lost_gpu_h/mean",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v3 (simulated, 10 test seeds)",
+   "label": "naive deficit_gpu_h",
+   "value": 3.690524969891908,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v3.json",
+   "key": "result/policies/naive/overall/deficit_gpu_h/mean",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v3 (simulated, 10 test seeds)",
+   "label": "naive recall",
+   "value": 0.3,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v3.json",
+   "key": "result/policies/naive/overall/recall/value",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v3 (simulated, 10 test seeds)",
+   "label": "naive false alarms per day",
+   "value": 5.4,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v3.json",
+   "key": "result/policies/naive/overall/false_alarms_per_day/mean",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v3 (simulated, 10 test seeds)",
+   "label": "naive useful_gpu_h_minus_reactive (mean)",
+   "value": 6.975153175435094,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v3.json",
+   "key": "result/paired_vs_reactive/naive/useful_gpu_h_minus_reactive/mean",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v3 (simulated, 10 test seeds)",
+   "label": "naive useful_gpu_h_minus_reactive (lo)",
+   "value": -0.11911111111105584,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v3.json",
+   "key": "result/paired_vs_reactive/naive/useful_gpu_h_minus_reactive/lo",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v3 (simulated, 10 test seeds)",
+   "label": "naive useful_gpu_h_minus_reactive (hi)",
+   "value": 20.681985353504274,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v3.json",
+   "key": "result/paired_vs_reactive/naive/useful_gpu_h_minus_reactive/hi",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v3 (simulated, 10 test seeds)",
+   "label": "naive lost_gpu_h_minus_reactive (mean)",
+   "value": -15.347023671724363,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v3.json",
+   "key": "result/paired_vs_reactive/naive/lost_gpu_h_minus_reactive/mean",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v3 (simulated, 10 test seeds)",
+   "label": "naive lost_gpu_h_minus_reactive (lo)",
+   "value": -28.951285560237178,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v3.json",
+   "key": "result/paired_vs_reactive/naive/lost_gpu_h_minus_reactive/lo",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v3 (simulated, 10 test seeds)",
+   "label": "naive lost_gpu_h_minus_reactive (hi)",
+   "value": -5.721451907891814,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v3.json",
+   "key": "result/paired_vs_reactive/naive/lost_gpu_h_minus_reactive/hi",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v3 (simulated, 10 test seeds)",
+   "label": "ets useful_gpu_h",
+   "value": 1721.6076481515872,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v3.json",
+   "key": "result/policies/ets/overall/useful_gpu_h/mean",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v3 (simulated, 10 test seeds)",
+   "label": "ets lost_gpu_h",
+   "value": 26.230914668237034,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v3.json",
+   "key": "result/policies/ets/overall/lost_gpu_h/mean",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v3 (simulated, 10 test seeds)",
+   "label": "ets deficit_gpu_h",
+   "value": 11.191635957508879,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v3.json",
+   "key": "result/policies/ets/overall/deficit_gpu_h/mean",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v3 (simulated, 10 test seeds)",
+   "label": "ets recall",
+   "value": 0.26666666666666666,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v3.json",
+   "key": "result/policies/ets/overall/recall/value",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v3 (simulated, 10 test seeds)",
+   "label": "ets false alarms per day",
+   "value": 1.8,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v3.json",
+   "key": "result/policies/ets/overall/false_alarms_per_day/mean",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v3 (simulated, 10 test seeds)",
+   "label": "ets useful_gpu_h_minus_reactive (mean)",
+   "value": -0.5259578121818776,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v3.json",
+   "key": "result/paired_vs_reactive/ets/useful_gpu_h_minus_reactive/mean",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v3 (simulated, 10 test seeds)",
+   "label": "ets useful_gpu_h_minus_reactive (lo)",
+   "value": -1.6254594438438623,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v3.json",
+   "key": "result/paired_vs_reactive/ets/useful_gpu_h_minus_reactive/lo",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v3 (simulated, 10 test seeds)",
+   "label": "ets useful_gpu_h_minus_reactive (hi)",
+   "value": 0.14980540078007734,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v3.json",
+   "key": "result/paired_vs_reactive/ets/useful_gpu_h_minus_reactive/hi",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v3 (simulated, 10 test seeds)",
+   "label": "ets lost_gpu_h_minus_reactive (mean)",
+   "value": -8.82527871067227,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v3.json",
+   "key": "result/paired_vs_reactive/ets/lost_gpu_h_minus_reactive/mean",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v3 (simulated, 10 test seeds)",
+   "label": "ets lost_gpu_h_minus_reactive (lo)",
+   "value": -14.155135036571679,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v3.json",
+   "key": "result/paired_vs_reactive/ets/lost_gpu_h_minus_reactive/lo",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v3 (simulated, 10 test seeds)",
+   "label": "ets lost_gpu_h_minus_reactive (hi)",
+   "value": -4.263537103154194,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v3.json",
+   "key": "result/paired_vs_reactive/ets/lost_gpu_h_minus_reactive/hi",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v3 (simulated, 10 test seeds)",
+   "label": "arima useful_gpu_h",
+   "value": 1727.3744411699656,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v3.json",
+   "key": "result/policies/arima/overall/useful_gpu_h/mean",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v3 (simulated, 10 test seeds)",
+   "label": "arima lost_gpu_h",
+   "value": 17.43237094249078,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v3.json",
+   "key": "result/policies/arima/overall/lost_gpu_h/mean",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v3 (simulated, 10 test seeds)",
+   "label": "arima deficit_gpu_h",
+   "value": 5.424842939130167,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v3.json",
+   "key": "result/policies/arima/overall/deficit_gpu_h/mean",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v3 (simulated, 10 test seeds)",
+   "label": "arima recall",
+   "value": 0.3,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v3.json",
+   "key": "result/policies/arima/overall/recall/value",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v3 (simulated, 10 test seeds)",
+   "label": "arima false alarms per day",
+   "value": 6.0,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v3.json",
+   "key": "result/policies/arima/overall/false_alarms_per_day/mean",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v3 (simulated, 10 test seeds)",
+   "label": "arima useful_gpu_h_minus_reactive (mean)",
+   "value": 5.240835206196834,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v3.json",
+   "key": "result/paired_vs_reactive/arima/useful_gpu_h_minus_reactive/mean",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v3 (simulated, 10 test seeds)",
+   "label": "arima useful_gpu_h_minus_reactive (lo)",
+   "value": -0.21222608914667945,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v3.json",
+   "key": "result/paired_vs_reactive/arima/useful_gpu_h_minus_reactive/lo",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v3 (simulated, 10 test seeds)",
+   "label": "arima useful_gpu_h_minus_reactive (hi)",
+   "value": 15.532368942109537,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v3.json",
+   "key": "result/paired_vs_reactive/arima/useful_gpu_h_minus_reactive/hi",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v3 (simulated, 10 test seeds)",
+   "label": "arima lost_gpu_h_minus_reactive (mean)",
+   "value": -17.62382243641853,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v3.json",
+   "key": "result/paired_vs_reactive/arima/lost_gpu_h_minus_reactive/mean",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v3 (simulated, 10 test seeds)",
+   "label": "arima lost_gpu_h_minus_reactive (lo)",
+   "value": -32.62761783576542,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v3.json",
+   "key": "result/paired_vs_reactive/arima/lost_gpu_h_minus_reactive/lo",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v3 (simulated, 10 test seeds)",
+   "label": "arima lost_gpu_h_minus_reactive (hi)",
+   "value": -6.8674614857388825,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v3.json",
+   "key": "result/paired_vs_reactive/arima/lost_gpu_h_minus_reactive/hi",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v3 (simulated, 10 test seeds)",
+   "label": "ts5m useful_gpu_h",
+   "value": 1728.3130433602685,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v3.json",
+   "key": "result/policies/ts5m/overall/useful_gpu_h/mean",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v3 (simulated, 10 test seeds)",
+   "label": "ts5m lost_gpu_h",
+   "value": 21.206779636505686,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v3.json",
+   "key": "result/policies/ts5m/overall/lost_gpu_h/mean",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v3 (simulated, 10 test seeds)",
+   "label": "ts5m deficit_gpu_h",
+   "value": 4.486240748827481,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v3.json",
+   "key": "result/policies/ts5m/overall/deficit_gpu_h/mean",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v3 (simulated, 10 test seeds)",
+   "label": "ts5m recall",
+   "value": 0.28888888888888886,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v3.json",
+   "key": "result/policies/ts5m/overall/recall/value",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v3 (simulated, 10 test seeds)",
+   "label": "ts5m false alarms per day",
+   "value": 0.4,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v3.json",
+   "key": "result/policies/ts5m/overall/false_alarms_per_day/mean",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v3 (simulated, 10 test seeds)",
+   "label": "ts5m useful_gpu_h_minus_reactive (mean)",
+   "value": 6.17943739649952,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v3.json",
+   "key": "result/paired_vs_reactive/ts5m/useful_gpu_h_minus_reactive/mean",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v3 (simulated, 10 test seeds)",
+   "label": "ts5m useful_gpu_h_minus_reactive (lo)",
+   "value": -0.6266488888887125,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v3.json",
+   "key": "result/paired_vs_reactive/ts5m/useful_gpu_h_minus_reactive/lo",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v3 (simulated, 10 test seeds)",
+   "label": "ts5m useful_gpu_h_minus_reactive (hi)",
+   "value": 18.70626068567981,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v3.json",
+   "key": "result/paired_vs_reactive/ts5m/useful_gpu_h_minus_reactive/hi",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v3 (simulated, 10 test seeds)",
+   "label": "ts5m lost_gpu_h_minus_reactive (mean)",
+   "value": -13.849413742403618,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v3.json",
+   "key": "result/paired_vs_reactive/ts5m/lost_gpu_h_minus_reactive/mean",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v3 (simulated, 10 test seeds)",
+   "label": "ts5m lost_gpu_h_minus_reactive (lo)",
+   "value": -28.065652323601903,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v3.json",
+   "key": "result/paired_vs_reactive/ts5m/lost_gpu_h_minus_reactive/lo",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v3 (simulated, 10 test seeds)",
+   "label": "ts5m lost_gpu_h_minus_reactive (hi)",
+   "value": -4.26539559650239,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v3.json",
+   "key": "result/paired_vs_reactive/ts5m/lost_gpu_h_minus_reactive/hi",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v3 (simulated, 10 test seeds)",
+   "label": "ts28m useful_gpu_h",
+   "value": 1728.3130433602685,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v3.json",
+   "key": "result/policies/ts28m/overall/useful_gpu_h/mean",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v3 (simulated, 10 test seeds)",
+   "label": "ts28m lost_gpu_h",
+   "value": 20.61613227653404,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v3.json",
+   "key": "result/policies/ts28m/overall/lost_gpu_h/mean",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v3 (simulated, 10 test seeds)",
+   "label": "ts28m deficit_gpu_h",
+   "value": 4.486240748827481,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v3.json",
+   "key": "result/policies/ts28m/overall/deficit_gpu_h/mean",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v3 (simulated, 10 test seeds)",
+   "label": "ts28m recall",
+   "value": 0.3,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v3.json",
+   "key": "result/policies/ts28m/overall/recall/value",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v3 (simulated, 10 test seeds)",
+   "label": "ts28m false alarms per day",
+   "value": 0.4,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v3.json",
+   "key": "result/policies/ts28m/overall/false_alarms_per_day/mean",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v3 (simulated, 10 test seeds)",
+   "label": "ts28m useful_gpu_h_minus_reactive (mean)",
+   "value": 6.17943739649952,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v3.json",
+   "key": "result/paired_vs_reactive/ts28m/useful_gpu_h_minus_reactive/mean",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v3 (simulated, 10 test seeds)",
+   "label": "ts28m useful_gpu_h_minus_reactive (lo)",
+   "value": -0.6266488888887125,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v3.json",
+   "key": "result/paired_vs_reactive/ts28m/useful_gpu_h_minus_reactive/lo",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v3 (simulated, 10 test seeds)",
+   "label": "ts28m useful_gpu_h_minus_reactive (hi)",
+   "value": 18.70626068567981,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v3.json",
+   "key": "result/paired_vs_reactive/ts28m/useful_gpu_h_minus_reactive/hi",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v3 (simulated, 10 test seeds)",
+   "label": "ts28m lost_gpu_h_minus_reactive (mean)",
+   "value": -14.440061102375267,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v3.json",
+   "key": "result/paired_vs_reactive/ts28m/lost_gpu_h_minus_reactive/mean",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v3 (simulated, 10 test seeds)",
+   "label": "ts28m lost_gpu_h_minus_reactive (lo)",
+   "value": -29.83759440351685,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v3.json",
+   "key": "result/paired_vs_reactive/ts28m/lost_gpu_h_minus_reactive/lo",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v3 (simulated, 10 test seeds)",
+   "label": "ts28m lost_gpu_h_minus_reactive (hi)",
+   "value": -4.26539559650239,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v3.json",
+   "key": "result/paired_vs_reactive/ts28m/lost_gpu_h_minus_reactive/hi",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v3 (simulated, 10 test seeds)",
+   "label": "perfect_foresight useful_gpu_h",
+   "value": 1733.7197135300241,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v3.json",
+   "key": "result/policies/perfect_foresight/overall/useful_gpu_h/mean",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v3 (simulated, 10 test seeds)",
+   "label": "perfect_foresight lost_gpu_h",
+   "value": 4.176335448924352,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v3.json",
+   "key": "result/policies/perfect_foresight/overall/lost_gpu_h/mean",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v3 (simulated, 10 test seeds)",
+   "label": "perfect_foresight deficit_gpu_h",
+   "value": -0.920429420928258,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v3.json",
+   "key": "result/policies/perfect_foresight/overall/deficit_gpu_h/mean",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v3 (simulated, 10 test seeds)",
+   "label": "perfect_foresight recall",
+   "value": 1.0,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v3.json",
+   "key": "result/policies/perfect_foresight/overall/recall/value",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v3 (simulated, 10 test seeds)",
+   "label": "perfect_foresight false alarms per day",
+   "value": 0.0,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v3.json",
+   "key": "result/policies/perfect_foresight/overall/false_alarms_per_day/mean",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v3 (simulated, 10 test seeds)",
+   "label": "perfect_foresight useful_gpu_h_minus_reactive (mean)",
+   "value": 11.58610756625526,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v3.json",
+   "key": "result/paired_vs_reactive/perfect_foresight/useful_gpu_h_minus_reactive/mean",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v3 (simulated, 10 test seeds)",
+   "label": "perfect_foresight useful_gpu_h_minus_reactive (lo)",
+   "value": 0.7735974195369181,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v3.json",
+   "key": "result/paired_vs_reactive/perfect_foresight/useful_gpu_h_minus_reactive/lo",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v3 (simulated, 10 test seeds)",
+   "label": "perfect_foresight useful_gpu_h_minus_reactive (hi)",
+   "value": 27.93800512075966,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v3.json",
+   "key": "result/paired_vs_reactive/perfect_foresight/useful_gpu_h_minus_reactive/hi",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v3 (simulated, 10 test seeds)",
+   "label": "perfect_foresight lost_gpu_h_minus_reactive (mean)",
+   "value": -30.879857929984958,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v3.json",
+   "key": "result/paired_vs_reactive/perfect_foresight/lost_gpu_h_minus_reactive/mean",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v3 (simulated, 10 test seeds)",
+   "label": "perfect_foresight lost_gpu_h_minus_reactive (lo)",
+   "value": -48.100364668897654,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v3.json",
+   "key": "result/paired_vs_reactive/perfect_foresight/lost_gpu_h_minus_reactive/lo",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v3 (simulated, 10 test seeds)",
+   "label": "perfect_foresight lost_gpu_h_minus_reactive (hi)",
+   "value": -15.686049552247606,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v3.json",
+   "key": "result/paired_vs_reactive/perfect_foresight/lost_gpu_h_minus_reactive/hi",
    "status": "ok"
   },
   {
@@ -5036,13 +5676,2763 @@
   },
   {
    "section": "known-future inputs, simulated cluster (test seeds)",
-   "label": "result",
-   "value": null,
+   "label": "sim_site_power_1h timestral-209M none WQL",
+   "value": 0.10050345268295748,
    "unit": "",
-   "data_kind": "",
+   "data_kind": "mixed (simulated plant, public environment)",
    "source": "heatwave:results/ablation/ablation_sim.json",
-   "key": "result",
-   "status": "missing file"
+   "key": "result/datasets/sim_site_power_1h/methods/timestral-209M/configs/none/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1h timestral-209M J WQL",
+   "value": 0.09098873527640565,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1h/methods/timestral-209M/configs/J/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1h timestral-209M J minus none (paired)",
+   "value": -0.009514717406551826,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1h/methods/timestral-209M/configs/J/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1h timestral-209M J minus none, interval",
+   "value": [
+    -0.009059436770109655,
+    -0.0026123626703275326
+   ],
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1h/methods/timestral-209M/configs/J/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1h timestral-209M P WQL",
+   "value": 0.1045071877864985,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1h/methods/timestral-209M/configs/P/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1h timestral-209M P minus none (paired)",
+   "value": 0.004003735103541031,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1h/methods/timestral-209M/configs/P/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1h timestral-209M P minus none, interval",
+   "value": [
+    0.002967756615122701,
+    0.0055836814851609115
+   ],
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1h/methods/timestral-209M/configs/P/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1h timestral-209M W WQL",
+   "value": 0.10514386560913057,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1h/methods/timestral-209M/configs/W/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1h timestral-209M W minus none (paired)",
+   "value": 0.004640412926173093,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1h/methods/timestral-209M/configs/W/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1h timestral-209M W minus none, interval",
+   "value": [
+    0.0026422561441308734,
+    0.006007702889317948
+   ],
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1h/methods/timestral-209M/configs/W/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1h timestral-209M C WQL",
+   "value": 0.10466401932586912,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1h/methods/timestral-209M/configs/C/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1h timestral-209M C minus none (paired)",
+   "value": 0.004160566642911645,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1h/methods/timestral-209M/configs/C/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1h timestral-209M C minus none, interval",
+   "value": [
+    0.0017901981179270585,
+    0.004241563522074874
+   ],
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1h/methods/timestral-209M/configs/C/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1h timestral-209M J+P WQL",
+   "value": 0.09282827229247483,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1h/methods/timestral-209M/configs/J+P/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1h timestral-209M J+P minus none (paired)",
+   "value": -0.00767518039048265,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1h/methods/timestral-209M/configs/J+P/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1h timestral-209M J+P minus none, interval",
+   "value": [
+    -0.007846047561850259,
+    -0.0003464236206896072
+   ],
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1h/methods/timestral-209M/configs/J+P/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1h timestral-209M J+P+W WQL",
+   "value": 0.08803979805167948,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1h/methods/timestral-209M/configs/J+P+W/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1h timestral-209M J+P+W minus none (paired)",
+   "value": -0.012463654631277993,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1h/methods/timestral-209M/configs/J+P+W/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1h timestral-209M J+P+W minus none, interval",
+   "value": [
+    -0.01212438299177994,
+    -0.005603252091403818
+   ],
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1h/methods/timestral-209M/configs/J+P+W/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1h timestral-209M J+P+W+C WQL",
+   "value": 0.09017735801570648,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1h/methods/timestral-209M/configs/J+P+W+C/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1h timestral-209M J+P+W+C minus none (paired)",
+   "value": -0.010326094667250998,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1h/methods/timestral-209M/configs/J+P+W+C/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1h timestral-209M J+P+W+C minus none, interval",
+   "value": [
+    -0.010729939072513912,
+    -0.0037506325953007374
+   ],
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1h/methods/timestral-209M/configs/J+P+W+C/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1h timestral-209M P+W+C WQL",
+   "value": 0.10356081017977292,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1h/methods/timestral-209M/configs/P+W+C/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1h timestral-209M P+W+C minus none (paired)",
+   "value": 0.0030573574968154466,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1h/methods/timestral-209M/configs/P+W+C/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1h timestral-209M P+W+C minus none, interval",
+   "value": [
+    0.0015878121671105186,
+    0.0050991900917999
+   ],
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1h/methods/timestral-209M/configs/P+W+C/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1h timestral-209M J+W+C WQL",
+   "value": 0.09119348632015646,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1h/methods/timestral-209M/configs/J+W+C/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1h timestral-209M J+W+C minus none (paired)",
+   "value": -0.009309966362801014,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1h/methods/timestral-209M/configs/J+W+C/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1h timestral-209M J+W+C minus none, interval",
+   "value": [
+    -0.009066911340436745,
+    -0.004166091937874303
+   ],
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1h/methods/timestral-209M/configs/J+W+C/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1h timestral-209M J+P+C WQL",
+   "value": 0.0906704039596599,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1h/methods/timestral-209M/configs/J+P+C/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1h timestral-209M J+P+C minus none (paired)",
+   "value": -0.009833048723297572,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1h/methods/timestral-209M/configs/J+P+C/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1h timestral-209M J+P+C minus none, interval",
+   "value": [
+    -0.011190964722637765,
+    -0.003018281618713244
+   ],
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1h/methods/timestral-209M/configs/J+P+C/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1h timestral-28M none WQL",
+   "value": 0.1028409414784098,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1h/methods/timestral-28M/configs/none/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1h timestral-28M J WQL",
+   "value": 0.09641784742306773,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1h/methods/timestral-28M/configs/J/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1h timestral-28M J minus none (paired)",
+   "value": -0.0064230940553420685,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1h/methods/timestral-28M/configs/J/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1h timestral-28M J minus none, interval",
+   "value": [
+    -0.006000788821117943,
+    0.00013850438930914052
+   ],
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1h/methods/timestral-28M/configs/J/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1h timestral-28M P WQL",
+   "value": 0.11141838975238895,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1h/methods/timestral-28M/configs/P/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1h timestral-28M P minus none (paired)",
+   "value": 0.008577448273979146,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1h/methods/timestral-28M/configs/P/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1h timestral-28M P minus none, interval",
+   "value": [
+    0.005843670114043355,
+    0.009865066267050625
+   ],
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1h/methods/timestral-28M/configs/P/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1h timestral-28M W WQL",
+   "value": 0.10556599954083302,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1h/methods/timestral-28M/configs/W/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1h timestral-28M W minus none (paired)",
+   "value": 0.002725058062423222,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1h/methods/timestral-28M/configs/W/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1h timestral-28M W minus none, interval",
+   "value": [
+    0.001234332093886945,
+    0.0035354878922764133
+   ],
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1h/methods/timestral-28M/configs/W/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1h timestral-28M C WQL",
+   "value": 0.10479429816272355,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1h/methods/timestral-28M/configs/C/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1h timestral-28M C minus none (paired)",
+   "value": 0.001953356684313748,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1h/methods/timestral-28M/configs/C/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1h timestral-28M C minus none, interval",
+   "value": [
+    -0.0004611553142091246,
+    0.0019454268760100081
+   ],
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1h/methods/timestral-28M/configs/C/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1h timestral-28M J+P WQL",
+   "value": 0.10112652115959168,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1h/methods/timestral-28M/configs/J+P/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1h timestral-28M J+P minus none (paired)",
+   "value": -0.001714420318818119,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1h/methods/timestral-28M/configs/J+P/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1h timestral-28M J+P minus none, interval",
+   "value": [
+    -0.001778264200992797,
+    0.005106209018235325
+   ],
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1h/methods/timestral-28M/configs/J+P/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1h timestral-28M J+P+W WQL",
+   "value": 0.09601192155616617,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1h/methods/timestral-28M/configs/J+P+W/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1h timestral-28M J+P+W minus none (paired)",
+   "value": -0.006829019922243634,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1h/methods/timestral-28M/configs/J+P+W/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1h timestral-28M J+P+W minus none, interval",
+   "value": [
+    -0.006568655348911354,
+    -0.0012162425617282722
+   ],
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1h/methods/timestral-28M/configs/J+P+W/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1h timestral-28M J+P+W+C WQL",
+   "value": 0.09312851422598357,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1h/methods/timestral-28M/configs/J+P+W+C/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1h timestral-28M J+P+W+C minus none (paired)",
+   "value": -0.009712427252426228,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1h/methods/timestral-28M/configs/J+P+W+C/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1h timestral-28M J+P+W+C minus none, interval",
+   "value": [
+    -0.009509976714658643,
+    -0.0041552767937846746
+   ],
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1h/methods/timestral-28M/configs/J+P+W+C/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1h timestral-28M P+W+C WQL",
+   "value": 0.10174313862595528,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1h/methods/timestral-28M/configs/P+W+C/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1h timestral-28M P+W+C minus none (paired)",
+   "value": -0.0010978028524545186,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1h/methods/timestral-28M/configs/P+W+C/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1h timestral-28M P+W+C minus none, interval",
+   "value": [
+    -0.0019297711729746182,
+    9.621737306014888e-05
+   ],
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1h/methods/timestral-28M/configs/P+W+C/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1h timestral-28M J+W+C WQL",
+   "value": 0.09301264703335617,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1h/methods/timestral-28M/configs/J+W+C/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1h timestral-28M J+W+C minus none (paired)",
+   "value": -0.009828294445053634,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1h/methods/timestral-28M/configs/J+W+C/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1h timestral-28M J+W+C minus none, interval",
+   "value": [
+    -0.00963822743232343,
+    -0.004880696022203915
+   ],
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1h/methods/timestral-28M/configs/J+W+C/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1h timestral-28M J+P+C WQL",
+   "value": 0.09461037899819429,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1h/methods/timestral-28M/configs/J+P+C/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1h timestral-28M J+P+C minus none (paired)",
+   "value": -0.008230562480215517,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1h/methods/timestral-28M/configs/J+P+C/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1h timestral-28M J+P+C minus none, interval",
+   "value": [
+    -0.008019230778164224,
+    -0.002186269264127801
+   ],
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1h/methods/timestral-28M/configs/J+P+C/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1h seasonal-naive-24 none WQL",
+   "value": 0.14163682704054542,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1h/methods/seasonal-naive-24/configs/none/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1min timestral-209M none WQL",
+   "value": 0.05097233590752779,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1min/methods/timestral-209M/configs/none/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1min timestral-209M J WQL",
+   "value": 0.03912804451592001,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1min/methods/timestral-209M/configs/J/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1min timestral-209M J minus none (paired)",
+   "value": -0.01184429139160778,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1min/methods/timestral-209M/configs/J/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1min timestral-209M J minus none, interval",
+   "value": [
+    -0.01563751899469284,
+    -0.008234123557175647
+   ],
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1min/methods/timestral-209M/configs/J/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1min timestral-209M P WQL",
+   "value": 0.047444749934700055,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1min/methods/timestral-209M/configs/P/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1min timestral-209M P minus none (paired)",
+   "value": -0.003527585972827735,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1min/methods/timestral-209M/configs/P/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1min timestral-209M P minus none, interval",
+   "value": [
+    -0.005294353744187335,
+    -0.0016282111153559735
+   ],
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1min/methods/timestral-209M/configs/P/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1min timestral-209M W WQL",
+   "value": 0.05196950857002641,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1min/methods/timestral-209M/configs/W/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1min timestral-209M W minus none (paired)",
+   "value": 0.000997172662498623,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1min/methods/timestral-209M/configs/W/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1min timestral-209M W minus none, interval",
+   "value": [
+    0.000388523844032229,
+    0.0016154404400065224
+   ],
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1min/methods/timestral-209M/configs/W/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1min timestral-209M C WQL",
+   "value": 0.05092361996227257,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1min/methods/timestral-209M/configs/C/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1min timestral-209M C minus none (paired)",
+   "value": -4.8715945255219106e-05,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1min/methods/timestral-209M/configs/C/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1min timestral-209M C minus none, interval",
+   "value": [
+    -0.0005237335357836575,
+    0.0002952797051838771
+   ],
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1min/methods/timestral-209M/configs/C/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1min timestral-209M J+P WQL",
+   "value": 0.039018352935824285,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1min/methods/timestral-209M/configs/J+P/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1min timestral-209M J+P minus none (paired)",
+   "value": -0.011953982971703504,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1min/methods/timestral-209M/configs/J+P/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1min timestral-209M J+P minus none, interval",
+   "value": [
+    -0.01569816949015066,
+    -0.008463555326893246
+   ],
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1min/methods/timestral-209M/configs/J+P/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1min timestral-209M J+P+W WQL",
+   "value": 0.03834872189172747,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1min/methods/timestral-209M/configs/J+P+W/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1min timestral-209M J+P+W minus none (paired)",
+   "value": -0.012623614015800318,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1min/methods/timestral-209M/configs/J+P+W/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1min timestral-209M J+P+W minus none, interval",
+   "value": [
+    -0.015988235845148305,
+    -0.009564618952652676
+   ],
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1min/methods/timestral-209M/configs/J+P+W/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1min timestral-209M J+P+W+C WQL",
+   "value": 0.03860605331560536,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1min/methods/timestral-209M/configs/J+P+W+C/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1min timestral-209M J+P+W+C minus none (paired)",
+   "value": -0.012366282591922427,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1min/methods/timestral-209M/configs/J+P+W+C/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1min timestral-209M J+P+W+C minus none, interval",
+   "value": [
+    -0.015754948487510505,
+    -0.009312551220264078
+   ],
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1min/methods/timestral-209M/configs/J+P+W+C/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1min timestral-209M P+W+C WQL",
+   "value": 0.04823257072439613,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1min/methods/timestral-209M/configs/P+W+C/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1min timestral-209M P+W+C minus none (paired)",
+   "value": -0.002739765183131661,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1min/methods/timestral-209M/configs/P+W+C/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1min timestral-209M P+W+C minus none, interval",
+   "value": [
+    -0.004100825142496498,
+    -0.0010045199963470276
+   ],
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1min/methods/timestral-209M/configs/P+W+C/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1min timestral-209M J+W+C WQL",
+   "value": 0.038807780008657006,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1min/methods/timestral-209M/configs/J+W+C/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1min timestral-209M J+W+C minus none (paired)",
+   "value": -0.012164555898870784,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1min/methods/timestral-209M/configs/J+W+C/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1min timestral-209M J+W+C minus none, interval",
+   "value": [
+    -0.01575263886683061,
+    -0.009072307413364263
+   ],
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1min/methods/timestral-209M/configs/J+W+C/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1min timestral-209M J+P+C WQL",
+   "value": 0.03882541984423477,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1min/methods/timestral-209M/configs/J+P+C/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1min timestral-209M J+P+C minus none (paired)",
+   "value": -0.012146916063293017,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1min/methods/timestral-209M/configs/J+P+C/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1min timestral-209M J+P+C minus none, interval",
+   "value": [
+    -0.015486533673207528,
+    -0.00900327889955412
+   ],
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1min/methods/timestral-209M/configs/J+P+C/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1min timestral-28M none WQL",
+   "value": 0.052263454631143506,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1min/methods/timestral-28M/configs/none/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1min timestral-28M J WQL",
+   "value": 0.04293074639041,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1min/methods/timestral-28M/configs/J/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1min timestral-28M J minus none (paired)",
+   "value": -0.009332708240733505,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1min/methods/timestral-28M/configs/J/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1min timestral-28M J minus none, interval",
+   "value": [
+    -0.012685225599970098,
+    -0.006379566751472601
+   ],
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1min/methods/timestral-28M/configs/J/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1min timestral-28M P WQL",
+   "value": 0.04967083030356122,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1min/methods/timestral-28M/configs/P/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1min timestral-28M P minus none (paired)",
+   "value": -0.0025926243275822894,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1min/methods/timestral-28M/configs/P/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1min timestral-28M P minus none, interval",
+   "value": [
+    -0.0040401326426554,
+    -0.0009889546552495285
+   ],
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1min/methods/timestral-28M/configs/P/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1min timestral-28M W WQL",
+   "value": 0.05309904231283807,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1min/methods/timestral-28M/configs/W/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1min timestral-28M W minus none (paired)",
+   "value": 0.0008355876816945607,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1min/methods/timestral-28M/configs/W/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1min timestral-28M W minus none, interval",
+   "value": [
+    7.183164868724019e-05,
+    0.0014593425175049662
+   ],
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1min/methods/timestral-28M/configs/W/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1min timestral-28M C WQL",
+   "value": 0.053213259691783234,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1min/methods/timestral-28M/configs/C/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1min timestral-28M C minus none (paired)",
+   "value": 0.0009498050606397274,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1min/methods/timestral-28M/configs/C/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1min timestral-28M C minus none, interval",
+   "value": [
+    0.00040770685994467106,
+    0.0014233388618477385
+   ],
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1min/methods/timestral-28M/configs/C/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1min timestral-28M J+P WQL",
+   "value": 0.04234597754163441,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1min/methods/timestral-28M/configs/J+P/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1min timestral-28M J+P minus none (paired)",
+   "value": -0.009917477089509096,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1min/methods/timestral-28M/configs/J+P/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1min timestral-28M J+P minus none, interval",
+   "value": [
+    -0.013317167393588066,
+    -0.006859054278894676
+   ],
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1min/methods/timestral-28M/configs/J+P/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1min timestral-28M J+P+W WQL",
+   "value": 0.041206363655462326,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1min/methods/timestral-28M/configs/J+P+W/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1min timestral-28M J+P+W minus none (paired)",
+   "value": -0.01105709097568118,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1min/methods/timestral-28M/configs/J+P+W/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1min timestral-28M J+P+W minus none, interval",
+   "value": [
+    -0.014334680764704571,
+    -0.008100046490149554
+   ],
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1min/methods/timestral-28M/configs/J+P+W/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1min timestral-28M J+P+W+C WQL",
+   "value": 0.04336097672657745,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1min/methods/timestral-28M/configs/J+P+W+C/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1min timestral-28M J+P+W+C minus none (paired)",
+   "value": -0.008902477904566053,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1min/methods/timestral-28M/configs/J+P+W+C/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1min timestral-28M J+P+W+C minus none, interval",
+   "value": [
+    -0.011767031294132946,
+    -0.0063843599161870985
+   ],
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1min/methods/timestral-28M/configs/J+P+W+C/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1min timestral-28M P+W+C WQL",
+   "value": 0.05068906526945898,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1min/methods/timestral-28M/configs/P+W+C/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1min timestral-28M P+W+C minus none (paired)",
+   "value": -0.001574389361684525,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1min/methods/timestral-28M/configs/P+W+C/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1min timestral-28M P+W+C minus none, interval",
+   "value": [
+    -0.0026462181608723975,
+    -0.0002597739193004739
+   ],
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1min/methods/timestral-28M/configs/P+W+C/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1min timestral-28M J+W+C WQL",
+   "value": 0.04426180134781377,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1min/methods/timestral-28M/configs/J+W+C/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1min timestral-28M J+W+C minus none (paired)",
+   "value": -0.008001653283329739,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1min/methods/timestral-28M/configs/J+W+C/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1min timestral-28M J+W+C minus none, interval",
+   "value": [
+    -0.010985552806949898,
+    -0.005678555180486146
+   ],
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1min/methods/timestral-28M/configs/J+W+C/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1min timestral-28M J+P+C WQL",
+   "value": 0.04285268364143129,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1min/methods/timestral-28M/configs/J+P+C/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1min timestral-28M J+P+C minus none (paired)",
+   "value": -0.009410770989712214,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1min/methods/timestral-28M/configs/J+P+C/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1min timestral-28M J+P+C minus none, interval",
+   "value": [
+    -0.012293137341732258,
+    -0.00692156962208262
+   ],
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1min/methods/timestral-28M/configs/J+P+C/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_site_power_1min seasonal-naive-1440 none WQL",
+   "value": 0.1393324310965026,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_site_power_1min/methods/seasonal-naive-1440/configs/none/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_temp_1min timestral-209M none WQL",
+   "value": 0.018716725189606744,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_temp_1min/methods/timestral-209M/configs/none/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_temp_1min timestral-209M J WQL",
+   "value": 0.016897539704281452,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_temp_1min/methods/timestral-209M/configs/J/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_temp_1min timestral-209M J minus none (paired)",
+   "value": -0.0018191854853252913,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_temp_1min/methods/timestral-209M/configs/J/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_temp_1min timestral-209M J minus none, interval",
+   "value": [
+    -0.002683034305480739,
+    -0.0009442633189774671
+   ],
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_temp_1min/methods/timestral-209M/configs/J/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_temp_1min timestral-209M P WQL",
+   "value": 0.017173847637970217,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_temp_1min/methods/timestral-209M/configs/P/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_temp_1min timestral-209M P minus none (paired)",
+   "value": -0.0015428775516365262,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_temp_1min/methods/timestral-209M/configs/P/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_temp_1min timestral-209M P minus none, interval",
+   "value": [
+    -0.002114840279732028,
+    -0.0009033315458010793
+   ],
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_temp_1min/methods/timestral-209M/configs/P/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_temp_1min timestral-209M W WQL",
+   "value": 0.019294869615908455,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_temp_1min/methods/timestral-209M/configs/W/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_temp_1min timestral-209M W minus none (paired)",
+   "value": 0.0005781444263017119,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_temp_1min/methods/timestral-209M/configs/W/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_temp_1min timestral-209M W minus none, interval",
+   "value": [
+    0.00026600256569722706,
+    0.0009703833233262348
+   ],
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_temp_1min/methods/timestral-209M/configs/W/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_temp_1min timestral-209M C WQL",
+   "value": 0.01881949425698903,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_temp_1min/methods/timestral-209M/configs/C/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_temp_1min timestral-209M C minus none (paired)",
+   "value": 0.00010276906738228633,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_temp_1min/methods/timestral-209M/configs/C/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_temp_1min timestral-209M C minus none, interval",
+   "value": [
+    -1.1694592483841875e-05,
+    0.00019255374002890018
+   ],
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_temp_1min/methods/timestral-209M/configs/C/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_temp_1min timestral-209M J+P WQL",
+   "value": 0.01685645039833691,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_temp_1min/methods/timestral-209M/configs/J+P/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_temp_1min timestral-209M J+P minus none (paired)",
+   "value": -0.001860274791269833,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_temp_1min/methods/timestral-209M/configs/J+P/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_temp_1min timestral-209M J+P minus none, interval",
+   "value": [
+    -0.0026748782998459986,
+    -0.001053199752687829
+   ],
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_temp_1min/methods/timestral-209M/configs/J+P/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_temp_1min timestral-209M J+P+W WQL",
+   "value": 0.017117793320825355,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_temp_1min/methods/timestral-209M/configs/J+P+W/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_temp_1min timestral-209M J+P+W minus none (paired)",
+   "value": -0.0015989318687813885,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_temp_1min/methods/timestral-209M/configs/J+P+W/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_temp_1min timestral-209M J+P+W minus none, interval",
+   "value": [
+    -0.002379773635483182,
+    -0.0008536802866284755
+   ],
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_temp_1min/methods/timestral-209M/configs/J+P+W/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_temp_1min timestral-209M J+P+W+C WQL",
+   "value": 0.016865886359739637,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_temp_1min/methods/timestral-209M/configs/J+P+W+C/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_temp_1min timestral-209M J+P+W+C minus none (paired)",
+   "value": -0.001850838829867106,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_temp_1min/methods/timestral-209M/configs/J+P+W+C/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_temp_1min timestral-209M J+P+W+C minus none, interval",
+   "value": [
+    -0.0026150326834808208,
+    -0.0011336066452264976
+   ],
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_temp_1min/methods/timestral-209M/configs/J+P+W+C/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_temp_1min timestral-209M P+W+C WQL",
+   "value": 0.017425002196591086,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_temp_1min/methods/timestral-209M/configs/P+W+C/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_temp_1min timestral-209M P+W+C minus none (paired)",
+   "value": -0.001291722993015658,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_temp_1min/methods/timestral-209M/configs/P+W+C/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_temp_1min timestral-209M P+W+C minus none, interval",
+   "value": [
+    -0.001799134603658533,
+    -0.0007754517413615808
+   ],
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_temp_1min/methods/timestral-209M/configs/P+W+C/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_temp_1min timestral-209M J+W+C WQL",
+   "value": 0.016996526293005295,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_temp_1min/methods/timestral-209M/configs/J+W+C/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_temp_1min timestral-209M J+W+C minus none (paired)",
+   "value": -0.0017201988966014485,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_temp_1min/methods/timestral-209M/configs/J+W+C/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_temp_1min timestral-209M J+W+C minus none, interval",
+   "value": [
+    -0.0025264803908785385,
+    -0.0009549347726243429
+   ],
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_temp_1min/methods/timestral-209M/configs/J+W+C/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_temp_1min timestral-209M J+P+C WQL",
+   "value": 0.016759537335918076,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_temp_1min/methods/timestral-209M/configs/J+P+C/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_temp_1min timestral-209M J+P+C minus none (paired)",
+   "value": -0.0019571878536886675,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_temp_1min/methods/timestral-209M/configs/J+P+C/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_temp_1min timestral-209M J+P+C minus none, interval",
+   "value": [
+    -0.0027291958193855865,
+    -0.0012383860410434809
+   ],
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_temp_1min/methods/timestral-209M/configs/J+P+C/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_temp_1min timestral-28M none WQL",
+   "value": 0.019352722907503752,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_temp_1min/methods/timestral-28M/configs/none/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_temp_1min timestral-28M J WQL",
+   "value": 0.018340634869508703,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_temp_1min/methods/timestral-28M/configs/J/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_temp_1min timestral-28M J minus none (paired)",
+   "value": -0.0010120880379950493,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_temp_1min/methods/timestral-28M/configs/J/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_temp_1min timestral-28M J minus none, interval",
+   "value": [
+    -0.0018060968090774195,
+    -0.00036764335318988583
+   ],
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_temp_1min/methods/timestral-28M/configs/J/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_temp_1min timestral-28M P WQL",
+   "value": 0.018437793705303927,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_temp_1min/methods/timestral-28M/configs/P/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_temp_1min timestral-28M P minus none (paired)",
+   "value": -0.0009149292021998247,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_temp_1min/methods/timestral-28M/configs/P/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_temp_1min timestral-28M P minus none, interval",
+   "value": [
+    -0.001566969537739947,
+    -0.00018946227333725102
+   ],
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_temp_1min/methods/timestral-28M/configs/P/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_temp_1min timestral-28M W WQL",
+   "value": 0.02010787238262635,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_temp_1min/methods/timestral-28M/configs/W/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_temp_1min timestral-28M W minus none (paired)",
+   "value": 0.0007551494751225976,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_temp_1min/methods/timestral-28M/configs/W/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_temp_1min timestral-28M W minus none, interval",
+   "value": [
+    0.0004646891269688634,
+    0.0010453442855021275
+   ],
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_temp_1min/methods/timestral-28M/configs/W/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_temp_1min timestral-28M C WQL",
+   "value": 0.019812406890288844,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_temp_1min/methods/timestral-28M/configs/C/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_temp_1min timestral-28M C minus none (paired)",
+   "value": 0.0004596839827850918,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_temp_1min/methods/timestral-28M/configs/C/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_temp_1min timestral-28M C minus none, interval",
+   "value": [
+    -5.1962495726181114e-05,
+    0.0008903738979788921
+   ],
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_temp_1min/methods/timestral-28M/configs/C/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_temp_1min timestral-28M J+P WQL",
+   "value": 0.01878830470479191,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_temp_1min/methods/timestral-28M/configs/J+P/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_temp_1min timestral-28M J+P minus none (paired)",
+   "value": -0.0005644182027118409,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_temp_1min/methods/timestral-28M/configs/J+P/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_temp_1min timestral-28M J+P minus none, interval",
+   "value": [
+    -0.0016069097987961767,
+    0.0005258402400500495
+   ],
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_temp_1min/methods/timestral-28M/configs/J+P/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_temp_1min timestral-28M J+P+W WQL",
+   "value": 0.018777890357636898,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_temp_1min/methods/timestral-28M/configs/J+P+W/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_temp_1min timestral-28M J+P+W minus none (paired)",
+   "value": -0.0005748325498668543,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_temp_1min/methods/timestral-28M/configs/J+P+W/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_temp_1min timestral-28M J+P+W minus none, interval",
+   "value": [
+    -0.0017077975514040104,
+    0.0007133642550463407
+   ],
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_temp_1min/methods/timestral-28M/configs/J+P+W/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_temp_1min timestral-28M J+P+W+C WQL",
+   "value": 0.01787380219661261,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_temp_1min/methods/timestral-28M/configs/J+P+W+C/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_temp_1min timestral-28M J+P+W+C minus none (paired)",
+   "value": -0.0014789207108911427,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_temp_1min/methods/timestral-28M/configs/J+P+W+C/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_temp_1min timestral-28M J+P+W+C minus none, interval",
+   "value": [
+    -0.002132285993085924,
+    -0.0008805772236455655
+   ],
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_temp_1min/methods/timestral-28M/configs/J+P+W+C/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_temp_1min timestral-28M P+W+C WQL",
+   "value": 0.018443187627267887,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_temp_1min/methods/timestral-28M/configs/P+W+C/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_temp_1min timestral-28M P+W+C minus none (paired)",
+   "value": -0.0009095352802358653,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_temp_1min/methods/timestral-28M/configs/P+W+C/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_temp_1min timestral-28M P+W+C minus none, interval",
+   "value": [
+    -0.0013921875875554809,
+    -0.00039658238994059433
+   ],
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_temp_1min/methods/timestral-28M/configs/P+W+C/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_temp_1min timestral-28M J+W+C WQL",
+   "value": 0.018135329474558915,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_temp_1min/methods/timestral-28M/configs/J+W+C/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_temp_1min timestral-28M J+W+C minus none (paired)",
+   "value": -0.0012173934329448369,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_temp_1min/methods/timestral-28M/configs/J+W+C/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_temp_1min timestral-28M J+W+C minus none, interval",
+   "value": [
+    -0.0018765941969947591,
+    -0.0006295350240286399
+   ],
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_temp_1min/methods/timestral-28M/configs/J+W+C/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_temp_1min timestral-28M J+P+C WQL",
+   "value": 0.017904853848395446,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_temp_1min/methods/timestral-28M/configs/J+P+C/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_temp_1min timestral-28M J+P+C minus none (paired)",
+   "value": -0.001447869059108306,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_temp_1min/methods/timestral-28M/configs/J+P+C/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_temp_1min timestral-28M J+P+C minus none, interval",
+   "value": [
+    -0.0020940359756004895,
+    -0.0008544603874847683
+   ],
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_temp_1min/methods/timestral-28M/configs/J+P+C/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_temp_1min seasonal-naive-1440 none WQL",
+   "value": 0.059419388222189874,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_temp_1min/methods/seasonal-naive-1440/configs/none/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_power_1s timestral-209M none WQL",
+   "value": 0.01673064175718714,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_power_1s/methods/timestral-209M/configs/none/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_power_1s timestral-209M J WQL",
+   "value": 0.05487037034579723,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_power_1s/methods/timestral-209M/configs/J/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_power_1s timestral-209M J minus none (paired)",
+   "value": 0.03813972858861009,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_power_1s/methods/timestral-209M/configs/J/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_power_1s timestral-209M J minus none, interval",
+   "value": [
+    0.03050945792230532,
+    0.046346039627531296
+   ],
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_power_1s/methods/timestral-209M/configs/J/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_power_1s timestral-209M P WQL",
+   "value": 0.018160952965768484,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_power_1s/methods/timestral-209M/configs/P/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_power_1s timestral-209M P minus none (paired)",
+   "value": 0.0014303112085813433,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_power_1s/methods/timestral-209M/configs/P/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_power_1s timestral-209M P minus none, interval",
+   "value": [
+    0.0005336121884570251,
+    0.002519663526124829
+   ],
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_power_1s/methods/timestral-209M/configs/P/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_power_1s timestral-209M W WQL",
+   "value": 0.03324402782998883,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_power_1s/methods/timestral-209M/configs/W/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_power_1s timestral-209M W minus none (paired)",
+   "value": 0.01651338607280169,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_power_1s/methods/timestral-209M/configs/W/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_power_1s timestral-209M W minus none, interval",
+   "value": [
+    0.009121199093756065,
+    0.02586455080203441
+   ],
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_power_1s/methods/timestral-209M/configs/W/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_power_1s timestral-209M C WQL",
+   "value": 1.0124091762945264,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_power_1s/methods/timestral-209M/configs/C/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_power_1s timestral-209M C minus none (paired)",
+   "value": 0.9956785345373392,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_power_1s/methods/timestral-209M/configs/C/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_power_1s timestral-209M C minus none, interval",
+   "value": [
+    0.7872498734469463,
+    1.2059017054686556
+   ],
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_power_1s/methods/timestral-209M/configs/C/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_power_1s timestral-209M J+P WQL",
+   "value": 0.04454819168401167,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_power_1s/methods/timestral-209M/configs/J+P/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_power_1s timestral-209M J+P minus none (paired)",
+   "value": 0.027817549926824527,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_power_1s/methods/timestral-209M/configs/J+P/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_power_1s timestral-209M J+P minus none, interval",
+   "value": [
+    0.022218969825215918,
+    0.03378679765845196
+   ],
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_power_1s/methods/timestral-209M/configs/J+P/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_power_1s timestral-209M J+P+W WQL",
+   "value": 0.04782762147650882,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_power_1s/methods/timestral-209M/configs/J+P+W/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_power_1s timestral-209M J+P+W minus none (paired)",
+   "value": 0.03109697971932168,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_power_1s/methods/timestral-209M/configs/J+P+W/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_power_1s timestral-209M J+P+W minus none, interval",
+   "value": [
+    0.024372497783620273,
+    0.03962661512636069
+   ],
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_power_1s/methods/timestral-209M/configs/J+P+W/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_power_1s timestral-209M J+P+W+C WQL",
+   "value": 0.3337506866757644,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_power_1s/methods/timestral-209M/configs/J+P+W+C/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_power_1s timestral-209M J+P+W+C minus none (paired)",
+   "value": 0.31702004491857727,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_power_1s/methods/timestral-209M/configs/J+P+W+C/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_power_1s timestral-209M J+P+W+C minus none, interval",
+   "value": [
+    0.24689872477346533,
+    0.3869114255196333
+   ],
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_power_1s/methods/timestral-209M/configs/J+P+W+C/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_power_1s timestral-209M P+W+C WQL",
+   "value": 0.2735619766696946,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_power_1s/methods/timestral-209M/configs/P+W+C/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_power_1s timestral-209M P+W+C minus none (paired)",
+   "value": 0.2568313349125075,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_power_1s/methods/timestral-209M/configs/P+W+C/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_power_1s timestral-209M P+W+C minus none, interval",
+   "value": [
+    0.19670437908169464,
+    0.3170475282968109
+   ],
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_power_1s/methods/timestral-209M/configs/P+W+C/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_power_1s timestral-209M J+W+C WQL",
+   "value": 0.4925402666892634,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_power_1s/methods/timestral-209M/configs/J+W+C/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_power_1s timestral-209M J+W+C minus none (paired)",
+   "value": 0.47580962493207624,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_power_1s/methods/timestral-209M/configs/J+W+C/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_power_1s timestral-209M J+W+C minus none, interval",
+   "value": [
+    0.37247661724362296,
+    0.5799384323090646
+   ],
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_power_1s/methods/timestral-209M/configs/J+W+C/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_power_1s timestral-209M J+P+C WQL",
+   "value": 0.3608854357401454,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_power_1s/methods/timestral-209M/configs/J+P+C/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_power_1s timestral-209M J+P+C minus none (paired)",
+   "value": 0.3441547939829583,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_power_1s/methods/timestral-209M/configs/J+P+C/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_power_1s timestral-209M J+P+C minus none, interval",
+   "value": [
+    0.26591456022361215,
+    0.4224456930027183
+   ],
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_power_1s/methods/timestral-209M/configs/J+P+C/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_power_1s timestral-28M none WQL",
+   "value": 0.01941208372196405,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_power_1s/methods/timestral-28M/configs/none/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_power_1s timestral-28M J WQL",
+   "value": 0.0234867168780503,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_power_1s/methods/timestral-28M/configs/J/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_power_1s timestral-28M J minus none (paired)",
+   "value": 0.004074633156086249,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_power_1s/methods/timestral-28M/configs/J/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_power_1s timestral-28M J minus none, interval",
+   "value": [
+    0.00305671483951575,
+    0.005210128022867552
+   ],
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_power_1s/methods/timestral-28M/configs/J/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_power_1s timestral-28M P WQL",
+   "value": 0.019106746561482073,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_power_1s/methods/timestral-28M/configs/P/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_power_1s timestral-28M P minus none (paired)",
+   "value": -0.0003053371604819777,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_power_1s/methods/timestral-28M/configs/P/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_power_1s timestral-28M P minus none, interval",
+   "value": [
+    -0.0005945838707589357,
+    -1.5558321479254556e-05
+   ],
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_power_1s/methods/timestral-28M/configs/P/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_power_1s timestral-28M W WQL",
+   "value": 0.023323962516015224,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_power_1s/methods/timestral-28M/configs/W/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_power_1s timestral-28M W minus none (paired)",
+   "value": 0.003911878794051173,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_power_1s/methods/timestral-28M/configs/W/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_power_1s timestral-28M W minus none, interval",
+   "value": [
+    0.0018201002538555681,
+    0.006958273863615379
+   ],
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_power_1s/methods/timestral-28M/configs/W/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_power_1s timestral-28M C WQL",
+   "value": 0.13855347908272728,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_power_1s/methods/timestral-28M/configs/C/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_power_1s timestral-28M C minus none (paired)",
+   "value": 0.11914139536076322,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_power_1s/methods/timestral-28M/configs/C/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_power_1s timestral-28M C minus none, interval",
+   "value": [
+    0.09202306902298386,
+    0.1465162045635536
+   ],
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_power_1s/methods/timestral-28M/configs/C/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_power_1s timestral-28M J+P WQL",
+   "value": 0.025292829214311863,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_power_1s/methods/timestral-28M/configs/J+P/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_power_1s timestral-28M J+P minus none (paired)",
+   "value": 0.0058807454923478115,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_power_1s/methods/timestral-28M/configs/J+P/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_power_1s timestral-28M J+P minus none, interval",
+   "value": [
+    0.004527660790392758,
+    0.007409739670938684
+   ],
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_power_1s/methods/timestral-28M/configs/J+P/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_power_1s timestral-28M J+P+W WQL",
+   "value": 0.026118594156498212,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_power_1s/methods/timestral-28M/configs/J+P+W/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_power_1s timestral-28M J+P+W minus none (paired)",
+   "value": 0.006706510434534161,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_power_1s/methods/timestral-28M/configs/J+P+W/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_power_1s timestral-28M J+P+W minus none, interval",
+   "value": [
+    0.0051083795637562645,
+    0.008497395466554104
+   ],
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_power_1s/methods/timestral-28M/configs/J+P+W/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_power_1s timestral-28M J+P+W+C WQL",
+   "value": 0.05040509138019463,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_power_1s/methods/timestral-28M/configs/J+P+W+C/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_power_1s timestral-28M J+P+W+C minus none (paired)",
+   "value": 0.03099300765823058,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_power_1s/methods/timestral-28M/configs/J+P+W+C/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_power_1s timestral-28M J+P+W+C minus none, interval",
+   "value": [
+    0.023805548008587918,
+    0.03920984319622435
+   ],
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_power_1s/methods/timestral-28M/configs/J+P+W+C/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_power_1s timestral-28M P+W+C WQL",
+   "value": 0.05210261035008532,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_power_1s/methods/timestral-28M/configs/P+W+C/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_power_1s timestral-28M P+W+C minus none (paired)",
+   "value": 0.032690526628121275,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_power_1s/methods/timestral-28M/configs/P+W+C/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_power_1s timestral-28M P+W+C minus none, interval",
+   "value": [
+    0.024458156010180938,
+    0.04232834281435537
+   ],
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_power_1s/methods/timestral-28M/configs/P+W+C/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_power_1s timestral-28M J+W+C WQL",
+   "value": 0.06134670661482206,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_power_1s/methods/timestral-28M/configs/J+W+C/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_power_1s timestral-28M J+W+C minus none (paired)",
+   "value": 0.041934622892858014,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_power_1s/methods/timestral-28M/configs/J+W+C/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_power_1s timestral-28M J+W+C minus none, interval",
+   "value": [
+    0.03219419331018861,
+    0.05221382108102953
+   ],
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_power_1s/methods/timestral-28M/configs/J+W+C/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_power_1s timestral-28M J+P+C WQL",
+   "value": 0.051479312140057874,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_power_1s/methods/timestral-28M/configs/J+P+C/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_power_1s timestral-28M J+P+C minus none (paired)",
+   "value": 0.03206722841809383,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_power_1s/methods/timestral-28M/configs/J+P+C/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_power_1s timestral-28M J+P+C minus none, interval",
+   "value": [
+    0.025267831065895443,
+    0.039505924795657045
+   ],
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_power_1s/methods/timestral-28M/configs/J+P+C/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "sim_rack_power_1s seasonal-naive-1 none WQL",
+   "value": 0.31697945519311116,
+   "unit": "",
+   "data_kind": "mixed (simulated plant, public environment)",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result/datasets/sim_rack_power_1s/methods/seasonal-naive-1/configs/none/buckets/all/wql",
+   "status": "ok"
   },
   {
    "section": "fine-tuning, Timestral-28M (test windows)",
