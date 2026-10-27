@@ -29,9 +29,7 @@ manifests keep their sha256 and URL, and every fetch script downloads them again
 - Data: `https://mit-supercloud-dataset.s3.amazonaws.com/datacenter-challenge/202201/` (`gpu/<0000-0099>/<jobid>-r<rack>-n<node>.csv`,
   `slurm-log.csv`, `labelled_jobids.csv`, `README.md`, `LICENSE`).
 - Licence: **CC BY-NC-ND 4.0** (file `LICENSE` in the bucket). Attribution required, non-commercial only, **no derivatives**: the
-  processed 1 s series are an adaptation of the raw samples. The committed copy is therefore for internal research use; do not
-  publish `data/processed/public_gpu_mit*` outside the project without checking the licence. Re-create it with
-  `python scripts/fetch_mit_supercloud.py`. (The sibling folder `2022-hpca/` has stricter terms limiting use to the HPCA'22 paper analysis
+  processed 1 s series are an adaptation of the raw samples, so they are NOT in this repository and are never published: `data/processed/public_gpu_mit*` is gitignored and rebuilt locally with `python scripts/fetch_mit_supercloud.py`. Only aggregate results computed from them (forecast scores) are committed. (The sibling folder `2022-hpca/` has stricter terms limiting use to the HPCA'22 paper analysis
   and is not used.)
 - Hardware (paper, Section III): nodes with Intel Xeon Gold 6248 and two NVIDIA Volta V100 32 GB. In the file names `r` is the rack and
   `n` the node number (anonymised).
@@ -216,7 +214,7 @@ Each manifest lists the sha256 and byte size of every raw file used, plus the re
 | `data/processed/public_caiso/raw_manifest.json` | 3146 | `96343abc11a7dd9f1acb317de98e153a745bc4e57dbcde1a9e46bfec50a3dedc` |
 | `data/processed/public_eia/raw_manifest.json` | 1 | `2b24e98053282f11f44f761bc4c719a98e9ce29f7eb68dc521f223ec992ed253` |
 | `data/processed/public_energy_charts/raw_manifest.json` | 72 | `72bef606ab1d0c9204ef026ebb56900cf973030bccddaca9d155365453a18a2c` |
-| `data/processed/public_gpu_mit/raw_manifest.json` | 306 | `af56ec3d9dfa7b300b9b07a222a5d74750c9800fee43d08362e6bf369f429655` |
+| `data/processed/public_gpu_mit/raw_manifest.json` (local only, written by the fetch script with the series) | 306 | `af56ec3d9dfa7b300b9b07a222a5d74750c9800fee43d08362e6bf369f429655` |
 | `data/processed/public_gpu_nlr/raw_manifest.json` | 1 | `8c8d1051857b51b88a8e968d361307e1f8aecd77a6e32ab982272e58c52718ad` |
 | `data/processed/public_gpu_node/raw_manifest.json` | 1 | `f0547b978102523c6c9fd19c87ef9d68362225577a339d69a018a97a392763e8` |
 | `data/processed/public_job_traces/raw_manifest.json` | 3 | `ec9dff81f88f4cc24915fe2c13c2fabded526c7bd4dc497d779779f75f6e1325` |
