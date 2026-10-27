@@ -1229,6 +1229,1286 @@
    "source": "gpu_stack:experiments/e003-heatwave/results/cost-v1.json",
    "key": "result/pairs/de/curves/reactive|f=0.3|W=24|rho=0.7|q=na/saving_pct_total/5",
    "status": "ok"
+  },
+  {
+   "section": "power-cap packing (simulated, 6 test seeds)",
+   "label": "reactive gpu_hours",
+   "value": 1840.7432400539863,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/packing-v1.json",
+   "key": "result/policies/reactive/gpu_hours/mean",
+   "status": "ok"
+  },
+  {
+   "section": "power-cap packing (simulated, 6 test seeds)",
+   "label": "reactive energy_above_cap_kwh",
+   "value": 42.49089236736287,
+   "unit": "kWh",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/packing-v1.json",
+   "key": "result/policies/reactive/energy_above_cap_kwh/mean",
+   "status": "ok"
+  },
+  {
+   "section": "power-cap packing (simulated, 6 test seeds)",
+   "label": "reactive violation_rate",
+   "value": 0.71875,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/packing-v1.json",
+   "key": "result/policies/reactive/violation_rate/mean",
+   "status": "ok"
+  },
+  {
+   "section": "power-cap packing (simulated, 6 test seeds)",
+   "label": "reactive stranded_kwh",
+   "value": 74.27749647684968,
+   "unit": "kWh",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/packing-v1.json",
+   "key": "result/policies/reactive/stranded_kwh/mean",
+   "status": "ok"
+  },
+  {
+   "section": "power-cap packing (simulated, 6 test seeds)",
+   "label": "timestral-5M/q0.5 gpu_hours",
+   "value": 1562.2859107338807,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/packing-v1.json",
+   "key": "result/policies/timestral-5M/q0.5/gpu_hours/mean",
+   "status": "ok"
+  },
+  {
+   "section": "power-cap packing (simulated, 6 test seeds)",
+   "label": "timestral-5M/q0.5 energy_above_cap_kwh",
+   "value": 6.644896769530057,
+   "unit": "kWh",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/packing-v1.json",
+   "key": "result/policies/timestral-5M/q0.5/energy_above_cap_kwh/mean",
+   "status": "ok"
+  },
+  {
+   "section": "power-cap packing (simulated, 6 test seeds)",
+   "label": "timestral-5M/q0.5 violation_rate",
+   "value": 0.5859374999999999,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/packing-v1.json",
+   "key": "result/policies/timestral-5M/q0.5/violation_rate/mean",
+   "status": "ok"
+  },
+  {
+   "section": "power-cap packing (simulated, 6 test seeds)",
+   "label": "timestral-5M/q0.5 stranded_kwh",
+   "value": 71.44377707474177,
+   "unit": "kWh",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/packing-v1.json",
+   "key": "result/policies/timestral-5M/q0.5/stranded_kwh/mean",
+   "status": "ok"
+  },
+  {
+   "section": "power-cap packing (simulated, 6 test seeds)",
+   "label": "timestral-5M/q0.9 gpu_hours",
+   "value": 1531.4971249068385,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/packing-v1.json",
+   "key": "result/policies/timestral-5M/q0.9/gpu_hours/mean",
+   "status": "ok"
+  },
+  {
+   "section": "power-cap packing (simulated, 6 test seeds)",
+   "label": "timestral-5M/q0.9 energy_above_cap_kwh",
+   "value": 7.059795537688355,
+   "unit": "kWh",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/packing-v1.json",
+   "key": "result/policies/timestral-5M/q0.9/energy_above_cap_kwh/mean",
+   "status": "ok"
+  },
+  {
+   "section": "power-cap packing (simulated, 6 test seeds)",
+   "label": "timestral-5M/q0.9 violation_rate",
+   "value": 0.3619791666666667,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/packing-v1.json",
+   "key": "result/policies/timestral-5M/q0.9/violation_rate/mean",
+   "status": "ok"
+  },
+  {
+   "section": "power-cap packing (simulated, 6 test seeds)",
+   "label": "timestral-5M/q0.9 stranded_kwh",
+   "value": 89.72576419821326,
+   "unit": "kWh",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/packing-v1.json",
+   "key": "result/policies/timestral-5M/q0.9/stranded_kwh/mean",
+   "status": "ok"
+  },
+  {
+   "section": "power-cap packing (simulated, 6 test seeds)",
+   "label": "timestral-28M/q0.9 gpu_hours",
+   "value": 1523.451196480791,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/packing-v1.json",
+   "key": "result/policies/timestral-28M/q0.9/gpu_hours/mean",
+   "status": "ok"
+  },
+  {
+   "section": "power-cap packing (simulated, 6 test seeds)",
+   "label": "timestral-28M/q0.9 energy_above_cap_kwh",
+   "value": 4.669381544815004,
+   "unit": "kWh",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/packing-v1.json",
+   "key": "result/policies/timestral-28M/q0.9/energy_above_cap_kwh/mean",
+   "status": "ok"
+  },
+  {
+   "section": "power-cap packing (simulated, 6 test seeds)",
+   "label": "timestral-28M/q0.9 violation_rate",
+   "value": 0.42534722222222215,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/packing-v1.json",
+   "key": "result/policies/timestral-28M/q0.9/violation_rate/mean",
+   "status": "ok"
+  },
+  {
+   "section": "power-cap packing (simulated, 6 test seeds)",
+   "label": "timestral-28M/q0.9 stranded_kwh",
+   "value": 90.44075739077748,
+   "unit": "kWh",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/packing-v1.json",
+   "key": "result/policies/timestral-28M/q0.9/stranded_kwh/mean",
+   "status": "ok"
+  },
+  {
+   "section": "power-cap packing (simulated, 6 test seeds)",
+   "label": "seasonal-naive/q0.9 gpu_hours",
+   "value": 1559.7131151671038,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/packing-v1.json",
+   "key": "result/policies/seasonal-naive/q0.9/gpu_hours/mean",
+   "status": "ok"
+  },
+  {
+   "section": "power-cap packing (simulated, 6 test seeds)",
+   "label": "seasonal-naive/q0.9 energy_above_cap_kwh",
+   "value": 23.190606138441478,
+   "unit": "kWh",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/packing-v1.json",
+   "key": "result/policies/seasonal-naive/q0.9/energy_above_cap_kwh/mean",
+   "status": "ok"
+  },
+  {
+   "section": "power-cap packing (simulated, 6 test seeds)",
+   "label": "seasonal-naive/q0.9 violation_rate",
+   "value": 0.7230902777777778,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/packing-v1.json",
+   "key": "result/policies/seasonal-naive/q0.9/violation_rate/mean",
+   "status": "ok"
+  },
+  {
+   "section": "power-cap packing (simulated, 6 test seeds)",
+   "label": "seasonal-naive/q0.9 stranded_kwh",
+   "value": 88.89071350183194,
+   "unit": "kWh",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/packing-v1.json",
+   "key": "result/policies/seasonal-naive/q0.9/stranded_kwh/mean",
+   "status": "ok"
+  },
+  {
+   "section": "power-cap packing (simulated, 6 test seeds)",
+   "label": "ets/q0.9 gpu_hours",
+   "value": 1473.2342469159096,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/packing-v1.json",
+   "key": "result/policies/ets/q0.9/gpu_hours/mean",
+   "status": "ok"
+  },
+  {
+   "section": "power-cap packing (simulated, 6 test seeds)",
+   "label": "ets/q0.9 energy_above_cap_kwh",
+   "value": 15.410368425520113,
+   "unit": "kWh",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/packing-v1.json",
+   "key": "result/policies/ets/q0.9/energy_above_cap_kwh/mean",
+   "status": "ok"
+  },
+  {
+   "section": "power-cap packing (simulated, 6 test seeds)",
+   "label": "ets/q0.9 violation_rate",
+   "value": 0.19704861111111113,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/packing-v1.json",
+   "key": "result/policies/ets/q0.9/violation_rate/mean",
+   "status": "ok"
+  },
+  {
+   "section": "power-cap packing (simulated, 6 test seeds)",
+   "label": "ets/q0.9 stranded_kwh",
+   "value": 129.10979599261557,
+   "unit": "kWh",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/packing-v1.json",
+   "key": "result/policies/ets/q0.9/stranded_kwh/mean",
+   "status": "ok"
+  },
+  {
+   "section": "power-cap packing (simulated, 6 test seeds)",
+   "label": "arima/q0.9 gpu_hours",
+   "value": 1471.315453365879,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/packing-v1.json",
+   "key": "result/policies/arima/q0.9/gpu_hours/mean",
+   "status": "ok"
+  },
+  {
+   "section": "power-cap packing (simulated, 6 test seeds)",
+   "label": "arima/q0.9 energy_above_cap_kwh",
+   "value": 10.277590871824998,
+   "unit": "kWh",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/packing-v1.json",
+   "key": "result/policies/arima/q0.9/energy_above_cap_kwh/mean",
+   "status": "ok"
+  },
+  {
+   "section": "power-cap packing (simulated, 6 test seeds)",
+   "label": "arima/q0.9 violation_rate",
+   "value": 0.2821180555555555,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/packing-v1.json",
+   "key": "result/policies/arima/q0.9/violation_rate/mean",
+   "status": "ok"
+  },
+  {
+   "section": "power-cap packing (simulated, 6 test seeds)",
+   "label": "arima/q0.9 stranded_kwh",
+   "value": 125.60369938319268,
+   "unit": "kWh",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/packing-v1.json",
+   "key": "result/policies/arima/q0.9/stranded_kwh/mean",
+   "status": "ok"
+  },
+  {
+   "section": "power-cap packing (simulated, 6 test seeds)",
+   "label": "oracle gpu_hours",
+   "value": 1542.9013822415152,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/packing-v1.json",
+   "key": "result/policies/oracle/gpu_hours/mean",
+   "status": "ok"
+  },
+  {
+   "section": "power-cap packing (simulated, 6 test seeds)",
+   "label": "oracle energy_above_cap_kwh",
+   "value": 2.489547863964437,
+   "unit": "kWh",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/packing-v1.json",
+   "key": "result/policies/oracle/energy_above_cap_kwh/mean",
+   "status": "ok"
+  },
+  {
+   "section": "power-cap packing (simulated, 6 test seeds)",
+   "label": "oracle violation_rate",
+   "value": 0.49652777777777785,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/packing-v1.json",
+   "key": "result/policies/oracle/violation_rate/mean",
+   "status": "ok"
+  },
+  {
+   "section": "power-cap packing (simulated, 6 test seeds)",
+   "label": "oracle stranded_kwh",
+   "value": 78.76579413805912,
+   "unit": "kWh",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/packing-v1.json",
+   "key": "result/policies/oracle/stranded_kwh/mean",
+   "status": "ok"
+  },
+  {
+   "section": "power-cap packing (simulated, 6 test seeds)",
+   "label": "learned minus reactive net value at penalty 2.5 USD/kWh (mean)",
+   "value": -295.27612178277815,
+   "unit": "USD",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/packing-v1.json",
+   "key": "result/paired_net_value_difference/2.5/net_value_difference_usd_vs/reactive/mean",
+   "status": "ok"
+  },
+  {
+   "section": "power-cap packing (simulated, 6 test seeds)",
+   "label": "learned minus reactive net value at penalty 2.5 USD/kWh (lo)",
+   "value": -500.4079189126744,
+   "unit": "USD",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/packing-v1.json",
+   "key": "result/paired_net_value_difference/2.5/net_value_difference_usd_vs/reactive/lo",
+   "status": "ok"
+  },
+  {
+   "section": "power-cap packing (simulated, 6 test seeds)",
+   "label": "learned minus reactive net value at penalty 2.5 USD/kWh (hi)",
+   "value": -93.38330838878095,
+   "unit": "USD",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/packing-v1.json",
+   "key": "result/paired_net_value_difference/2.5/net_value_difference_usd_vs/reactive/hi",
+   "status": "ok"
+  },
+  {
+   "section": "power-cap packing (simulated, 6 test seeds)",
+   "label": "best fixed policy at penalty 2.5",
+   "value": "timestral-5M/q0.01",
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/packing-v1.json",
+   "key": "result/best_fixed_by_penalty/2.5/best_fixed_policy_by_mean_net_value_on_test_seeds",
+   "status": "ok"
+  },
+  {
+   "section": "power-cap packing (simulated, 6 test seeds)",
+   "label": "learned minus reactive net value at penalty 10 USD/kWh (mean)",
+   "value": -37.78802886526728,
+   "unit": "USD",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/packing-v1.json",
+   "key": "result/paired_net_value_difference/10/net_value_difference_usd_vs/reactive/mean",
+   "status": "ok"
+  },
+  {
+   "section": "power-cap packing (simulated, 6 test seeds)",
+   "label": "learned minus reactive net value at penalty 10 USD/kWh (lo)",
+   "value": -219.63657323773774,
+   "unit": "USD",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/packing-v1.json",
+   "key": "result/paired_net_value_difference/10/net_value_difference_usd_vs/reactive/lo",
+   "status": "ok"
+  },
+  {
+   "section": "power-cap packing (simulated, 6 test seeds)",
+   "label": "learned minus reactive net value at penalty 10 USD/kWh (hi)",
+   "value": 158.13264813671125,
+   "unit": "USD",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/packing-v1.json",
+   "key": "result/paired_net_value_difference/10/net_value_difference_usd_vs/reactive/hi",
+   "status": "ok"
+  },
+  {
+   "section": "power-cap packing (simulated, 6 test seeds)",
+   "label": "best fixed policy at penalty 10",
+   "value": "timestral-5M/q0.05",
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/packing-v1.json",
+   "key": "result/best_fixed_by_penalty/10/best_fixed_policy_by_mean_net_value_on_test_seeds",
+   "status": "ok"
+  },
+  {
+   "section": "power-cap packing (simulated, 6 test seeds)",
+   "label": "learned minus reactive net value at penalty 40 USD/kWh (mean)",
+   "value": 746.4915717749979,
+   "unit": "USD",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/packing-v1.json",
+   "key": "result/paired_net_value_difference/40/net_value_difference_usd_vs/reactive/mean",
+   "status": "ok"
+  },
+  {
+   "section": "power-cap packing (simulated, 6 test seeds)",
+   "label": "learned minus reactive net value at penalty 40 USD/kWh (lo)",
+   "value": 453.51683327904607,
+   "unit": "USD",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/packing-v1.json",
+   "key": "result/paired_net_value_difference/40/net_value_difference_usd_vs/reactive/lo",
+   "status": "ok"
+  },
+  {
+   "section": "power-cap packing (simulated, 6 test seeds)",
+   "label": "learned minus reactive net value at penalty 40 USD/kWh (hi)",
+   "value": 966.761199678164,
+   "unit": "USD",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/packing-v1.json",
+   "key": "result/paired_net_value_difference/40/net_value_difference_usd_vs/reactive/hi",
+   "status": "ok"
+  },
+  {
+   "section": "power-cap packing (simulated, 6 test seeds)",
+   "label": "best fixed policy at penalty 40",
+   "value": "timestral-5M/q0.15",
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/packing-v1.json",
+   "key": "result/best_fixed_by_penalty/40/best_fixed_policy_by_mean_net_value_on_test_seeds",
+   "status": "ok"
+  },
+  {
+   "section": "power-cap packing (simulated, 6 test seeds)",
+   "label": "learned minus reactive net value at penalty 160 USD/kWh (mean)",
+   "value": 5575.149932280213,
+   "unit": "USD",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/packing-v1.json",
+   "key": "result/paired_net_value_difference/160/net_value_difference_usd_vs/reactive/mean",
+   "status": "ok"
+  },
+  {
+   "section": "power-cap packing (simulated, 6 test seeds)",
+   "label": "learned minus reactive net value at penalty 160 USD/kWh (lo)",
+   "value": 4602.807603042872,
+   "unit": "USD",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/packing-v1.json",
+   "key": "result/paired_net_value_difference/160/net_value_difference_usd_vs/reactive/lo",
+   "status": "ok"
+  },
+  {
+   "section": "power-cap packing (simulated, 6 test seeds)",
+   "label": "learned minus reactive net value at penalty 160 USD/kWh (hi)",
+   "value": 6609.396556616363,
+   "unit": "USD",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/packing-v1.json",
+   "key": "result/paired_net_value_difference/160/net_value_difference_usd_vs/reactive/hi",
+   "status": "ok"
+  },
+  {
+   "section": "power-cap packing (simulated, 6 test seeds)",
+   "label": "best fixed policy at penalty 160",
+   "value": "timestral-28M/q0.99",
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/packing-v1.json",
+   "key": "result/best_fixed_by_penalty/160/best_fixed_policy_by_mean_net_value_on_test_seeds",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v1 (simulated, 10 test seeds)",
+   "label": "reactive useful_gpu_h",
+   "value": 1722.1336059637688,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v1.json",
+   "key": "result/policies/reactive/overall/useful_gpu_h/mean",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v1 (simulated, 10 test seeds)",
+   "label": "reactive lost_gpu_h",
+   "value": 35.056193378909306,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v1.json",
+   "key": "result/policies/reactive/overall/lost_gpu_h/mean",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v1 (simulated, 10 test seeds)",
+   "label": "reactive deficit_gpu_h",
+   "value": 10.665678145327002,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v1.json",
+   "key": "result/policies/reactive/overall/deficit_gpu_h/mean",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v1 (simulated, 10 test seeds)",
+   "label": "reactive recall",
+   "value": null,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v1.json",
+   "key": "result/policies/reactive/overall/recall/value",
+   "status": "missing key"
+  },
+  {
+   "section": "outage response v1 (simulated, 10 test seeds)",
+   "label": "reactive false alarms per day",
+   "value": null,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v1.json",
+   "key": "result/policies/reactive/overall/false_alarms_per_day/mean",
+   "status": "missing key"
+  },
+  {
+   "section": "outage response v1 (simulated, 10 test seeds)",
+   "label": "e001 useful_gpu_h",
+   "value": 1267.4949166514696,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v1.json",
+   "key": "result/policies/e001/overall/useful_gpu_h/mean",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v1 (simulated, 10 test seeds)",
+   "label": "e001 lost_gpu_h",
+   "value": 0.7429954685335168,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v1.json",
+   "key": "result/policies/e001/overall/lost_gpu_h/mean",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v1 (simulated, 10 test seeds)",
+   "label": "e001 deficit_gpu_h",
+   "value": 465.3043674576261,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v1.json",
+   "key": "result/policies/e001/overall/deficit_gpu_h/mean",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v1 (simulated, 10 test seeds)",
+   "label": "e001 recall",
+   "value": null,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v1.json",
+   "key": "result/policies/e001/overall/recall/value",
+   "status": "missing key"
+  },
+  {
+   "section": "outage response v1 (simulated, 10 test seeds)",
+   "label": "e001 false alarms per day",
+   "value": null,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v1.json",
+   "key": "result/policies/e001/overall/false_alarms_per_day/mean",
+   "status": "missing key"
+  },
+  {
+   "section": "outage response v1 (simulated, 10 test seeds)",
+   "label": "naive useful_gpu_h",
+   "value": 1726.1805151481283,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v1.json",
+   "key": "result/policies/naive/overall/useful_gpu_h/mean",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v1 (simulated, 10 test seeds)",
+   "label": "naive lost_gpu_h",
+   "value": 24.777448624767363,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v1.json",
+   "key": "result/policies/naive/overall/lost_gpu_h/mean",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v1 (simulated, 10 test seeds)",
+   "label": "naive deficit_gpu_h",
+   "value": 6.618768960967759,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v1.json",
+   "key": "result/policies/naive/overall/deficit_gpu_h/mean",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v1 (simulated, 10 test seeds)",
+   "label": "naive recall",
+   "value": 0.25555555555555554,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v1.json",
+   "key": "result/policies/naive/overall/recall/value",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v1 (simulated, 10 test seeds)",
+   "label": "naive false alarms per day",
+   "value": 0.6,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v1.json",
+   "key": "result/policies/naive/overall/false_alarms_per_day/mean",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v1 (simulated, 10 test seeds)",
+   "label": "ets useful_gpu_h",
+   "value": 1717.5987287345924,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v1.json",
+   "key": "result/policies/ets/overall/useful_gpu_h/mean",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v1 (simulated, 10 test seeds)",
+   "label": "ets lost_gpu_h",
+   "value": 33.599039895012936,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v1.json",
+   "key": "result/policies/ets/overall/lost_gpu_h/mean",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v1 (simulated, 10 test seeds)",
+   "label": "ets deficit_gpu_h",
+   "value": 15.200555374503528,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v1.json",
+   "key": "result/policies/ets/overall/deficit_gpu_h/mean",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v1 (simulated, 10 test seeds)",
+   "label": "ets recall",
+   "value": 0.15555555555555556,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v1.json",
+   "key": "result/policies/ets/overall/recall/value",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v1 (simulated, 10 test seeds)",
+   "label": "ets false alarms per day",
+   "value": 0.4,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v1.json",
+   "key": "result/policies/ets/overall/false_alarms_per_day/mean",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v1 (simulated, 10 test seeds)",
+   "label": "arima useful_gpu_h",
+   "value": 1709.0701026060785,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v1.json",
+   "key": "result/policies/arima/overall/useful_gpu_h/mean",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v1 (simulated, 10 test seeds)",
+   "label": "arima lost_gpu_h",
+   "value": 30.736945959723652,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v1.json",
+   "key": "result/policies/arima/overall/lost_gpu_h/mean",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v1 (simulated, 10 test seeds)",
+   "label": "arima deficit_gpu_h",
+   "value": 23.72918150301723,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v1.json",
+   "key": "result/policies/arima/overall/deficit_gpu_h/mean",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v1 (simulated, 10 test seeds)",
+   "label": "arima recall",
+   "value": 0.23333333333333334,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v1.json",
+   "key": "result/policies/arima/overall/recall/value",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v1 (simulated, 10 test seeds)",
+   "label": "arima false alarms per day",
+   "value": 1.4,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v1.json",
+   "key": "result/policies/arima/overall/false_alarms_per_day/mean",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v1 (simulated, 10 test seeds)",
+   "label": "ts5m useful_gpu_h",
+   "value": 1726.5705982746415,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v1.json",
+   "key": "result/policies/ts5m/overall/useful_gpu_h/mean",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v1 (simulated, 10 test seeds)",
+   "label": "ts5m lost_gpu_h",
+   "value": 23.88402436837041,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v1.json",
+   "key": "result/policies/ts5m/overall/lost_gpu_h/mean",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v1 (simulated, 10 test seeds)",
+   "label": "ts5m deficit_gpu_h",
+   "value": 6.228685834454405,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v1.json",
+   "key": "result/policies/ts5m/overall/deficit_gpu_h/mean",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v1 (simulated, 10 test seeds)",
+   "label": "ts5m recall",
+   "value": 0.23333333333333334,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v1.json",
+   "key": "result/policies/ts5m/overall/recall/value",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v1 (simulated, 10 test seeds)",
+   "label": "ts5m false alarms per day",
+   "value": 0.0,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v1.json",
+   "key": "result/policies/ts5m/overall/false_alarms_per_day/mean",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v1 (simulated, 10 test seeds)",
+   "label": "ts28m useful_gpu_h",
+   "value": 1726.5848204968636,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v1.json",
+   "key": "result/policies/ts28m/overall/useful_gpu_h/mean",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v1 (simulated, 10 test seeds)",
+   "label": "ts28m lost_gpu_h",
+   "value": 27.53269967293346,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v1.json",
+   "key": "result/policies/ts28m/overall/lost_gpu_h/mean",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v1 (simulated, 10 test seeds)",
+   "label": "ts28m deficit_gpu_h",
+   "value": 6.21446361223218,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v1.json",
+   "key": "result/policies/ts28m/overall/deficit_gpu_h/mean",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v1 (simulated, 10 test seeds)",
+   "label": "ts28m recall",
+   "value": 0.2222222222222222,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v1.json",
+   "key": "result/policies/ts28m/overall/recall/value",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v1 (simulated, 10 test seeds)",
+   "label": "ts28m false alarms per day",
+   "value": 0.0,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v1.json",
+   "key": "result/policies/ts28m/overall/false_alarms_per_day/mean",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v1 (simulated, 10 test seeds)",
+   "label": "perfect_foresight useful_gpu_h",
+   "value": 1721.3432473716634,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v1.json",
+   "key": "result/policies/perfect_foresight/overall/useful_gpu_h/mean",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v1 (simulated, 10 test seeds)",
+   "label": "perfect_foresight lost_gpu_h",
+   "value": 3.5113331016889213,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v1.json",
+   "key": "result/policies/perfect_foresight/overall/lost_gpu_h/mean",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v1 (simulated, 10 test seeds)",
+   "label": "perfect_foresight deficit_gpu_h",
+   "value": 11.456036737432555,
+   "unit": "GPU-h",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v1.json",
+   "key": "result/policies/perfect_foresight/overall/deficit_gpu_h/mean",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v1 (simulated, 10 test seeds)",
+   "label": "perfect_foresight recall",
+   "value": 1.0,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v1.json",
+   "key": "result/policies/perfect_foresight/overall/recall/value",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v1 (simulated, 10 test seeds)",
+   "label": "perfect_foresight false alarms per day",
+   "value": 0.0,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v1.json",
+   "key": "result/policies/perfect_foresight/overall/false_alarms_per_day/mean",
+   "status": "ok"
+  },
+  {
+   "section": "outage response v2 (simulated, 10 test seeds)",
+   "label": "reactive useful_gpu_h",
+   "value": null,
+   "unit": "GPU-h",
+   "data_kind": "",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
+   "key": "result/policies/reactive/overall/useful_gpu_h/mean",
+   "status": "missing file"
+  },
+  {
+   "section": "outage response v2 (simulated, 10 test seeds)",
+   "label": "reactive lost_gpu_h",
+   "value": null,
+   "unit": "GPU-h",
+   "data_kind": "",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
+   "key": "result/policies/reactive/overall/lost_gpu_h/mean",
+   "status": "missing file"
+  },
+  {
+   "section": "outage response v2 (simulated, 10 test seeds)",
+   "label": "reactive deficit_gpu_h",
+   "value": null,
+   "unit": "GPU-h",
+   "data_kind": "",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
+   "key": "result/policies/reactive/overall/deficit_gpu_h/mean",
+   "status": "missing file"
+  },
+  {
+   "section": "outage response v2 (simulated, 10 test seeds)",
+   "label": "reactive recall",
+   "value": null,
+   "unit": "",
+   "data_kind": "",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
+   "key": "result/policies/reactive/overall/recall/value",
+   "status": "missing file"
+  },
+  {
+   "section": "outage response v2 (simulated, 10 test seeds)",
+   "label": "reactive false alarms per day",
+   "value": null,
+   "unit": "",
+   "data_kind": "",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
+   "key": "result/policies/reactive/overall/false_alarms_per_day/mean",
+   "status": "missing file"
+  },
+  {
+   "section": "outage response v2 (simulated, 10 test seeds)",
+   "label": "e001 useful_gpu_h",
+   "value": null,
+   "unit": "GPU-h",
+   "data_kind": "",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
+   "key": "result/policies/e001/overall/useful_gpu_h/mean",
+   "status": "missing file"
+  },
+  {
+   "section": "outage response v2 (simulated, 10 test seeds)",
+   "label": "e001 lost_gpu_h",
+   "value": null,
+   "unit": "GPU-h",
+   "data_kind": "",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
+   "key": "result/policies/e001/overall/lost_gpu_h/mean",
+   "status": "missing file"
+  },
+  {
+   "section": "outage response v2 (simulated, 10 test seeds)",
+   "label": "e001 deficit_gpu_h",
+   "value": null,
+   "unit": "GPU-h",
+   "data_kind": "",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
+   "key": "result/policies/e001/overall/deficit_gpu_h/mean",
+   "status": "missing file"
+  },
+  {
+   "section": "outage response v2 (simulated, 10 test seeds)",
+   "label": "e001 recall",
+   "value": null,
+   "unit": "",
+   "data_kind": "",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
+   "key": "result/policies/e001/overall/recall/value",
+   "status": "missing file"
+  },
+  {
+   "section": "outage response v2 (simulated, 10 test seeds)",
+   "label": "e001 false alarms per day",
+   "value": null,
+   "unit": "",
+   "data_kind": "",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
+   "key": "result/policies/e001/overall/false_alarms_per_day/mean",
+   "status": "missing file"
+  },
+  {
+   "section": "outage response v2 (simulated, 10 test seeds)",
+   "label": "naive useful_gpu_h",
+   "value": null,
+   "unit": "GPU-h",
+   "data_kind": "",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
+   "key": "result/policies/naive/overall/useful_gpu_h/mean",
+   "status": "missing file"
+  },
+  {
+   "section": "outage response v2 (simulated, 10 test seeds)",
+   "label": "naive lost_gpu_h",
+   "value": null,
+   "unit": "GPU-h",
+   "data_kind": "",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
+   "key": "result/policies/naive/overall/lost_gpu_h/mean",
+   "status": "missing file"
+  },
+  {
+   "section": "outage response v2 (simulated, 10 test seeds)",
+   "label": "naive deficit_gpu_h",
+   "value": null,
+   "unit": "GPU-h",
+   "data_kind": "",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
+   "key": "result/policies/naive/overall/deficit_gpu_h/mean",
+   "status": "missing file"
+  },
+  {
+   "section": "outage response v2 (simulated, 10 test seeds)",
+   "label": "naive recall",
+   "value": null,
+   "unit": "",
+   "data_kind": "",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
+   "key": "result/policies/naive/overall/recall/value",
+   "status": "missing file"
+  },
+  {
+   "section": "outage response v2 (simulated, 10 test seeds)",
+   "label": "naive false alarms per day",
+   "value": null,
+   "unit": "",
+   "data_kind": "",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
+   "key": "result/policies/naive/overall/false_alarms_per_day/mean",
+   "status": "missing file"
+  },
+  {
+   "section": "outage response v2 (simulated, 10 test seeds)",
+   "label": "ets useful_gpu_h",
+   "value": null,
+   "unit": "GPU-h",
+   "data_kind": "",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
+   "key": "result/policies/ets/overall/useful_gpu_h/mean",
+   "status": "missing file"
+  },
+  {
+   "section": "outage response v2 (simulated, 10 test seeds)",
+   "label": "ets lost_gpu_h",
+   "value": null,
+   "unit": "GPU-h",
+   "data_kind": "",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
+   "key": "result/policies/ets/overall/lost_gpu_h/mean",
+   "status": "missing file"
+  },
+  {
+   "section": "outage response v2 (simulated, 10 test seeds)",
+   "label": "ets deficit_gpu_h",
+   "value": null,
+   "unit": "GPU-h",
+   "data_kind": "",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
+   "key": "result/policies/ets/overall/deficit_gpu_h/mean",
+   "status": "missing file"
+  },
+  {
+   "section": "outage response v2 (simulated, 10 test seeds)",
+   "label": "ets recall",
+   "value": null,
+   "unit": "",
+   "data_kind": "",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
+   "key": "result/policies/ets/overall/recall/value",
+   "status": "missing file"
+  },
+  {
+   "section": "outage response v2 (simulated, 10 test seeds)",
+   "label": "ets false alarms per day",
+   "value": null,
+   "unit": "",
+   "data_kind": "",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
+   "key": "result/policies/ets/overall/false_alarms_per_day/mean",
+   "status": "missing file"
+  },
+  {
+   "section": "outage response v2 (simulated, 10 test seeds)",
+   "label": "arima useful_gpu_h",
+   "value": null,
+   "unit": "GPU-h",
+   "data_kind": "",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
+   "key": "result/policies/arima/overall/useful_gpu_h/mean",
+   "status": "missing file"
+  },
+  {
+   "section": "outage response v2 (simulated, 10 test seeds)",
+   "label": "arima lost_gpu_h",
+   "value": null,
+   "unit": "GPU-h",
+   "data_kind": "",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
+   "key": "result/policies/arima/overall/lost_gpu_h/mean",
+   "status": "missing file"
+  },
+  {
+   "section": "outage response v2 (simulated, 10 test seeds)",
+   "label": "arima deficit_gpu_h",
+   "value": null,
+   "unit": "GPU-h",
+   "data_kind": "",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
+   "key": "result/policies/arima/overall/deficit_gpu_h/mean",
+   "status": "missing file"
+  },
+  {
+   "section": "outage response v2 (simulated, 10 test seeds)",
+   "label": "arima recall",
+   "value": null,
+   "unit": "",
+   "data_kind": "",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
+   "key": "result/policies/arima/overall/recall/value",
+   "status": "missing file"
+  },
+  {
+   "section": "outage response v2 (simulated, 10 test seeds)",
+   "label": "arima false alarms per day",
+   "value": null,
+   "unit": "",
+   "data_kind": "",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
+   "key": "result/policies/arima/overall/false_alarms_per_day/mean",
+   "status": "missing file"
+  },
+  {
+   "section": "outage response v2 (simulated, 10 test seeds)",
+   "label": "ts5m useful_gpu_h",
+   "value": null,
+   "unit": "GPU-h",
+   "data_kind": "",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
+   "key": "result/policies/ts5m/overall/useful_gpu_h/mean",
+   "status": "missing file"
+  },
+  {
+   "section": "outage response v2 (simulated, 10 test seeds)",
+   "label": "ts5m lost_gpu_h",
+   "value": null,
+   "unit": "GPU-h",
+   "data_kind": "",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
+   "key": "result/policies/ts5m/overall/lost_gpu_h/mean",
+   "status": "missing file"
+  },
+  {
+   "section": "outage response v2 (simulated, 10 test seeds)",
+   "label": "ts5m deficit_gpu_h",
+   "value": null,
+   "unit": "GPU-h",
+   "data_kind": "",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
+   "key": "result/policies/ts5m/overall/deficit_gpu_h/mean",
+   "status": "missing file"
+  },
+  {
+   "section": "outage response v2 (simulated, 10 test seeds)",
+   "label": "ts5m recall",
+   "value": null,
+   "unit": "",
+   "data_kind": "",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
+   "key": "result/policies/ts5m/overall/recall/value",
+   "status": "missing file"
+  },
+  {
+   "section": "outage response v2 (simulated, 10 test seeds)",
+   "label": "ts5m false alarms per day",
+   "value": null,
+   "unit": "",
+   "data_kind": "",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
+   "key": "result/policies/ts5m/overall/false_alarms_per_day/mean",
+   "status": "missing file"
+  },
+  {
+   "section": "outage response v2 (simulated, 10 test seeds)",
+   "label": "ts28m useful_gpu_h",
+   "value": null,
+   "unit": "GPU-h",
+   "data_kind": "",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
+   "key": "result/policies/ts28m/overall/useful_gpu_h/mean",
+   "status": "missing file"
+  },
+  {
+   "section": "outage response v2 (simulated, 10 test seeds)",
+   "label": "ts28m lost_gpu_h",
+   "value": null,
+   "unit": "GPU-h",
+   "data_kind": "",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
+   "key": "result/policies/ts28m/overall/lost_gpu_h/mean",
+   "status": "missing file"
+  },
+  {
+   "section": "outage response v2 (simulated, 10 test seeds)",
+   "label": "ts28m deficit_gpu_h",
+   "value": null,
+   "unit": "GPU-h",
+   "data_kind": "",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
+   "key": "result/policies/ts28m/overall/deficit_gpu_h/mean",
+   "status": "missing file"
+  },
+  {
+   "section": "outage response v2 (simulated, 10 test seeds)",
+   "label": "ts28m recall",
+   "value": null,
+   "unit": "",
+   "data_kind": "",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
+   "key": "result/policies/ts28m/overall/recall/value",
+   "status": "missing file"
+  },
+  {
+   "section": "outage response v2 (simulated, 10 test seeds)",
+   "label": "ts28m false alarms per day",
+   "value": null,
+   "unit": "",
+   "data_kind": "",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
+   "key": "result/policies/ts28m/overall/false_alarms_per_day/mean",
+   "status": "missing file"
+  },
+  {
+   "section": "outage response v2 (simulated, 10 test seeds)",
+   "label": "perfect_foresight useful_gpu_h",
+   "value": null,
+   "unit": "GPU-h",
+   "data_kind": "",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
+   "key": "result/policies/perfect_foresight/overall/useful_gpu_h/mean",
+   "status": "missing file"
+  },
+  {
+   "section": "outage response v2 (simulated, 10 test seeds)",
+   "label": "perfect_foresight lost_gpu_h",
+   "value": null,
+   "unit": "GPU-h",
+   "data_kind": "",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
+   "key": "result/policies/perfect_foresight/overall/lost_gpu_h/mean",
+   "status": "missing file"
+  },
+  {
+   "section": "outage response v2 (simulated, 10 test seeds)",
+   "label": "perfect_foresight deficit_gpu_h",
+   "value": null,
+   "unit": "GPU-h",
+   "data_kind": "",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
+   "key": "result/policies/perfect_foresight/overall/deficit_gpu_h/mean",
+   "status": "missing file"
+  },
+  {
+   "section": "outage response v2 (simulated, 10 test seeds)",
+   "label": "perfect_foresight recall",
+   "value": null,
+   "unit": "",
+   "data_kind": "",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
+   "key": "result/policies/perfect_foresight/overall/recall/value",
+   "status": "missing file"
+  },
+  {
+   "section": "outage response v2 (simulated, 10 test seeds)",
+   "label": "perfect_foresight false alarms per day",
+   "value": null,
+   "unit": "",
+   "data_kind": "",
+   "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
+   "key": "result/policies/perfect_foresight/overall/false_alarms_per_day/mean",
+   "status": "missing file"
   }
  ]
 }

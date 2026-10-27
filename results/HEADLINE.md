@@ -163,3 +163,146 @@
 | reactive saving_pct_electricity | 9.207 | % | public | gpu_stack:experiments/e003-heatwave/results/cost-v1.json | result/pairs/de/curves/reactive|f=0.3|W=24|rho=0.7|q=na/saving_pct_electricity/5 |
 | reactive saving_pct_co2 | 8.5 | % | public | gpu_stack:experiments/e003-heatwave/results/cost-v1.json | result/pairs/de/curves/reactive|f=0.3|W=24|rho=0.7|q=na/saving_pct_co2/5 |
 | reactive saving_pct_total | 0.8588 | % | public | gpu_stack:experiments/e003-heatwave/results/cost-v1.json | result/pairs/de/curves/reactive|f=0.3|W=24|rho=0.7|q=na/saving_pct_total/5 |
+
+## power-cap packing (simulated, 6 test seeds)
+
+| quantity | value | unit | data | source | key |
+|---|---|---|---|---|---|
+| reactive gpu_hours | 1841 | GPU-h | simulated | gpu_stack:experiments/e003-heatwave/results/packing-v1.json | result/policies/reactive/gpu_hours/mean |
+| reactive energy_above_cap_kwh | 42.49 | kWh | simulated | gpu_stack:experiments/e003-heatwave/results/packing-v1.json | result/policies/reactive/energy_above_cap_kwh/mean |
+| reactive violation_rate | 0.7188 |  | simulated | gpu_stack:experiments/e003-heatwave/results/packing-v1.json | result/policies/reactive/violation_rate/mean |
+| reactive stranded_kwh | 74.28 | kWh | simulated | gpu_stack:experiments/e003-heatwave/results/packing-v1.json | result/policies/reactive/stranded_kwh/mean |
+| timestral-5M/q0.5 gpu_hours | 1562 | GPU-h | simulated | gpu_stack:experiments/e003-heatwave/results/packing-v1.json | result/policies/timestral-5M/q0.5/gpu_hours/mean |
+| timestral-5M/q0.5 energy_above_cap_kwh | 6.645 | kWh | simulated | gpu_stack:experiments/e003-heatwave/results/packing-v1.json | result/policies/timestral-5M/q0.5/energy_above_cap_kwh/mean |
+| timestral-5M/q0.5 violation_rate | 0.5859 |  | simulated | gpu_stack:experiments/e003-heatwave/results/packing-v1.json | result/policies/timestral-5M/q0.5/violation_rate/mean |
+| timestral-5M/q0.5 stranded_kwh | 71.44 | kWh | simulated | gpu_stack:experiments/e003-heatwave/results/packing-v1.json | result/policies/timestral-5M/q0.5/stranded_kwh/mean |
+| timestral-5M/q0.9 gpu_hours | 1531 | GPU-h | simulated | gpu_stack:experiments/e003-heatwave/results/packing-v1.json | result/policies/timestral-5M/q0.9/gpu_hours/mean |
+| timestral-5M/q0.9 energy_above_cap_kwh | 7.06 | kWh | simulated | gpu_stack:experiments/e003-heatwave/results/packing-v1.json | result/policies/timestral-5M/q0.9/energy_above_cap_kwh/mean |
+| timestral-5M/q0.9 violation_rate | 0.362 |  | simulated | gpu_stack:experiments/e003-heatwave/results/packing-v1.json | result/policies/timestral-5M/q0.9/violation_rate/mean |
+| timestral-5M/q0.9 stranded_kwh | 89.73 | kWh | simulated | gpu_stack:experiments/e003-heatwave/results/packing-v1.json | result/policies/timestral-5M/q0.9/stranded_kwh/mean |
+| timestral-28M/q0.9 gpu_hours | 1523 | GPU-h | simulated | gpu_stack:experiments/e003-heatwave/results/packing-v1.json | result/policies/timestral-28M/q0.9/gpu_hours/mean |
+| timestral-28M/q0.9 energy_above_cap_kwh | 4.669 | kWh | simulated | gpu_stack:experiments/e003-heatwave/results/packing-v1.json | result/policies/timestral-28M/q0.9/energy_above_cap_kwh/mean |
+| timestral-28M/q0.9 violation_rate | 0.4253 |  | simulated | gpu_stack:experiments/e003-heatwave/results/packing-v1.json | result/policies/timestral-28M/q0.9/violation_rate/mean |
+| timestral-28M/q0.9 stranded_kwh | 90.44 | kWh | simulated | gpu_stack:experiments/e003-heatwave/results/packing-v1.json | result/policies/timestral-28M/q0.9/stranded_kwh/mean |
+| seasonal-naive/q0.9 gpu_hours | 1560 | GPU-h | simulated | gpu_stack:experiments/e003-heatwave/results/packing-v1.json | result/policies/seasonal-naive/q0.9/gpu_hours/mean |
+| seasonal-naive/q0.9 energy_above_cap_kwh | 23.19 | kWh | simulated | gpu_stack:experiments/e003-heatwave/results/packing-v1.json | result/policies/seasonal-naive/q0.9/energy_above_cap_kwh/mean |
+| seasonal-naive/q0.9 violation_rate | 0.7231 |  | simulated | gpu_stack:experiments/e003-heatwave/results/packing-v1.json | result/policies/seasonal-naive/q0.9/violation_rate/mean |
+| seasonal-naive/q0.9 stranded_kwh | 88.89 | kWh | simulated | gpu_stack:experiments/e003-heatwave/results/packing-v1.json | result/policies/seasonal-naive/q0.9/stranded_kwh/mean |
+| ets/q0.9 gpu_hours | 1473 | GPU-h | simulated | gpu_stack:experiments/e003-heatwave/results/packing-v1.json | result/policies/ets/q0.9/gpu_hours/mean |
+| ets/q0.9 energy_above_cap_kwh | 15.41 | kWh | simulated | gpu_stack:experiments/e003-heatwave/results/packing-v1.json | result/policies/ets/q0.9/energy_above_cap_kwh/mean |
+| ets/q0.9 violation_rate | 0.197 |  | simulated | gpu_stack:experiments/e003-heatwave/results/packing-v1.json | result/policies/ets/q0.9/violation_rate/mean |
+| ets/q0.9 stranded_kwh | 129.1 | kWh | simulated | gpu_stack:experiments/e003-heatwave/results/packing-v1.json | result/policies/ets/q0.9/stranded_kwh/mean |
+| arima/q0.9 gpu_hours | 1471 | GPU-h | simulated | gpu_stack:experiments/e003-heatwave/results/packing-v1.json | result/policies/arima/q0.9/gpu_hours/mean |
+| arima/q0.9 energy_above_cap_kwh | 10.28 | kWh | simulated | gpu_stack:experiments/e003-heatwave/results/packing-v1.json | result/policies/arima/q0.9/energy_above_cap_kwh/mean |
+| arima/q0.9 violation_rate | 0.2821 |  | simulated | gpu_stack:experiments/e003-heatwave/results/packing-v1.json | result/policies/arima/q0.9/violation_rate/mean |
+| arima/q0.9 stranded_kwh | 125.6 | kWh | simulated | gpu_stack:experiments/e003-heatwave/results/packing-v1.json | result/policies/arima/q0.9/stranded_kwh/mean |
+| oracle gpu_hours | 1543 | GPU-h | simulated | gpu_stack:experiments/e003-heatwave/results/packing-v1.json | result/policies/oracle/gpu_hours/mean |
+| oracle energy_above_cap_kwh | 2.49 | kWh | simulated | gpu_stack:experiments/e003-heatwave/results/packing-v1.json | result/policies/oracle/energy_above_cap_kwh/mean |
+| oracle violation_rate | 0.4965 |  | simulated | gpu_stack:experiments/e003-heatwave/results/packing-v1.json | result/policies/oracle/violation_rate/mean |
+| oracle stranded_kwh | 78.77 | kWh | simulated | gpu_stack:experiments/e003-heatwave/results/packing-v1.json | result/policies/oracle/stranded_kwh/mean |
+| learned minus reactive net value at penalty 2.5 USD/kWh (mean) | -295.3 | USD | simulated | gpu_stack:experiments/e003-heatwave/results/packing-v1.json | result/paired_net_value_difference/2.5/net_value_difference_usd_vs/reactive/mean |
+| learned minus reactive net value at penalty 2.5 USD/kWh (lo) | -500.4 | USD | simulated | gpu_stack:experiments/e003-heatwave/results/packing-v1.json | result/paired_net_value_difference/2.5/net_value_difference_usd_vs/reactive/lo |
+| learned minus reactive net value at penalty 2.5 USD/kWh (hi) | -93.38 | USD | simulated | gpu_stack:experiments/e003-heatwave/results/packing-v1.json | result/paired_net_value_difference/2.5/net_value_difference_usd_vs/reactive/hi |
+| best fixed policy at penalty 2.5 | timestral-5M/q0.01 |  | simulated | gpu_stack:experiments/e003-heatwave/results/packing-v1.json | result/best_fixed_by_penalty/2.5/best_fixed_policy_by_mean_net_value_on_test_seeds |
+| learned minus reactive net value at penalty 10 USD/kWh (mean) | -37.79 | USD | simulated | gpu_stack:experiments/e003-heatwave/results/packing-v1.json | result/paired_net_value_difference/10/net_value_difference_usd_vs/reactive/mean |
+| learned minus reactive net value at penalty 10 USD/kWh (lo) | -219.6 | USD | simulated | gpu_stack:experiments/e003-heatwave/results/packing-v1.json | result/paired_net_value_difference/10/net_value_difference_usd_vs/reactive/lo |
+| learned minus reactive net value at penalty 10 USD/kWh (hi) | 158.1 | USD | simulated | gpu_stack:experiments/e003-heatwave/results/packing-v1.json | result/paired_net_value_difference/10/net_value_difference_usd_vs/reactive/hi |
+| best fixed policy at penalty 10 | timestral-5M/q0.05 |  | simulated | gpu_stack:experiments/e003-heatwave/results/packing-v1.json | result/best_fixed_by_penalty/10/best_fixed_policy_by_mean_net_value_on_test_seeds |
+| learned minus reactive net value at penalty 40 USD/kWh (mean) | 746.5 | USD | simulated | gpu_stack:experiments/e003-heatwave/results/packing-v1.json | result/paired_net_value_difference/40/net_value_difference_usd_vs/reactive/mean |
+| learned minus reactive net value at penalty 40 USD/kWh (lo) | 453.5 | USD | simulated | gpu_stack:experiments/e003-heatwave/results/packing-v1.json | result/paired_net_value_difference/40/net_value_difference_usd_vs/reactive/lo |
+| learned minus reactive net value at penalty 40 USD/kWh (hi) | 966.8 | USD | simulated | gpu_stack:experiments/e003-heatwave/results/packing-v1.json | result/paired_net_value_difference/40/net_value_difference_usd_vs/reactive/hi |
+| best fixed policy at penalty 40 | timestral-5M/q0.15 |  | simulated | gpu_stack:experiments/e003-heatwave/results/packing-v1.json | result/best_fixed_by_penalty/40/best_fixed_policy_by_mean_net_value_on_test_seeds |
+| learned minus reactive net value at penalty 160 USD/kWh (mean) | 5575 | USD | simulated | gpu_stack:experiments/e003-heatwave/results/packing-v1.json | result/paired_net_value_difference/160/net_value_difference_usd_vs/reactive/mean |
+| learned minus reactive net value at penalty 160 USD/kWh (lo) | 4603 | USD | simulated | gpu_stack:experiments/e003-heatwave/results/packing-v1.json | result/paired_net_value_difference/160/net_value_difference_usd_vs/reactive/lo |
+| learned minus reactive net value at penalty 160 USD/kWh (hi) | 6609 | USD | simulated | gpu_stack:experiments/e003-heatwave/results/packing-v1.json | result/paired_net_value_difference/160/net_value_difference_usd_vs/reactive/hi |
+| best fixed policy at penalty 160 | timestral-28M/q0.99 |  | simulated | gpu_stack:experiments/e003-heatwave/results/packing-v1.json | result/best_fixed_by_penalty/160/best_fixed_policy_by_mean_net_value_on_test_seeds |
+
+## outage response v1 (simulated, 10 test seeds)
+
+| quantity | value | unit | data | source | key |
+|---|---|---|---|---|---|
+| reactive useful_gpu_h | 1722 | GPU-h | simulated | gpu_stack:experiments/e003-heatwave/results/outage-v1.json | result/policies/reactive/overall/useful_gpu_h/mean |
+| reactive lost_gpu_h | 35.06 | GPU-h | simulated | gpu_stack:experiments/e003-heatwave/results/outage-v1.json | result/policies/reactive/overall/lost_gpu_h/mean |
+| reactive deficit_gpu_h | 10.67 | GPU-h | simulated | gpu_stack:experiments/e003-heatwave/results/outage-v1.json | result/policies/reactive/overall/deficit_gpu_h/mean |
+| reactive recall | missing key |  | simulated | gpu_stack:experiments/e003-heatwave/results/outage-v1.json | result/policies/reactive/overall/recall/value |
+| reactive false alarms per day | missing key |  | simulated | gpu_stack:experiments/e003-heatwave/results/outage-v1.json | result/policies/reactive/overall/false_alarms_per_day/mean |
+| e001 useful_gpu_h | 1267 | GPU-h | simulated | gpu_stack:experiments/e003-heatwave/results/outage-v1.json | result/policies/e001/overall/useful_gpu_h/mean |
+| e001 lost_gpu_h | 0.743 | GPU-h | simulated | gpu_stack:experiments/e003-heatwave/results/outage-v1.json | result/policies/e001/overall/lost_gpu_h/mean |
+| e001 deficit_gpu_h | 465.3 | GPU-h | simulated | gpu_stack:experiments/e003-heatwave/results/outage-v1.json | result/policies/e001/overall/deficit_gpu_h/mean |
+| e001 recall | missing key |  | simulated | gpu_stack:experiments/e003-heatwave/results/outage-v1.json | result/policies/e001/overall/recall/value |
+| e001 false alarms per day | missing key |  | simulated | gpu_stack:experiments/e003-heatwave/results/outage-v1.json | result/policies/e001/overall/false_alarms_per_day/mean |
+| naive useful_gpu_h | 1726 | GPU-h | simulated | gpu_stack:experiments/e003-heatwave/results/outage-v1.json | result/policies/naive/overall/useful_gpu_h/mean |
+| naive lost_gpu_h | 24.78 | GPU-h | simulated | gpu_stack:experiments/e003-heatwave/results/outage-v1.json | result/policies/naive/overall/lost_gpu_h/mean |
+| naive deficit_gpu_h | 6.619 | GPU-h | simulated | gpu_stack:experiments/e003-heatwave/results/outage-v1.json | result/policies/naive/overall/deficit_gpu_h/mean |
+| naive recall | 0.2556 |  | simulated | gpu_stack:experiments/e003-heatwave/results/outage-v1.json | result/policies/naive/overall/recall/value |
+| naive false alarms per day | 0.6 |  | simulated | gpu_stack:experiments/e003-heatwave/results/outage-v1.json | result/policies/naive/overall/false_alarms_per_day/mean |
+| ets useful_gpu_h | 1718 | GPU-h | simulated | gpu_stack:experiments/e003-heatwave/results/outage-v1.json | result/policies/ets/overall/useful_gpu_h/mean |
+| ets lost_gpu_h | 33.6 | GPU-h | simulated | gpu_stack:experiments/e003-heatwave/results/outage-v1.json | result/policies/ets/overall/lost_gpu_h/mean |
+| ets deficit_gpu_h | 15.2 | GPU-h | simulated | gpu_stack:experiments/e003-heatwave/results/outage-v1.json | result/policies/ets/overall/deficit_gpu_h/mean |
+| ets recall | 0.1556 |  | simulated | gpu_stack:experiments/e003-heatwave/results/outage-v1.json | result/policies/ets/overall/recall/value |
+| ets false alarms per day | 0.4 |  | simulated | gpu_stack:experiments/e003-heatwave/results/outage-v1.json | result/policies/ets/overall/false_alarms_per_day/mean |
+| arima useful_gpu_h | 1709 | GPU-h | simulated | gpu_stack:experiments/e003-heatwave/results/outage-v1.json | result/policies/arima/overall/useful_gpu_h/mean |
+| arima lost_gpu_h | 30.74 | GPU-h | simulated | gpu_stack:experiments/e003-heatwave/results/outage-v1.json | result/policies/arima/overall/lost_gpu_h/mean |
+| arima deficit_gpu_h | 23.73 | GPU-h | simulated | gpu_stack:experiments/e003-heatwave/results/outage-v1.json | result/policies/arima/overall/deficit_gpu_h/mean |
+| arima recall | 0.2333 |  | simulated | gpu_stack:experiments/e003-heatwave/results/outage-v1.json | result/policies/arima/overall/recall/value |
+| arima false alarms per day | 1.4 |  | simulated | gpu_stack:experiments/e003-heatwave/results/outage-v1.json | result/policies/arima/overall/false_alarms_per_day/mean |
+| ts5m useful_gpu_h | 1727 | GPU-h | simulated | gpu_stack:experiments/e003-heatwave/results/outage-v1.json | result/policies/ts5m/overall/useful_gpu_h/mean |
+| ts5m lost_gpu_h | 23.88 | GPU-h | simulated | gpu_stack:experiments/e003-heatwave/results/outage-v1.json | result/policies/ts5m/overall/lost_gpu_h/mean |
+| ts5m deficit_gpu_h | 6.229 | GPU-h | simulated | gpu_stack:experiments/e003-heatwave/results/outage-v1.json | result/policies/ts5m/overall/deficit_gpu_h/mean |
+| ts5m recall | 0.2333 |  | simulated | gpu_stack:experiments/e003-heatwave/results/outage-v1.json | result/policies/ts5m/overall/recall/value |
+| ts5m false alarms per day | 0 |  | simulated | gpu_stack:experiments/e003-heatwave/results/outage-v1.json | result/policies/ts5m/overall/false_alarms_per_day/mean |
+| ts28m useful_gpu_h | 1727 | GPU-h | simulated | gpu_stack:experiments/e003-heatwave/results/outage-v1.json | result/policies/ts28m/overall/useful_gpu_h/mean |
+| ts28m lost_gpu_h | 27.53 | GPU-h | simulated | gpu_stack:experiments/e003-heatwave/results/outage-v1.json | result/policies/ts28m/overall/lost_gpu_h/mean |
+| ts28m deficit_gpu_h | 6.214 | GPU-h | simulated | gpu_stack:experiments/e003-heatwave/results/outage-v1.json | result/policies/ts28m/overall/deficit_gpu_h/mean |
+| ts28m recall | 0.2222 |  | simulated | gpu_stack:experiments/e003-heatwave/results/outage-v1.json | result/policies/ts28m/overall/recall/value |
+| ts28m false alarms per day | 0 |  | simulated | gpu_stack:experiments/e003-heatwave/results/outage-v1.json | result/policies/ts28m/overall/false_alarms_per_day/mean |
+| perfect_foresight useful_gpu_h | 1721 | GPU-h | simulated | gpu_stack:experiments/e003-heatwave/results/outage-v1.json | result/policies/perfect_foresight/overall/useful_gpu_h/mean |
+| perfect_foresight lost_gpu_h | 3.511 | GPU-h | simulated | gpu_stack:experiments/e003-heatwave/results/outage-v1.json | result/policies/perfect_foresight/overall/lost_gpu_h/mean |
+| perfect_foresight deficit_gpu_h | 11.46 | GPU-h | simulated | gpu_stack:experiments/e003-heatwave/results/outage-v1.json | result/policies/perfect_foresight/overall/deficit_gpu_h/mean |
+| perfect_foresight recall | 1 |  | simulated | gpu_stack:experiments/e003-heatwave/results/outage-v1.json | result/policies/perfect_foresight/overall/recall/value |
+| perfect_foresight false alarms per day | 0 |  | simulated | gpu_stack:experiments/e003-heatwave/results/outage-v1.json | result/policies/perfect_foresight/overall/false_alarms_per_day/mean |
+
+## outage response v2 (simulated, 10 test seeds)
+
+| quantity | value | unit | data | source | key |
+|---|---|---|---|---|---|
+| reactive useful_gpu_h | missing file | GPU-h |  | gpu_stack:experiments/e003-heatwave/results/outage-v2.json | result/policies/reactive/overall/useful_gpu_h/mean |
+| reactive lost_gpu_h | missing file | GPU-h |  | gpu_stack:experiments/e003-heatwave/results/outage-v2.json | result/policies/reactive/overall/lost_gpu_h/mean |
+| reactive deficit_gpu_h | missing file | GPU-h |  | gpu_stack:experiments/e003-heatwave/results/outage-v2.json | result/policies/reactive/overall/deficit_gpu_h/mean |
+| reactive recall | missing file |  |  | gpu_stack:experiments/e003-heatwave/results/outage-v2.json | result/policies/reactive/overall/recall/value |
+| reactive false alarms per day | missing file |  |  | gpu_stack:experiments/e003-heatwave/results/outage-v2.json | result/policies/reactive/overall/false_alarms_per_day/mean |
+| e001 useful_gpu_h | missing file | GPU-h |  | gpu_stack:experiments/e003-heatwave/results/outage-v2.json | result/policies/e001/overall/useful_gpu_h/mean |
+| e001 lost_gpu_h | missing file | GPU-h |  | gpu_stack:experiments/e003-heatwave/results/outage-v2.json | result/policies/e001/overall/lost_gpu_h/mean |
+| e001 deficit_gpu_h | missing file | GPU-h |  | gpu_stack:experiments/e003-heatwave/results/outage-v2.json | result/policies/e001/overall/deficit_gpu_h/mean |
+| e001 recall | missing file |  |  | gpu_stack:experiments/e003-heatwave/results/outage-v2.json | result/policies/e001/overall/recall/value |
+| e001 false alarms per day | missing file |  |  | gpu_stack:experiments/e003-heatwave/results/outage-v2.json | result/policies/e001/overall/false_alarms_per_day/mean |
+| naive useful_gpu_h | missing file | GPU-h |  | gpu_stack:experiments/e003-heatwave/results/outage-v2.json | result/policies/naive/overall/useful_gpu_h/mean |
+| naive lost_gpu_h | missing file | GPU-h |  | gpu_stack:experiments/e003-heatwave/results/outage-v2.json | result/policies/naive/overall/lost_gpu_h/mean |
+| naive deficit_gpu_h | missing file | GPU-h |  | gpu_stack:experiments/e003-heatwave/results/outage-v2.json | result/policies/naive/overall/deficit_gpu_h/mean |
+| naive recall | missing file |  |  | gpu_stack:experiments/e003-heatwave/results/outage-v2.json | result/policies/naive/overall/recall/value |
+| naive false alarms per day | missing file |  |  | gpu_stack:experiments/e003-heatwave/results/outage-v2.json | result/policies/naive/overall/false_alarms_per_day/mean |
+| ets useful_gpu_h | missing file | GPU-h |  | gpu_stack:experiments/e003-heatwave/results/outage-v2.json | result/policies/ets/overall/useful_gpu_h/mean |
+| ets lost_gpu_h | missing file | GPU-h |  | gpu_stack:experiments/e003-heatwave/results/outage-v2.json | result/policies/ets/overall/lost_gpu_h/mean |
+| ets deficit_gpu_h | missing file | GPU-h |  | gpu_stack:experiments/e003-heatwave/results/outage-v2.json | result/policies/ets/overall/deficit_gpu_h/mean |
+| ets recall | missing file |  |  | gpu_stack:experiments/e003-heatwave/results/outage-v2.json | result/policies/ets/overall/recall/value |
+| ets false alarms per day | missing file |  |  | gpu_stack:experiments/e003-heatwave/results/outage-v2.json | result/policies/ets/overall/false_alarms_per_day/mean |
+| arima useful_gpu_h | missing file | GPU-h |  | gpu_stack:experiments/e003-heatwave/results/outage-v2.json | result/policies/arima/overall/useful_gpu_h/mean |
+| arima lost_gpu_h | missing file | GPU-h |  | gpu_stack:experiments/e003-heatwave/results/outage-v2.json | result/policies/arima/overall/lost_gpu_h/mean |
+| arima deficit_gpu_h | missing file | GPU-h |  | gpu_stack:experiments/e003-heatwave/results/outage-v2.json | result/policies/arima/overall/deficit_gpu_h/mean |
+| arima recall | missing file |  |  | gpu_stack:experiments/e003-heatwave/results/outage-v2.json | result/policies/arima/overall/recall/value |
+| arima false alarms per day | missing file |  |  | gpu_stack:experiments/e003-heatwave/results/outage-v2.json | result/policies/arima/overall/false_alarms_per_day/mean |
+| ts5m useful_gpu_h | missing file | GPU-h |  | gpu_stack:experiments/e003-heatwave/results/outage-v2.json | result/policies/ts5m/overall/useful_gpu_h/mean |
+| ts5m lost_gpu_h | missing file | GPU-h |  | gpu_stack:experiments/e003-heatwave/results/outage-v2.json | result/policies/ts5m/overall/lost_gpu_h/mean |
+| ts5m deficit_gpu_h | missing file | GPU-h |  | gpu_stack:experiments/e003-heatwave/results/outage-v2.json | result/policies/ts5m/overall/deficit_gpu_h/mean |
+| ts5m recall | missing file |  |  | gpu_stack:experiments/e003-heatwave/results/outage-v2.json | result/policies/ts5m/overall/recall/value |
+| ts5m false alarms per day | missing file |  |  | gpu_stack:experiments/e003-heatwave/results/outage-v2.json | result/policies/ts5m/overall/false_alarms_per_day/mean |
+| ts28m useful_gpu_h | missing file | GPU-h |  | gpu_stack:experiments/e003-heatwave/results/outage-v2.json | result/policies/ts28m/overall/useful_gpu_h/mean |
+| ts28m lost_gpu_h | missing file | GPU-h |  | gpu_stack:experiments/e003-heatwave/results/outage-v2.json | result/policies/ts28m/overall/lost_gpu_h/mean |
+| ts28m deficit_gpu_h | missing file | GPU-h |  | gpu_stack:experiments/e003-heatwave/results/outage-v2.json | result/policies/ts28m/overall/deficit_gpu_h/mean |
+| ts28m recall | missing file |  |  | gpu_stack:experiments/e003-heatwave/results/outage-v2.json | result/policies/ts28m/overall/recall/value |
+| ts28m false alarms per day | missing file |  |  | gpu_stack:experiments/e003-heatwave/results/outage-v2.json | result/policies/ts28m/overall/false_alarms_per_day/mean |
+| perfect_foresight useful_gpu_h | missing file | GPU-h |  | gpu_stack:experiments/e003-heatwave/results/outage-v2.json | result/policies/perfect_foresight/overall/useful_gpu_h/mean |
+| perfect_foresight lost_gpu_h | missing file | GPU-h |  | gpu_stack:experiments/e003-heatwave/results/outage-v2.json | result/policies/perfect_foresight/overall/lost_gpu_h/mean |
+| perfect_foresight deficit_gpu_h | missing file | GPU-h |  | gpu_stack:experiments/e003-heatwave/results/outage-v2.json | result/policies/perfect_foresight/overall/deficit_gpu_h/mean |
+| perfect_foresight recall | missing file |  |  | gpu_stack:experiments/e003-heatwave/results/outage-v2.json | result/policies/perfect_foresight/overall/recall/value |
+| perfect_foresight false alarms per day | missing file |  |  | gpu_stack:experiments/e003-heatwave/results/outage-v2.json | result/policies/perfect_foresight/overall/false_alarms_per_day/mean |
