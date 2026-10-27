@@ -1,9 +1,15 @@
+import pytest
 """Tests for window cutting and the fixed splits of the forecasting studies."""
 
 import numpy as np
 import pandas as pd
 
 from heatwave.forecast import datasets as D
+
+from heatwave.data.schema import PROCESSED
+# MIT Supercloud series are not redistributed (CC BY-NC-ND 4.0); rebuild them with scripts/fetch_mit_supercloud.py
+needs_mit = pytest.mark.skipif(not (PROCESSED / "public_gpu_mit_jobs.parquet").exists(),
+                               reason="MIT Supercloud series not present; run scripts/fetch_mit_supercloud.py")
 
 
 def test_origin_positions_bounds_and_thinning():
@@ -41,6 +47,7 @@ def test_subsample_index_is_deterministic_and_spans_range():
     assert len(D.subsample_index(3, 5)) == 3
 
 
+@needs_mit
 def test_splits_are_disjoint_and_follow_the_rules():
     te, tr = D.node_sessions("test"), D.node_sessions("train")
     assert not set(te) & set(tr) and len(te) + len(tr) == 32

@@ -10,6 +10,10 @@ from heatwave.data import public
 from heatwave.data.public.weather import wet_bulb_stull
 from heatwave.data.schema import PROCESSED, list_series, load_series
 
+# MIT Supercloud series are not redistributed (CC BY-NC-ND 4.0); rebuild them with scripts/fetch_mit_supercloud.py
+needs_mit = pytest.mark.skipif(not (PROCESSED / "public_gpu_mit_jobs.parquet").exists(),
+                               reason="MIT Supercloud series not present; run scripts/fetch_mit_supercloud.py")
+
 TOP = [n for n in list_series(PROCESSED) if n.startswith("public_")]
 GPU_SERIES = public.list_gpu_series() if public.GPU_DIR.exists() else []
 NODE_SESSIONS = list(public.list_node_power_sessions().session) if (PROCESSED / "public_gpu_node_sessions.parquet").exists() else []
@@ -44,6 +48,7 @@ def test_expected_top_level_series_exist():
         assert n in TOP, n
 
 
+@needs_mit
 def test_gpu_jobs_table():
     jobs = public.load_gpu_jobs()
     assert len(jobs) >= 200
@@ -54,12 +59,14 @@ def test_gpu_jobs_table():
     assert jobs.job_id.is_unique
 
 
+@needs_mit
 def test_gpu_series_all_files_consistent():
     jobs = public.load_gpu_jobs()
     listed = {s for ss in jobs.series for s in ss}
     assert listed == set(GPU_SERIES)
 
 
+@needs_mit
 def test_gpu_series_sample():
     jobs = public.load_gpu_jobs()
     sample = jobs.sample(12, random_state=0)
@@ -79,6 +86,7 @@ def test_gpu_series_sample():
         assert df[f"{gpus[0]}_power_w"].dropna().between(0, 500).all()  # V100 board limit is 300 W; margin for sensor noise
 
 
+@needs_mit
 def test_multi_node_job_requires_node():
     jobs = public.load_gpu_jobs()
     multi = jobs[jobs.n_nodes > 1]

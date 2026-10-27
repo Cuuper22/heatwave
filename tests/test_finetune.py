@@ -19,6 +19,11 @@ from heatwave.finetune import model as Mo  # noqa: E402
 from heatwave.finetune import sim as S  # noqa: E402
 from heatwave.finetune import train as Tr  # noqa: E402
 
+from heatwave.data.schema import PROCESSED
+# MIT Supercloud series are not redistributed (CC BY-NC-ND 4.0); rebuild them with scripts/fetch_mit_supercloud.py
+needs_mit = pytest.mark.skipif(not (PROCESSED / "public_gpu_mit_jobs.parquet").exists(),
+                               reason="MIT Supercloud series not present; run scripts/fetch_mit_supercloud.py")
+
 try:
     BASE5 = BaseForecaster.from_pretrained("mistralai/Timestral-5M", local_files_only=True)
 except Exception:  # pragma: no cover - weights not cached
@@ -226,6 +231,7 @@ def test_sim_seed_weeks_respect_the_splits():
         S.split_of_seed(75)
 
 
+@needs_mit
 def test_public_telemetry_splits_are_disjoint_from_test():
     D = Dt._datasets()
     tr, va = Dt._val_node_sessions()
