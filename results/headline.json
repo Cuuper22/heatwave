@@ -2113,402 +2113,402 @@
   {
    "section": "outage response v2 (simulated, 10 test seeds)",
    "label": "reactive useful_gpu_h",
-   "value": null,
+   "value": 1722.1336059637688,
    "unit": "GPU-h",
-   "data_kind": "",
+   "data_kind": "simulated",
    "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
    "key": "result/policies/reactive/overall/useful_gpu_h/mean",
-   "status": "missing file"
+   "status": "ok"
   },
   {
    "section": "outage response v2 (simulated, 10 test seeds)",
    "label": "reactive lost_gpu_h",
-   "value": null,
+   "value": 35.056193378909306,
    "unit": "GPU-h",
-   "data_kind": "",
+   "data_kind": "simulated",
    "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
    "key": "result/policies/reactive/overall/lost_gpu_h/mean",
-   "status": "missing file"
+   "status": "ok"
   },
   {
    "section": "outage response v2 (simulated, 10 test seeds)",
    "label": "reactive deficit_gpu_h",
-   "value": null,
+   "value": 10.665678145327002,
    "unit": "GPU-h",
-   "data_kind": "",
+   "data_kind": "simulated",
    "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
    "key": "result/policies/reactive/overall/deficit_gpu_h/mean",
-   "status": "missing file"
+   "status": "ok"
   },
   {
    "section": "outage response v2 (simulated, 10 test seeds)",
    "label": "reactive recall",
    "value": null,
    "unit": "",
-   "data_kind": "",
+   "data_kind": "simulated",
    "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
    "key": "result/policies/reactive/overall/recall/value",
-   "status": "missing file"
+   "status": "missing key"
   },
   {
    "section": "outage response v2 (simulated, 10 test seeds)",
    "label": "reactive false alarms per day",
    "value": null,
    "unit": "",
-   "data_kind": "",
+   "data_kind": "simulated",
    "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
    "key": "result/policies/reactive/overall/false_alarms_per_day/mean",
-   "status": "missing file"
+   "status": "missing key"
   },
   {
    "section": "outage response v2 (simulated, 10 test seeds)",
    "label": "e001 useful_gpu_h",
-   "value": null,
+   "value": 1267.4949166514696,
    "unit": "GPU-h",
-   "data_kind": "",
+   "data_kind": "simulated",
    "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
    "key": "result/policies/e001/overall/useful_gpu_h/mean",
-   "status": "missing file"
+   "status": "ok"
   },
   {
    "section": "outage response v2 (simulated, 10 test seeds)",
    "label": "e001 lost_gpu_h",
-   "value": null,
+   "value": 0.7429954685335168,
    "unit": "GPU-h",
-   "data_kind": "",
+   "data_kind": "simulated",
    "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
    "key": "result/policies/e001/overall/lost_gpu_h/mean",
-   "status": "missing file"
+   "status": "ok"
   },
   {
    "section": "outage response v2 (simulated, 10 test seeds)",
    "label": "e001 deficit_gpu_h",
-   "value": null,
+   "value": 465.3043674576261,
    "unit": "GPU-h",
-   "data_kind": "",
+   "data_kind": "simulated",
    "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
    "key": "result/policies/e001/overall/deficit_gpu_h/mean",
-   "status": "missing file"
+   "status": "ok"
   },
   {
    "section": "outage response v2 (simulated, 10 test seeds)",
    "label": "e001 recall",
    "value": null,
    "unit": "",
-   "data_kind": "",
+   "data_kind": "simulated",
    "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
    "key": "result/policies/e001/overall/recall/value",
-   "status": "missing file"
+   "status": "missing key"
   },
   {
    "section": "outage response v2 (simulated, 10 test seeds)",
    "label": "e001 false alarms per day",
    "value": null,
    "unit": "",
-   "data_kind": "",
+   "data_kind": "simulated",
    "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
    "key": "result/policies/e001/overall/false_alarms_per_day/mean",
-   "status": "missing file"
+   "status": "missing key"
   },
   {
    "section": "outage response v2 (simulated, 10 test seeds)",
    "label": "naive useful_gpu_h",
-   "value": null,
+   "value": 1727.742683761301,
    "unit": "GPU-h",
-   "data_kind": "",
+   "data_kind": "simulated",
    "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
    "key": "result/policies/naive/overall/useful_gpu_h/mean",
-   "status": "missing file"
+   "status": "ok"
   },
   {
    "section": "outage response v2 (simulated, 10 test seeds)",
    "label": "naive lost_gpu_h",
-   "value": null,
+   "value": 23.46242897591366,
    "unit": "GPU-h",
-   "data_kind": "",
+   "data_kind": "simulated",
    "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
    "key": "result/policies/naive/overall/lost_gpu_h/mean",
-   "status": "missing file"
+   "status": "ok"
   },
   {
    "section": "outage response v2 (simulated, 10 test seeds)",
    "label": "naive deficit_gpu_h",
-   "value": null,
+   "value": 5.056600347794801,
    "unit": "GPU-h",
-   "data_kind": "",
+   "data_kind": "simulated",
    "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
    "key": "result/policies/naive/overall/deficit_gpu_h/mean",
-   "status": "missing file"
+   "status": "ok"
   },
   {
    "section": "outage response v2 (simulated, 10 test seeds)",
    "label": "naive recall",
-   "value": null,
+   "value": 0.3333333333333333,
    "unit": "",
-   "data_kind": "",
+   "data_kind": "simulated",
    "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
    "key": "result/policies/naive/overall/recall/value",
-   "status": "missing file"
+   "status": "ok"
   },
   {
    "section": "outage response v2 (simulated, 10 test seeds)",
    "label": "naive false alarms per day",
-   "value": null,
+   "value": 7.4,
    "unit": "",
-   "data_kind": "",
+   "data_kind": "simulated",
    "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
    "key": "result/policies/naive/overall/false_alarms_per_day/mean",
-   "status": "missing file"
+   "status": "ok"
   },
   {
    "section": "outage response v2 (simulated, 10 test seeds)",
    "label": "ets useful_gpu_h",
-   "value": null,
+   "value": 1715.3647302730526,
    "unit": "GPU-h",
-   "data_kind": "",
+   "data_kind": "simulated",
    "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
    "key": "result/policies/ets/overall/useful_gpu_h/mean",
-   "status": "missing file"
+   "status": "ok"
   },
   {
    "section": "outage response v2 (simulated, 10 test seeds)",
    "label": "ets lost_gpu_h",
-   "value": null,
+   "value": 28.070422109560717,
    "unit": "GPU-h",
-   "data_kind": "",
+   "data_kind": "simulated",
    "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
    "key": "result/policies/ets/overall/lost_gpu_h/mean",
-   "status": "missing file"
+   "status": "ok"
   },
   {
    "section": "outage response v2 (simulated, 10 test seeds)",
    "label": "ets deficit_gpu_h",
-   "value": null,
+   "value": 17.434553836043598,
    "unit": "GPU-h",
-   "data_kind": "",
+   "data_kind": "simulated",
    "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
    "key": "result/policies/ets/overall/deficit_gpu_h/mean",
-   "status": "missing file"
+   "status": "ok"
   },
   {
    "section": "outage response v2 (simulated, 10 test seeds)",
    "label": "ets recall",
-   "value": null,
+   "value": 0.26666666666666666,
    "unit": "",
-   "data_kind": "",
+   "data_kind": "simulated",
    "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
    "key": "result/policies/ets/overall/recall/value",
-   "status": "missing file"
+   "status": "ok"
   },
   {
    "section": "outage response v2 (simulated, 10 test seeds)",
    "label": "ets false alarms per day",
-   "value": null,
+   "value": 1.8,
    "unit": "",
-   "data_kind": "",
+   "data_kind": "simulated",
    "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
    "key": "result/policies/ets/overall/false_alarms_per_day/mean",
-   "status": "missing file"
+   "status": "ok"
   },
   {
    "section": "outage response v2 (simulated, 10 test seeds)",
    "label": "arima useful_gpu_h",
-   "value": null,
+   "value": 1700.7269887663253,
    "unit": "GPU-h",
-   "data_kind": "",
+   "data_kind": "simulated",
    "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
    "key": "result/policies/arima/overall/useful_gpu_h/mean",
-   "status": "missing file"
+   "status": "ok"
   },
   {
    "section": "outage response v2 (simulated, 10 test seeds)",
    "label": "arima lost_gpu_h",
-   "value": null,
+   "value": 27.987695443064705,
    "unit": "GPU-h",
-   "data_kind": "",
+   "data_kind": "simulated",
    "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
    "key": "result/policies/arima/overall/lost_gpu_h/mean",
-   "status": "missing file"
+   "status": "ok"
   },
   {
    "section": "outage response v2 (simulated, 10 test seeds)",
    "label": "arima deficit_gpu_h",
-   "value": null,
+   "value": 32.07229534277046,
    "unit": "GPU-h",
-   "data_kind": "",
+   "data_kind": "simulated",
    "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
    "key": "result/policies/arima/overall/deficit_gpu_h/mean",
-   "status": "missing file"
+   "status": "ok"
   },
   {
    "section": "outage response v2 (simulated, 10 test seeds)",
    "label": "arima recall",
-   "value": null,
+   "value": 0.3,
    "unit": "",
-   "data_kind": "",
+   "data_kind": "simulated",
    "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
    "key": "result/policies/arima/overall/recall/value",
-   "status": "missing file"
+   "status": "ok"
   },
   {
    "section": "outage response v2 (simulated, 10 test seeds)",
    "label": "arima false alarms per day",
-   "value": null,
+   "value": 5.8,
    "unit": "",
-   "data_kind": "",
+   "data_kind": "simulated",
    "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
    "key": "result/policies/arima/overall/false_alarms_per_day/mean",
-   "status": "missing file"
+   "status": "ok"
   },
   {
    "section": "outage response v2 (simulated, 10 test seeds)",
    "label": "ts5m useful_gpu_h",
-   "value": null,
+   "value": 1724.9699387415517,
    "unit": "GPU-h",
-   "data_kind": "",
+   "data_kind": "simulated",
    "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
    "key": "result/policies/ts5m/overall/useful_gpu_h/mean",
-   "status": "missing file"
+   "status": "ok"
   },
   {
    "section": "outage response v2 (simulated, 10 test seeds)",
    "label": "ts5m lost_gpu_h",
-   "value": null,
+   "value": 23.980112607922788,
    "unit": "GPU-h",
-   "data_kind": "",
+   "data_kind": "simulated",
    "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
    "key": "result/policies/ts5m/overall/lost_gpu_h/mean",
-   "status": "missing file"
+   "status": "ok"
   },
   {
    "section": "outage response v2 (simulated, 10 test seeds)",
    "label": "ts5m deficit_gpu_h",
-   "value": null,
+   "value": 7.829345367544397,
    "unit": "GPU-h",
-   "data_kind": "",
+   "data_kind": "simulated",
    "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
    "key": "result/policies/ts5m/overall/deficit_gpu_h/mean",
-   "status": "missing file"
+   "status": "ok"
   },
   {
    "section": "outage response v2 (simulated, 10 test seeds)",
    "label": "ts5m recall",
-   "value": null,
+   "value": 0.28888888888888886,
    "unit": "",
-   "data_kind": "",
+   "data_kind": "simulated",
    "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
    "key": "result/policies/ts5m/overall/recall/value",
-   "status": "missing file"
+   "status": "ok"
   },
   {
    "section": "outage response v2 (simulated, 10 test seeds)",
    "label": "ts5m false alarms per day",
-   "value": null,
+   "value": 0.4,
    "unit": "",
-   "data_kind": "",
+   "data_kind": "simulated",
    "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
    "key": "result/policies/ts5m/overall/false_alarms_per_day/mean",
-   "status": "missing file"
+   "status": "ok"
   },
   {
    "section": "outage response v2 (simulated, 10 test seeds)",
    "label": "ts28m useful_gpu_h",
-   "value": null,
+   "value": 1727.0281291876465,
    "unit": "GPU-h",
-   "data_kind": "",
+   "data_kind": "simulated",
    "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
    "key": "result/policies/ts28m/overall/useful_gpu_h/mean",
-   "status": "missing file"
+   "status": "ok"
   },
   {
    "section": "outage response v2 (simulated, 10 test seeds)",
    "label": "ts28m lost_gpu_h",
-   "value": null,
+   "value": 26.83892198952388,
    "unit": "GPU-h",
-   "data_kind": "",
+   "data_kind": "simulated",
    "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
    "key": "result/policies/ts28m/overall/lost_gpu_h/mean",
-   "status": "missing file"
+   "status": "ok"
   },
   {
    "section": "outage response v2 (simulated, 10 test seeds)",
    "label": "ts28m deficit_gpu_h",
-   "value": null,
+   "value": 5.771154921449261,
    "unit": "GPU-h",
-   "data_kind": "",
+   "data_kind": "simulated",
    "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
    "key": "result/policies/ts28m/overall/deficit_gpu_h/mean",
-   "status": "missing file"
+   "status": "ok"
   },
   {
    "section": "outage response v2 (simulated, 10 test seeds)",
    "label": "ts28m recall",
-   "value": null,
+   "value": 0.28888888888888886,
    "unit": "",
-   "data_kind": "",
+   "data_kind": "simulated",
    "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
    "key": "result/policies/ts28m/overall/recall/value",
-   "status": "missing file"
+   "status": "ok"
   },
   {
    "section": "outage response v2 (simulated, 10 test seeds)",
    "label": "ts28m false alarms per day",
-   "value": null,
+   "value": 0.4,
    "unit": "",
-   "data_kind": "",
+   "data_kind": "simulated",
    "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
    "key": "result/policies/ts28m/overall/false_alarms_per_day/mean",
-   "status": "missing file"
+   "status": "ok"
   },
   {
    "section": "outage response v2 (simulated, 10 test seeds)",
    "label": "perfect_foresight useful_gpu_h",
-   "value": null,
+   "value": 1721.3432473716634,
    "unit": "GPU-h",
-   "data_kind": "",
+   "data_kind": "simulated",
    "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
    "key": "result/policies/perfect_foresight/overall/useful_gpu_h/mean",
-   "status": "missing file"
+   "status": "ok"
   },
   {
    "section": "outage response v2 (simulated, 10 test seeds)",
    "label": "perfect_foresight lost_gpu_h",
-   "value": null,
+   "value": 3.5113331016889213,
    "unit": "GPU-h",
-   "data_kind": "",
+   "data_kind": "simulated",
    "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
    "key": "result/policies/perfect_foresight/overall/lost_gpu_h/mean",
-   "status": "missing file"
+   "status": "ok"
   },
   {
    "section": "outage response v2 (simulated, 10 test seeds)",
    "label": "perfect_foresight deficit_gpu_h",
-   "value": null,
+   "value": 11.456036737432555,
    "unit": "GPU-h",
-   "data_kind": "",
+   "data_kind": "simulated",
    "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
    "key": "result/policies/perfect_foresight/overall/deficit_gpu_h/mean",
-   "status": "missing file"
+   "status": "ok"
   },
   {
    "section": "outage response v2 (simulated, 10 test seeds)",
    "label": "perfect_foresight recall",
-   "value": null,
+   "value": 1.0,
    "unit": "",
-   "data_kind": "",
+   "data_kind": "simulated",
    "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
    "key": "result/policies/perfect_foresight/overall/recall/value",
-   "status": "missing file"
+   "status": "ok"
   },
   {
    "section": "outage response v2 (simulated, 10 test seeds)",
    "label": "perfect_foresight false alarms per day",
-   "value": null,
+   "value": 0.0,
    "unit": "",
-   "data_kind": "",
+   "data_kind": "simulated",
    "source": "gpu_stack:experiments/e003-heatwave/results/outage-v2.json",
    "key": "result/policies/perfect_foresight/overall/false_alarms_per_day/mean",
-   "status": "missing file"
+   "status": "ok"
   },
   {
    "section": "cost audit (published prices, calculator)",
