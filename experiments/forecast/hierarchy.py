@@ -235,7 +235,7 @@ def main() -> None:
     result["development_cap_test_windows"] = a.max_test_windows or None
     kinds = {t["data_kind"] for t in result["trees"].values()}
     kind = "mixed" if len(kinds) > 1 else (kinds.pop() if kinds else "mixed")
-    notes = (f"Trees with data_kind 'simulated' are gpu_stack heatwave simulator v2 output. Hardware: {result['hardware']}. "
+    notes = (f"Trees with data_kind 'simulated' are gpu_stack heatwave simulator output (scenario {D.SIM_TAG}). Hardware: {result['hardware']}. "
              "Quantile levels are adjusted one at a time (approximation).")
     write_result(a.out, result, script=__file__, data_kind=kind, inputs=inputs, notes=notes)
     log("wrote", a.out, f"({result['runtime_seconds']:.0f} s)")

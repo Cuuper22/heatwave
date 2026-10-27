@@ -148,7 +148,7 @@ def main() -> None:
         if f.exists():
             inputs.append(f)
     inputs += [D.sim_cache_path(s) for s in seeds if D.sim_cache_path(s).exists()]
-    notes = ("Datasets of kind 'simulated' are gpu_stack heatwave simulator v2 output (not measured). "
+    notes = (f"Datasets of kind 'simulated' are gpu_stack heatwave simulator output (scenario {D.SIM_TAG}) (not measured). "
              f"Hardware: {result['hardware']}. Timestral zero-shot weights from the Hugging Face hub.")
     write_result(a.out, result, script=__file__, data_kind="mixed", inputs=inputs, notes=notes)
     log("wrote", a.out, f"({result['runtime_seconds']:.0f} s)")
