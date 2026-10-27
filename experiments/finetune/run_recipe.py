@@ -108,7 +108,7 @@ def main() -> None:
     ap.add_argument("--runs", nargs="+", default=["5M-full"], choices=list(RUNS))
     ap.add_argument("--stage", choices=["data", "sweep", "train", "eval", "all"], default="all")
     ap.add_argument("--device", default="cpu")
-    ap.add_argument("--threads", type=int, default=2)
+    ap.add_argument("--threads", type=int, default=0, help="torch threads (0: all cores)")
     ap.add_argument("--sim-workers", type=int, default=1)
     ap.add_argument("--no-mit", action="store_true", help="skip the MIT Supercloud series (licence: local copy only)")
     ap.add_argument("--cache-dir", default=str(ROOT / "results" / "cache" / "finetune"))
@@ -126,6 +126,7 @@ def main() -> None:
     ap.add_argument("--raw-pass", action="store_true", help="train on the single raw pass instead of the symmetric-averaged forecast")
     ap.add_argument("--head-lr-mult", type=float, default=1.0)
     ap.add_argument("--micro-batch", type=int, default=0, help="windows per forward chunk (gradient accumulation); 0: whole batch")
+    ap.add_argument("--max-context", type=int, default=0, help="train only on geometries with at most this many context steps (CPU pilot: 300)")
     ap.add_argument("--n-val", type=int, default=0)
     ap.add_argument("--seed", type=int, default=0)
     ap.add_argument("--log-every", type=int, default=20)
@@ -134,6 +135,7 @@ def main() -> None:
     ap.add_argument("--run-label", default="")
     args = ap.parse_args()
 
+    args.threads = args.threads or (os.cpu_count() or 1)
     torch.set_num_threads(args.threads)
     recipe = make_recipe(args.recipe, args)
     cache_dir, work = Path(args.cache_dir), Path(args.work_dir) / recipe.name
@@ -145,7 +147,7 @@ def main() -> None:
     if args.stage == "data":
         log("data stage done")
         return
-    mixture = Dt.Mixture(tr_src, batch_size=args.batch_size)
+    mixture = Dt.Mixture(tr_src, batch_size=args.batch_size, max_context=args.max_context or None)
     val_batches = Dt.validation_batches(va_src, seed=1234, n=recipe.n_val_per_batch)
     log(f"mixture: {json.dumps(mixture.describe())}")
     log(f"validation batches: {len(val_batches)}")

@@ -485,8 +485,12 @@ def build_sim_banks(seeds: Sequence[int], recipe: Recipe, cache_dir: str | Path,
 class Mixture:
     """Draws training batches: a task by weight, a geometry by the task's probabilities, a covariate subset."""
 
-    def __init__(self, sources: dict, weights: Optional[dict] = None, batch_size: int = 32, p_none: float = 0.25, p_all: float = 0.25):
-        self.sources = {k: v for k, v in sources.items() if any(v.n_windows(i) > 0 for i in range(len(v.task.geometries)))}
+    def __init__(self, sources: dict, weights: Optional[dict] = None, batch_size: int = 32, p_none: float = 0.25, p_all: float = 0.25,
+                 max_context: Optional[int] = None):
+        self.max_context = max_context
+        self.sources = {k: v for k, v in sources.items()
+                        if any(v.n_windows(i) > 0 and (max_context is None or v.task.geometries[i][0] <= max_context)
+                               for i in range(len(v.task.geometries)))}
         self.names = sorted(self.sources)
         w = np.asarray([(weights or {}).get(n, 1.0) for n in self.names], dtype=float)
         self.p = w / w.sum()
@@ -498,7 +502,7 @@ class Mixture:
         src = self.sources[name]
         probs = src.task.probs().copy()
         for i in range(len(probs)):
-            if src.n_windows(i) == 0:
+            if src.n_windows(i) == 0 or (self.max_context is not None and src.task.geometries[i][0] > self.max_context):
                 probs[i] = 0.0
         gi = int(rng.choice(len(probs), p=probs / probs.sum()))
         groups = choose_groups(rng, src.task.groups, self.p_none, self.p_all)
