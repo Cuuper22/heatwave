@@ -1,5 +1,5 @@
-"""Run the SIMULATED gpu_stack heatwave scenario (sim-scenario-v2) for the given seeds and cache the arrays that the
-forecasting studies read (results/cache/forecast/sim_v2_seed<S>.npz, gitignored).
+"""Run the SIMULATED gpu_stack heatwave scenario (HEATWAVE_SIM_SCENARIO, default sim-scenario-v3) for the given seeds and
+cache the arrays that the forecasting studies read (results/cache/forecast/sim_<version>_seed<S>.npz, gitignored).
 
 This is data preparation, not a study: one seven-day run takes about three minutes per seed on one core, so seeds are
 run in parallel processes. Default seeds: TEST 100-109 (multi-scale and hierarchy evaluation) and validation 50-53

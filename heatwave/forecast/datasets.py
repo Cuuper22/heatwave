@@ -50,10 +50,11 @@ BUCKETS = {
 }
 
 TEST_FROM_UTC = pd.Timestamp("2026-05-01", tz="UTC")
-SIM_SCENARIO = os.environ.get("HEATWAVE_SIM_SCENARIO", "/home/claude/gpu_stack-/experiments/e003-heatwave/sim-scenario-v2.json")
+SIM_SCENARIO = os.environ.get("HEATWAVE_SIM_SCENARIO", "/home/claude/gpu_stack-/experiments/e003-heatwave/sim-scenario-v3.json")
+SIM_TAG = Path(SIM_SCENARIO).stem.replace("sim-scenario-", "sim_")  # e.g. sim_v3: cache files are per scenario
 SIM_TEST_SEEDS = tuple(range(100, 110))
 SIM_VAL_SEEDS = tuple(range(50, 54))     # subset of the validation seeds 50-59, used for MinT covariance only
-SIM_START_UTC = pd.Timestamp("2026-07-06", tz="UTC")  # scenario start_utc of sim-scenario-v2.json
+SIM_START_UTC = pd.Timestamp("2026-07-06", tz="UTC")  # scenario start_utc of sim-scenario-v2/v3.json
 # Windows of per-GPU power (start second, end second), fixed a priori. The first four (30, 70, 110, 150 h into the week) are the
 # evaluation windows of the TEST seeds; the last four (50, 90, 130, 160 h) are calibration windows: the MinT covariance is
 # estimated from the validation seeds in these windows only, so it never sees the times or the seeds of the test windows.
@@ -338,11 +339,11 @@ def uk_carbon_series(with_covariates: bool = True) -> list[Series]:
 
 # --------------------------------------------------------------------------- simulator
 def sim_cache_path(seed: int, cache_dir: Path = CACHE_DIR) -> Path:
-    return Path(cache_dir) / f"sim_v2_seed{seed}.npz"
+    return Path(cache_dir) / f"{SIM_TAG}_seed{seed}.npz"
 
 
 def build_sim_cache(seed: int, path: Optional[Path] = None, horizon_s: Optional[int] = None) -> Path:
-    """Run sim-scenario-v2 for one seed (SIMULATED data) and cache the arrays the forecasting studies use.
+    """Run the configured sim scenario (SIM_SCENARIO) for one seed (SIMULATED data) and cache the arrays the forecasting studies use.
 
     Cached: rack_power_w (1 s, float32), rack_temp_c_1min, rack_max_gpu_temp_c_1min, site_mean_power_w_1h,
     per-GPU power in the fixed windows ``SIM_GPU_WINDOWS_S`` (float32), the known-future covariates of the
@@ -438,17 +439,17 @@ def dataset_specs(sim_seeds: Sequence[int] = SIM_TEST_SEEDS, mit: bool = True) -
         DatasetSpec("nlr_job_power", "seconds", "public", "multi-node job power", "W",
                     "NLR 2026 H100 training jobs, TEST runs, total power, 1 s", lambda: nlr_series("test"), 600, 10),
         DatasetSpec("sim_rack_power_1s", "seconds", "simulated", "rack power (SIMULATED)", "W",
-                    "gpu_stack heatwave simulator v2, TEST seeds, rack_power_w, 1 s", lambda: sim_series("rack_power_1s", sim_seeds), 3600, 6),
+                    f"gpu_stack heatwave simulator {SIM_TAG}, TEST seeds, rack_power_w, 1 s", lambda: sim_series("rack_power_1s", sim_seeds), 3600, 6),
         DatasetSpec("laptop_temp", "minutes", "measured", "GPU temperature", "deg C",
                     "RTX 3060 Laptop GPU, measured run2 (TEST), 15 s means (run is 79 min long)", lambda: laptop_series("run2", "temp", False), 6, None),
         DatasetSpec("sim_rack_temp_1min", "minutes", "simulated", "rack air temperature (SIMULATED)", "deg C",
-                    "gpu_stack heatwave simulator v2, TEST seeds, rack_temp_c_1min", lambda: sim_series("rack_temp_1min", sim_seeds, with_covariates=False), 60, 6),
+                    f"gpu_stack heatwave simulator {SIM_TAG}, TEST seeds, rack_temp_c_1min", lambda: sim_series("rack_temp_1min", sim_seeds, with_covariates=False), 60, 6),
         DatasetSpec("caiso_rt_price_1h", "hours", "public", "CAISO RT LMP, hourly mean", "USD/MWh",
                     "CAISO NP15 real-time LMP, hourly means, origins from 2026-05-01", lambda: caiso_price_series(False), 12, None),
         DatasetSpec("uk_carbon_actual_1h", "hours", "public", "GB carbon intensity, hourly mean", "gCO2/kWh",
                     "National Energy System Operator actual intensity, hourly means, origins from 2026-05-01", lambda: uk_carbon_series(False), 12, None),
         DatasetSpec("sim_site_power_1h", "hours", "simulated", "site mean power (SIMULATED)", "W",
-                    "gpu_stack heatwave simulator v2, TEST seeds, site_mean_power_w_1h", lambda: sim_series("site_power_1h", sim_seeds), 6, None),
+                    f"gpu_stack heatwave simulator {SIM_TAG}, TEST seeds, site_mean_power_w_1h", lambda: sim_series("site_power_1h", sim_seeds), 6, None),
     ]
     if mit:
         S.insert(3, DatasetSpec("mit_node_power", "seconds", "public", "node power (2 x V100)", "W",
