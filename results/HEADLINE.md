@@ -317,3 +317,4 @@
 
 - readme_cost_range: For a 7 billion parameter model trained on 2 trillion tokens on 1,024 H100s, power and cooling come to about 7.4 percent of the cost. At the industrial electricity prices of different places, with the calculator's other defaults (5.5-year server life, PUE 1.2), the same run ranges from about 5 percent (New Mexico average) to about 16 percent (California average).
 - readme_cost_range_source: gpu_stack:experiments/e003-heatwave/results/cost-audit-v1.json result/base_case/electricity_share and result/one_at_a_time/H100 (electricity price NM, CA)
+- packing_learned_vs_reactive: A small learned policy that picks the quantile per situation (from forecast spread, job value and the over-cap penalty) delivers $746 more net value per episode than reacting at a penalty of $40/kWh, and $5,575 more at $160/kWh; at $2.5/kWh reacting wins by $295.
