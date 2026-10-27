@@ -1,0 +1,1234 @@
+{
+ "rows": [
+  {
+   "section": "thermal (measured laptop)",
+   "label": "one_node RC, out-of-sample run2 R^2",
+   "value": 0.9568356163905534,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/thermal/laptop_rc.json",
+   "key": "result/validation/run2/one_node/r2",
+   "status": "ok"
+  },
+  {
+   "section": "thermal (measured laptop)",
+   "label": "one_node RC, out-of-sample run2 RMSE",
+   "value": 3.37531561124012,
+   "unit": "degC",
+   "data_kind": "measured",
+   "source": "heatwave:results/thermal/laptop_rc.json",
+   "key": "result/validation/run2/one_node/rmse_c",
+   "status": "ok"
+  },
+  {
+   "section": "thermal (measured laptop)",
+   "label": "two_node RC, out-of-sample run2 R^2",
+   "value": 0.9724653495028405,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/thermal/laptop_rc.json",
+   "key": "result/validation/run2/two_node/r2",
+   "status": "ok"
+  },
+  {
+   "section": "thermal (measured laptop)",
+   "label": "two_node RC, out-of-sample run2 RMSE",
+   "value": 2.695823162442319,
+   "unit": "degC",
+   "data_kind": "measured",
+   "source": "heatwave:results/thermal/laptop_rc.json",
+   "key": "result/validation/run2/two_node/rmse_c",
+   "status": "ok"
+  },
+  {
+   "section": "thermal (measured laptop)",
+   "label": "die time constant (2-node)",
+   "value": 1.549070618434795,
+   "unit": "s",
+   "data_kind": "measured",
+   "source": "heatwave:results/thermal/laptop_rc.json",
+   "key": "result/two_node/die_tau_s",
+   "status": "ok"
+  },
+  {
+   "section": "thermal (measured laptop)",
+   "label": "heatsink time constant (2-node)",
+   "value": 37.634793105529425,
+   "unit": "s",
+   "data_kind": "measured",
+   "source": "heatwave:results/thermal/laptop_rc.json",
+   "key": "result/two_node/sink_tau_s",
+   "status": "ok"
+  },
+  {
+   "section": "thermal (measured laptop)",
+   "label": "thermal slowdown onset temperature, 5th pct (run1)",
+   "value": 84.0,
+   "unit": "degC",
+   "data_kind": "measured",
+   "source": "heatwave:results/thermal/laptop_rc.json",
+   "key": "result/throttle/run1/temp_c_at_sw_thermal_p05",
+   "status": "ok"
+  },
+  {
+   "section": "thermal (measured laptop)",
+   "label": "SM clock in training, slowdown vs none (run1)",
+   "value": 900.0,
+   "unit": "MHz",
+   "data_kind": "measured",
+   "source": "heatwave:results/thermal/laptop_rc.json",
+   "key": "result/throttle/run1/sm_clock_mhz_training_sw_thermal_median",
+   "status": "ok"
+  },
+  {
+   "section": "thermal (measured laptop)",
+   "label": "SM clock in training without slowdown (run1)",
+   "value": 1642.0,
+   "unit": "MHz",
+   "data_kind": "measured",
+   "source": "heatwave:results/thermal/laptop_rc.json",
+   "key": "result/throttle/run1/sm_clock_mhz_training_no_thermal_median",
+   "status": "ok"
+  },
+  {
+   "section": "throttle warning (measured laptop, test run2)",
+   "label": "reactive F1",
+   "value": 0.5483870967741935,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/thermal/throttle_warning.json",
+   "key": "result/methods/reactive/test/run2/f1",
+   "status": "ok"
+  },
+  {
+   "section": "throttle warning (measured laptop, test run2)",
+   "label": "reactive median lead",
+   "value": 10.5,
+   "unit": "s",
+   "data_kind": "measured",
+   "source": "heatwave:results/thermal/throttle_warning.json",
+   "key": "result/methods/reactive/test/run2/median_lead_s",
+   "status": "ok"
+  },
+  {
+   "section": "throttle warning (measured laptop, test run2)",
+   "label": "ets F1",
+   "value": 0.7412587412587412,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/thermal/throttle_warning.json",
+   "key": "result/methods/ets/test/run2/f1",
+   "status": "ok"
+  },
+  {
+   "section": "throttle warning (measured laptop, test run2)",
+   "label": "ets median lead",
+   "value": 16.5,
+   "unit": "s",
+   "data_kind": "measured",
+   "source": "heatwave:results/thermal/throttle_warning.json",
+   "key": "result/methods/ets/test/run2/median_lead_s",
+   "status": "ok"
+  },
+  {
+   "section": "throttle warning (measured laptop, test run2)",
+   "label": "arima F1",
+   "value": 0.732394366197183,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/thermal/throttle_warning.json",
+   "key": "result/methods/arima/test/run2/f1",
+   "status": "ok"
+  },
+  {
+   "section": "throttle warning (measured laptop, test run2)",
+   "label": "arima median lead",
+   "value": 16.5,
+   "unit": "s",
+   "data_kind": "measured",
+   "source": "heatwave:results/thermal/throttle_warning.json",
+   "key": "result/methods/arima/test/run2/median_lead_s",
+   "status": "ok"
+  },
+  {
+   "section": "throttle warning (measured laptop, test run2)",
+   "label": "timestral-5M F1",
+   "value": 0.684931506849315,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/thermal/throttle_warning.json",
+   "key": "result/methods/timestral-5M/test/run2/f1",
+   "status": "ok"
+  },
+  {
+   "section": "throttle warning (measured laptop, test run2)",
+   "label": "timestral-5M median lead",
+   "value": 17.5,
+   "unit": "s",
+   "data_kind": "measured",
+   "source": "heatwave:results/thermal/throttle_warning.json",
+   "key": "result/methods/timestral-5M/test/run2/median_lead_s",
+   "status": "ok"
+  },
+  {
+   "section": "throttle warning (measured laptop, test run2)",
+   "label": "timestral-28M F1",
+   "value": 0.7297297297297297,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/thermal/throttle_warning.json",
+   "key": "result/methods/timestral-28M/test/run2/f1",
+   "status": "ok"
+  },
+  {
+   "section": "throttle warning (measured laptop, test run2)",
+   "label": "timestral-28M median lead",
+   "value": 18.5,
+   "unit": "s",
+   "data_kind": "measured",
+   "source": "heatwave:results/thermal/throttle_warning.json",
+   "key": "result/methods/timestral-28M/test/run2/median_lead_s",
+   "status": "ok"
+  },
+  {
+   "section": "throttle warning (measured laptop, test run2)",
+   "label": "timestral-28M+schedule F1",
+   "value": 0.6956521739130436,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/thermal/throttle_warning.json",
+   "key": "result/methods/timestral-28M+schedule/test/run2/f1",
+   "status": "ok"
+  },
+  {
+   "section": "throttle warning (measured laptop, test run2)",
+   "label": "timestral-28M+schedule median lead",
+   "value": 16.5,
+   "unit": "s",
+   "data_kind": "measured",
+   "source": "heatwave:results/thermal/throttle_warning.json",
+   "key": "result/methods/timestral-28M+schedule/test/run2/median_lead_s",
+   "status": "ok"
+  },
+  {
+   "section": "live laptop session (measured, dry-run control)",
+   "label": "timestral-5M power_w pinball",
+   "value": 0.6304662745297407,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/laptop/20261026T214028Z/forecast_score.json",
+   "key": "result/methods/timestral-5M/power_w/pinball_mean",
+   "status": "ok"
+  },
+  {
+   "section": "live laptop session (measured, dry-run control)",
+   "label": "timestral-5M temp_c pinball",
+   "value": 0.18833882559453197,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/laptop/20261026T214028Z/forecast_score.json",
+   "key": "result/methods/timestral-5M/temp_c/pinball_mean",
+   "status": "ok"
+  },
+  {
+   "section": "live laptop session (measured, dry-run control)",
+   "label": "seasonal-naive power_w pinball",
+   "value": 0.786933058747105,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/laptop/20261026T214028Z/forecast_score.json",
+   "key": "result/methods/seasonal-naive/power_w/pinball_mean",
+   "status": "ok"
+  },
+  {
+   "section": "live laptop session (measured, dry-run control)",
+   "label": "seasonal-naive temp_c pinball",
+   "value": 0.24630963427102745,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/laptop/20261026T214028Z/forecast_score.json",
+   "key": "result/methods/seasonal-naive/temp_c/pinball_mean",
+   "status": "ok"
+  },
+  {
+   "section": "simulator calibration (public H100)",
+   "label": "idle_ratio",
+   "value": 0.21292761611145372,
+   "unit": "",
+   "data_kind": "mixed",
+   "source": "heatwave:results/calibration/datacenter_power.json",
+   "key": "result/idle_ratio/median",
+   "status": "ok"
+  },
+  {
+   "section": "simulator calibration (public H100)",
+   "label": "compute_fraction_of_limit",
+   "value": 0.8550598580496651,
+   "unit": "",
+   "data_kind": "mixed",
+   "source": "heatwave:results/calibration/datacenter_power.json",
+   "key": "result/compute_fraction_of_limit/median",
+   "status": "ok"
+  },
+  {
+   "section": "simulator calibration (public H100)",
+   "label": "low_phase_ratio",
+   "value": 0.2492626550302487,
+   "unit": "",
+   "data_kind": "mixed",
+   "source": "heatwave:results/calibration/datacenter_power.json",
+   "key": "result/low_phase_ratio/median",
+   "status": "ok"
+  },
+  {
+   "section": "simulator calibration (public H100)",
+   "label": "low_phase_fraction_of_active_time",
+   "value": 0.1434169547785198,
+   "unit": "",
+   "data_kind": "mixed",
+   "source": "heatwave:results/calibration/datacenter_power.json",
+   "key": "result/low_phase_fraction_of_active_time/median",
+   "status": "ok"
+  },
+  {
+   "section": "simulator calibration (public H100)",
+   "label": "temp_per_power_k_per_w",
+   "value": 0.02558234685296796,
+   "unit": "",
+   "data_kind": "mixed",
+   "source": "heatwave:results/calibration/datacenter_power.json",
+   "key": "result/temp_per_power_k_per_w/median",
+   "status": "ok"
+  },
+  {
+   "section": "simulator calibration (measured laptop)",
+   "label": "checkpoint/compute power ratio",
+   "value": 0.6123595506482253,
+   "unit": "",
+   "data_kind": "mixed",
+   "source": "heatwave:results/calibration/datacenter_power.json",
+   "key": "result/laptop_checkpoint/ratio",
+   "status": "ok"
+  },
+  {
+   "section": "forecasting (multi-scale)",
+   "label": "laptop_power: timestral-28M WQL (all horizons)",
+   "value": 0.19139808166463979,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/forecast/multiscale.json",
+   "key": "result/datasets/laptop_power/methods/timestral-28M/buckets/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "forecasting (multi-scale)",
+   "label": "laptop_power: seasonal-naive WQL (all horizons)",
+   "value": 0.21779487061965017,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/forecast/multiscale.json",
+   "key": "result/datasets/laptop_power/methods/seasonal-naive/buckets/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "forecasting (multi-scale)",
+   "label": "laptop_power: ets WQL (all horizons)",
+   "value": 0.22616513353356457,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/forecast/multiscale.json",
+   "key": "result/datasets/laptop_power/methods/ets/buckets/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "forecasting (multi-scale)",
+   "label": "laptop_power: arima WQL (all horizons)",
+   "value": 0.23097224620288248,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/forecast/multiscale.json",
+   "key": "result/datasets/laptop_power/methods/arima/buckets/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "forecasting (multi-scale)",
+   "label": "elsayed_gpu_power: timestral-28M WQL (all horizons)",
+   "value": 0.15805532697763647,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/forecast/multiscale.json",
+   "key": "result/datasets/elsayed_gpu_power/methods/timestral-28M/buckets/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "forecasting (multi-scale)",
+   "label": "elsayed_gpu_power: seasonal-naive WQL (all horizons)",
+   "value": 0.6060545572827782,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/forecast/multiscale.json",
+   "key": "result/datasets/elsayed_gpu_power/methods/seasonal-naive/buckets/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "forecasting (multi-scale)",
+   "label": "elsayed_gpu_power: ets WQL (all horizons)",
+   "value": 0.25858964958610614,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/forecast/multiscale.json",
+   "key": "result/datasets/elsayed_gpu_power/methods/ets/buckets/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "forecasting (multi-scale)",
+   "label": "elsayed_gpu_power: arima WQL (all horizons)",
+   "value": 0.44895471074183324,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/forecast/multiscale.json",
+   "key": "result/datasets/elsayed_gpu_power/methods/arima/buckets/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "forecasting (multi-scale)",
+   "label": "nlr_job_power: timestral-28M WQL (all horizons)",
+   "value": 0.07617664990908542,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/forecast/multiscale.json",
+   "key": "result/datasets/nlr_job_power/methods/timestral-28M/buckets/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "forecasting (multi-scale)",
+   "label": "nlr_job_power: seasonal-naive WQL (all horizons)",
+   "value": 0.12230410358298761,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/forecast/multiscale.json",
+   "key": "result/datasets/nlr_job_power/methods/seasonal-naive/buckets/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "forecasting (multi-scale)",
+   "label": "nlr_job_power: ets WQL (all horizons)",
+   "value": 0.14628260790423364,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/forecast/multiscale.json",
+   "key": "result/datasets/nlr_job_power/methods/ets/buckets/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "forecasting (multi-scale)",
+   "label": "nlr_job_power: arima WQL (all horizons)",
+   "value": 0.18780794823999983,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/forecast/multiscale.json",
+   "key": "result/datasets/nlr_job_power/methods/arima/buckets/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "forecasting (multi-scale)",
+   "label": "mit_node_power: timestral-28M WQL (all horizons)",
+   "value": 0.08602286184262928,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/forecast/multiscale.json",
+   "key": "result/datasets/mit_node_power/methods/timestral-28M/buckets/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "forecasting (multi-scale)",
+   "label": "mit_node_power: seasonal-naive WQL (all horizons)",
+   "value": 0.24917018955541326,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/forecast/multiscale.json",
+   "key": "result/datasets/mit_node_power/methods/seasonal-naive/buckets/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "forecasting (multi-scale)",
+   "label": "mit_node_power: ets WQL (all horizons)",
+   "value": 0.12680166638649548,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/forecast/multiscale.json",
+   "key": "result/datasets/mit_node_power/methods/ets/buckets/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "forecasting (multi-scale)",
+   "label": "mit_node_power: arima WQL (all horizons)",
+   "value": 0.11248675689393879,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/forecast/multiscale.json",
+   "key": "result/datasets/mit_node_power/methods/arima/buckets/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "forecasting (multi-scale)",
+   "label": "sim_rack_power_1s: timestral-28M WQL (all horizons)",
+   "value": 0.02479148671054492,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "heatwave:results/forecast/multiscale.json",
+   "key": "result/datasets/sim_rack_power_1s/methods/timestral-28M/buckets/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "forecasting (multi-scale)",
+   "label": "sim_rack_power_1s: seasonal-naive WQL (all horizons)",
+   "value": 0.35668546763419284,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "heatwave:results/forecast/multiscale.json",
+   "key": "result/datasets/sim_rack_power_1s/methods/seasonal-naive/buckets/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "forecasting (multi-scale)",
+   "label": "sim_rack_power_1s: ets WQL (all horizons)",
+   "value": 0.08561308665722582,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "heatwave:results/forecast/multiscale.json",
+   "key": "result/datasets/sim_rack_power_1s/methods/ets/buckets/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "forecasting (multi-scale)",
+   "label": "sim_rack_power_1s: arima WQL (all horizons)",
+   "value": 0.08228421089730976,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "heatwave:results/forecast/multiscale.json",
+   "key": "result/datasets/sim_rack_power_1s/methods/arima/buckets/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "forecasting (multi-scale)",
+   "label": "laptop_temp: timestral-28M WQL (all horizons)",
+   "value": 0.16383131463918632,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/forecast/multiscale.json",
+   "key": "result/datasets/laptop_temp/methods/timestral-28M/buckets/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "forecasting (multi-scale)",
+   "label": "laptop_temp: seasonal-naive WQL (all horizons)",
+   "value": 0.20538898695025193,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/forecast/multiscale.json",
+   "key": "result/datasets/laptop_temp/methods/seasonal-naive/buckets/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "forecasting (multi-scale)",
+   "label": "laptop_temp: ets WQL (all horizons)",
+   "value": 0.1945708651628518,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/forecast/multiscale.json",
+   "key": "result/datasets/laptop_temp/methods/ets/buckets/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "forecasting (multi-scale)",
+   "label": "laptop_temp: arima WQL (all horizons)",
+   "value": 0.1796744021476009,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/forecast/multiscale.json",
+   "key": "result/datasets/laptop_temp/methods/arima/buckets/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "forecasting (multi-scale)",
+   "label": "mit_node_temp: timestral-28M WQL (all horizons)",
+   "value": 0.013384946156404476,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/forecast/multiscale.json",
+   "key": "result/datasets/mit_node_temp/methods/timestral-28M/buckets/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "forecasting (multi-scale)",
+   "label": "mit_node_temp: seasonal-naive WQL (all horizons)",
+   "value": 0.018050278783860296,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/forecast/multiscale.json",
+   "key": "result/datasets/mit_node_temp/methods/seasonal-naive/buckets/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "forecasting (multi-scale)",
+   "label": "mit_node_temp: ets WQL (all horizons)",
+   "value": 0.021900406450501713,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/forecast/multiscale.json",
+   "key": "result/datasets/mit_node_temp/methods/ets/buckets/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "forecasting (multi-scale)",
+   "label": "mit_node_temp: arima WQL (all horizons)",
+   "value": 0.02100685288164805,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/forecast/multiscale.json",
+   "key": "result/datasets/mit_node_temp/methods/arima/buckets/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "forecasting (multi-scale)",
+   "label": "sim_rack_temp_1min: timestral-28M WQL (all horizons)",
+   "value": 0.005603679164555975,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "heatwave:results/forecast/multiscale.json",
+   "key": "result/datasets/sim_rack_temp_1min/methods/timestral-28M/buckets/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "forecasting (multi-scale)",
+   "label": "sim_rack_temp_1min: seasonal-naive WQL (all horizons)",
+   "value": 0.006887735818953871,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "heatwave:results/forecast/multiscale.json",
+   "key": "result/datasets/sim_rack_temp_1min/methods/seasonal-naive/buckets/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "forecasting (multi-scale)",
+   "label": "sim_rack_temp_1min: ets WQL (all horizons)",
+   "value": 0.008262080497019833,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "heatwave:results/forecast/multiscale.json",
+   "key": "result/datasets/sim_rack_temp_1min/methods/ets/buckets/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "forecasting (multi-scale)",
+   "label": "sim_rack_temp_1min: arima WQL (all horizons)",
+   "value": 0.00914566589089053,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "heatwave:results/forecast/multiscale.json",
+   "key": "result/datasets/sim_rack_temp_1min/methods/arima/buckets/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "forecasting (multi-scale)",
+   "label": "caiso_rt_price_1h: timestral-28M WQL (all horizons)",
+   "value": 0.20258559897243938,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/forecast/multiscale.json",
+   "key": "result/datasets/caiso_rt_price_1h/methods/timestral-28M/buckets/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "forecasting (multi-scale)",
+   "label": "caiso_rt_price_1h: seasonal-naive WQL (all horizons)",
+   "value": 0.2410772133316928,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/forecast/multiscale.json",
+   "key": "result/datasets/caiso_rt_price_1h/methods/seasonal-naive/buckets/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "forecasting (multi-scale)",
+   "label": "caiso_rt_price_1h: ets WQL (all horizons)",
+   "value": 0.3274767109373592,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/forecast/multiscale.json",
+   "key": "result/datasets/caiso_rt_price_1h/methods/ets/buckets/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "forecasting (multi-scale)",
+   "label": "caiso_rt_price_1h: arima WQL (all horizons)",
+   "value": 0.2959359251605056,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/forecast/multiscale.json",
+   "key": "result/datasets/caiso_rt_price_1h/methods/arima/buckets/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "forecasting (multi-scale)",
+   "label": "uk_carbon_actual_1h: timestral-28M WQL (all horizons)",
+   "value": 0.18534799508078345,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/forecast/multiscale.json",
+   "key": "result/datasets/uk_carbon_actual_1h/methods/timestral-28M/buckets/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "forecasting (multi-scale)",
+   "label": "uk_carbon_actual_1h: seasonal-naive WQL (all horizons)",
+   "value": 0.24755086797294606,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/forecast/multiscale.json",
+   "key": "result/datasets/uk_carbon_actual_1h/methods/seasonal-naive/buckets/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "forecasting (multi-scale)",
+   "label": "uk_carbon_actual_1h: ets WQL (all horizons)",
+   "value": 0.2952816011382882,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/forecast/multiscale.json",
+   "key": "result/datasets/uk_carbon_actual_1h/methods/ets/buckets/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "forecasting (multi-scale)",
+   "label": "uk_carbon_actual_1h: arima WQL (all horizons)",
+   "value": 0.2840857211513979,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/forecast/multiscale.json",
+   "key": "result/datasets/uk_carbon_actual_1h/methods/arima/buckets/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "forecasting (multi-scale)",
+   "label": "sim_site_power_1h: timestral-28M WQL (all horizons)",
+   "value": 0.12543198004090175,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "heatwave:results/forecast/multiscale.json",
+   "key": "result/datasets/sim_site_power_1h/methods/timestral-28M/buckets/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "forecasting (multi-scale)",
+   "label": "sim_site_power_1h: seasonal-naive WQL (all horizons)",
+   "value": 0.16474939562991794,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "heatwave:results/forecast/multiscale.json",
+   "key": "result/datasets/sim_site_power_1h/methods/seasonal-naive/buckets/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "forecasting (multi-scale)",
+   "label": "sim_site_power_1h: ets WQL (all horizons)",
+   "value": 0.1335055445041051,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "heatwave:results/forecast/multiscale.json",
+   "key": "result/datasets/sim_site_power_1h/methods/ets/buckets/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "forecasting (multi-scale)",
+   "label": "sim_site_power_1h: arima WQL (all horizons)",
+   "value": 0.14260457476188734,
+   "unit": "",
+   "data_kind": "simulated",
+   "source": "heatwave:results/forecast/multiscale.json",
+   "key": "result/datasets/sim_site_power_1h/methods/arima/buckets/all/wql/est",
+   "status": "ok"
+  },
+  {
+   "section": "cost timing (caiso, f=0.3, W=24 h, lambda=0.5)",
+   "label": "timestral_28M saving_pct_electricity",
+   "value": 8.605878085822122,
+   "unit": "%",
+   "data_kind": "public",
+   "source": "gpu_stack:experiments/e003-heatwave/results/cost-v1.json",
+   "key": "result/pairs/caiso/curves/timestral_28M|f=0.3|W=24|rho=0.7|q=0.5/saving_pct_electricity/5",
+   "status": "ok"
+  },
+  {
+   "section": "cost timing (caiso, f=0.3, W=24 h, lambda=0.5)",
+   "label": "timestral_28M saving_pct_co2",
+   "value": 10.835902036408603,
+   "unit": "%",
+   "data_kind": "public",
+   "source": "gpu_stack:experiments/e003-heatwave/results/cost-v1.json",
+   "key": "result/pairs/caiso/curves/timestral_28M|f=0.3|W=24|rho=0.7|q=0.5/saving_pct_co2/5",
+   "status": "ok"
+  },
+  {
+   "section": "cost timing (caiso, f=0.3, W=24 h, lambda=0.5)",
+   "label": "timestral_28M saving_pct_total",
+   "value": 0.2179201513987245,
+   "unit": "%",
+   "data_kind": "public",
+   "source": "gpu_stack:experiments/e003-heatwave/results/cost-v1.json",
+   "key": "result/pairs/caiso/curves/timestral_28M|f=0.3|W=24|rho=0.7|q=0.5/saving_pct_total/5",
+   "status": "ok"
+  },
+  {
+   "section": "cost timing (caiso, f=0.3, W=24 h, lambda=0.5)",
+   "label": "timestral_28M_cov saving_pct_electricity",
+   "value": 8.691326786784288,
+   "unit": "%",
+   "data_kind": "public",
+   "source": "gpu_stack:experiments/e003-heatwave/results/cost-v1.json",
+   "key": "result/pairs/caiso/curves/timestral_28M_cov|f=0.3|W=24|rho=0.7|q=0.5/saving_pct_electricity/5",
+   "status": "ok"
+  },
+  {
+   "section": "cost timing (caiso, f=0.3, W=24 h, lambda=0.5)",
+   "label": "timestral_28M_cov saving_pct_co2",
+   "value": 10.893129993019853,
+   "unit": "%",
+   "data_kind": "public",
+   "source": "gpu_stack:experiments/e003-heatwave/results/cost-v1.json",
+   "key": "result/pairs/caiso/curves/timestral_28M_cov|f=0.3|W=24|rho=0.7|q=0.5/saving_pct_co2/5",
+   "status": "ok"
+  },
+  {
+   "section": "cost timing (caiso, f=0.3, W=24 h, lambda=0.5)",
+   "label": "timestral_28M_cov saving_pct_total",
+   "value": 0.22008390432025138,
+   "unit": "%",
+   "data_kind": "public",
+   "source": "gpu_stack:experiments/e003-heatwave/results/cost-v1.json",
+   "key": "result/pairs/caiso/curves/timestral_28M_cov|f=0.3|W=24|rho=0.7|q=0.5/saving_pct_total/5",
+   "status": "ok"
+  },
+  {
+   "section": "cost timing (caiso, f=0.3, W=24 h, lambda=0.5)",
+   "label": "seasonal_naive_24 saving_pct_electricity",
+   "value": 8.324343822115194,
+   "unit": "%",
+   "data_kind": "public",
+   "source": "gpu_stack:experiments/e003-heatwave/results/cost-v1.json",
+   "key": "result/pairs/caiso/curves/seasonal_naive_24|f=0.3|W=24|rho=0.7|q=0.5/saving_pct_electricity/5",
+   "status": "ok"
+  },
+  {
+   "section": "cost timing (caiso, f=0.3, W=24 h, lambda=0.5)",
+   "label": "seasonal_naive_24 saving_pct_co2",
+   "value": 10.639373409703428,
+   "unit": "%",
+   "data_kind": "public",
+   "source": "gpu_stack:experiments/e003-heatwave/results/cost-v1.json",
+   "key": "result/pairs/caiso/curves/seasonal_naive_24|f=0.3|W=24|rho=0.7|q=0.5/saving_pct_co2/5",
+   "status": "ok"
+  },
+  {
+   "section": "cost timing (caiso, f=0.3, W=24 h, lambda=0.5)",
+   "label": "seasonal_naive_24 saving_pct_total",
+   "value": 0.21079107186040122,
+   "unit": "%",
+   "data_kind": "public",
+   "source": "gpu_stack:experiments/e003-heatwave/results/cost-v1.json",
+   "key": "result/pairs/caiso/curves/seasonal_naive_24|f=0.3|W=24|rho=0.7|q=0.5/saving_pct_total/5",
+   "status": "ok"
+  },
+  {
+   "section": "cost timing (caiso, f=0.3, W=24 h, lambda=0.5)",
+   "label": "ets_24 saving_pct_electricity",
+   "value": 1.2061171580786294,
+   "unit": "%",
+   "data_kind": "public",
+   "source": "gpu_stack:experiments/e003-heatwave/results/cost-v1.json",
+   "key": "result/pairs/caiso/curves/ets_24|f=0.3|W=24|rho=0.7|q=0.5/saving_pct_electricity/5",
+   "status": "ok"
+  },
+  {
+   "section": "cost timing (caiso, f=0.3, W=24 h, lambda=0.5)",
+   "label": "ets_24 saving_pct_co2",
+   "value": 1.9523968258410291,
+   "unit": "%",
+   "data_kind": "public",
+   "source": "gpu_stack:experiments/e003-heatwave/results/cost-v1.json",
+   "key": "result/pairs/caiso/curves/ets_24|f=0.3|W=24|rho=0.7|q=0.5/saving_pct_co2/5",
+   "status": "ok"
+  },
+  {
+   "section": "cost timing (caiso, f=0.3, W=24 h, lambda=0.5)",
+   "label": "ets_24 saving_pct_total",
+   "value": 0.030541593904997416,
+   "unit": "%",
+   "data_kind": "public",
+   "source": "gpu_stack:experiments/e003-heatwave/results/cost-v1.json",
+   "key": "result/pairs/caiso/curves/ets_24|f=0.3|W=24|rho=0.7|q=0.5/saving_pct_total/5",
+   "status": "ok"
+  },
+  {
+   "section": "cost timing (caiso, f=0.3, W=24 h, lambda=0.5)",
+   "label": "arima_seasonal saving_pct_electricity",
+   "value": 8.501524788007673,
+   "unit": "%",
+   "data_kind": "public",
+   "source": "gpu_stack:experiments/e003-heatwave/results/cost-v1.json",
+   "key": "result/pairs/caiso/curves/arima_seasonal|f=0.3|W=24|rho=0.7|q=0.5/saving_pct_electricity/5",
+   "status": "ok"
+  },
+  {
+   "section": "cost timing (caiso, f=0.3, W=24 h, lambda=0.5)",
+   "label": "arima_seasonal saving_pct_co2",
+   "value": 10.68917697615126,
+   "unit": "%",
+   "data_kind": "public",
+   "source": "gpu_stack:experiments/e003-heatwave/results/cost-v1.json",
+   "key": "result/pairs/caiso/curves/arima_seasonal|f=0.3|W=24|rho=0.7|q=0.5/saving_pct_co2/5",
+   "status": "ok"
+  },
+  {
+   "section": "cost timing (caiso, f=0.3, W=24 h, lambda=0.5)",
+   "label": "arima_seasonal saving_pct_total",
+   "value": 0.2152776916483191,
+   "unit": "%",
+   "data_kind": "public",
+   "source": "gpu_stack:experiments/e003-heatwave/results/cost-v1.json",
+   "key": "result/pairs/caiso/curves/arima_seasonal|f=0.3|W=24|rho=0.7|q=0.5/saving_pct_total/5",
+   "status": "ok"
+  },
+  {
+   "section": "cost timing (caiso, f=0.3, W=24 h, lambda=0.5)",
+   "label": "perfect saving_pct_electricity",
+   "value": 8.956285004711473,
+   "unit": "%",
+   "data_kind": "public",
+   "source": "gpu_stack:experiments/e003-heatwave/results/cost-v1.json",
+   "key": "result/pairs/caiso/curves/perfect|f=0.3|W=24|rho=0.7|q=0.5/saving_pct_electricity/5",
+   "status": "ok"
+  },
+  {
+   "section": "cost timing (caiso, f=0.3, W=24 h, lambda=0.5)",
+   "label": "perfect saving_pct_co2",
+   "value": 11.208126036348444,
+   "unit": "%",
+   "data_kind": "public",
+   "source": "gpu_stack:experiments/e003-heatwave/results/cost-v1.json",
+   "key": "result/pairs/caiso/curves/perfect|f=0.3|W=24|rho=0.7|q=0.5/saving_pct_co2/5",
+   "status": "ok"
+  },
+  {
+   "section": "cost timing (caiso, f=0.3, W=24 h, lambda=0.5)",
+   "label": "perfect saving_pct_total",
+   "value": 0.22679324116992752,
+   "unit": "%",
+   "data_kind": "public",
+   "source": "gpu_stack:experiments/e003-heatwave/results/cost-v1.json",
+   "key": "result/pairs/caiso/curves/perfect|f=0.3|W=24|rho=0.7|q=0.5/saving_pct_total/5",
+   "status": "ok"
+  },
+  {
+   "section": "cost timing (caiso, f=0.3, W=24 h, lambda=0.5)",
+   "label": "offline_optimum saving_pct_electricity",
+   "value": 9.215511795963307,
+   "unit": "%",
+   "data_kind": "public",
+   "source": "gpu_stack:experiments/e003-heatwave/results/cost-v1.json",
+   "key": "result/pairs/caiso/curves/offline_optimum|f=0.3|W=24|rho=0.7|q=0.5/saving_pct_electricity/5",
+   "status": "ok"
+  },
+  {
+   "section": "cost timing (caiso, f=0.3, W=24 h, lambda=0.5)",
+   "label": "offline_optimum saving_pct_co2",
+   "value": 11.43335388963587,
+   "unit": "%",
+   "data_kind": "public",
+   "source": "gpu_stack:experiments/e003-heatwave/results/cost-v1.json",
+   "key": "result/pairs/caiso/curves/offline_optimum|f=0.3|W=24|rho=0.7|q=0.5/saving_pct_co2/5",
+   "status": "ok"
+  },
+  {
+   "section": "cost timing (caiso, f=0.3, W=24 h, lambda=0.5)",
+   "label": "offline_optimum saving_pct_total",
+   "value": 0.23335744543041714,
+   "unit": "%",
+   "data_kind": "public",
+   "source": "gpu_stack:experiments/e003-heatwave/results/cost-v1.json",
+   "key": "result/pairs/caiso/curves/offline_optimum|f=0.3|W=24|rho=0.7|q=0.5/saving_pct_total/5",
+   "status": "ok"
+  },
+  {
+   "section": "cost timing (caiso, f=0.3, W=24 h, lambda=0.5)",
+   "label": "reactive saving_pct_electricity",
+   "value": 5.658571281957078,
+   "unit": "%",
+   "data_kind": "public",
+   "source": "gpu_stack:experiments/e003-heatwave/results/cost-v1.json",
+   "key": "result/pairs/caiso/curves/reactive|f=0.3|W=24|rho=0.7|q=na/saving_pct_electricity/5",
+   "status": "ok"
+  },
+  {
+   "section": "cost timing (caiso, f=0.3, W=24 h, lambda=0.5)",
+   "label": "reactive saving_pct_co2",
+   "value": 8.146445888302209,
+   "unit": "%",
+   "data_kind": "public",
+   "source": "gpu_stack:experiments/e003-heatwave/results/cost-v1.json",
+   "key": "result/pairs/caiso/curves/reactive|f=0.3|W=24|rho=0.7|q=na/saving_pct_co2/5",
+   "status": "ok"
+  },
+  {
+   "section": "cost timing (caiso, f=0.3, W=24 h, lambda=0.5)",
+   "label": "reactive saving_pct_total",
+   "value": 0.14328772708226933,
+   "unit": "%",
+   "data_kind": "public",
+   "source": "gpu_stack:experiments/e003-heatwave/results/cost-v1.json",
+   "key": "result/pairs/caiso/curves/reactive|f=0.3|W=24|rho=0.7|q=na/saving_pct_total/5",
+   "status": "ok"
+  },
+  {
+   "section": "cost timing (de, f=0.3, W=24 h, lambda=0.5)",
+   "label": "timestral_28M saving_pct_electricity",
+   "value": 12.61885110915285,
+   "unit": "%",
+   "data_kind": "public",
+   "source": "gpu_stack:experiments/e003-heatwave/results/cost-v1.json",
+   "key": "result/pairs/de/curves/timestral_28M|f=0.3|W=24|rho=0.7|q=0.5/saving_pct_electricity/5",
+   "status": "ok"
+  },
+  {
+   "section": "cost timing (de, f=0.3, W=24 h, lambda=0.5)",
+   "label": "timestral_28M saving_pct_co2",
+   "value": 11.05093787621919,
+   "unit": "%",
+   "data_kind": "public",
+   "source": "gpu_stack:experiments/e003-heatwave/results/cost-v1.json",
+   "key": "result/pairs/de/curves/timestral_28M|f=0.3|W=24|rho=0.7|q=0.5/saving_pct_co2/5",
+   "status": "ok"
+  },
+  {
+   "section": "cost timing (de, f=0.3, W=24 h, lambda=0.5)",
+   "label": "timestral_28M saving_pct_total",
+   "value": 1.1770845499954297,
+   "unit": "%",
+   "data_kind": "public",
+   "source": "gpu_stack:experiments/e003-heatwave/results/cost-v1.json",
+   "key": "result/pairs/de/curves/timestral_28M|f=0.3|W=24|rho=0.7|q=0.5/saving_pct_total/5",
+   "status": "ok"
+  },
+  {
+   "section": "cost timing (de, f=0.3, W=24 h, lambda=0.5)",
+   "label": "timestral_28M_cov saving_pct_electricity",
+   "value": 13.348104057994826,
+   "unit": "%",
+   "data_kind": "public",
+   "source": "gpu_stack:experiments/e003-heatwave/results/cost-v1.json",
+   "key": "result/pairs/de/curves/timestral_28M_cov|f=0.3|W=24|rho=0.7|q=0.5/saving_pct_electricity/5",
+   "status": "ok"
+  },
+  {
+   "section": "cost timing (de, f=0.3, W=24 h, lambda=0.5)",
+   "label": "timestral_28M_cov saving_pct_co2",
+   "value": 11.543927205994219,
+   "unit": "%",
+   "data_kind": "public",
+   "source": "gpu_stack:experiments/e003-heatwave/results/cost-v1.json",
+   "key": "result/pairs/de/curves/timestral_28M_cov|f=0.3|W=24|rho=0.7|q=0.5/saving_pct_co2/5",
+   "status": "ok"
+  },
+  {
+   "section": "cost timing (de, f=0.3, W=24 h, lambda=0.5)",
+   "label": "timestral_28M_cov saving_pct_total",
+   "value": 1.2451091563320464,
+   "unit": "%",
+   "data_kind": "public",
+   "source": "gpu_stack:experiments/e003-heatwave/results/cost-v1.json",
+   "key": "result/pairs/de/curves/timestral_28M_cov|f=0.3|W=24|rho=0.7|q=0.5/saving_pct_total/5",
+   "status": "ok"
+  },
+  {
+   "section": "cost timing (de, f=0.3, W=24 h, lambda=0.5)",
+   "label": "seasonal_naive_24 saving_pct_electricity",
+   "value": 12.096205417940622,
+   "unit": "%",
+   "data_kind": "public",
+   "source": "gpu_stack:experiments/e003-heatwave/results/cost-v1.json",
+   "key": "result/pairs/de/curves/seasonal_naive_24|f=0.3|W=24|rho=0.7|q=0.5/saving_pct_electricity/5",
+   "status": "ok"
+  },
+  {
+   "section": "cost timing (de, f=0.3, W=24 h, lambda=0.5)",
+   "label": "seasonal_naive_24 saving_pct_co2",
+   "value": 10.226678083765975,
+   "unit": "%",
+   "data_kind": "public",
+   "source": "gpu_stack:experiments/e003-heatwave/results/cost-v1.json",
+   "key": "result/pairs/de/curves/seasonal_naive_24|f=0.3|W=24|rho=0.7|q=0.5/saving_pct_co2/5",
+   "status": "ok"
+  },
+  {
+   "section": "cost timing (de, f=0.3, W=24 h, lambda=0.5)",
+   "label": "seasonal_naive_24 saving_pct_total",
+   "value": 1.128332237845445,
+   "unit": "%",
+   "data_kind": "public",
+   "source": "gpu_stack:experiments/e003-heatwave/results/cost-v1.json",
+   "key": "result/pairs/de/curves/seasonal_naive_24|f=0.3|W=24|rho=0.7|q=0.5/saving_pct_total/5",
+   "status": "ok"
+  },
+  {
+   "section": "cost timing (de, f=0.3, W=24 h, lambda=0.5)",
+   "label": "ets_24 saving_pct_electricity",
+   "value": 5.360306484696829,
+   "unit": "%",
+   "data_kind": "public",
+   "source": "gpu_stack:experiments/e003-heatwave/results/cost-v1.json",
+   "key": "result/pairs/de/curves/ets_24|f=0.3|W=24|rho=0.7|q=0.5/saving_pct_electricity/5",
+   "status": "ok"
+  },
+  {
+   "section": "cost timing (de, f=0.3, W=24 h, lambda=0.5)",
+   "label": "ets_24 saving_pct_co2",
+   "value": 5.572095724262156,
+   "unit": "%",
+   "data_kind": "public",
+   "source": "gpu_stack:experiments/e003-heatwave/results/cost-v1.json",
+   "key": "result/pairs/de/curves/ets_24|f=0.3|W=24|rho=0.7|q=0.5/saving_pct_co2/5",
+   "status": "ok"
+  },
+  {
+   "section": "cost timing (de, f=0.3, W=24 h, lambda=0.5)",
+   "label": "ets_24 saving_pct_total",
+   "value": 0.5000085896726717,
+   "unit": "%",
+   "data_kind": "public",
+   "source": "gpu_stack:experiments/e003-heatwave/results/cost-v1.json",
+   "key": "result/pairs/de/curves/ets_24|f=0.3|W=24|rho=0.7|q=0.5/saving_pct_total/5",
+   "status": "ok"
+  },
+  {
+   "section": "cost timing (de, f=0.3, W=24 h, lambda=0.5)",
+   "label": "arima_seasonal saving_pct_electricity",
+   "value": 12.265925753393295,
+   "unit": "%",
+   "data_kind": "public",
+   "source": "gpu_stack:experiments/e003-heatwave/results/cost-v1.json",
+   "key": "result/pairs/de/curves/arima_seasonal|f=0.3|W=24|rho=0.7|q=0.5/saving_pct_electricity/5",
+   "status": "ok"
+  },
+  {
+   "section": "cost timing (de, f=0.3, W=24 h, lambda=0.5)",
+   "label": "arima_seasonal saving_pct_co2",
+   "value": 10.647998703863774,
+   "unit": "%",
+   "data_kind": "public",
+   "source": "gpu_stack:experiments/e003-heatwave/results/cost-v1.json",
+   "key": "result/pairs/de/curves/arima_seasonal|f=0.3|W=24|rho=0.7|q=0.5/saving_pct_co2/5",
+   "status": "ok"
+  },
+  {
+   "section": "cost timing (de, f=0.3, W=24 h, lambda=0.5)",
+   "label": "arima_seasonal saving_pct_total",
+   "value": 1.1441637254312276,
+   "unit": "%",
+   "data_kind": "public",
+   "source": "gpu_stack:experiments/e003-heatwave/results/cost-v1.json",
+   "key": "result/pairs/de/curves/arima_seasonal|f=0.3|W=24|rho=0.7|q=0.5/saving_pct_total/5",
+   "status": "ok"
+  },
+  {
+   "section": "cost timing (de, f=0.3, W=24 h, lambda=0.5)",
+   "label": "perfect saving_pct_electricity",
+   "value": 13.710916734386132,
+   "unit": "%",
+   "data_kind": "public",
+   "source": "gpu_stack:experiments/e003-heatwave/results/cost-v1.json",
+   "key": "result/pairs/de/curves/perfect|f=0.3|W=24|rho=0.7|q=0.5/saving_pct_electricity/5",
+   "status": "ok"
+  },
+  {
+   "section": "cost timing (de, f=0.3, W=24 h, lambda=0.5)",
+   "label": "perfect saving_pct_co2",
+   "value": 11.541809922711334,
+   "unit": "%",
+   "data_kind": "public",
+   "source": "gpu_stack:experiments/e003-heatwave/results/cost-v1.json",
+   "key": "result/pairs/de/curves/perfect|f=0.3|W=24|rho=0.7|q=0.5/saving_pct_co2/5",
+   "status": "ok"
+  },
+  {
+   "section": "cost timing (de, f=0.3, W=24 h, lambda=0.5)",
+   "label": "perfect saving_pct_total",
+   "value": 1.2789522686905819,
+   "unit": "%",
+   "data_kind": "public",
+   "source": "gpu_stack:experiments/e003-heatwave/results/cost-v1.json",
+   "key": "result/pairs/de/curves/perfect|f=0.3|W=24|rho=0.7|q=0.5/saving_pct_total/5",
+   "status": "ok"
+  },
+  {
+   "section": "cost timing (de, f=0.3, W=24 h, lambda=0.5)",
+   "label": "offline_optimum saving_pct_electricity",
+   "value": 13.905016204885467,
+   "unit": "%",
+   "data_kind": "public",
+   "source": "gpu_stack:experiments/e003-heatwave/results/cost-v1.json",
+   "key": "result/pairs/de/curves/offline_optimum|f=0.3|W=24|rho=0.7|q=0.5/saving_pct_electricity/5",
+   "status": "ok"
+  },
+  {
+   "section": "cost timing (de, f=0.3, W=24 h, lambda=0.5)",
+   "label": "offline_optimum saving_pct_co2",
+   "value": 11.770956278405807,
+   "unit": "%",
+   "data_kind": "public",
+   "source": "gpu_stack:experiments/e003-heatwave/results/cost-v1.json",
+   "key": "result/pairs/de/curves/offline_optimum|f=0.3|W=24|rho=0.7|q=0.5/saving_pct_co2/5",
+   "status": "ok"
+  },
+  {
+   "section": "cost timing (de, f=0.3, W=24 h, lambda=0.5)",
+   "label": "offline_optimum saving_pct_total",
+   "value": 1.2970578383585953,
+   "unit": "%",
+   "data_kind": "public",
+   "source": "gpu_stack:experiments/e003-heatwave/results/cost-v1.json",
+   "key": "result/pairs/de/curves/offline_optimum|f=0.3|W=24|rho=0.7|q=0.5/saving_pct_total/5",
+   "status": "ok"
+  },
+  {
+   "section": "cost timing (de, f=0.3, W=24 h, lambda=0.5)",
+   "label": "reactive saving_pct_electricity",
+   "value": 9.206733025280181,
+   "unit": "%",
+   "data_kind": "public",
+   "source": "gpu_stack:experiments/e003-heatwave/results/cost-v1.json",
+   "key": "result/pairs/de/curves/reactive|f=0.3|W=24|rho=0.7|q=na/saving_pct_electricity/5",
+   "status": "ok"
+  },
+  {
+   "section": "cost timing (de, f=0.3, W=24 h, lambda=0.5)",
+   "label": "reactive saving_pct_co2",
+   "value": 8.500057848485367,
+   "unit": "%",
+   "data_kind": "public",
+   "source": "gpu_stack:experiments/e003-heatwave/results/cost-v1.json",
+   "key": "result/pairs/de/curves/reactive|f=0.3|W=24|rho=0.7|q=na/saving_pct_co2/5",
+   "status": "ok"
+  },
+  {
+   "section": "cost timing (de, f=0.3, W=24 h, lambda=0.5)",
+   "label": "reactive saving_pct_total",
+   "value": 0.8588026838774173,
+   "unit": "%",
+   "data_kind": "public",
+   "source": "gpu_stack:experiments/e003-heatwave/results/cost-v1.json",
+   "key": "result/pairs/de/curves/reactive|f=0.3|W=24|rho=0.7|q=na/saving_pct_total/5",
+   "status": "ok"
+  }
+ ]
+}
