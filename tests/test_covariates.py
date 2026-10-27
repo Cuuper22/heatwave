@@ -24,6 +24,29 @@ from heatwave.forecast.metrics import coverage, mase, pinball, wql
 
 
 # ----------------------------------------------------------------------------------------------- simulator builders
+START = "2026-07-06T00:00:00Z"
+
+
+def _make_env(seed: int = 0, n: int = 169):
+    """Synthetic stand-in for heatwave.sim_env.PublicEnvironment (test data, random series with the same structure)."""
+    pytest.importorskip("gpu_stack.research.heatwave_sim")
+    from gpu_stack.research.heatwave_sim import SiteEnvironment
+    from heatwave.sim_env import PublicEnvironment
+
+    rng = np.random.default_rng(seed)
+    idx = pd.date_range(START, periods=n, freq="1h")
+    env, fc = {}, {}
+    for sid in ("site-a", "site-b"):
+        act = 20 + 5 * np.sin(np.arange(n) / 3.8) + rng.normal(0, 0.3, n)
+        wfc = act + rng.normal(0, 1.5, n)
+        price = 0.05 + 0.02 * rng.random(n)
+        carbon = 200 + 50 * rng.random(n)
+        env[sid] = SiteEnvironment(outdoor_c=act, price_usd_per_kwh=price, carbon_g_per_kwh=carbon, outdoor_forecast_c=wfc)
+        prev = np.concatenate([np.full(24, carbon[0]), carbon[:-24]])
+        fc[sid] = {"outdoor_forecast_c": wfc.copy(), "price_usd_per_kwh": price.copy(), "carbon_forecast_g_per_kwh": prev}
+    return PublicEnvironment(env, idx, fc, {}, {})
+
+
 @pytest.fixture(scope="module")
 def sim():
     hs = pytest.importorskip("gpu_stack.research.heatwave_sim")
@@ -35,16 +58,15 @@ def sim():
 
 @pytest.fixture(scope="module")
 def builder(sim):
-    return cv.SimCovariateBuilder(sim[1], 100, "worlds")
+    return cv.SimCovariateBuilder(sim[1], 100, _make_env())
 
 
-def test_world_scenario_variants(sim):
-    sc = sim[1]
-    lit = cv.world_scenario(sc, 105, "literal")
-    assert lit["jobs"]["generate"]["seed"] == sc["jobs"]["generate"]["seed"]
-    wor = cv.world_scenario(sc, 105, "worlds")
-    assert wor["jobs"]["generate"]["seed"] == 105 and wor["environment"]["seed"] == 105
-    assert sc["jobs"]["generate"]["seed"] != 105  # the input is not modified
+def test_scenario_v3_job_schedule_follows_the_run_seed(sim):
+    _, sc = sim
+    assert "seed" not in sc["jobs"]["generate"] and "seed" not in sc["environment"]
+    a = cv.SimCovariateBuilder(sc, 100, _make_env())
+    b = cv.SimCovariateBuilder(sc, 101, _make_env())
+    assert [j.submit_s for j in a._jobs] != [j.submit_s for j in b._jobs]
 
 
 def test_sim_plan_ignores_jobs_submitted_after_origin(sim, builder):
@@ -60,7 +82,7 @@ def test_sim_plan_ignores_jobs_submitted_after_origin(sim, builder):
     late = [j for j in builder._jobs if j.submit_s > o_s]
     assert late, "scenario must have jobs submitted after the origin for this test to mean anything"
     # change every late job: the covariate at the origin must not move
-    b2 = cv.SimCovariateBuilder(sc, 100, "worlds")
+    b2 = cv.SimCovariateBuilder(sc, 100, _make_env())
     b2._jobs = [
         (j if j.submit_s <= o_s else type(j)(**{**j.to_dict(), "duration_s": j.duration_s * 2.0, "n_gpus": j.n_gpus}))
         for j in b2._jobs
@@ -76,42 +98,115 @@ def test_sim_plan_ignores_jobs_submitted_after_origin(sim, builder):
     np.testing.assert_allclose(full["P"][..., :72], base["P"][..., :72])
 
 
-def test_sim_full_knowledge_equals_simulator_covariates(sim, builder):
+def test_sim_full_knowledge_equals_simulator_plan(sim, builder):
     hs, _ = sim
     plans = hs.plan_schedule(builder.cfg)
     ref = hs.planned_covariates(builder.cfg, plans, 3600.0, "site")
     w = builder.window("site", 3600.0, 100, 50, 24, full_knowledge=True)
-    for g, keys in cv.SIM_GROUPS.items():
-        for c, k in enumerate(keys):
+    for g in ("J", "P"):
+        for c, k in enumerate(cv.SIM_GROUPS[g]):
             np.testing.assert_allclose(w[g][c].T, ref[k][50:50 + 74])
 
 
-def test_sim_weather_is_the_forecast_not_the_actual(sim):
-    hs, sc = sim
-    b = cv.SimCovariateBuilder(sc, 101, "worlds")
+def test_sim_weather_is_the_archived_forecast_not_the_actual(sim):
+    _, sc = sim
+    env = _make_env(1)
+    b = cv.SimCovariateBuilder(sc, 101, env)
     before = b.window("site", 3600.0, 100, 72, 24)["W"].copy()
-    for env in b.cfg.environment.values():
-        assert env.outdoor_forecast_c is not None
-        env.outdoor_c[:] = env.outdoor_c + 10.0  # change the actual outdoor temperature
+    for e in env.environment.values():
+        e.outdoor_c[:] = e.outdoor_c + 10.0  # change the actual outdoor temperature the plant uses
     after = b.window("site", 3600.0, 100, 72, 24)["W"]
     np.testing.assert_array_equal(before, after)
-    # and it is not equal to the actual
-    for u, env in enumerate(b.cfg.environment.values()):
-        assert not np.allclose(after[0, u, :], env.outdoor_c[28:124])
+    for u, sid in enumerate(b.site_ids):
+        assert not np.allclose(after[0, u, :], env.environment[sid].outdoor_c[28:124])
+    # at hourly resolution the covariate is the interpolated forecast series itself
+    exp = np.interp((np.arange(28, 124) + 0.5) * 3600.0, np.arange(169) * 3600.0, env.forecasts["site-a"]["outdoor_forecast_c"])
+    np.testing.assert_allclose(after[0, 0, :], exp)
 
 
-def test_sim_covariates_do_not_depend_on_the_noise_seed(sim):
+def test_sim_weather_forecast_lead_limit(builder):
+    # the previous_day1 vintage is issued 24 h ahead: values valid later than origin + 24 h are not available
+    o = 100 * 3600.0
+    w = builder.external("site-a", "outdoor_forecast_c", 3600.0, o, o + 30 * 3600.0, o)
+    assert np.all(np.isfinite(w[:23])) and np.all(np.isnan(w[25:]))
+
+
+def test_sim_price_publication_rule_and_no_future_values(sim):
     _, sc = sim
-    a = cv.SimCovariateBuilder(sc, 100, "literal").window("site", 3600.0, 110, 72, 24)
-    b = cv.SimCovariateBuilder(sc, 101, "literal").window("site", 3600.0, 110, 72, 24)
-    for g in a:
-        np.testing.assert_array_equal(a[g], b[g])
+    env = _make_env(2)
+    b = cv.SimCovariateBuilder(sc, 100, env)
+    # site-a: Pacific time (PDT = UTC-7). Origin 2026-07-10 19:00 UTC = 12:00 Pacific: the price for 07-11 is not
+    # published (13:00 local on 07-10). Hour index of the origin from 2026-07-06 00:00 UTC.
+    o_idx = 4 * 24 + 19
+    w = b.window("site", 3600.0, o_idx, 72, 24)["C"][0]  # (units, T+H), channel 0 = price
+    steps_utc = pd.date_range(START, periods=169, freq="1h")[o_idx - 72:o_idx + 24]
+    day = steps_utc.tz_convert("America/Los_Angeles").normalize()
+    today = pd.Timestamp("2026-07-10", tz="America/Los_Angeles")
+    pub = np.asarray(day <= today)
+    assert np.all(np.isfinite(w[0][pub])) and np.all(np.isnan(w[0][~pub])) and (~pub).any()
+    # change the unpublished prices: the window must not move; change a published one: it must
+    p = env.forecasts["site-a"]["price_usd_per_kwh"]
+    keep = b.window("site", 3600.0, o_idx, 72, 24)["C"].copy()
+    unpub_nodes = np.where(~pub)[0] + (o_idx - 72)
+    old = p.copy()
+    p[unpub_nodes] += 1.0
+    np.testing.assert_array_equal(keep, b.window("site", 3600.0, o_idx, 72, 24)["C"])
+    p[:] = old
+    p[o_idx + 1] += 1.0  # a published hour
+    assert not np.array_equal(keep, b.window("site", 3600.0, o_idx, 72, 24)["C"])
+    # after 13:00 Pacific (20:00 UTC) the next day is available
+    w2 = b.window("site", 3600.0, o_idx + 1, 72, 24)["C"][0][0]
+    assert np.isfinite(w2[-1])
+
+
+def test_sim_carbon_is_a_forecast_not_the_actual(sim):
+    _, sc = sim
+    env = _make_env(3)
+    b = cv.SimCovariateBuilder(sc, 100, env)
+    before = b.window("site", 3600.0, 100, 72, 24)["C"].copy()
+    for e in env.environment.values():
+        e.carbon_g_per_kwh[:] = e.carbon_g_per_kwh + 500.0  # change the actual carbon series
+    np.testing.assert_array_equal(before, b.window("site", 3600.0, 100, 72, 24)["C"])
+    # the horizon values equal the actual of 24 h earlier, which is in the past at the origin
+    act = env.environment["site-a"].carbon_g_per_kwh - 500.0
+    np.testing.assert_allclose(before[1, 0, 72:], act[100 - 24:100])
+    # availability lead: the forecast for an hour is usable 23 h before it, not earlier
+    o = 100 * 3600.0
+    c = b.external("site-a", "carbon_forecast_g_per_kwh", 3600.0, o, o + 30 * 3600.0, o)
+    assert np.all(np.isfinite(c[:24])) and np.all(np.isnan(c[25:]))
 
 
 def test_sim_horizon_limit(builder):
     with pytest.raises(cv.LeakageError):
         builder.window("site", 3600.0, 100, 72, 25)  # 25 h > known-future horizon 24 h
     builder.window("site", 3600.0, 100, 72, 24)
+
+
+def test_sim_rack_level_maps_sites(builder):
+    w = builder.window("rack", 60.0, 6000, 120, 60)
+    assert w["C"].shape[:2] == (2, len(builder.rack_ids))
+    sites = np.array(builder.rack_site)
+    a = np.where(sites == "site-a")[0]
+    b = np.where(sites == "site-b")[0]
+    np.testing.assert_array_equal(w["W"][0, a[0]], w["W"][0, a[-1]])
+    assert not np.array_equal(w["W"][0, a[0]], w["W"][0, b[0]])
+
+
+def test_public_environment_forecasts_are_not_actuals(sim):
+    _, sc = sim
+    sim_env = pytest.importorskip("heatwave.sim_env")
+    try:
+        pe = sim_env.public_environment(START, 7 * 86400, usd_per_eur=1.15)
+    except Exception as e:  # public data not present in this checkout
+        pytest.skip(f"public data unavailable: {e}")
+    for sid in ("site-a", "site-b"):
+        e, f = pe.environment[sid], pe.forecasts[sid]
+        assert not np.allclose(f["outdoor_forecast_c"], e.outdoor_c)
+        np.testing.assert_allclose(f["carbon_forecast_g_per_kwh"][24:], e.carbon_g_per_kwh[:-24])
+        assert not np.allclose(f["carbon_forecast_g_per_kwh"], e.carbon_g_per_kwh)
+    b = cv.SimCovariateBuilder(sc, 100, pe)
+    w = b.window("site", 3600.0, 100, 72, 24)
+    assert np.isfinite(w["W"]).all()
 
 
 # -------------------------------------------------------------------------------------------------- issue-time builders

@@ -27,6 +27,14 @@ def dci(e, key="delta_wql"):
     return f"{e[key]:+.4f} [{lo:+.4f}, {hi:+.4f}]"
 
 
+def note_line(block: dict) -> str:
+    if "windows" not in block:
+        return ""
+    return (f"Windows per configuration: {block['windows']}. Constant non-binary covariate rows zeroed (rows per group): "
+            f"{block['constant_rows_zeroed']} (guard on: {block['const_guard']}). Windows the model rejected, by configuration: "
+            f"{block['failed_windows_by_config'] or 'none'}.")
+
+
 def metric_table(block: dict, labels: list[str]) -> list[str]:
     cfgs = block["configs"]
     rows = ["| config | covariates | " + " | ".join(f"WQL {l}" for l in labels) + " | MASE all | cov80 all | cov98 all |",
@@ -40,8 +48,8 @@ def metric_table(block: dict, labels: list[str]) -> list[str]:
 
 def delta_table(block: dict, labels: list[str], names=None, cluster: bool = False) -> list[str]:
     cl = " | dWQL all, seed-cluster 95% CI" if cluster else ""
-    rows = ["| config | " + " | ".join(f"dWQL {l}" for l in labels) + " | dWQL all | relative dWQL all | dMASE all" + cl + " |",
-            "|---|" + "---|" * (len(labels) + 3 + (1 if cluster else 0))]
+    rows = ["| config | " + " | ".join(f"dWQL {l}" for l in labels) + " | dWQL all | relative dWQL all | dMASE all | share of windows with pinball > 10x none | median per-window pinball ratio" + cl + " |",
+            "|---|" + "---|" * (len(labels) + 5 + (1 if cluster else 0))]
     for c, e in block["configs"].items():
         if c == "none" or (names is not None and c not in names):
             continue
@@ -53,30 +61,36 @@ def delta_table(block: dict, labels: list[str], names=None, cluster: bool = Fals
             clo, chi = b["all"]["delta_wql_cluster_ci95"]
             extra = f" | [{clo:+.4f}, {chi:+.4f}]"
         rows.append(f"| {c} | " + " | ".join(dci(b[l]) for l in labels) + f" | {dci(b['all'])}"
-                    + f" | {100 * rel:+.2f}% [{100 * lo:+.2f}%, {100 * hi:+.2f}%] | " + dci(b["all"], "delta_mase") + extra + " |")
+                    + f" | {100 * rel:+.2f}% [{100 * lo:+.2f}%, {100 * hi:+.2f}%] | " + dci(b["all"], "delta_mase")
+                    + f" | {g(e.get('blowup_rate_vs_none'), 3)} | {g(e.get('median_pinball_ratio_vs_none'), 3)}" + extra + " |")
     return rows
 
 
 def sim_section(d: dict) -> list[str]:
-    out = ["# Simulated data (e003 sim-scenario-v2). Every number in this part is SIMULATED.", ""]
+    out = ["# Mixed data: SIMULATED cluster (e003 sim-scenario-v3) driven by PUBLIC weather, price and carbon", ""]
     des = d["design"]
     out += [f"Forward-addition order (declared before scoring): {' , '.join(des['forward_order'])}.", ""]
     out += ["| group | covariate | channels |", "|---|---|---|"]
     out += [f"| {k} | {v['name']} | {', '.join(v['channels'])} |" for k, v in des["groups"].items()]
-    out += ["", "Variants:"] + [f"- {k}: {v}" for k, v in des["variants"].items()]
+    env = des["environment"]
+    out += ["", f"Scenario: {JSON_ENC.encode(des['scenario'])}.", "", "Environment:",
+            f"- kind: {env['kind']}", f"- week per seed: {env['week_start_rule']}",
+            f"- USD per EUR: {env['usd_per_eur']:.6g} (source: {env['usd_per_eur_source']})"]
+    out += [f"- {k}: {v}" for k, v in env["sites"].items()]
     out += ["", "Leakage rules:"] + [f"- {k}: {v}" for k, v in des["leakage_rules"].items()]
     out += ["", f"Bootstrap: {des['bootstrap']}.", f"Seeds: {des['seeds']}. Origin stride multiplier: {des['stride_mult']}. "
             f"Hardware: {JSON_ENC.encode(d['meta'].get('hardware'))}. Run complete: {d.get('complete')}.", ""]
     roles = {n: c["roles"] for n, c in des["configs"].items()}
     for name, ds in d["datasets"].items():
         sc = ds["scale"]
-        out += [f"## {name}: {ds['what']} [SIMULATED]", "",
+        out += [f"## {name}: {ds['what']} [MIXED: SIMULATED plant, PUBLIC environment]", "",
                 f"context {sc['context']} steps, horizon {sc['horizon']} steps of {sc['step']}, "
                 f"{ds['subsampling']['n_origins']} origins (stride {ds['subsampling']['origin_stride_steps']} steps), "
-                f"seeds {ds['subsampling']['seeds']}, units {ds['subsampling']['units']}.", ""]
+                f"seeds {ds['subsampling']['seeds']}, units {ds['subsampling']['units']}, week starts (UTC) {JSON_ENC.encode(ds['subsampling'].get('week_start_utc'))}.", ""]
         for mname, block in ds["methods"].items():
             labels = sc["buckets"][:-1]
-            out += [f"### {name} / {mname}", "", "Scores per configuration (WQL per horizon bucket; MASE and coverage over the whole horizon):", ""]
+            out += [f"### {name} / {mname}", "", note_line(block), "",
+                    "Scores per configuration (WQL per horizon bucket; MASE and coverage over the whole horizon):", ""]
             out += metric_table(block, labels)
             if "none" not in block["configs"] or len(block["configs"]) == 1:
                 out.append("")
@@ -110,7 +124,7 @@ def real_section(d: dict) -> list[str]:
                 "Covariate groups: " + "; ".join(f"{k} = {v}" for k, v in ds["covariate_groups"].items()), ""]
         for mname, block in ds["methods"].items():
             labels = sc["buckets"][:-1]
-            out += [f"### {name} / {mname}", ""] + metric_table(block, labels) + [""]
+            out += [f"### {name} / {mname}", "", note_line(block), ""] + metric_table(block, labels) + [""]
             if len(block["configs"]) > 1:
                 out += ["Change in WQL against `none` (point estimate [95% CI]):", ""] + delta_table(block, labels) + [""]
     return out

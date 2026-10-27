@@ -1,20 +1,19 @@
-"""Run the e003 Heatwave simulator (SIMULATED data) for one seed and cache the series the ablation needs.
+"""Run the e003 Heatwave simulator (SIMULATED plant, PUBLIC environment) for one seed and cache the series the ablation needs.
 
-Scenario: gpu_stack branch `heatwave`, experiments/e003-heatwave/sim-scenario-v2.json.
+Scenario: gpu_stack branch `heatwave`, experiments/e003-heatwave/sim-scenario-v3.json (job schedule follows the run
+seed). The environment is public: Open-Meteo weather (actual for the plant, archived day-ahead forecast for the
+covariate), CAISO and DE-LU day-ahead prices (DE converted at the ECB mean rate in results/cost-v1.json), CAISO and DE
+carbon intensity (`heatwave.sim_env.public_environment`). Seed s runs the week starting at the scenario start_utc
+plus 7 x (s - 100) days.
 
-Variants (see heatwave/forecast/covariates.py, `world_scenario`):
-  literal : the committed scenario unchanged; the run seed changes only the noise streams, because the scenario file fixes
-            the job-generator seed (7) and the environment seed (11). All seeds share one job schedule and one weather path.
-  worlds  : job-generator seed and environment seed set to the run seed, so each seed is a different synthetic job
-            schedule, weather, price and carbon path (fault and grid events keep their scheduled times).
-
-Usage: python experiments/ablation/sim_cache.py --variant literal|worlds --seeds 100 101 ... [--out results/ablation/cache]
-Output: <out>/sim_<variant>_<seed>.npz (gitignored cache).
+Usage: python experiments/ablation/sim_cache.py --seeds 100 101 ... [--out results/ablation/cache]
+Output: <out>/sim_v3_<seed>.npz (gitignored cache).
 """
 
 from __future__ import annotations
 
 import argparse
+import json
 import sys
 import time
 from pathlib import Path
@@ -23,22 +22,30 @@ import numpy as np
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT))
-from heatwave.forecast.covariates import SCENARIO_PATH, world_scenario  # noqa: E402
+from heatwave.forecast.covariates import (  # noqa: E402
+    SCENARIO_PATH, public_env_for_seed, seed_start_utc, usd_per_eur_from_cost_result,
+)
+
+JSON_ENC = json.JSONEncoder(sort_keys=True)
 
 
-def run_one(variant: str, seed: int, out_dir: Path) -> Path:
+def run_one(seed: int, out_dir: Path, usd_per_eur: float) -> Path:
     from gpu_stack.research import heatwave_sim as hs
 
     sc = hs.load_scenario(SCENARIO_PATH)
-    sc = world_scenario(sc, seed, variant)
     sc["outputs"] = {"gpu_windows": []}
+    pe = public_env_for_seed(sc, seed, usd_per_eur)
     t0 = time.time()
-    res = hs.run_scenario(sc, seed=seed)
+    res = hs.run_scenario(sc, seed=seed, environment=pe.environment)
     a = res.to_arrays()
     site_1min = a["site_power_w"].reshape(-1, 60, a["site_power_w"].shape[1]).mean(axis=1)
     meta = a["meta"]
-    out = out_dir / f"sim_{variant}_{seed}.npz"
+    out = out_dir / f"sim_v3_{seed}.npz"
     out_dir.mkdir(parents=True, exist_ok=True)
+    info = {
+        "scenario_id": sc["scenario_id"], "start_utc": str(seed_start_utc(sc, seed)), "usd_per_eur": usd_per_eur,
+        "filled_share": pe.filled_share, "sources": pe.sources,
+    }
     np.savez_compressed(
         out,
         site_mean_power_w_1h=a["site_mean_power_w_1h"],
@@ -48,7 +55,7 @@ def run_one(variant: str, seed: int, out_dir: Path) -> Path:
         rack_ids=np.array(meta["rack_ids"]),
         site_ids=np.array(meta["site_ids"]),
         seed=np.array(seed),
-        variant=np.array(variant),
+        env_info=np.array(JSON_ENC.encode(info)),
         wall_s=np.array(time.time() - t0),
     )
     return out
@@ -56,14 +63,15 @@ def run_one(variant: str, seed: int, out_dir: Path) -> Path:
 
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--variant", choices=["literal", "worlds"], required=True)
     ap.add_argument("--seeds", type=int, nargs="+", required=True)
     ap.add_argument("--out", default=str(ROOT / "results" / "ablation" / "cache"))
+    ap.add_argument("--usd-per-eur", type=float, default=None, help="default: read from results/cost-v1.json")
     a = ap.parse_args()
+    fx = a.usd_per_eur if a.usd_per_eur is not None else usd_per_eur_from_cost_result()[0]
     for s in a.seeds:
         t = time.time()
-        p = run_one(a.variant, s, Path(a.out))
-        print(f"{a.variant} seed {s}: {p} ({time.time() - t:.0f} s)", flush=True)
+        p = run_one(s, Path(a.out), fx)
+        print(f"seed {s}: {p} ({time.time() - t:.0f} s)", flush=True)
 
 
 if __name__ == "__main__":

@@ -1,14 +1,14 @@
-"""Covariate ablation on the SIMULATED e003 cluster (all four known-future covariates exist).
+"""Covariate ablation on the SIMULATED e003 cluster with a PUBLIC environment (data kind: mixed).
 
 Forecaster: Timestral zero-shot (or a fine-tuned checkpoint via --weights-dir), plus a seasonal-naive reference.
 Series (test seeds 100-109): site power (hourly and 1-min), rack temperature (1-min), rack power (1 s).
 Covariate groups: J job schedule (planned GPUs running, planned checkpoint GPUs), P training-step phase,
-W weather (outdoor temperature) forecast, C price and carbon forecast.
+W weather forecast (Open-Meteo archived day-ahead vintage), C day-ahead price and seasonal-naive carbon forecast.
 Configurations: none; each group alone; forward addition in the pre-declared order J, P, W, C; all four; leave one out.
 Scores: WQL, MASE, 80% and 98% coverage per horizon bucket; delta WQL against `none` with paired block-bootstrap CIs.
 
-The simulator cache comes from sim_cache.py. Variants: `literal` (scenario as committed: all seeds share one job
-schedule and weather path) and `worlds` (job and environment seeds follow the run seed).
+The simulator cache comes from sim_cache.py (scenario sim-scenario-v3: the job schedule follows the run seed; the
+plant runs on public weather, price and carbon via heatwave.sim_env.public_environment, one week per seed).
 
 Usage (development, 2 cores):
   python experiments/ablation/ablation_sim.py --sizes 5M --seeds 100 101 --stride-mult 6 --reps 200 --out results/ablation/dev/sim.json
@@ -36,7 +36,6 @@ from heatwave.provenance import write_result
 
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--variants", nargs="+", default=["literal", "worlds"], choices=["literal", "worlds"])
     ap.add_argument("--kinds", nargs="+", default=list(SIM_KINDS), choices=list(SIM_KINDS))
     ap.add_argument("--seeds", type=int, nargs="+", default=list(range(100, 110)))
     ap.add_argument("--sizes", nargs="+", default=["209M", "28M"])
@@ -48,11 +47,16 @@ def main() -> None:
     ap.add_argument("--reps", type=int, default=1000)
     ap.add_argument("--cache-dir", default=str(ac.ROOT / "results" / "ablation" / "cache"))
     ap.add_argument("--out", default=str(ac.ROOT / "results" / "ablation" / "ablation_sim.json"))
+    ap.add_argument("--usd-per-eur", type=float, default=None, help="default: read from results/cost-v1.json")
     ap.add_argument("--run-label", default="")
     ap.add_argument("--no-const-guard", action="store_true", help="feed constant non-binary covariate rows to the model unchanged")
     a = ap.parse_args()
 
     scenario = json.loads(Path(cv.SCENARIO_PATH).read_text())
+    if a.usd_per_eur is None:
+        usd_per_eur, fx_src = cv.usd_per_eur_from_cost_result()
+    else:
+        usd_per_eur, fx_src = a.usd_per_eur, "command line"
     configs, roles = ac.sim_configs()
     forecasters = {s: ac.make_timestral(s, a.weights_dir, a.device, a.threads) for s in a.sizes}
     out_path = Path(a.out)
@@ -62,17 +66,20 @@ def main() -> None:
         "forward_order": list(ac.FORWARD_ORDER),
         "groups": {g: {"name": cv.SIM_GROUP_NAMES[g], "channels": list(cv.SIM_GROUPS[g])} for g in cv.SIM_GROUPS},
         "configs": {n: {"groups": list(g), "roles": roles[n]} for n, g in configs},
-        "variants": {
-            "literal": "scenario as committed; the job-generator seed (7) and environment seed (11) are fixed in the file, "
-                       "so seeds 100-109 share one job schedule, weather, price and carbon path and differ in noise only",
-            "worlds": "job-generator seed and environment seed set to the run seed: each seed is a different synthetic "
-                      "job schedule, weather, price and carbon path; fault and grid events keep their scheduled times",
+        "scenario": {"id": scenario["scenario_id"], "path": str(cv.SCENARIO_PATH),
+                     "note": "job schedule follows the run seed; the scenario synthetic environment is replaced by the public environment; plant SIMULATED"},
+        "environment": {
+            "kind": "public weather, day-ahead price and carbon via heatwave.sim_env.public_environment (mixed: simulated plant, public exogenous series)",
+            "week_start_rule": "seed s runs the week starting at scenario start_utc + 7 x (s - 100) days (all weeks in the test period, 2026-05-01 onward)",
+            "usd_per_eur": usd_per_eur, "usd_per_eur_source": fx_src,
+            "sites": {"site-a": "Bay Area weather, CAISO NP15 day-ahead LMP, CAISO carbon", "site-b": "Frankfurt weather, DE-LU day-ahead price x usd_per_eur, DE carbon"},
         },
         "leakage_rules": {
             "J": "plan built from jobs with submit_s <= origin only; horizon <= known_future_horizon_s",
             "P": "same plan as J (phase of the planned steps)",
-            "W": "scenario outdoor *forecast* series (simulated: truth + AR(1) error, sigma 1.2 degC), never the actual outdoor temperature",
-            "C": "scenario price and carbon series passed through without error (day-ahead style); SIMULATED",
+            "W": "Open-Meteo previous_day1 (day-ahead) forecast, available from valid time minus 24 h; never the actual (ERA5-based) outdoor temperature the plant used",
+            "C": "day-ahead price, available from 13:00 local market time on the day before delivery (assumed publication time; unpublished steps are NaN); "
+                 "carbon: seasonal-naive forecast (actual of 24 h earlier, available 23 h before its hour); the simulator's actual-carbon export is not used",
         },
         "bootstrap": "moving-block bootstrap over origins (block = ceil(horizon / origin stride)), same resampled origins for "
                      "every stream and config (paired); cluster bootstrap over seeds in delta_wql_cluster_ci95; "
@@ -83,10 +90,10 @@ def main() -> None:
         "split": "simulator test seeds 100-109 (fixed split; no fitting on any series)",
     }
     meta = {"hardware": ac.hardware_info(a.device), "run_label": a.run_label}
-    for variant in a.variants:
+    for _ in [0]:
         for kind in a.kinds:
             t0 = time.time()
-            ds = SimDataset(kind, variant, a.seeds, Path(a.cache_dir), scenario, stride_mult=a.stride_mult)
+            ds = SimDataset(kind, a.seeds, Path(a.cache_dir), scenario, usd_per_eur, stride_mult=a.stride_mult)
             methods = [
                 MethodSpec(f.name, f, configs) for f in forecasters.values()
             ] + [MethodSpec(f"seasonal-naive-{ds.scale.season}", SeasonalNaiveForecaster(ds.scale.season), [("none", ())], False)]
@@ -94,24 +101,24 @@ def main() -> None:
             run = evaluate(ds, methods, batch_size=a.batch_size, log=ac.log, const_guard=not a.no_const_guard)
             block = result_block(ds, run, methods, reps=a.reps, seed=0, cluster=ds.cluster)
             results[ds.name] = {
-                "data_kind": "simulated", "variant": variant, "quantity": kind, "what": ds.what,
+                "data_kind": "mixed (simulated plant, public environment)", "quantity": kind, "what": ds.what,
                 "scale": {"context": ds.scale.context, "horizon": ds.scale.horizon, "step": ds.scale.step,
                           "buckets": ds.scale.labels(), "season": ds.scale.season},
                 "subsampling": ds.subsampling(), "methods": block, "wall_seconds": time.time() - t0,
             }
             np.savez_compressed(
-                Path(a.cache_dir) / f"stats_{ds.scale.name}_{variant}.npz",
+                Path(a.cache_dir) / f"stats_{ds.scale.name}.npz",
                 **{f"{m}|{c}": v for m, d in run["stats"].items() for c, v in d.items()},
             )
             content = {"design": design, "meta": meta, "datasets": results, "complete": False}
-            write_result(out_path, content, script=__file__, data_kind="simulated",
-                         inputs=sorted(Path(a.cache_dir).glob("sim_*_*.npz")),
-                         notes=f"SIMULATED data (e003 sim-scenario-v2). run_label={a.run_label}; partial={True}")
+            write_result(out_path, content, script=__file__, data_kind="mixed",
+                         inputs=sorted(Path(a.cache_dir).glob("sim_v3_*.npz")),
+                         notes=f"SIMULATED plant (e003 sim-scenario-v3) with PUBLIC weather, price and carbon (mixed). run_label={a.run_label}; partial={True}")
     content = {"design": design, "meta": {**meta, "wall_seconds_total": time.time() - t_all},
                "datasets": results, "complete": True}
-    write_result(out_path, content, script=__file__, data_kind="simulated",
-                 inputs=sorted(Path(a.cache_dir).glob("sim_*_*.npz")),
-                 notes=f"SIMULATED data (e003 sim-scenario-v2). run_label={a.run_label}. Hardware: {meta['hardware']}")
+    write_result(out_path, content, script=__file__, data_kind="mixed",
+                 inputs=sorted(Path(a.cache_dir).glob("sim_v3_*.npz")),
+                 notes=f"SIMULATED plant (e003 sim-scenario-v3) with PUBLIC weather, price and carbon (mixed). run_label={a.run_label}. Hardware: {meta['hardware']}")
     ac.log(f"wrote {out_path}")
 
 

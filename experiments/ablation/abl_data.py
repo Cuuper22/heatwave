@@ -10,6 +10,7 @@ No parameter of any forecaster is fitted on a test series.
 
 from __future__ import annotations
 
+import json
 import math
 from pathlib import Path
 from typing import Callable, Iterator, Optional
@@ -48,33 +49,35 @@ SIM_KINDS = {
 _BUILDERS: dict = {}
 
 
-def get_builder(scenario: dict, seed: int, variant: str) -> "cv.SimCovariateBuilder":
-    """One covariate builder (and its plan cache) per simulated world, shared by all datasets and, for the
-    `literal` variant (one world for every seed), by all seeds."""
-    key = (variant, 0 if variant == "literal" else int(seed))
+def get_builder(scenario: dict, seed: int, usd_per_eur: float) -> "cv.SimCovariateBuilder":
+    """One covariate builder (and its plan cache) per run seed, shared by all datasets."""
+    key = (int(seed), float(usd_per_eur))
     if key not in _BUILDERS:
-        _BUILDERS[key] = cv.SimCovariateBuilder(scenario, key[1] if variant == "literal" else seed, variant)
+        env = cv.public_env_for_seed(scenario, seed, usd_per_eur)
+        _BUILDERS[key] = cv.SimCovariateBuilder(scenario, seed, env)
     return _BUILDERS[key]
 
 
 class SimDataset:
-    """One simulator quantity over several test seeds. Streams are (seed, site-or-rack)."""
+    """One simulator quantity over several test seeds (simulated plant, public environment). Streams are (seed, site-or-rack)."""
 
-    data_kind = "simulated"
+    data_kind = "mixed"
 
-    def __init__(self, kind: str, variant: str, seeds, cache_dir: Path, scenario: dict, *,
+    def __init__(self, kind: str, seeds, cache_dir: Path, scenario: dict, usd_per_eur: float, *,
                  stride_mult: int = 1, units: Optional[list] = None) -> None:
         spec = SIM_KINDS[kind]
-        self.kind, self.variant, self.seeds = kind, variant, list(seeds)
+        self.kind, self.seeds = kind, list(seeds)
         self.spec, self.scale = spec, spec["scale"]
-        self.name = f"{spec['scale'].name}[{variant}]"
+        self.name = spec["scale"].name
         self.what = spec["what"]
-        self.series, self.builders = [], []
+        self.series, self.builders, self.env_info = [], [], []
         for s in self.seeds:
-            z = np.load(Path(cache_dir) / f"sim_{variant}_{s}.npz")
+            z = np.load(Path(cache_dir) / f"sim_v3_{s}.npz")
             self.series.append(np.asarray(z[spec["key"]], dtype=np.float64))
             self.unit_ids = [str(u) for u in z["rack_ids" if spec["level"] == "rack" else "site_ids"]]
-            self.builders.append(get_builder(scenario, s, variant))
+            self.env_info.append(json.loads(str(z["env_info"])))
+            assert abs(self.env_info[-1]["usd_per_eur"] - usd_per_eur) < 1e-12, "cache built with another exchange rate"
+            self.builders.append(get_builder(scenario, s, usd_per_eur))
         self.units = list(range(len(self.unit_ids))) if units is None else list(units)
         self.n_total = self.series[0].shape[0]
         self.origin_stride = spec["stride"] * stride_mult
@@ -82,9 +85,6 @@ class SimDataset:
         self.stream_ids = [f"seed{s}/{self.unit_ids[u]}" for s in self.seeds for u in self.units]
         self.cluster = np.repeat(np.arange(len(self.seeds)), len(self.units))
         self.groups = list(cv.SIM_GROUPS)
-        if variant == "literal":
-            keys = {b.world_key() for b in self.builders}
-            assert len(keys) == 1, "literal variant must share one world"
 
     @property
     def n_streams(self) -> int:
@@ -96,7 +96,8 @@ class SimDataset:
 
     def subsampling(self) -> dict:
         return {"origin_stride_steps": int(self.origin_stride), "n_origins": int(self.n_origins),
-                "seeds": self.seeds, "units": [self.unit_ids[u] for u in self.units]}
+                "seeds": self.seeds, "units": [self.unit_ids[u] for u in self.units],
+                "week_start_utc": {str(s): e["start_utc"] for s, e in zip(self.seeds, self.env_info)}}
 
     def iter_batches(self, batch_size: int) -> Iterator[Batch]:
         sc = self.scale
@@ -104,15 +105,9 @@ class SimDataset:
         res, level = self.spec["res"], self.spec["level"]
         pend = dict(stream=[], origin=[], ctx=[], y=[], cov={g: [] for g in self.groups})
         n_units = len(self.units)
-        shared = None
         for oi, o in enumerate(self.origins):
             for si, b in enumerate(self.builders):
-                if self.variant == "literal" and shared is not None and shared[0] == o:
-                    cov = shared[1]
-                else:
-                    cov = b.window(level, res, int(o), T, H)
-                    if self.variant == "literal":
-                        shared = (o, cov)
+                cov = b.window(level, res, int(o), T, H)
                 for ui, u in enumerate(self.units):
                     y = self.series[si][:, u]
                     pend["stream"].append(si * n_units + ui)
