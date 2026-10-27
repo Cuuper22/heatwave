@@ -54,6 +54,8 @@ def main() -> None:
     ap.add_argument("--checkpoint-dir", default=None, help="per-dataset checkpoints (default: <cache-dir>/ckpt)")
     ap.add_argument("--checkpoint-every", type=int, default=25, help="batches between checkpoints")
     ap.add_argument("--no-const-guard", action="store_true", help="feed constant non-binary covariate rows to the model unchanged")
+    ap.add_argument("--guard", choices=["exact", "context"], default="exact",
+                    help="exact: zero rows that are exactly constant; context: zero rows whose context part is constant")
     a = ap.parse_args()
 
     scenario = json.loads(Path(cv.SCENARIO_PATH).read_text())
@@ -96,7 +98,11 @@ def main() -> None:
                      "every stream and config (paired); cluster bootstrap over seeds in delta_wql_cluster_ci95; "
                      f"{a.reps} replicates, 95% percentile intervals",
         "const_guard": not a.no_const_guard,
-        "const_guard_rule": "covariate rows (window, channel) that are exactly constant and not 0/1 are replaced by zeros before the model; counts in constant_rows_zeroed",
+        "const_guard_rule": ("covariate rows (window, channel) that are exactly constant and not 0/1 are replaced by zeros before the model; counts in constant_rows_zeroed"
+                             if a.guard == "exact" else
+                             "covariate rows (window, channel) whose context part is constant and that are not 0/1 indicators are replaced by zeros before the model "
+                             "(no in-context evidence of a relation to the series); counts in constant_rows_zeroed"),
+        "guard": a.guard,
         "sizes": a.sizes, "weights_dir": a.weights_dir, "seeds": a.seeds, "stride_mult": a.stride_mult,
         "split": "simulator test seeds 100-109 (fixed split; no fitting on any series)",
     }
@@ -111,7 +117,7 @@ def main() -> None:
                 MethodSpec(f.name, f, configs) for f in forecasters.values()
             ] + [MethodSpec(f"seasonal-naive-{ds.scale.season}", SeasonalNaiveForecaster(ds.scale.season), [("none", ())], False)]
             ac.log(f"{ds.name}: {ds.n_streams} streams x {ds.n_origins} origins, methods {[m.name for m in methods]}")
-            run = evaluate(ds, methods, batch_size=a.batch_size, log=ac.log, const_guard=not a.no_const_guard,
+            run = evaluate(ds, methods, batch_size=a.batch_size, log=ac.log, const_guard=not a.no_const_guard, guard=a.guard,
                            checkpoint=str(ckpt_dir / f"{ds.name}.npy"), checkpoint_every=a.checkpoint_every)
             block = result_block(ds, run, methods, reps=a.reps, seed=0, cluster=ds.cluster)
             results[ds.name] = {
