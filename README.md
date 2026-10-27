@@ -18,7 +18,7 @@ Heatwave is built on [gpu_stack](https://github.com/Cuuper22/gpu_stack-) (a calc
 
 | series | data | Timestral-28M | best classical |
 |---|---|---|---|
-| H100 GPU power, 1 s (Elsayed et al. 2026) | public | 0.158 | 0.259 (ETS) |
+| H100 and B200 GPU power, 1 s (Elsayed et al. 2026) | public | 0.158 | 0.259 (ETS) |
 | H100 multi-node job power, 0.2 s (NLR 2026) | public | 0.076 | 0.122 (seasonal naive) |
 | V100 node power, 1 s (MIT Supercloud) | public | 0.086 | 0.112 (ARIMA) |
 | laptop RTX 3060 power, 1 s | measured | 0.191 | 0.218 (seasonal naive) |
