@@ -200,6 +200,28 @@ def guard_constant_rows(cov: np.ndarray) -> tuple[np.ndarray, int]:
     return out, int(const.sum())
 
 
+def guard_context_constant_rows(cov: np.ndarray, context: int) -> tuple[np.ndarray, int]:
+    """Zero every covariate row (window, channel) whose CONTEXT part is constant.
+
+    Such a row gives the model no evidence of how the series responds to it: whatever it does in the horizon (an hourly
+    price that steps once, a checkpoint pulse that is scheduled but has not happened in the context) cannot be related to
+    the history. Zero-shot Timestral was found to react strongly to these horizon-only changes on 1 s rack power
+    (results/ablation/ablation_sim.json; diagnosis in experiments/ablation/diagnose_horizon_steps.py). This rule includes
+    the exactly-constant rows of :func:`guard_constant_rows`. NaN entries stay NaN. Returns (array, rows zeroed).
+    """
+    out = cov.copy()
+    ctx = out[..., :context]
+    with np.errstate(all="ignore"):
+        mn, mx = np.nanmin(ctx, axis=-1), np.nanmax(ctx, axis=-1)
+    const = mn == mx  # indicators included: a 0/1 row that only changes in the horizon has the same problem
+    if const.any():
+        b, c = np.nonzero(const)
+        for i, j in zip(b, c):
+            r = out[i, j]
+            r[~np.isnan(r)] = 0.0
+    return out, int(const.sum())
+
+
 def _forecast_batch(forecaster, ctx3, horizon, kw, fail_count: dict, cfg: str) -> np.ndarray:
     """Quantiles (B, H, 21). If the model rejects a batch (degenerate input), retry window by window; a window that still
     fails becomes NaN (excluded from every average) and is counted in ``fail_count[cfg]``."""
@@ -223,6 +245,7 @@ def evaluate(
     batch_size: int = 64,
     log: Callable[[str], None] = print,
     const_guard: bool = True,
+    guard: str = "exact",
     checkpoint: Optional[str] = None,
     checkpoint_every: int = 25,
 ) -> dict:
@@ -257,7 +280,10 @@ def evaluate(
         ctx3 = batch.ctx[:, None, :]
         if const_guard:
             for g in list(batch.cov):
-                batch.cov[g], nz = guard_constant_rows(batch.cov[g])
+                if guard == "context":
+                    batch.cov[g], nz = guard_context_constant_rows(batch.cov[g], sc.context)
+                else:
+                    batch.cov[g], nz = guard_constant_rows(batch.cov[g])
                 zeroed[g] += nz
         n_rows += len(batch.stream)
         for m in methods:
@@ -281,7 +307,7 @@ def evaluate(
     log(f"  [{dataset.name}] finished {total} windows in {time.time() - t_start:.0f} s; forecast seconds: "
         + ", ".join(f"{k}={v:.0f}" for k, v in timing.items()))
     return {"stats": stats, "forecast_seconds": timing, "wall_seconds": time.time() - t_start, "failed_windows": failures,
-            "const_guard": const_guard, "constant_rows_zeroed": zeroed, "windows": n_rows}
+            "const_guard": const_guard, "guard": guard, "constant_rows_zeroed": zeroed, "windows": n_rows}
 
 
 def result_block(
