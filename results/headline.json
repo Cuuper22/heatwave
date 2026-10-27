@@ -2521,6 +2521,2530 @@
    "status": "ok"
   },
   {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "caiso_rt_lmp_5min timestral-209M none WQL",
+   "value": 0.18887970827232434,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/caiso_rt_lmp_5min/methods/timestral-209M/configs/none/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "caiso_rt_lmp_5min timestral-209M DA WQL",
+   "value": 0.16889050120005278,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/caiso_rt_lmp_5min/methods/timestral-209M/configs/DA/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "caiso_rt_lmp_5min timestral-209M DA minus none (paired)",
+   "value": -0.01998920707227156,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/caiso_rt_lmp_5min/methods/timestral-209M/configs/DA/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "caiso_rt_lmp_5min timestral-209M DA minus none, interval",
+   "value": [
+    -0.02494892221757666,
+    -0.015548357129506266
+   ],
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/caiso_rt_lmp_5min/methods/timestral-209M/configs/DA/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "caiso_rt_lmp_5min timestral-209M WX WQL",
+   "value": 0.1880711415666729,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/caiso_rt_lmp_5min/methods/timestral-209M/configs/WX/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "caiso_rt_lmp_5min timestral-209M WX minus none (paired)",
+   "value": -0.0008085667056514367,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/caiso_rt_lmp_5min/methods/timestral-209M/configs/WX/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "caiso_rt_lmp_5min timestral-209M WX minus none, interval",
+   "value": [
+    -0.0032276192727728717,
+    0.0017901411595955122
+   ],
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/caiso_rt_lmp_5min/methods/timestral-209M/configs/WX/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "caiso_rt_lmp_5min timestral-209M DEM WQL",
+   "value": 0.18021135785641063,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/caiso_rt_lmp_5min/methods/timestral-209M/configs/DEM/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "caiso_rt_lmp_5min timestral-209M DEM minus none (paired)",
+   "value": -0.008668350415913711,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/caiso_rt_lmp_5min/methods/timestral-209M/configs/DEM/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "caiso_rt_lmp_5min timestral-209M DEM minus none, interval",
+   "value": [
+    -0.011792771186744015,
+    -0.0057357908992846
+   ],
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/caiso_rt_lmp_5min/methods/timestral-209M/configs/DEM/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "caiso_rt_lmp_5min timestral-209M DA+WX+DEM WQL",
+   "value": 0.17232529883713066,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/caiso_rt_lmp_5min/methods/timestral-209M/configs/DA+WX+DEM/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "caiso_rt_lmp_5min timestral-209M DA+WX+DEM minus none (paired)",
+   "value": -0.01655440943519368,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/caiso_rt_lmp_5min/methods/timestral-209M/configs/DA+WX+DEM/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "caiso_rt_lmp_5min timestral-209M DA+WX+DEM minus none, interval",
+   "value": [
+    -0.021052081779175842,
+    -0.012489385147673254
+   ],
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/caiso_rt_lmp_5min/methods/timestral-209M/configs/DA+WX+DEM/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "caiso_rt_lmp_5min timestral-28M none WQL",
+   "value": 0.19245700115669248,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/caiso_rt_lmp_5min/methods/timestral-28M/configs/none/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "caiso_rt_lmp_5min timestral-28M DA WQL",
+   "value": 0.1720225006774235,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/caiso_rt_lmp_5min/methods/timestral-28M/configs/DA/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "caiso_rt_lmp_5min timestral-28M DA minus none (paired)",
+   "value": -0.02043450047926898,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/caiso_rt_lmp_5min/methods/timestral-28M/configs/DA/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "caiso_rt_lmp_5min timestral-28M DA minus none, interval",
+   "value": [
+    -0.025455361591626573,
+    -0.015658253304181982
+   ],
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/caiso_rt_lmp_5min/methods/timestral-28M/configs/DA/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "caiso_rt_lmp_5min timestral-28M WX WQL",
+   "value": 0.19248573245373415,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/caiso_rt_lmp_5min/methods/timestral-28M/configs/WX/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "caiso_rt_lmp_5min timestral-28M WX minus none (paired)",
+   "value": 2.87312970416731e-05,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/caiso_rt_lmp_5min/methods/timestral-28M/configs/WX/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "caiso_rt_lmp_5min timestral-28M WX minus none, interval",
+   "value": [
+    -0.0028656441803661115,
+    0.003309772912925113
+   ],
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/caiso_rt_lmp_5min/methods/timestral-28M/configs/WX/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "caiso_rt_lmp_5min timestral-28M DEM WQL",
+   "value": 0.18407424725299246,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/caiso_rt_lmp_5min/methods/timestral-28M/configs/DEM/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "caiso_rt_lmp_5min timestral-28M DEM minus none (paired)",
+   "value": -0.008382753903700024,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/caiso_rt_lmp_5min/methods/timestral-28M/configs/DEM/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "caiso_rt_lmp_5min timestral-28M DEM minus none, interval",
+   "value": [
+    -0.012163450379638431,
+    -0.004813230272761452
+   ],
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/caiso_rt_lmp_5min/methods/timestral-28M/configs/DEM/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "caiso_rt_lmp_5min timestral-28M DA+WX+DEM WQL",
+   "value": 0.17726986112470738,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/caiso_rt_lmp_5min/methods/timestral-28M/configs/DA+WX+DEM/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "caiso_rt_lmp_5min timestral-28M DA+WX+DEM minus none (paired)",
+   "value": -0.015187140031985097,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/caiso_rt_lmp_5min/methods/timestral-28M/configs/DA+WX+DEM/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "caiso_rt_lmp_5min timestral-28M DA+WX+DEM minus none, interval",
+   "value": [
+    -0.019724774277455875,
+    -0.010955819450272093
+   ],
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/caiso_rt_lmp_5min/methods/timestral-28M/configs/DA+WX+DEM/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "caiso_rt_lmp_5min seasonal-naive-288 none WQL",
+   "value": 0.2292958400957304,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/caiso_rt_lmp_5min/methods/seasonal-naive-288/configs/none/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "caiso_carbon_5min timestral-209M none WQL",
+   "value": 0.11742501810425224,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/caiso_carbon_5min/methods/timestral-209M/configs/none/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "caiso_carbon_5min timestral-209M WX WQL",
+   "value": 0.11714641373087657,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/caiso_carbon_5min/methods/timestral-209M/configs/WX/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "caiso_carbon_5min timestral-209M WX minus none (paired)",
+   "value": -0.00027860437337566546,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/caiso_carbon_5min/methods/timestral-209M/configs/WX/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "caiso_carbon_5min timestral-209M WX minus none, interval",
+   "value": [
+    -0.003027829596005351,
+    0.002459295500240762
+   ],
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/caiso_carbon_5min/methods/timestral-209M/configs/WX/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "caiso_carbon_5min timestral-209M DEM WQL",
+   "value": 0.11409930362321774,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/caiso_carbon_5min/methods/timestral-209M/configs/DEM/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "caiso_carbon_5min timestral-209M DEM minus none (paired)",
+   "value": -0.0033257144810344974,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/caiso_carbon_5min/methods/timestral-209M/configs/DEM/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "caiso_carbon_5min timestral-209M DEM minus none, interval",
+   "value": [
+    -0.004526166483686225,
+    -0.0021066149425071857
+   ],
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/caiso_carbon_5min/methods/timestral-209M/configs/DEM/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "caiso_carbon_5min timestral-209M WX+DEM WQL",
+   "value": 0.11559767621374963,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/caiso_carbon_5min/methods/timestral-209M/configs/WX+DEM/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "caiso_carbon_5min timestral-209M WX+DEM minus none (paired)",
+   "value": -0.0018273418905026123,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/caiso_carbon_5min/methods/timestral-209M/configs/WX+DEM/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "caiso_carbon_5min timestral-209M WX+DEM minus none, interval",
+   "value": [
+    -0.00419884904572095,
+    0.0005941598264851175
+   ],
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/caiso_carbon_5min/methods/timestral-209M/configs/WX+DEM/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "caiso_carbon_5min timestral-28M none WQL",
+   "value": 0.11973999467263542,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/caiso_carbon_5min/methods/timestral-28M/configs/none/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "caiso_carbon_5min timestral-28M WX WQL",
+   "value": 0.12025534082671503,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/caiso_carbon_5min/methods/timestral-28M/configs/WX/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "caiso_carbon_5min timestral-28M WX minus none (paired)",
+   "value": 0.00051534615407961,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/caiso_carbon_5min/methods/timestral-28M/configs/WX/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "caiso_carbon_5min timestral-28M WX minus none, interval",
+   "value": [
+    -0.0028945112137126207,
+    0.003960945688163104
+   ],
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/caiso_carbon_5min/methods/timestral-28M/configs/WX/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "caiso_carbon_5min timestral-28M DEM WQL",
+   "value": 0.11819033470938943,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/caiso_carbon_5min/methods/timestral-28M/configs/DEM/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "caiso_carbon_5min timestral-28M DEM minus none (paired)",
+   "value": -0.0015496599632459918,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/caiso_carbon_5min/methods/timestral-28M/configs/DEM/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "caiso_carbon_5min timestral-28M DEM minus none, interval",
+   "value": [
+    -0.0032981060369741745,
+    0.0004937092610981015
+   ],
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/caiso_carbon_5min/methods/timestral-28M/configs/DEM/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "caiso_carbon_5min timestral-28M WX+DEM WQL",
+   "value": 0.11919093413944801,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/caiso_carbon_5min/methods/timestral-28M/configs/WX+DEM/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "caiso_carbon_5min timestral-28M WX+DEM minus none (paired)",
+   "value": -0.0005490605331874149,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/caiso_carbon_5min/methods/timestral-28M/configs/WX+DEM/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "caiso_carbon_5min timestral-28M WX+DEM minus none, interval",
+   "value": [
+    -0.0036442510126299195,
+    0.00256238143854468
+   ],
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/caiso_carbon_5min/methods/timestral-28M/configs/WX+DEM/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "caiso_carbon_5min seasonal-naive-288 none WQL",
+   "value": 0.14958514489405483,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/caiso_carbon_5min/methods/seasonal-naive-288/configs/none/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "gb_carbon_30min timestral-209M none WQL",
+   "value": 0.1449894794936927,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/gb_carbon_30min/methods/timestral-209M/configs/none/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "gb_carbon_30min timestral-209M F WQL",
+   "value": 0.04052790816680728,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/gb_carbon_30min/methods/timestral-209M/configs/F/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "gb_carbon_30min timestral-209M F minus none (paired)",
+   "value": -0.10446157132688542,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/gb_carbon_30min/methods/timestral-209M/configs/F/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "gb_carbon_30min timestral-209M F minus none, interval",
+   "value": [
+    -0.11381892395147487,
+    -0.09595557708793283
+   ],
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/gb_carbon_30min/methods/timestral-209M/configs/F/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "gb_carbon_30min timestral-209M WX WQL",
+   "value": 0.14015762812606847,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/gb_carbon_30min/methods/timestral-209M/configs/WX/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "gb_carbon_30min timestral-209M WX minus none (paired)",
+   "value": -0.004831851367624235,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/gb_carbon_30min/methods/timestral-209M/configs/WX/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "gb_carbon_30min timestral-209M WX minus none, interval",
+   "value": [
+    -0.008324031897249893,
+    -0.0016053403387766949
+   ],
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/gb_carbon_30min/methods/timestral-209M/configs/WX/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "gb_carbon_30min timestral-209M F+WX WQL",
+   "value": 0.04724215198753842,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/gb_carbon_30min/methods/timestral-209M/configs/F+WX/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "gb_carbon_30min timestral-209M F+WX minus none (paired)",
+   "value": -0.09774732750615428,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/gb_carbon_30min/methods/timestral-209M/configs/F+WX/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "gb_carbon_30min timestral-209M F+WX minus none, interval",
+   "value": [
+    -0.10666006966267302,
+    -0.08953752263120156
+   ],
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/gb_carbon_30min/methods/timestral-209M/configs/F+WX/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "gb_carbon_30min timestral-28M none WQL",
+   "value": 0.1461072233532256,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/gb_carbon_30min/methods/timestral-28M/configs/none/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "gb_carbon_30min timestral-28M F WQL",
+   "value": 0.04370710260949595,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/gb_carbon_30min/methods/timestral-28M/configs/F/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "gb_carbon_30min timestral-28M F minus none (paired)",
+   "value": -0.10240012074372964,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/gb_carbon_30min/methods/timestral-28M/configs/F/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "gb_carbon_30min timestral-28M F minus none, interval",
+   "value": [
+    -0.11141053502261435,
+    -0.09404583164677745
+   ],
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/gb_carbon_30min/methods/timestral-28M/configs/F/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "gb_carbon_30min timestral-28M WX WQL",
+   "value": 0.14133456002020092,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/gb_carbon_30min/methods/timestral-28M/configs/WX/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "gb_carbon_30min timestral-28M WX minus none (paired)",
+   "value": -0.004772663333024674,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/gb_carbon_30min/methods/timestral-28M/configs/WX/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "gb_carbon_30min timestral-28M WX minus none, interval",
+   "value": [
+    -0.008982786534118164,
+    -0.000427860703102299
+   ],
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/gb_carbon_30min/methods/timestral-28M/configs/WX/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "gb_carbon_30min timestral-28M F+WX WQL",
+   "value": 0.054566593451647764,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/gb_carbon_30min/methods/timestral-28M/configs/F+WX/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "gb_carbon_30min timestral-28M F+WX minus none (paired)",
+   "value": -0.09154062990157782,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/gb_carbon_30min/methods/timestral-28M/configs/F+WX/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "gb_carbon_30min timestral-28M F+WX minus none, interval",
+   "value": [
+    -0.10041632157877017,
+    -0.08378793411380077
+   ],
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/gb_carbon_30min/methods/timestral-28M/configs/F+WX/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "gb_carbon_30min seasonal-naive-48 none WQL",
+   "value": 0.22422349464124577,
+   "unit": "",
+   "data_kind": "public",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/gb_carbon_30min/methods/seasonal-naive-48/configs/none/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_1s_run2 timestral-209M none WQL",
+   "value": 0.09621825432619913,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_1s_run2/methods/timestral-209M/configs/none/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_1s_run2 timestral-209M S WQL",
+   "value": 0.04451987901445907,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_1s_run2/methods/timestral-209M/configs/S/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_1s_run2 timestral-209M S minus none (paired)",
+   "value": -0.051698375311740055,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_1s_run2/methods/timestral-209M/configs/S/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_1s_run2 timestral-209M S minus none, interval",
+   "value": [
+    -0.07714093665625175,
+    -0.030206337773839662
+   ],
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_1s_run2/methods/timestral-209M/configs/S/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_1s_run2 timestral-209M K WQL",
+   "value": 0.09498327093782218,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_1s_run2/methods/timestral-209M/configs/K/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_1s_run2 timestral-209M K minus none (paired)",
+   "value": -0.0012349833883769507,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_1s_run2/methods/timestral-209M/configs/K/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_1s_run2 timestral-209M K minus none, interval",
+   "value": [
+    -0.0035975597935013156,
+    0.0005923816835839823
+   ],
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_1s_run2/methods/timestral-209M/configs/K/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_1s_run2 timestral-209M S+K WQL",
+   "value": 0.04371138063338808,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_1s_run2/methods/timestral-209M/configs/S+K/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_1s_run2 timestral-209M S+K minus none (paired)",
+   "value": -0.05250687369281105,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_1s_run2/methods/timestral-209M/configs/S+K/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_1s_run2 timestral-209M S+K minus none, interval",
+   "value": [
+    -0.07753292347469735,
+    -0.031167057937634936
+   ],
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_1s_run2/methods/timestral-209M/configs/S+K/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_1s_run2 timestral-209M S+L WQL",
+   "value": 0.043640076972978656,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_1s_run2/methods/timestral-209M/configs/S+L_realised/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_1s_run2 timestral-209M S+L minus none (paired)",
+   "value": -0.05257817735322047,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_1s_run2/methods/timestral-209M/configs/S+L_realised/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_1s_run2 timestral-209M S+L minus none, interval",
+   "value": [
+    -0.07764848611143392,
+    -0.03128443582229529
+   ],
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_1s_run2/methods/timestral-209M/configs/S+L_realised/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_1s_run2 timestral-28M none WQL",
+   "value": 0.09515699107159992,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_1s_run2/methods/timestral-28M/configs/none/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_1s_run2 timestral-28M S WQL",
+   "value": 0.044857163204877044,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_1s_run2/methods/timestral-28M/configs/S/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_1s_run2 timestral-28M S minus none (paired)",
+   "value": -0.05029982786672287,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_1s_run2/methods/timestral-28M/configs/S/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_1s_run2 timestral-28M S minus none, interval",
+   "value": [
+    -0.0735251746626248,
+    -0.030213662323593724
+   ],
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_1s_run2/methods/timestral-28M/configs/S/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_1s_run2 timestral-28M K WQL",
+   "value": 0.09246993518109166,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_1s_run2/methods/timestral-28M/configs/K/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_1s_run2 timestral-28M K minus none (paired)",
+   "value": -0.002687055890508258,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_1s_run2/methods/timestral-28M/configs/K/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_1s_run2 timestral-28M K minus none, interval",
+   "value": [
+    -0.005563506300508632,
+    -0.00046740440973801656
+   ],
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_1s_run2/methods/timestral-28M/configs/K/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_1s_run2 timestral-28M S+K WQL",
+   "value": 0.045184262390534094,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_1s_run2/methods/timestral-28M/configs/S+K/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_1s_run2 timestral-28M S+K minus none (paired)",
+   "value": -0.04997272868106582,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_1s_run2/methods/timestral-28M/configs/S+K/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_1s_run2 timestral-28M S+K minus none, interval",
+   "value": [
+    -0.07343564430327215,
+    -0.029923016290603795
+   ],
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_1s_run2/methods/timestral-28M/configs/S+K/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_1s_run2 timestral-28M S+L WQL",
+   "value": 0.04521891586743341,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_1s_run2/methods/timestral-28M/configs/S+L_realised/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_1s_run2 timestral-28M S+L minus none (paired)",
+   "value": -0.04993807520416651,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_1s_run2/methods/timestral-28M/configs/S+L_realised/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_1s_run2 timestral-28M S+L minus none, interval",
+   "value": [
+    -0.07337530589006203,
+    -0.02992032843095302
+   ],
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_1s_run2/methods/timestral-28M/configs/S+L_realised/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_1s_run2 seasonal-naive-1 none WQL",
+   "value": 0.10590716057457429,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_1s_run2/methods/seasonal-naive-1/configs/none/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_temp_1s_run2 timestral-209M none WQL",
+   "value": 0.0355987443698437,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_temp_1s_run2/methods/timestral-209M/configs/none/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_temp_1s_run2 timestral-209M S WQL",
+   "value": 0.022026429549683552,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_temp_1s_run2/methods/timestral-209M/configs/S/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_temp_1s_run2 timestral-209M S minus none (paired)",
+   "value": -0.013572314820160147,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_temp_1s_run2/methods/timestral-209M/configs/S/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_temp_1s_run2 timestral-209M S minus none, interval",
+   "value": [
+    -0.029480238019477904,
+    0.00607927071302303
+   ],
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_temp_1s_run2/methods/timestral-209M/configs/S/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_temp_1s_run2 timestral-209M K WQL",
+   "value": 0.03473187693087772,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_temp_1s_run2/methods/timestral-209M/configs/K/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_temp_1s_run2 timestral-209M K minus none (paired)",
+   "value": -0.000866867438965982,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_temp_1s_run2/methods/timestral-209M/configs/K/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_temp_1s_run2 timestral-209M K minus none, interval",
+   "value": [
+    -0.002097384474172413,
+    -1.7435731604762296e-06
+   ],
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_temp_1s_run2/methods/timestral-209M/configs/K/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_temp_1s_run2 timestral-209M S+K WQL",
+   "value": 0.019255894600881205,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_temp_1s_run2/methods/timestral-209M/configs/S+K/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_temp_1s_run2 timestral-209M S+K minus none (paired)",
+   "value": -0.016342849768962494,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_temp_1s_run2/methods/timestral-209M/configs/S+K/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_temp_1s_run2 timestral-209M S+K minus none, interval",
+   "value": [
+    -0.02995720152734158,
+    -0.0014507569960298262
+   ],
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_temp_1s_run2/methods/timestral-209M/configs/S+K/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_temp_1s_run2 timestral-209M S+L WQL",
+   "value": 0.01922783801179521,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_temp_1s_run2/methods/timestral-209M/configs/S+L_realised/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_temp_1s_run2 timestral-209M S+L minus none (paired)",
+   "value": -0.016370906358048488,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_temp_1s_run2/methods/timestral-209M/configs/S+L_realised/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_temp_1s_run2 timestral-209M S+L minus none, interval",
+   "value": [
+    -0.02997602000973443,
+    -0.001477090492088298
+   ],
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_temp_1s_run2/methods/timestral-209M/configs/S+L_realised/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_temp_1s_run2 timestral-28M none WQL",
+   "value": 0.03642592110096792,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_temp_1s_run2/methods/timestral-28M/configs/none/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_temp_1s_run2 timestral-28M S WQL",
+   "value": 0.014670545465888312,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_temp_1s_run2/methods/timestral-28M/configs/S/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_temp_1s_run2 timestral-28M S minus none (paired)",
+   "value": -0.021755375635079607,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_temp_1s_run2/methods/timestral-28M/configs/S/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_temp_1s_run2 timestral-28M S minus none, interval",
+   "value": [
+    -0.03183982623957732,
+    -0.012863818273198395
+   ],
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_temp_1s_run2/methods/timestral-28M/configs/S/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_temp_1s_run2 timestral-28M K WQL",
+   "value": 0.03571829173301281,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_temp_1s_run2/methods/timestral-28M/configs/K/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_temp_1s_run2 timestral-28M K minus none (paired)",
+   "value": -0.0007076293679551121,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_temp_1s_run2/methods/timestral-28M/configs/K/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_temp_1s_run2 timestral-28M K minus none, interval",
+   "value": [
+    -0.0020304491642232463,
+    0.0003492484735752613
+   ],
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_temp_1s_run2/methods/timestral-28M/configs/K/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_temp_1s_run2 timestral-28M S+K WQL",
+   "value": 0.014760550959772493,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_temp_1s_run2/methods/timestral-28M/configs/S+K/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_temp_1s_run2 timestral-28M S+K minus none (paired)",
+   "value": -0.021665370141195427,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_temp_1s_run2/methods/timestral-28M/configs/S+K/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_temp_1s_run2 timestral-28M S+K minus none, interval",
+   "value": [
+    -0.03182392978625988,
+    -0.012653925686019174
+   ],
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_temp_1s_run2/methods/timestral-28M/configs/S+K/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_temp_1s_run2 timestral-28M S+L WQL",
+   "value": 0.014759702515538176,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_temp_1s_run2/methods/timestral-28M/configs/S+L_realised/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_temp_1s_run2 timestral-28M S+L minus none (paired)",
+   "value": -0.021666218585429747,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_temp_1s_run2/methods/timestral-28M/configs/S+L_realised/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_temp_1s_run2 timestral-28M S+L minus none, interval",
+   "value": [
+    -0.0318334865160522,
+    -0.012654224483259096
+   ],
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_temp_1s_run2/methods/timestral-28M/configs/S+L_realised/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_temp_1s_run2 seasonal-naive-1 none WQL",
+   "value": 0.03988354127568893,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_temp_1s_run2/methods/seasonal-naive-1/configs/none/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_10hz_run2 timestral-209M none WQL",
+   "value": 0.10726380422186285,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_10hz_run2/methods/timestral-209M/configs/none/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_10hz_run2 timestral-209M S WQL",
+   "value": 0.2495023881763486,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_10hz_run2/methods/timestral-209M/configs/S/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_10hz_run2 timestral-209M S minus none (paired)",
+   "value": 0.14223858395448574,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_10hz_run2/methods/timestral-209M/configs/S/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_10hz_run2 timestral-209M S minus none, interval",
+   "value": [
+    0.045177251320419456,
+    0.26429687006073127
+   ],
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_10hz_run2/methods/timestral-209M/configs/S/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_10hz_run2 timestral-209M K WQL",
+   "value": 0.11084279887612854,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_10hz_run2/methods/timestral-209M/configs/K/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_10hz_run2 timestral-209M K minus none (paired)",
+   "value": 0.0035789946542656853,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_10hz_run2/methods/timestral-209M/configs/K/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_10hz_run2 timestral-209M K minus none, interval",
+   "value": [
+    0.0010625151338693225,
+    0.007154075406825847
+   ],
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_10hz_run2/methods/timestral-209M/configs/K/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_10hz_run2 timestral-209M S+K WQL",
+   "value": 0.20584661413233407,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_10hz_run2/methods/timestral-209M/configs/S+K/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_10hz_run2 timestral-209M S+K minus none (paired)",
+   "value": 0.09858280991047122,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_10hz_run2/methods/timestral-209M/configs/S+K/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_10hz_run2 timestral-209M S+K minus none, interval",
+   "value": [
+    0.02709269965840958,
+    0.18957400226121998
+   ],
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_10hz_run2/methods/timestral-209M/configs/S+K/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_10hz_run2 timestral-209M S+L WQL",
+   "value": 0.20465558058145747,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_10hz_run2/methods/timestral-209M/configs/S+L_realised/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_10hz_run2 timestral-209M S+L minus none (paired)",
+   "value": 0.09739177635959462,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_10hz_run2/methods/timestral-209M/configs/S+L_realised/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_10hz_run2 timestral-209M S+L minus none, interval",
+   "value": [
+    0.026028448817886397,
+    0.188478100307045
+   ],
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_10hz_run2/methods/timestral-209M/configs/S+L_realised/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_10hz_run2 timestral-28M none WQL",
+   "value": 0.10862713207892433,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_10hz_run2/methods/timestral-28M/configs/none/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_10hz_run2 timestral-28M S WQL",
+   "value": 0.11967728641003991,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_10hz_run2/methods/timestral-28M/configs/S/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_10hz_run2 timestral-28M S minus none (paired)",
+   "value": 0.011050154331115586,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_10hz_run2/methods/timestral-28M/configs/S/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_10hz_run2 timestral-28M S minus none, interval",
+   "value": [
+    0.0018500493192151162,
+    0.02292626526223567
+   ],
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_10hz_run2/methods/timestral-28M/configs/S/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_10hz_run2 timestral-28M K WQL",
+   "value": 0.10932182268887165,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_10hz_run2/methods/timestral-28M/configs/K/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_10hz_run2 timestral-28M K minus none (paired)",
+   "value": 0.0006946906099473266,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_10hz_run2/methods/timestral-28M/configs/K/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_10hz_run2 timestral-28M K minus none, interval",
+   "value": [
+    0.00024633777022944474,
+    0.0011803280621351237
+   ],
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_10hz_run2/methods/timestral-28M/configs/K/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_10hz_run2 timestral-28M S+K WQL",
+   "value": 0.11344330359510366,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_10hz_run2/methods/timestral-28M/configs/S+K/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_10hz_run2 timestral-28M S+K minus none (paired)",
+   "value": 0.0048161715161793295,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_10hz_run2/methods/timestral-28M/configs/S+K/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_10hz_run2 timestral-28M S+K minus none, interval",
+   "value": [
+    0.0005761113394963168,
+    0.00992945737690666
+   ],
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_10hz_run2/methods/timestral-28M/configs/S+K/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_10hz_run2 timestral-28M S+L WQL",
+   "value": 0.11311231436292524,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_10hz_run2/methods/timestral-28M/configs/S+L_realised/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_10hz_run2 timestral-28M S+L minus none (paired)",
+   "value": 0.00448518228400091,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_10hz_run2/methods/timestral-28M/configs/S+L_realised/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_10hz_run2 timestral-28M S+L minus none, interval",
+   "value": [
+    0.00021634635500645923,
+    0.009601021597107701
+   ],
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_10hz_run2/methods/timestral-28M/configs/S+L_realised/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_10hz_run2 seasonal-naive-1 none WQL",
+   "value": 0.40031719155514506,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_10hz_run2/methods/seasonal-naive-1/configs/none/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_1s_run1 timestral-209M none WQL",
+   "value": 0.1360541060636428,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_1s_run1/methods/timestral-209M/configs/none/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_1s_run1 timestral-209M S WQL",
+   "value": 0.036506634723941014,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_1s_run1/methods/timestral-209M/configs/S/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_1s_run1 timestral-209M S minus none (paired)",
+   "value": -0.09954747133970178,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_1s_run1/methods/timestral-209M/configs/S/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_1s_run1 timestral-209M S minus none, interval",
+   "value": [
+    -0.15599803397521986,
+    -0.0591386558583254
+   ],
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_1s_run1/methods/timestral-209M/configs/S/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_1s_run1 timestral-209M K WQL",
+   "value": 0.13060237182298817,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_1s_run1/methods/timestral-209M/configs/K/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_1s_run1 timestral-209M K minus none (paired)",
+   "value": -0.005451734240654621,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_1s_run1/methods/timestral-209M/configs/K/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_1s_run1 timestral-209M K minus none, interval",
+   "value": [
+    -0.01027440374716438,
+    -0.001601759483413632
+   ],
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_1s_run1/methods/timestral-209M/configs/K/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_1s_run1 timestral-209M S+K WQL",
+   "value": 0.034252509396103144,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_1s_run1/methods/timestral-209M/configs/S+K/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_1s_run1 timestral-209M S+K minus none (paired)",
+   "value": -0.10180159666753966,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_1s_run1/methods/timestral-209M/configs/S+K/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_1s_run1 timestral-209M S+K minus none, interval",
+   "value": [
+    -0.15903402829509417,
+    -0.06054557014155355
+   ],
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_1s_run1/methods/timestral-209M/configs/S+K/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_1s_run1 timestral-209M S+L WQL",
+   "value": 0.0342141473551769,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_1s_run1/methods/timestral-209M/configs/S+L_realised/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_1s_run1 timestral-209M S+L minus none (paired)",
+   "value": -0.10183995870846589,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_1s_run1/methods/timestral-209M/configs/S+L_realised/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_1s_run1 timestral-209M S+L minus none, interval",
+   "value": [
+    -0.15904077432352456,
+    -0.0606395647765428
+   ],
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_1s_run1/methods/timestral-209M/configs/S+L_realised/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_1s_run1 timestral-28M none WQL",
+   "value": 0.13486287453282073,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_1s_run1/methods/timestral-28M/configs/none/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_1s_run1 timestral-28M S WQL",
+   "value": 0.04614096624239104,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_1s_run1/methods/timestral-28M/configs/S/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_1s_run1 timestral-28M S minus none (paired)",
+   "value": -0.08872190829042968,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_1s_run1/methods/timestral-28M/configs/S/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_1s_run1 timestral-28M S minus none, interval",
+   "value": [
+    -0.1468228304884635,
+    -0.048581698793707113
+   ],
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_1s_run1/methods/timestral-28M/configs/S/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_1s_run1 timestral-28M K WQL",
+   "value": 0.13294690176004545,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_1s_run1/methods/timestral-28M/configs/K/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_1s_run1 timestral-28M K minus none (paired)",
+   "value": -0.0019159727727752762,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_1s_run1/methods/timestral-28M/configs/K/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_1s_run1 timestral-28M K minus none, interval",
+   "value": [
+    -0.006072497109161099,
+    0.0018800132303999446
+   ],
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_1s_run1/methods/timestral-28M/configs/K/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_1s_run1 timestral-28M S+K WQL",
+   "value": 0.04298930181967834,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_1s_run1/methods/timestral-28M/configs/S+K/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_1s_run1 timestral-28M S+K minus none (paired)",
+   "value": -0.09187357271314239,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_1s_run1/methods/timestral-28M/configs/S+K/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_1s_run1 timestral-28M S+K minus none, interval",
+   "value": [
+    -0.1490944852870599,
+    -0.052375033835574694
+   ],
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_1s_run1/methods/timestral-28M/configs/S+K/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_1s_run1 timestral-28M S+L WQL",
+   "value": 0.042995845279158444,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_1s_run1/methods/timestral-28M/configs/S+L_realised/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_1s_run1 timestral-28M S+L minus none (paired)",
+   "value": -0.09186702925366227,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_1s_run1/methods/timestral-28M/configs/S+L_realised/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_1s_run1 timestral-28M S+L minus none, interval",
+   "value": [
+    -0.14907925243693898,
+    -0.052389637014004585
+   ],
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_1s_run1/methods/timestral-28M/configs/S+L_realised/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_1s_run1 seasonal-naive-1 none WQL",
+   "value": 0.19384126712061586,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_1s_run1/methods/seasonal-naive-1/configs/none/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_temp_1s_run1 timestral-209M none WQL",
+   "value": 0.05765516139604462,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_temp_1s_run1/methods/timestral-209M/configs/none/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_temp_1s_run1 timestral-209M S WQL",
+   "value": 0.011994732486096338,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_temp_1s_run1/methods/timestral-209M/configs/S/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_temp_1s_run1 timestral-209M S minus none (paired)",
+   "value": -0.04566042890994828,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_temp_1s_run1/methods/timestral-209M/configs/S/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_temp_1s_run1 timestral-209M S minus none, interval",
+   "value": [
+    -0.07074462620276896,
+    -0.026786826107506042
+   ],
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_temp_1s_run1/methods/timestral-209M/configs/S/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_temp_1s_run1 timestral-209M K WQL",
+   "value": 0.05426747920873081,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_temp_1s_run1/methods/timestral-209M/configs/K/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_temp_1s_run1 timestral-209M K minus none (paired)",
+   "value": -0.0033876821873138063,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_temp_1s_run1/methods/timestral-209M/configs/K/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_temp_1s_run1 timestral-209M K minus none, interval",
+   "value": [
+    -0.007072112123159278,
+    -0.0007384297631846925
+   ],
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_temp_1s_run1/methods/timestral-209M/configs/K/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_temp_1s_run1 timestral-209M S+K WQL",
+   "value": 0.011167398608805534,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_temp_1s_run1/methods/timestral-209M/configs/S+K/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_temp_1s_run1 timestral-209M S+K minus none (paired)",
+   "value": -0.04648776278723908,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_temp_1s_run1/methods/timestral-209M/configs/S+K/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_temp_1s_run1 timestral-209M S+K minus none, interval",
+   "value": [
+    -0.07149606157976908,
+    -0.02713003943248524
+   ],
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_temp_1s_run1/methods/timestral-209M/configs/S+K/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_temp_1s_run1 timestral-209M S+L WQL",
+   "value": 0.011136849368750671,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_temp_1s_run1/methods/timestral-209M/configs/S+L_realised/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_temp_1s_run1 timestral-209M S+L minus none (paired)",
+   "value": -0.046518312027293944,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_temp_1s_run1/methods/timestral-209M/configs/S+L_realised/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_temp_1s_run1 timestral-209M S+L minus none, interval",
+   "value": [
+    -0.07150619993973117,
+    -0.027192356391313732
+   ],
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_temp_1s_run1/methods/timestral-209M/configs/S+L_realised/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_temp_1s_run1 timestral-28M none WQL",
+   "value": 0.05894907526428936,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_temp_1s_run1/methods/timestral-28M/configs/none/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_temp_1s_run1 timestral-28M S WQL",
+   "value": 0.02342137539662272,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_temp_1s_run1/methods/timestral-28M/configs/S/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_temp_1s_run1 timestral-28M S minus none (paired)",
+   "value": -0.03552769986766664,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_temp_1s_run1/methods/timestral-28M/configs/S/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_temp_1s_run1 timestral-28M S minus none, interval",
+   "value": [
+    -0.06736385744824727,
+    -0.005418735954746935
+   ],
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_temp_1s_run1/methods/timestral-28M/configs/S/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_temp_1s_run1 timestral-28M K WQL",
+   "value": 0.05683784053728449,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_temp_1s_run1/methods/timestral-28M/configs/K/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_temp_1s_run1 timestral-28M K minus none (paired)",
+   "value": -0.0021112347270048695,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_temp_1s_run1/methods/timestral-28M/configs/K/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_temp_1s_run1 timestral-28M K minus none, interval",
+   "value": [
+    -0.003818665369812044,
+    -0.000725602457840325
+   ],
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_temp_1s_run1/methods/timestral-28M/configs/K/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_temp_1s_run1 timestral-28M S+K WQL",
+   "value": 0.012558026837866974,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_temp_1s_run1/methods/timestral-28M/configs/S+K/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_temp_1s_run1 timestral-28M S+K minus none (paired)",
+   "value": -0.04639104842642239,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_temp_1s_run1/methods/timestral-28M/configs/S+K/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_temp_1s_run1 timestral-28M S+K minus none, interval",
+   "value": [
+    -0.07180399489111902,
+    -0.027349969234615287
+   ],
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_temp_1s_run1/methods/timestral-28M/configs/S+K/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_temp_1s_run1 timestral-28M S+L WQL",
+   "value": 0.012547028172918516,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_temp_1s_run1/methods/timestral-28M/configs/S+L_realised/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_temp_1s_run1 timestral-28M S+L minus none (paired)",
+   "value": -0.04640204709137084,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_temp_1s_run1/methods/timestral-28M/configs/S+L_realised/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_temp_1s_run1 timestral-28M S+L minus none, interval",
+   "value": [
+    -0.07180994665384119,
+    -0.027364529550651023
+   ],
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_temp_1s_run1/methods/timestral-28M/configs/S+L_realised/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_temp_1s_run1 seasonal-naive-1 none WQL",
+   "value": 0.07308481589685194,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_temp_1s_run1/methods/seasonal-naive-1/configs/none/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_10hz_run1 timestral-209M none WQL",
+   "value": 0.12130327470031561,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_10hz_run1/methods/timestral-209M/configs/none/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_10hz_run1 timestral-209M S WQL",
+   "value": 0.2969710391349611,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_10hz_run1/methods/timestral-209M/configs/S/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_10hz_run1 timestral-209M S minus none (paired)",
+   "value": 0.1756677644346455,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_10hz_run1/methods/timestral-209M/configs/S/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_10hz_run1 timestral-209M S minus none, interval",
+   "value": [
+    0.027765922681492895,
+    0.38891048784379895
+   ],
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_10hz_run1/methods/timestral-209M/configs/S/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_10hz_run1 timestral-209M K WQL",
+   "value": 0.12543505633841848,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_10hz_run1/methods/timestral-209M/configs/K/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_10hz_run1 timestral-209M K minus none (paired)",
+   "value": 0.004131781638102863,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_10hz_run1/methods/timestral-209M/configs/K/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_10hz_run1 timestral-209M K minus none, interval",
+   "value": [
+    5.829171876384385e-05,
+    0.010227154048747312
+   ],
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_10hz_run1/methods/timestral-209M/configs/K/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_10hz_run1 timestral-209M S+K WQL",
+   "value": 0.24873922635454054,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_10hz_run1/methods/timestral-209M/configs/S+K/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_10hz_run1 timestral-209M S+K minus none (paired)",
+   "value": 0.12743595165422494,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_10hz_run1/methods/timestral-209M/configs/S+K/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_10hz_run1 timestral-209M S+K minus none, interval",
+   "value": [
+    0.00982855461713182,
+    0.28858717380264187
+   ],
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_10hz_run1/methods/timestral-209M/configs/S+K/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_10hz_run1 timestral-209M S+L WQL",
+   "value": 0.24774367271342393,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_10hz_run1/methods/timestral-209M/configs/S+L_realised/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_10hz_run1 timestral-209M S+L minus none (paired)",
+   "value": 0.1264403980131083,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_10hz_run1/methods/timestral-209M/configs/S+L_realised/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_10hz_run1 timestral-209M S+L minus none, interval",
+   "value": [
+    0.00869642213486039,
+    0.28745845579066653
+   ],
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_10hz_run1/methods/timestral-209M/configs/S+L_realised/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_10hz_run1 timestral-28M none WQL",
+   "value": 0.12319702125139546,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_10hz_run1/methods/timestral-28M/configs/none/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_10hz_run1 timestral-28M S WQL",
+   "value": 0.12862987624902614,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_10hz_run1/methods/timestral-28M/configs/S/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_10hz_run1 timestral-28M S minus none (paired)",
+   "value": 0.005432854997630673,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_10hz_run1/methods/timestral-28M/configs/S/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_10hz_run1 timestral-28M S minus none, interval",
+   "value": [
+    -0.0031136113769510794,
+    0.01712354981768966
+   ],
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_10hz_run1/methods/timestral-28M/configs/S/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_10hz_run1 timestral-28M K WQL",
+   "value": 0.1230666284889923,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_10hz_run1/methods/timestral-28M/configs/K/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_10hz_run1 timestral-28M K minus none (paired)",
+   "value": -0.00013039276240316144,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_10hz_run1/methods/timestral-28M/configs/K/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_10hz_run1 timestral-28M K minus none, interval",
+   "value": [
+    -0.0004913018360334978,
+    0.0002816476043684134
+   ],
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_10hz_run1/methods/timestral-28M/configs/K/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_10hz_run1 timestral-28M S+K WQL",
+   "value": 0.12255363645892323,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_10hz_run1/methods/timestral-28M/configs/S+K/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_10hz_run1 timestral-28M S+K minus none (paired)",
+   "value": -0.0006433847924722375,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_10hz_run1/methods/timestral-28M/configs/S+K/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_10hz_run1 timestral-28M S+K minus none, interval",
+   "value": [
+    -0.006165342333191201,
+    0.007555392395909957
+   ],
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_10hz_run1/methods/timestral-28M/configs/S+K/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_10hz_run1 timestral-28M S+L WQL",
+   "value": 0.12204511766460195,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_10hz_run1/methods/timestral-28M/configs/S+L_realised/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_10hz_run1 timestral-28M S+L minus none (paired)",
+   "value": -0.0011519035867935123,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_10hz_run1/methods/timestral-28M/configs/S+L_realised/buckets/all/delta_wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_10hz_run1 timestral-28M S+L minus none, interval",
+   "value": [
+    -0.006604706769843776,
+    0.00707756496855471
+   ],
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_10hz_run1/methods/timestral-28M/configs/S+L_realised/buckets/all/delta_wql_ci95",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, real data (test windows)",
+   "label": "laptop_power_10hz_run1 seasonal-naive-1 none WQL",
+   "value": 0.4210223056495068,
+   "unit": "",
+   "data_kind": "measured",
+   "source": "heatwave:results/ablation/ablation_real.json",
+   "key": "result/datasets/laptop_power_10hz_run1/methods/seasonal-naive-1/configs/none/buckets/all/wql",
+   "status": "ok"
+  },
+  {
+   "section": "known-future inputs, simulated cluster (test seeds)",
+   "label": "result",
+   "value": null,
+   "unit": "",
+   "data_kind": "",
+   "source": "heatwave:results/ablation/ablation_sim.json",
+   "key": "result",
+   "status": "missing file"
+  },
+  {
    "section": "fine-tuning, Timestral-28M (test windows)",
    "label": "laptop_power none zero-shot-28M WQL",
    "value": 0.19137627631366097,

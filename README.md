@@ -30,7 +30,23 @@ Heatwave is built on [gpu_stack](https://github.com/Cuuper22/gpu_stack-) (a calc
 
 Source: [results/forecast/multiscale.json](results/forecast/multiscale.json), table form in [results/forecast/SUMMARY.md](results/forecast/SUMMARY.md) (per horizon, with bootstrap intervals and coverage).
 
-**Known-future inputs.** PENDING (T04b covariate ablation: results/ablation/).
+**Inputs known ahead of time help when they describe what the series is about to do.** Timestral can take inputs whose future values are known at forecast time alongside the history. Each input here becomes visible only once it would have been published: the CAISO day-ahead price from 13:00 Pacific the day before (assumed publication time), a weather forecast 24 hours before the hour it describes. Zero-shot Timestral-209M on held-out real data, loss without and with each input, and the paired difference over the same windows with its 95% interval (moving-block bootstrap):
+
+| series | data | input | without | with | difference (interval) |
+|---|---|---|---|---|---|
+| CAISO real-time price, 5 min | public | day-ahead price | 0.189 | 0.169 | −0.020 (−0.025 to −0.016) |
+| CAISO real-time price, 5 min | public | day-ahead demand forecast | 0.189 | 0.180 | −0.009 (−0.012 to −0.006) |
+| CAISO real-time price, 5 min | public | weather forecast | 0.189 | 0.188 | −0.001 (−0.003 to +0.002) |
+| CAISO carbon intensity, 5 min | public | day-ahead demand forecast | 0.117 | 0.114 | −0.003 (−0.005 to −0.002) |
+| CAISO carbon intensity, 5 min | public | weather forecast | 0.117 | 0.117 | 0.000 (−0.003 to +0.002) |
+| GB carbon intensity, 30 min | public | archived carbon forecast | 0.145 | 0.041 | −0.104 (−0.114 to −0.096) |
+| GB carbon intensity, 30 min | public | weather forecast | 0.145 | 0.140 | −0.005 (−0.008 to −0.002) |
+| laptop GPU power, 1 s | measured | load schedule | 0.096 | 0.045 | −0.052 (−0.077 to −0.030) |
+| laptop GPU power, 1 s | measured | checkpoint timing | 0.096 | 0.095 | −0.001 (−0.004 to +0.001) |
+| laptop GPU temperature, 1 s | measured | load schedule | 0.036 | 0.022 | −0.014 (−0.029 to +0.006) |
+| laptop GPU power, 10 Hz | measured | load schedule | 0.107 | 0.250 | +0.142 (+0.045 to +0.264) |
+
+The GB carbon forecast comes from an archive that does not record when each forecast was issued; I assumed 24 hours ahead, and if it was issued later the gain is overstated. The same load schedule that halves the loss at one reading a second makes the 209M model worse at ten readings a second (the 28M model only slightly: +0.011, interval +0.002 to +0.023), so how a schedule is handed to the model matters as much as the schedule. A version that is told the checkpoint times the run actually logged (not knowable in advance; a comparison only) does no better than the schedule plus predicted checkpoint timing. Source: [results/ablation/ablation_real.json](results/ablation/ablation_real.json) (also Timestral-28M, and the laptop's first run). The same test on the simulated cluster, with its job schedule, training-step phase, weather forecast and price and carbon forecasts, is still running; its result will be `results/ablation/ablation_sim.json`.<!-- PENDING: ablation_sim -->
 
 **A GPU's temperature is easy to model and its throttling is easy to see coming, by a few seconds.** On my laptop's GPU (measured, two runs, 41 and 79 minutes of scripted training load), a two-node thermal model (die plus heatsink) fitted on the first run predicts the second run's temperature with R² 0.972 (RMSE 2.7 °C); the die's time constant is 1.5 s and the heatsink's 38 s. The GPU's own thermal slowdown flag starts around 84 °C (5th percentile) and halves the clock (900 vs 1,642 MHz median during training). Warning before each slowdown from a 30-second temperature forecast, tuned on run 1 and tested on run 2: F1 0.730 with Timestral-28M (median warning 18.5 s ahead) and 0.741 with ETS (16.5 s) against 0.548 for reacting to the current temperature (10.5 s). On a horizon this short, the classical models do as well as Timestral. Source: [results/thermal/](results/thermal/).
 

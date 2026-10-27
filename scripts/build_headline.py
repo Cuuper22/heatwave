@@ -144,6 +144,22 @@ def main() -> None:
             f"A small learned policy that picks the quantile per situation (from forecast spread, job value and the over-cap penalty) "
             f"delivers ${m['40']:,.0f} more net value per episode than reacting at a penalty of $40/kWh, and ${m['160']:,.0f} more at $160/kWh; "
             f"at $2.5/kWh reacting wins by ${-m['2.5']:,.0f}.")
+    # known-future inputs (covariate ablation): WQL per input set and the paired difference against no inputs
+    for abf, sec in [("results/ablation/ablation_real.json", "known-future inputs, real data (test windows)"),
+                     ("results/ablation/ablation_sim.json", "known-future inputs, simulated cluster (test seeds)")]:
+        ab = b.load("heatwave", abf)
+        if ab is None:
+            b.get(sec, "result", "heatwave", abf, ["result"])
+            continue
+        for ds, v in ab["result"]["datasets"].items():
+            for m, mv in v["methods"].items():
+                for c, cv in (mv.get("configs") or {}).items():
+                    bk = [k for k in cv["buckets"] if k.startswith("all")][0]
+                    base = ["result", "datasets", ds, "methods", m, "configs", c, "buckets", bk]
+                    b.get(sec, f"{ds} {m} {'+'.join(cv['groups']) or 'none'} WQL", "heatwave", abf, base + ["wql"], kind=v.get("data_kind", ""))
+                    if cv["buckets"][bk].get("delta_wql") is not None:
+                        b.get(sec, f"{ds} {m} {'+'.join(cv['groups'])} minus none (paired)", "heatwave", abf, base + ["delta_wql"], kind=v.get("data_kind", ""))
+                        b.get(sec, f"{ds} {m} {'+'.join(cv['groups'])} minus none, interval", "heatwave", abf, base + ["delta_wql_ci95"], kind=v.get("data_kind", ""))
     # fine-tuning (GPU, Colab): zero-shot vs fine-tuned, with and without covariates, per dataset
     ftf = "results/finetune/colab/finetune_colab.json"
     ft = b.load("heatwave", ftf)
